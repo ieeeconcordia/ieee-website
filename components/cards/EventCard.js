@@ -1,14 +1,43 @@
+import React from "react";
+import { IoTimeOutline, IoLocationSharp, IoArrowForward } from "react-icons/io5";
+
 export default function EventCard() {
   return (
-    <div className="w-80 flex flex-col justify-start bg-white">
-      <div className="h-64 bg-slate-400"></div>
-      <div className="w-full p-2 text-start gap-2">
-        <h4 className="w-full">Event Name</h4>
-        <p className="italic">Additional tags</p>
-        <p>
+    <div className="w-80 flex flex-col justify-start bg-white border rounded-xl">
+      <div className="h-56 bg-slate-400 rounded-t-xl">
+        <div className="w-1/3 p-1 bg-sky-400 rounded-tl-lg text-white">
+          Competition
+        </div>
+      </div>
+      <div className="w-full flex flex-col p-4 gap-3 text-start rounded-b-xl">
+
+        {/* Name & Tags */}
+        <div>
+          <h3 className="w-full text-2xl font-semibold">Event Name</h3>
+          <p className="italic text-sm font-light">Additional tags</p>
+        </div>
+
+
+        {/* Date & Location */}
+        <div className="flex flex-row items-center gap-6">
+          <div className="flex flex-row items-center text-sm gap-1 text-gray-600" ><IoTimeOutline size={24} color="gray"/> Date</div>
+          <div className="flex flex-row items-center text-sm gap-1 text-gray-600"><IoLocationSharp size={24} color="gray"/> Location</div>
+          
+        </div>
+
+        {/* Details */}
+        <p className="text-sm text-gray-600">
           Forem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu
           turpis molestie, dictum est a, mattis tellus
         </p>
+
+        {/* Learn more */}
+        <div className="flex flex-row gap-2 items-center text-sm text-cyan-400">
+          <div className="w-fit rounded p-1 bg-gradient-to-r from-cyan-400 to-sky-400">
+            <IoArrowForward size={16} color="white"/>
+          </div>
+          Learn More
+        </div>
       </div>
     </div>
   );
