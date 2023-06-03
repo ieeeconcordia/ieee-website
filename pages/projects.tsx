@@ -1,7 +1,10 @@
+import RootLayout from "./layout";
 export default function projects() {
-    return (
-      <>
+  return (
+    <>
+      <RootLayout>
         <h1>Projects Screen</h1>
-      </>
-    )
-  }
+      </RootLayout>
+    </>
+  );
+}

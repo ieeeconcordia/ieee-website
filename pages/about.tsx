@@ -1,10 +1,10 @@
 import RootLayout from "./layout";
 
-export default function Events() {
+export default function about() {
     return (
       <>
         <RootLayout>
-        <h1>Events Screen</h1>
+        <h1>About Screen</h1>
         </ RootLayout>
       </>
     )

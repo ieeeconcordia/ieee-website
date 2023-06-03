@@ -18,7 +18,7 @@ export default function Navbar() {
           }}
         >
           <li style={{ display: "inline" }}>
-          <Link href="/aboutUs">
+          <Link href="/about">
              aboutUs
             </Link>
           </li>

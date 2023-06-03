@@ -1,13 +1,11 @@
-import Navbar from "../components/navbar";
-import Events from "../components/sections/Events"
+import RootLayout from "./layout";
 
 export default function Home() {
-
   return (
-    <>
-      <Navbar />
-       
-      <Events />
-    </>
-  )
+    <div>
+      <RootLayout>
+        <h1>Welcome to ieee concordia</h1>
+      </RootLayout>
+    </div>
+  );
 }
