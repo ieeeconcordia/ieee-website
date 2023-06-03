@@ -1,5 +1,9 @@
 import React from "react";
-import { IoTimeOutline, IoLocationSharp, IoArrowForward } from "react-icons/io5";
+import {
+  IoTimeOutline,
+  IoLocationSharp,
+  IoArrowForward,
+} from "react-icons/io5";
 
 export default function EventCard() {
   return (
@@ -10,19 +14,20 @@ export default function EventCard() {
         </div>
       </div>
       <div className="w-full flex flex-col p-4 gap-3 text-start rounded-b-xl">
-
         {/* Name & Tags */}
         <div>
           <h3 className="w-full text-2xl font-semibold">Event Name</h3>
           <p className="italic text-sm font-light">Additional tags</p>
         </div>
 
-
         {/* Date & Location */}
         <div className="flex flex-row items-center gap-6">
-          <div className="flex flex-row items-center text-sm gap-1 text-gray-600" ><IoTimeOutline size={24} color="gray"/> Date</div>
-          <div className="flex flex-row items-center text-sm gap-1 text-gray-600"><IoLocationSharp size={24} color="gray"/> Location</div>
-          
+          <div className="flex flex-row items-center text-sm gap-1 text-gray-600">
+            <IoTimeOutline size={24} color="gray" /> Date
+          </div>
+          <div className="flex flex-row items-center text-sm gap-1 text-gray-600">
+            <IoLocationSharp size={24} color="gray" /> Location
+          </div>
         </div>
 
         {/* Details */}
@@ -34,7 +39,7 @@ export default function EventCard() {
         {/* Learn more */}
         <div className="flex flex-row gap-2 items-center text-sm text-cyan-400">
           <div className="w-fit rounded p-1 bg-gradient-to-r from-cyan-400 to-sky-400">
-            <IoArrowForward size={16} color="white"/>
+            <IoArrowForward size={16} color="white" />
           </div>
           Learn More
         </div>
