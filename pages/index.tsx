@@ -1,8 +1,33 @@
+import { useEffect, useState } from "react";
 import RootLayout from "./layout";
 import EventCard from "../components/cards/EventCard";
 import EventForm from "../components/forms/EventForm.js";
 import ProjectCard from "@/components/cards/ProjectCard";
+
+async function getEvents() {
+  let res = await fetch("http://localhost:3001/api/events", {
+    method: "GET",
+  });
+  let data = await res.json();
+  return data.events;
+}
+
 export default function Home() {
+  const [events, setEvents] = useState([]);
+
+  useEffect(() => {
+    async function fetchData() {
+      try {
+        const data = await getEvents();
+        setEvents(data);
+      } catch (error) {
+        console.error(error);
+      }
+    }
+
+    fetchData();
+  }, []);
+
   return (
     <div className="">
       <RootLayout>
@@ -24,10 +49,18 @@ export default function Home() {
             Forem ipsum dolora asdklasjdkasdj sit amet, consectetur adipiscing
             elit. Etiam eu turpis molestie, dictum est a
           </p>
-          <div className="flex flex-row justify-between">
-            <EventCard />
-            <EventCard />
-            <EventCard />
+          <div className="flex flex-row justify-center gap-6">
+            {events.map((event) => (
+              <EventCard
+                key={event._id}
+                eventName={event.eventName}
+                date={event.date}
+                location={event.location}
+                time={event.time}
+                fee={event.fee}
+                eventType={event.eventType}
+              />
+            ))}
           </div>
         </section>
 
@@ -46,6 +79,7 @@ export default function Home() {
 
         <EventForm />
       </RootLayout>
+
     </div>
   );
 }
