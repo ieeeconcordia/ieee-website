@@ -1,14 +1,14 @@
 import RootLayout from "./layout";
-import EventCard from "../components/cards/EventCard.js";
+import EventCard from "../components/cards/EventCard";
 import EventForm from "../components/forms/EventForm.js";
+import ProjectCard from "@/components/cards/ProjectCard";
 export default function Home() {
   return (
-    <div>
+    <div className="">
       <RootLayout>
-        <h1>Welcome to ieee concordia</h1>
-        <section>
-          <h4>About Us</h4>
-          <p>
+        <section className="flex flex-col gap-6 pb-20">
+          <h4 className="font-raleway font-semibold text-headline-l text-secondary">About IEEE Concordia</h4>
+          <p className="font-raleway font-title-gray text-title-m ">
             Forem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu
             turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus
             nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum
@@ -18,16 +18,29 @@ export default function Home() {
           </p>
         </section>
 
-        <section>
-          <h2>Events</h2>
-          <p>
+        <section className="flex flex-col gap-6 text-center justify-center pb-20">
+          <h2 className="font-lora font-bold text-headline-l text-secondary">Events</h2>
+          <p className="font-raleway text-title-m text-title-gray">
             Forem ipsum dolora asdklasjdkasdj sit amet, consectetur adipiscing
             elit. Etiam eu turpis molestie, dictum est a
           </p>
-          <div className="flex flex-row justify-center gap-6">
+          <div className="flex flex-row justify-between">
             <EventCard />
             <EventCard />
             <EventCard />
+          </div>
+        </section>
+
+        <section className="flex flex-col gap-6 text-center justify-center pb-20">
+          <h2 className="font-lora font-bold text-headline-l text-secondary">Projects</h2>
+          <p className="font-raleway text-title-m text-title-gray">
+            Forem ipsum dolora asdklasjdkasdj sit amet, consectetur adipiscing
+            elit. Etiam eu turpis molestie, dictum est a
+          </p>
+          <div className="flex flex-row justify-between">
+            <ProjectCard />
+            <ProjectCard />
+            <ProjectCard />
           </div>
         </section>
 
