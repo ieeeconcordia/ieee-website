@@ -1,9 +1,11 @@
+import BasicExample from "../components/navbar";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function Home() {
 
   return (
     <>
-      <h1 id="myText">Hello there</h1>
+      <BasicExample ></BasicExample>
     </>
   )
 }

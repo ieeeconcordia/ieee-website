@@ -7,6 +7,7 @@ export default function EventForm() {
   const [time, setTime] = useState('');
   const [fee, setFee] = useState('');
   const [eventType, setEventType] = useState('');
+  const [eventDetails, setEventDetails] = useState('');
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -103,6 +104,15 @@ alert("Event created!");
           <option value="Seminar">Social</option>
           {/* Add more event types as needed */}
         </select>
+      </div>
+      <div>
+        <label htmlFor="eventName">Event Details:</label>
+        <input
+          type="text"
+          id="eventName"
+          value={eventDetails}
+          onChange={(e) => setEventDetails(e.target.value)}
+        />
       </div>
 
       <button type="submit">Submit</button>
