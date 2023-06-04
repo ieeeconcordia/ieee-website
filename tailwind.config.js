@@ -9,7 +9,7 @@ module.exports = {
     extend: {
       padding: {
         'container': '1.5rem',
-        'section': '9rem',
+        'section': '12rem',
       },
       fontSize: {
         'display-l': '3.75rem',
@@ -35,7 +35,8 @@ module.exports = {
       colors: {
         'primary': '#33BEFF',
         'secondary': '#093774',
-        'footer': '#093774',
+        'footer-bg': '#002333',
+        'footer-fd': '#FFFFFF',
         'tertiary': '#FFD100',
         'title-gray': '#5F5F5F',
         'sponsorship': '#006999',
