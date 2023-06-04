@@ -22,7 +22,7 @@ export const SponsorshipSection = () => {
         <Image src={sponsors} alt={""} className="w-40" />
         <Image src={sponsors} alt={""} className="w-40" />
       </div>
-      <SponsorshipBtn/>
+      <SponsorshipBtn text={"Become a sponsor!"}/>
     </div>
   );
 };
