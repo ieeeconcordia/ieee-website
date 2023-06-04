@@ -6,7 +6,7 @@ import ProjectCard from "@/components/cards/ProjectCard";
 import { SponsorshipSection } from "@/components/SponsorshipSection";
 
 async function getEvents() {
-  let res = await fetch('/api/events', {
+  let res = await fetch("/api/events", {
     method: "GET",
   });
   let data = await res.json();
@@ -46,31 +46,43 @@ export default function Home() {
           </p>
         </section>
 
-        <section className="flex flex-col gap-6 text-center justify-center px-section pb-20">
-          <h2 className="font-lora font-bold text-headline-l text-secondary">
-            Events
-          </h2>
-          <p className="font-raleway text-title-m text-title-gray">
-            Forem ipsum dolora asdklasjdkasdj sit amet, consectetur adipiscing
-            elit. Etiam eu turpis molestie, dictum est a
-          </p>
+        <section className="flex flex-col gap-16 text-center justify-center px-section pb-20">
+          <div className="">
+            <h2 className="font-lora font-bold text-headline-l text-secondary pb-3">
+              Events
+            </h2>
+            <p className="font-raleway text-title-m text-title-gray">
+              Forem ipsum dolora asdklasjdkasdj sit amet, consectetur adipiscing
+              elit. Etiam eu turpis molestie, dictum est a
+            </p>
+          </div>
+
           <div className="flex flex-row justify-center gap-10">
             {events.map((event: any) => (
               <EventCard
-                key={event._id} id={event._id} eventName={event.eventName} date={event.date} location={event.location} time={event.time} fee={event.fee} eventType={event.eventType}
+                key={event._id}
+                id={event._id}
+                eventName={event.eventName}
+                date={event.date}
+                location={event.location}
+                time={event.time}
+                fee={event.fee}
+                eventType={event.eventType}
               />
             ))}
           </div>
         </section>
 
-        <section className="flex flex-col gap-6 text-center justify-center px-section pb-20">
-          <h2 className="font-lora font-bold text-headline-l text-secondary">
-            Projects
-          </h2>
-          <p className="font-raleway text-title-m text-title-gray">
-            Forem ipsum dolora asdklasjdkasdj sit amet, consectetur adipiscing
-            elit. Etiam eu turpis molestie, dictum est a
-          </p>
+        <section className="flex flex-col gap-16 text-center justify-center px-section pb-20">
+          <div className="">
+            <h2 className="font-lora font-bold text-headline-l text-secondary pb-3">
+              Projects
+            </h2>
+            <p className="font-raleway text-title-m text-title-gray">
+              Forem ipsum dolora asdklasjdkasdj sit amet, consectetur adipiscing
+              elit. Etiam eu turpis molestie, dictum est a
+            </p>
+          </div>
           <div className="flex flex-row justify-center gap-10">
             <ProjectCard />
             <ProjectCard />
@@ -80,7 +92,6 @@ export default function Home() {
 
         <SponsorshipSection />
 
-        <EventForm />
       </RootLayout>
     </div>
   );

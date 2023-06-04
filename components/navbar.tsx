@@ -33,8 +33,8 @@ export default function Navbar() {
               <Link href="/projects">Projects</Link>
             </li>
 
-            <li style={{ display: "inline" }}>
-              <Link href="/laboratory">Lab</Link>
+            <li style={{ display: "inline", }} className="line-through decoration-2">
+              Lab
             </li>
 
             <li style={{ display: "inline" }}>
