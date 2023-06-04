@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 import {
   IoArrowForward,
@@ -6,16 +7,15 @@ import {
 } from "react-icons/io5";
 
 type EventProps = {
-  eventName: string;
-  date: string;
-  location: string;
-  time: string;
-  fee: string;
-  eventType: string;
-};
-export default function EventCard(
-  { eventName, date, location, time, fee, eventType }: EventProps,
-) {
+  id: string,
+  eventName:string,
+  date:string,
+  location:string,
+  time:string,
+  fee:string,
+  eventType:string
+}
+export default function EventCard({id,eventName,date,location,time,fee,eventType} : EventProps) {
   return (
     <div className="w-80 flex flex-col justify-start bg-white border rounded-xl">
       <div className="h-56 bg-slate-400 rounded-t-xl">
@@ -47,12 +47,15 @@ export default function EventCard(
         </p>
 
         {/* Learn more */}
-        <div className="flex flex-row gap-2 items-center text-sm text-cyan-400">
-          <div className="w-fit rounded p-1 bg-gradient-to-r from-cyan-400 to-sky-400">
-            <IoArrowForward size={16} color="white" />
+        <Link href={`/${id}`}>
+          <div className="flex flex-row gap-2 items-center text-sm text-cyan-400">
+            <div className="w-fit rounded p-1 bg-gradient-to-r from-cyan-400 to-sky-400">
+              <IoArrowForward size={16} color="white"/>
+            </div>
+            Learn More
           </div>
-          Learn More
-        </div>
+        </Link>
+        
       </div>
     </div>
   );

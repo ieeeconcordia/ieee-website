@@ -6,7 +6,7 @@ import ProjectCard from "@/components/cards/ProjectCard";
 import { SponsorshipSection } from "@/components/SponsorshipSection";
 
 async function getEvents() {
-  let res = await fetch("http://localhost:3000/api/events", {
+  let res = await fetch('/api/events', {
     method: "GET",
   });
   let data = await res.json();
@@ -57,13 +57,7 @@ export default function Home() {
           <div className="flex flex-row justify-center gap-6">
             {events.map((event: any) => (
               <EventCard
-                key={event._id}
-                eventName={event.eventName}
-                date={event.date}
-                location={event.location}
-                time={event.time}
-                fee={event.fee}
-                eventType={event.eventType}
+                key={event._id} id={event._id} eventName={event.eventName} date={event.date} location={event.location} time={event.time} fee={event.fee} eventType={event.eventType}
               />
             ))}
           </div>

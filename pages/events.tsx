@@ -40,6 +40,7 @@ export default function Events() {
             {events.map((event: any) => (
               <EventCard
                 key={event._id}
+                id={event._id}
                 eventName={event.eventName}
                 date={event.date}
                 location={event.location}

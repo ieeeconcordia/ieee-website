@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import logo from "../public/logo.png";
-import { SponsorshipBtn } from "./buttons/SponsorshipBtn";
+import { SponsorshipBtnNav } from "./buttons/SponsorshipBtn";
 
 export default function Navbar() {
   return (
@@ -41,7 +41,7 @@ export default function Navbar() {
               <Link href="contact">Contact us</Link>
             </li>
           </ul>
-          <SponsorshipBtn />
+          <SponsorshipBtnNav />
         </div>
       </div>
     </nav>
