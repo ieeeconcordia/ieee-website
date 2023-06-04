@@ -8,6 +8,7 @@ export const SponsorshipSection = () => {
       Forem ipsum dolora asdklasjdkasdj sit amet, consectetur adipiscing
       elit. Etiam eu turpis molestie, dictum est a
     </p>
+    
   </div>
   )
 }
