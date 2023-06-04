@@ -3,7 +3,7 @@ import RootLayout from "./layout";
 import EventCard from "../components/cards/EventCard";
 import EventForm from "../components/forms/EventForm.js";
 import ProjectCard from "@/components/cards/ProjectCard";
-<<<<<<< Updated upstream
+import { SponsorshipSection } from "@/components/SponsorshipSection";
 
 async function getEvents() {
   let res = await fetch("http://localhost:3000/api/events", {
@@ -13,9 +13,6 @@ async function getEvents() {
   return data.events;
 }
 
-=======
-import { SponsorshipSection } from "@/components/SponsorshipSection";
->>>>>>> Stashed changes
 export default function Home() {
   const [events, setEvents] = useState([]);
 
@@ -53,7 +50,7 @@ export default function Home() {
             Forem ipsum dolora asdklasjdkasdj sit amet, consectetur adipiscing
             elit. Etiam eu turpis molestie, dictum est a
           </p>
-          <div className="flex flex-row justify-center gap-6">
+          <div className="flex flex-row justify-between">
             {events.map((event : any) => (
               <EventCard
                 key={event._id} eventName={event.eventName} date={event.date} location={event.location} time={event.time} fee={event.fee} eventType={event.eventType}
