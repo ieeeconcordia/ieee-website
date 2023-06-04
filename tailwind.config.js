@@ -26,7 +26,7 @@ module.exports = {
         'label-s': '0.75rem',
         'body-l': '1rem',
         'body-m': '0.875rem',
-        'body-s': '0.75rem',
+        'body-s': '0.75rem', 
       },
       fontFamily: {
         'raleway': 'var(--font-raleway)',
