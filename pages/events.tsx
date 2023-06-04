@@ -1,6 +1,7 @@
 import RootLayout from "./layout";
 import EventCard from "../components/cards/EventCard";
 import { useEffect, useState } from "react";
+import { SponsorshipSection } from "@/components/SponsorshipSection";
 
 async function getEvents() {
   let res = await fetch("http://localhost:3000/api/events", {
@@ -30,13 +31,13 @@ export default function Events() {
   return (
     <>
       <RootLayout>
-        <div className="flex flex-col justify-center text-center gap-7 p-container">
+        <div className="flex flex-col justify-center text-center gap-7 p-container pb-16">
           <h2 className="text-headline-l font-lora font-bold text-secondary">Events</h2>
           <p className="text-title-m font-raleway text-title-gray">
             Forem ipsum dolora asdklasjdkasdj sit amet, consectetur adipiscing
             elit. Etiam eu turpis molestie, dictum est a
           </p>
-          <div className="flex flex-row justify-center gap-6">
+          <div className="flex flex-row justify-center gap-10">
             {events.map((event: any) => (
               <EventCard
                 key={event._id}
@@ -51,6 +52,7 @@ export default function Events() {
             ))}
           </div>
         </div>
+        <SponsorshipSection />
       </RootLayout>
     </>
   );

@@ -26,7 +26,7 @@ export default function EventCard({id,eventName,date,location,time,fee,eventType
       <div className="w-full flex flex-col p-4 gap-3 text-start rounded-b-xl">
         {/* Name & Tags */}
         <div>
-          <h3 className="w-full text-2xl font-semibold">{eventName}</h3>
+          <h3 className="w-full text-title-l font-semibold font-raleway text-black">{eventName}</h3>
           <p className="italic text-sm font-light">Additional tags</p>
         </div>
 

@@ -54,7 +54,7 @@ export default function Home() {
             Forem ipsum dolora asdklasjdkasdj sit amet, consectetur adipiscing
             elit. Etiam eu turpis molestie, dictum est a
           </p>
-          <div className="flex flex-row justify-center gap-6">
+          <div className="flex flex-row justify-center gap-10">
             {events.map((event: any) => (
               <EventCard
                 key={event._id} id={event._id} eventName={event.eventName} date={event.date} location={event.location} time={event.time} fee={event.fee} eventType={event.eventType}
@@ -71,7 +71,7 @@ export default function Home() {
             Forem ipsum dolora asdklasjdkasdj sit amet, consectetur adipiscing
             elit. Etiam eu turpis molestie, dictum est a
           </p>
-          <div className="flex flex-row justify-between">
+          <div className="flex flex-row justify-center gap-10">
             <ProjectCard />
             <ProjectCard />
             <ProjectCard />
