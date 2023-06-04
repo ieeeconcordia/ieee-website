@@ -5,7 +5,7 @@ import { SponsorshipBtn } from "./buttons/SponsorshipBtn";
 
 export default function Navbar() {
   return (
-    <nav className="nav_container flex flex-col items-center pb-6 gap-3">
+    <nav className="nav_container flex flex-col items-center px-16 pb-6 gap-3 ">
       <div className="min-w-40 bg-green-500 rounded-b-xl text-center text-black font-raleway font-bold align-middle py-2 px-8 gap-0">
         Lab Status: Open
       </div>

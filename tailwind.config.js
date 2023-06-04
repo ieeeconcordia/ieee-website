@@ -9,6 +9,7 @@ module.exports = {
     extend: {
       padding: {
         'container': '1.5rem',
+        'section': '9rem',
       },
       fontSize: {
         'display-l': '3.75rem',
