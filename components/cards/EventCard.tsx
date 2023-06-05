@@ -7,7 +7,7 @@ import {
 } from "react-icons/io5";
 
 type EventProps = {
-  id: string,
+  _id: string,
   eventName:string,
   date:string,
   location:string,
@@ -15,7 +15,7 @@ type EventProps = {
   fee:string,
   eventType:string
 }
-export default function EventCard({id,eventName,date,location,time,fee,eventType} : EventProps) {
+export default function EventCard({_id,eventName,date,location,time,fee,eventType} : EventProps) {
   return (
     <div className="w-80 flex flex-col justify-start bg-white border rounded-xl">
       <div className="h-56 bg-slate-400 rounded-t-xl">
@@ -47,7 +47,7 @@ export default function EventCard({id,eventName,date,location,time,fee,eventType
         </p>
 
         {/* Learn more */}
-        <Link href={`/${id}`}>
+        <Link href={`/events/${_id}`}>
           <div className="flex flex-row gap-2 items-center text-sm text-cyan-400">
             <div className="w-fit rounded p-1 bg-gradient-to-r from-cyan-400 to-sky-400">
               <IoArrowForward size={16} color="white"/>

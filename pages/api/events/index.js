@@ -1,6 +1,7 @@
 import { createEvent, getEvent, getEvents } from "../../../lib/mongo/events";
 
 const handler = async (req, res) => {
+  
   if (req.method === "GET") {
     if (req.query.id) {
       try {
@@ -9,6 +10,7 @@ const handler = async (req, res) => {
 
         return res.status(200).json({ event });
       } catch (error) {
+        console.error(error.message);
         return res.status(500).json({ error: error.message });
       }
     } else {

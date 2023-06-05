@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import RootLayout from "./layout";
-import EventCard from "../components/cards/EventCard";
-import EventForm from "../components/forms/EventForm.js";
+import RootLayout from "@/pages/layout";
+import EventCard from "@/components/cards/EventCard";
+import EventForm from "@components/forms/EventForm.js";
 import ProjectCard from "@/components/cards/ProjectCard";
 import { SponsorshipSection } from "@/components/SponsorshipSection";
 
@@ -61,7 +61,7 @@ export default function Home() {
             {events.map((event: any) => (
               <EventCard
                 key={event._id}
-                id={event._id}
+               _id={event._id}
                 eventName={event.eventName}
                 date={event.date}
                 location={event.location}

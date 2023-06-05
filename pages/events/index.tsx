@@ -1,36 +1,25 @@
-import RootLayout from "./layout";
-import EventCard from "../components/cards/EventCard";
+import Link from "next/link";
+import { createEvent, getEvent, getEvents } from "@/lib/mongo/events";
+import RootLayout from "@/pages/layout";
+import EventCard from "@/components/cards/EventCard";
 import { useEffect, useState } from "react";
 import { SponsorshipSection } from "@/components/SponsorshipSection";
 
-async function getEvents() {
+
+
+export async function getStaticProps() {
   let res = await fetch("http://localhost:3000/api/events", {
     method: "GET",
   });
-  let data = await res.json();
-  return data.events;
+  const data = await res.json();
+  return {
+    props : {events : data.events}
+  }
 }
 
-export default function Events() {
-
-  const [events, setEvents] = useState([]);
-
-  useEffect(() => {
-    async function fetchData() {
-      try {
-        const data = await getEvents();
-        setEvents(data);
-      } catch (error) {
-        console.error(error);
-      }
-    }
-
-    fetchData();
-  }, []);
-
+export default function Events ({events}){
   return (
-    <>
-      <RootLayout>
+    <RootLayout>
         <div className="flex flex-col justify-center text-center gap-7 p-container pb-16">
           <h2 className="text-display-m font-lora font-bold text-secondary">Events</h2>
           <p className="text-title-m font-raleway text-title-gray">
@@ -51,9 +40,8 @@ export default function Events() {
               />
             ))}
           </div>
-        </div>
-        <SponsorshipSection />
-      </RootLayout>
-    </>
-  );
+
+    </div>
+    </RootLayout>
+  )
 }
