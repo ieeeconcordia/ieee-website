@@ -5,7 +5,6 @@ import ProjectCard from "@/components/cards/ProjectCard";
 import { SponsorshipSection } from "@/components/SponsorshipSection";
 import { getEvents } from "@/lib/mongo/events";
 
-
 // Fetch all events and pass them as a prop to the Events component
 export async function getStaticProps() {
   const { events } = await getEvents();
@@ -13,8 +12,7 @@ export async function getStaticProps() {
     props: { events },
   };
 }
-export default function Home({events}:any) {
-
+export default function Home({ events }: any) {
   return (
     <div className="">
       <RootLayout>
@@ -43,11 +41,11 @@ export default function Home({events}:any) {
             </p>
           </div>
 
-          <div className="flex flex-row justify-center gap-10">
-            {events.map((event: any) => (
+          <div className="flex flex-row justify-center gap-5 sm:gap-6 md:gap-10">
+            {events.slice(0, 3).map((event: any) => (
               <EventCard
                 key={event._id}
-               _id={event._id}
+                _id={event._id}
                 eventName={event.eventName}
                 date={event.date}
                 location={event.location}
@@ -77,7 +75,6 @@ export default function Home({events}:any) {
         </section>
 
         <SponsorshipSection />
-
       </RootLayout>
     </div>
   );
