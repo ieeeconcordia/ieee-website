@@ -1,33 +1,34 @@
 import Link from "next/link";
-import { createEvent, getEvent, getEvents } from "@/lib/mongo/events";
+import { getEvent, getEvents } from "@/lib/mongo/events";
+import RootLayout from "@/pages/layout";
 
+// Generate static paths for all events
 export async function getStaticPaths() {
-  let res = await fetch("http://localhost:3000/api/events", {
-    method: "GET",
-  });
-  const data = await res.json();
+  const { events } = await getEvents();
+  
+  // Map events to an array of paths with their respective IDs
+  const paths = events.map((event:any) => ({
+    params: { id: event._id },
+  }));
 
-  const paths = data.events.map((events) => {
-    return {
-      params: { id: events._id.toString() },
-    };
-  });
-
-  return { paths: paths, fallback: false };
+  return { paths, fallback: false };
 }
 
-export async function getStaticProps({ params }) {
-  const id = params.id;
-  const  result= await getEvent(id);
+// Fetch the event data and pass it as a prop to the EventDetail component
+export async function getStaticProps({ params: { id } }) {
+  const event = await getEvent(id);
   return {
-    props: { event : result },
+    props: { event },
   };
 }
-export default function PostDetail({event}) {
+
+export default function EventDetail({ event: { eventName, date } }) {
   return (
-    <div className="flex-items flex-col">
-      {event.eventName}---{event.date}
+  <RootLayout>
+    <div className="flex-items flex-row">
+      {eventName}---{date}
       <Link href="/events">Go Back</Link>
     </div>
+  </RootLayout>
   );
 }

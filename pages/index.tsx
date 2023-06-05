@@ -1,33 +1,19 @@
 import { useEffect, useState } from "react";
 import RootLayout from "@/pages/layout";
 import EventCard from "@/components/cards/EventCard";
-import EventForm from "@components/forms/EventForm.js";
 import ProjectCard from "@/components/cards/ProjectCard";
 import { SponsorshipSection } from "@/components/SponsorshipSection";
+import { getEvents } from "@/lib/mongo/events";
 
-async function getEvents() {
-  let res = await fetch("/api/events", {
-    method: "GET",
-  });
-  let data = await res.json();
-  return data.events;
+
+// Fetch all events and pass them as a prop to the Events component
+export async function getStaticProps() {
+  const { events } = await getEvents();
+  return {
+    props: { events },
+  };
 }
-
-export default function Home() {
-  const [events, setEvents] = useState([]);
-
-  useEffect(() => {
-    async function fetchData() {
-      try {
-        const data = await getEvents();
-        setEvents(data);
-      } catch (error) {
-        console.error(error);
-      }
-    }
-
-    fetchData();
-  }, []);
+export default function Home({events}:any) {
 
   return (
     <div className="">
