@@ -22,11 +22,11 @@ export async function getStaticProps({ params: { id } }) {
   };
 }
 
-export default function EventDetail({ event: { eventName, date } }) {
+export default function EventDetail({ event: { eventName, date, location, fee, time, eventType   } }: any) {
   return (
   <RootLayout>
     <div className="flex-items flex-row">
-      {eventName}---{date}
+      {eventName}---{date} --- {location} -- {fee} --- 
       <Link href="/events">Go Back</Link>
     </div>
   </RootLayout>
