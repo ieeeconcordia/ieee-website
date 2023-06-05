@@ -25,25 +25,26 @@ export default function Events({ events }: any) {
         </p>
 
         <div className="flex flex-row justify-center gap-7 flex-wrap">
-          {events.map((event :any) => {
-                  return (
-                      <div
-                          key={event._id}
-                          className="w-full sm:w-1/2 md:w-1/3 lg:w-1/3 xl:w-1/3 mb-10"
-                      >
-                          <EventCard
-                              key={event._id}
-                              _id={event._id}
-                              name={event.name}
-                              date={event.date}
-                              location={event.location}
-                              time={event.time}
-                              price={event.price}
-                              image={event.image}
-                              eventType={event.eventType} />
-                      </div>
-                  );
-              })}
+          {events.map((event: any) => {
+            return (
+              <div
+                key={event._id}
+                className="w-full sm:w-1/2 md:w-1/3 lg:w-1/3 xl:w-1/3 mb-10"
+              >
+                <EventCard
+                  key={event._id}
+                  _id={event._id}
+                  name={event.name}
+                  date={event.date}
+                  location={event.location}
+                  time={event.time}
+                  price={event.price}
+                  image={event.image}
+                  eventType={event.eventType}
+                />
+              </div>
+            );
+          })}
         </div>
       </div>
       <SponsorshipSection />
