@@ -26,7 +26,7 @@ export default function EventDetail({ event: { eventName, date, location, fee, t
   return (
   <RootLayout>
     <div className="flex-items flex-row">
-      {eventName}---{date} --- {location} -- {fee} --- 
+      {eventName}---{date} --- {location} -- {fee} --- {eventType} --
       <Link href="/events">Go Back</Link>
     </div>
   </RootLayout>
