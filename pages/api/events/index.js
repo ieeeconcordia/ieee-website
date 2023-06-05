@@ -1,4 +1,4 @@
-import { createEvent, getEvent, getEvents } from "../../../lib/mongo/events";
+import { createEvent, getEvent, getEvents } from "@/lib/mongo/events";
 
 const handler = async (req, res) => {
   

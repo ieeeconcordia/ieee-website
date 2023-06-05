@@ -1,122 +1,201 @@
-// TODO : refactor to ts
-import { useState } from 'react';
+import { useState } from "react";
 
 export default function EventForm() {
-  const [eventName, setEventName] = useState('');
-  const [date, setDate] = useState('');
-  const [location, setLocation] = useState('');
-  const [time, setTime] = useState('');
-  const [fee, setFee] = useState('');
-  const [eventType, setEventType] = useState('');
-  const [eventDetails, setEventDetails] = useState('');
+  const [name, setName] = useState("");
+  const [date, setDate] = useState("");
+  const [location, setLocation] = useState("");
+  const [time, setTime] = useState("");
+  const [description, setDescription] = useState("");
+  const [image, setImage] = useState("");
+  const [price, setPrice] = useState("");
+  const [eventType, setEventType] = useState("");
+  const [organizer, setOrganizer] = useState("");
+  const [sponsors, setSponsors] = useState([]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Handle form submission here
-    // You can access the form values using the state variables
-    const event = { eventName, date, location, time, fee, eventType };
-    let res = await fetch("http://localhost:3000/api/events", {
-    method: "POST",
-    body: JSON.stringify({
-      eventName: eventName,
-      date: date,
-      location: location,
-      time: time,
-      fee: fee,
-      eventType: eventType
-    }),
-  });
-  res = await res.json();
-  console.log(res)
-alert("Event created!");
+    const event = {
+      name,
+      date,
+      location,
+      time,
+      description,
+      image,
+      price,
+      eventType,
+      organizer,
+      sponsors,
+    };
+
+    let res = await fetch("/api/events", {
+      method: "POST",
+      body: JSON.stringify(event),
+    });
+
+    const data = await res.json();
+    console.log(data);
+    alert("Event created!");
 
     // Reset the form
-    setEventName('');
-    setDate('');
-    setLocation('');
-    setTime('');
-    setFee('');
-    setEventType('');
+    setName("");
+    setDate("");
+    setLocation("");
+    setTime("");
+    setDescription("");
+    setImage("");
+    setPrice("");
+    setEventType("");
+    setOrganizer("");
+    setSponsors([]);
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <div>
-        <label htmlFor="eventName">Event Name:</label>
+    <form onSubmit={handleSubmit} className="max-w-xl mx-auto space-y-4">
+      <div className="flex flex-col">
+        <label htmlFor="name" className="text-sm font-medium text-gray-700">
+          Event Name:
+        </label>
         <input
           type="text"
-          id="eventName"
-          value={eventName}
-          onChange={(e) => setEventName(e.target.value)}
+          id="name"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          className="border border-gray-300 rounded-md p-2"
         />
       </div>
 
-      <div>
-        <label htmlFor="date">Date:</label>
+      <div className="flex flex-col">
+        <label htmlFor="date" className="text-sm font-medium text-gray-700">
+          Date:
+        </label>
         <input
           type="date"
           id="date"
           value={date}
           onChange={(e) => setDate(e.target.value)}
+          className="border border-gray-300 rounded-md p-2"
         />
       </div>
 
-      <div>
-        <label htmlFor="location">Location:</label>
+      <div className="flex flex-col">
+        <label htmlFor="location" className="text-sm font-medium text-gray-700">
+          Location:
+        </label>
         <input
           type="text"
           id="location"
           value={location}
           onChange={(e) => setLocation(e.target.value)}
+          className="border border-gray-300 rounded-md p-2"
         />
       </div>
 
-      <div>
-        <label htmlFor="time">Time:</label>
+      <div className="flex flex-col">
+        <label htmlFor="time" className="text-sm font-medium text-gray-700">
+          Time:
+        </label>
         <input
           type="time"
           id="time"
           value={time}
           onChange={(e) => setTime(e.target.value)}
+          className="border border-gray-300 rounded-md p-2"
         />
       </div>
 
-      <div>
-        <label htmlFor="fee">Fee:</label>
+      <div className="flex flex-col">
+        <label
+          htmlFor="description"
+          className="text-sm font-medium text-gray-700"
+        >
+          Description:
+        </label>
+        <textarea
+          id="description"
+          value={description}
+          onChange={(e) => setDescription(e.target.value)}
+          className="border border-gray-300 rounded-md p-2"
+        />
+      </div>
+
+      <div className="flex flex-col">
+        <label htmlFor="image" className="text-sm font-medium text-gray-700">
+          Image URL:
+        </label>
         <input
           type="text"
-          id="fee"
-          value={fee}
-          onChange={(e) => setFee(e.target.value)}
+          id="image"
+          value={image}
+          onChange={(e) => setImage(e.target.value)}
+          className="border border-gray-300 rounded-md p-2"
         />
       </div>
 
-      <div>
-        <label htmlFor="eventType">Event Type:</label>
-        <select
+      <div className="flex flex-col">
+        <label htmlFor="price" className="text-sm font-medium text-gray-700">
+          Price:
+        </label>
+        <input
+          type="text"
+          id="price"
+          value={price}
+          onChange={(e) => setPrice(e.target.value)}
+          className="border border-gray-300 rounded-md p-2"
+        />
+      </div>
+
+      <div className="flex flex-col">
+        <label
+          htmlFor="eventType"
+          className="text-sm font-medium text-gray-700"
+        >
+          Event Type:
+        </label>
+        <input
+          type="text"
           id="eventType"
           value={eventType}
           onChange={(e) => setEventType(e.target.value)}
-        >
-          <option value="">Select an event type</option>
-          <option value="Conference">Tutorial</option>
-          <option value="Workshop">Competition</option>
-          <option value="Seminar">Social</option>
-          {/* Add more event types as needed */}
-        </select>
-      </div>
-      <div>
-        <label htmlFor="eventName">Event Details:</label>
-        <input
-          type="text"
-          id="eventName"
-          value={eventDetails}
-          onChange={(e) => setEventDetails(e.target.value)}
+          className="border border-gray-300 rounded-md p-2"
         />
       </div>
 
-      <button type="submit">Submit</button>
+      <div className="flex flex-col">
+        <label
+          htmlFor="organizer"
+          className="text-sm font-medium text-gray-700"
+        >
+          Organizer:
+        </label>
+        <input
+          type="text"
+          id="organizer"
+          value={organizer}
+          onChange={(e) => setOrganizer(e.target.value)}
+          className="border border-gray-300 rounded-md p-2"
+        />
+      </div>
+
+      <div className="flex flex-col">
+        <label htmlFor="sponsors" className="text-sm font-medium text-gray-700">
+          Sponsors (comma-separated):
+        </label>
+        <textarea
+          id="sponsors"
+          value={sponsors.join(", ")}
+          onChange={(e) =>
+            setSponsors(e.target.value.split(",").map((s) => s.trim()))}
+          className="border border-gray-300 rounded-md p-2"
+        />
+      </div>
+
+      <button
+        type="submit"
+        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+      >
+        Submit
+      </button>
     </form>
   );
 }

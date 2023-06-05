@@ -43,14 +43,15 @@ export default function Home({ events }: any) {
 
           <div className="flex flex-row justify-center gap-5 sm:gap-6 md:gap-10">
             {events.slice(0, 3).map((event: any) => (
-              <EventCard
+              <EventCard 
                 key={event._id}
                 _id={event._id}
-                eventName={event.eventName}
+               name={event.name}
                 date={event.date}
                 location={event.location}
                 time={event.time}
-                fee={event.fee}
+                price={event.price}
+                image={event.image}
                 eventType={event.eventType}
               />
             ))}
