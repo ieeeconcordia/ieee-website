@@ -24,7 +24,7 @@ export default function EventCard({ _id, name, date, location, time, description
   return (
 <div className="w-80 flex flex-col justify-start bg-white border rounded-xl">
       <div className="h-56 bg-slate-400 rounded-t-xl">
-        <div className="w-1/3 p-1 bg-sky-400 rounded-tl-lg text-white">
+        <div className="w-fit h-8 py-1 px-6 bg-sky-400 rounded-tl-lg text-white">
           {eventType}
         </div>
         <img src={image} alt={name} className="w-full object-cover rounded-t-xl" />
