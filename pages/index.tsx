@@ -68,10 +68,12 @@ export default function Home({events}:any) {
             </p>
           </div>
 
-          <div className="flex flex-col lg:flex-row items-center justify-center gap-10">
-          <ProjectCard />
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3  justify-items-center gap-6 sm:gap-10">
+           <ProjectCard />
             <ProjectCard />
             <ProjectCard />
+            <ProjectCard />
+
           </div>
         </section>
 

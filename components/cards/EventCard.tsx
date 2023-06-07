@@ -22,9 +22,9 @@ type EventProps = {
 
 export default function EventCard({ _id, name, date, location, time, description, image, price, organizer, eventType, sponsors }: EventProps) {
   return (
-<div className="w-80 flex flex-col justify-start bg-white border rounded-xl">
-      <div className="h-56 bg-slate-400 rounded-t-xl">
-        <div className="w-fit h-8 py-1 px-6 bg-sky-400 rounded-tl-lg text-white">
+<div className="w-72 sm:w-80 flex flex-col justify-start bg-white border rounded-xl">
+      <div className="h-44 sm:h-56 bg-slate-400 rounded-t-xl">
+        <div className="w-fit h-8 py-1 px-4 sm:px-6 bg-sky-400 rounded-tl-lg text-white font-raleway">
           {eventType}
         </div>
         <img src={image} alt={name} className="w-full object-cover rounded-t-xl" />
@@ -36,7 +36,7 @@ export default function EventCard({ _id, name, date, location, time, description
           <p className="italic text-sm font-light">Additional tags</p>
         </div>
 
-        <div className="flex flex-row items-center gap-6">
+        <div className="flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:gap-6">
           <div className="flex flex-row items-center text-sm gap-1 text-gray-600">
             <IoTimeOutline size={24} color="gray" /> {date}
           </div>
@@ -46,7 +46,7 @@ export default function EventCard({ _id, name, date, location, time, description
         </div>
 
 
-        <p className="text-sm text-gray-600">
+        <p className="text-sm text-gray-600 line-clamp-3">
           Forem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu
           turpis molestie, dictum est a, mattis tellus
         </p>

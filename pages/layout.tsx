@@ -1,5 +1,6 @@
 import Navbar from '@/components/navbar';
 import Footer from '@/components/Footer';
+import EventCard from '@/components/cards/EventCard';
 
 export default function RootLayout({
   children,
@@ -11,6 +12,7 @@ export default function RootLayout({
           <Navbar />
           <div className=''>{children}</div>
           {/* <Footer /> */}
+          {/* <EventCard _id={''} name={''} date={''} location={''} time={''} description={''} price={''} image={''} organizer={''} eventType={''} sponsors={''} /> */}
         </main>
   );
 }

@@ -7,9 +7,9 @@ import {
 
 export default function ProjectCard() {
   return (
-    <div className="w-80 flex flex-col justify-start bg-white border rounded-xl">
-      <div className="h-56 bg-slate-400 rounded-t-xl">
-        <div className="w-1/3 p-1 bg-yellow-400 rounded-tl-lg text-white font-raleway">
+    <div className="w-72 sm:w-80 flex flex-col justify-start bg-white border rounded-xl">
+      <div className="h-44 sm:h-56 bg-slate-400 rounded-t-xl">
+        <div className="w-fit h-8 py-1 px-4 sm:px-6 bg-yellow-400 rounded-tl-lg text-white font-raleway">
           Electrical
         </div>
       </div>

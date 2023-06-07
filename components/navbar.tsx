@@ -36,11 +36,11 @@ export default function Navbar() {
   // }
 
   return (
-    <nav className="nav_container flex flex-col items-center pb-6 gap-3 ">
-      <div className="min-w-40 bg-green-500 rounded-b-xl text-center text-black font-raleway font-bold align-middle py-2 px-8 gap-0">
+    <nav className="nav_container flex flex-col items-center pb-6 sm:gap-3 ">
+      <div className="w-full md:w-fit bg-green-500 md:rounded-b-xl text-center text-black font-raleway font-bold align-middle py-2 px-8 gap-0">
         Lab Status: Open
       </div>
-      <div className="flex flex-row items-center w-full justify-between px-6 md:px-12 py-6">
+      <div className="flex flex-row items-center w-full justify-between px-4 md:px-12 py-6">
         <div className="flex items-center">
           <Link href={"/"}>
             <Image src={logo} alt={"IEEE Concordia"} className="w-20 h-20" />
