@@ -16,7 +16,7 @@ export const SponsorshipSection = () => {
       </p>
       </div>
       
-      <div className="flex flex-row justify-center gap-8">
+      <div className="flex flex-col md:flex-row justify-center gap-8">
         <Image src={sponsors} alt={""} className="w-40" />
         <Image src={sponsors} alt={""} className="w-40" />
         <Image src={sponsors} alt={""} className="w-40" />

@@ -10,7 +10,7 @@ import { SimpleBtn } from "./buttons/SimpleBtn";
 export default function Footer() {
   return (
     <footer className="bg-footer-bg">
-      <div className="container flex flex-col justify-center mx-auto pb-20 pt-10 px-section">
+      <div className="container flex flex-col justify-center mx-auto pb-20 pt-10 lg:px-section">
 
         <div className="flex flex-wrap mx-4">
 

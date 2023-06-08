@@ -11,7 +11,7 @@ export default function RootLayout({
         <main className=''>
           <Navbar />
           <div className=''>{children}</div>
-          {/* <Footer /> */}
+          <Footer />
           {/* <EventCard _id={''} name={''} date={''} location={''} time={''} description={''} price={''} image={''} organizer={''} eventType={''} sponsors={''} /> */}
         </main>
   );
