@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import { slide as Menu } from 'react-burger-menu';
+import { useState } from "react";
+import { slide as Menu } from "react-burger-menu";
 
 // ...
 
@@ -7,11 +7,10 @@ import Link from "next/link";
 import Image from "next/image";
 import logo from "../public/logo.png";
 import { SponsorshipBtnNav } from "./buttons/SponsorshipBtn";
-import { IoMenuOutline } from 'react-icons/io5';
-import BurgerMenu from './BurgerMenu';
+import { IoMenuOutline } from "react-icons/io5";
+import BurgerMenu from "./BurgerMenu";
 
 export default function Navbar() {
-
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const handleMenuToggle = () => {
@@ -47,30 +46,34 @@ export default function Navbar() {
           </Link>
         </div>
 
-        <BurgerMenu />
-        {/* <div className="flex flex-row items-center justify-between mt-4 md:mt-0 gap-6">
-          <ul className="flex flex-col md:flex-row items-center font-raleway text-label-l font-bold gap-6">
-            <li>
-              <Link href="/about">About Us</Link>
-            </li>
+        <div className="md:hidden">
+          <BurgerMenu />
+        </div>
 
-            <li>
-              <Link href="/events">Events</Link>
-            </li>
+        <div className="hidden md:block">
+          <div className="flex flex-row items-center justify-between mt-4 md:mt-0 gap-6">
+            <ul className="flex flex-row items-center font-raleway text-label-l font-bold gap-6">
+              <li>
+                <Link href="/about">About Us</Link>
+              </li>
 
-            <li>
-              <Link href="/projects">Projects</Link>
-            </li>
+              <li>
+                <Link href="/events">Events</Link>
+              </li>
 
-            <li className="line-through decoration-2">Lab</li>
+              <li>
+                <Link href="/projects">Projects</Link>
+              </li>
 
-            <li>
-              <Link href="contact">Contact us</Link>
-            </li>
-          </ul>
-          <SponsorshipBtnNav />
-        </div> */}
-        
+              <li className="line-through decoration-2">Lab</li>
+
+              <li>
+                <Link href="contact">Contact us</Link>
+              </li>
+            </ul>
+            <SponsorshipBtnNav />
+          </div>
+        </div>
       </div>
     </nav>
   );
