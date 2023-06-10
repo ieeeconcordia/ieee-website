@@ -1,13 +1,13 @@
-import Link from "next/link";
-import { getAllEvents } from "@/lib/events.js";
-import RootLayout from "@/pages/layout";
-import EventCard from "@/components/cards/EventCard";
+
+import Link from 'next/link';
+import { getAllEvents } from '@/lib/events.js';
+import RootLayout from '@/layout';
 
 export async function getStaticProps() {
-  const events = await getAllEvents();
+  const allEvents = await getAllEvents();
   return {
     props: {
-      events,
+      events : allEvents ,
     },
   };
 }
@@ -31,8 +31,8 @@ export default function Events({ events }: any) {
                 className="w-full sm:w-1/2 md:w-1/3 lg:w-1/3 xl:w-1/3 mb-10"
               >
                 <EventCard
-                  key={event.slug}
-                  _id={event.slug}
+                  key={event._id}
+                  _id={event._id}
                   name={event.name}
                   date={event.date}
                   location={event.location}
@@ -46,6 +46,8 @@ export default function Events({ events }: any) {
           })}
         </div>
       </div>
+      <SponsorshipSection />
+      <EventForm></EventForm>
     </RootLayout>
   );
 }
