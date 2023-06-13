@@ -4,8 +4,8 @@ export default function contact() {
   return (
     <>
       <RootLayout>
-        <div className="flex flex-col justify-center items-center text-center gap-7 p-container pb-16">
-          <h2 className="text-display-m font-lora font-bold text-secondary">
+        <div className="flex flex-col text-center items-center justify-items-center gap-6 px-8 pb-16 sm:px-20 xl:px-section md:pb-14">
+          <h2 className="font-lora font-bold text-headline-m sm:text-headline-l text-secondary pb-3">
             Contact Us
           </h2>
           <p className="text-title-m font-raleway text-title-gray">

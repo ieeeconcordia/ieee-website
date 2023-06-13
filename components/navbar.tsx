@@ -36,8 +36,8 @@ export default function Navbar() {
 
   return (
     <nav className="nav_container flex flex-col items-center pb-6 sm:gap-3 ">
-      <div className="w-full md:w-fit bg-green-500 md:rounded-b-xl text-center text-black font-raleway font-bold align-middle py-2 px-8 gap-0">
-        Lab Status: Open
+      <div className="w-full md:w-fit bg-yellow-400 md:rounded-b-xl text-center text-black font-raleway font-bold align-middle py-2 px-8 gap-0">
+        Lab Status: Unavailable
       </div>
       <div className="flex flex-row items-center w-full justify-between px-4 md:px-12 py-6">
         <div className="flex items-center">
