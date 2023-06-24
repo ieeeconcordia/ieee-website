@@ -4,7 +4,6 @@ import EventCard from "@/components/cards/EventCard";
 import ProjectCard from "@/components/cards/ProjectCard";
 import { SponsorshipSection } from "@/components/SponsorshipSection";
 import { getAllEvents } from "@/lib/events";
-import { getEvents } from "@/lib/mongo/events";
 import { SimpleBtn } from "@/components/buttons/SimpleBtn";
 
 // Fetch all events and pass them as a prop to the Events component

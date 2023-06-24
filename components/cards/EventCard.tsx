@@ -19,32 +19,7 @@ type EventProps = {
   eventType: string;
   sponsors: string;
 };
-  _id: string;
-  name: string;
-  date: string;
-  location: string;
-  time: string;
-  description: string;
-  price: string;
-  image: string;
-  organizer: string;
-  eventType: string;
-  sponsors: string;
-};
 
-export default function EventCard({
-  _id,
-  name,
-  date,
-  location,
-  time,
-  description,
-  image,
-  price,
-  organizer,
-  eventType,
-  sponsors,
-}: EventProps) {
 export default function EventCard({
   _id,
   name,
@@ -64,11 +39,6 @@ export default function EventCard({
         <div className="absolute w-32 p-1 bg-sky-400 rounded-tl-lg rounded-br-lg text-white">
           {eventType}
         </div>
-        <img
-          src={image}
-          alt={name}
-          className="w-full object-cover rounded-t-xl"
-        />
         <img
           src={image}
           alt={name}
@@ -96,7 +66,6 @@ export default function EventCard({
         </div>
 
         <p className="text-sm text-gray-600 line-clamp-3">
-        <p className="text-sm text-gray-600">
           Forem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu
           turpis molestie, dictum est a, mattis tellus
         </p>
