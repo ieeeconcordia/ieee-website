@@ -19,6 +19,18 @@ type EventProps = {
   eventType: string;
   sponsors: string;
 };
+  _id: string;
+  name: string;
+  date: string;
+  location: string;
+  time: string;
+  description: string;
+  price: string;
+  image: string;
+  organizer: string;
+  eventType: string;
+  sponsors: string;
+};
 
 export default function EventCard({
   _id,
@@ -33,10 +45,23 @@ export default function EventCard({
   eventType,
   sponsors,
 }: EventProps) {
+export default function EventCard({
+  _id,
+  name,
+  date,
+  location,
+  time,
+  description,
+  image,
+  price,
+  organizer,
+  eventType,
+  sponsors,
+}: EventProps) {
   return (
-    <div className="w-72 sm:w-80 flex flex-col justify-start bg-white border rounded-xl">
-      <div className="h-44 sm:h-56 bg-slate-400 rounded-t-xl">
-        <div className="w-fit h-8 py-1 px-4 sm:px-6 bg-sky-400 rounded-tl-lg text-white font-raleway">
+    <div className="w-80 flex flex-col justify-start bg-white border rounded-xl">
+      <div className="w-full h-fit bg-slate-400 rounded-t-xl">
+        <div className="absolute w-32 p-1 bg-sky-400 rounded-tl-lg rounded-br-lg text-white">
           {eventType}
         </div>
         <img
@@ -44,9 +69,17 @@ export default function EventCard({
           alt={name}
           className="w-full object-cover rounded-t-xl"
         />
+        <img
+          src={image}
+          alt={name}
+          className="w-full object-cover rounded-t-xl"
+        />
       </div>
-      <div className="w-full flex flex-col p-4 gap-3 text-start rounded-b-xl">
+      <div className="w-full flex flex-col px-4 gap-3 text-start rounded-b-xl">
         <div>
+          <h3 className="w-full text-title-l font-semibold font-raleway text-black">
+            {name}
+          </h3>
           <h3 className="w-full text-title-l font-semibold font-raleway text-black">
             {name}
           </h3>
@@ -63,6 +96,7 @@ export default function EventCard({
         </div>
 
         <p className="text-sm text-gray-600 line-clamp-3">
+        <p className="text-sm text-gray-600">
           Forem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu
           turpis molestie, dictum est a, mattis tellus
         </p>
@@ -71,6 +105,7 @@ export default function EventCard({
         <Link href={`/events/${_id}`}>
           <div className="flex flex-row gap-2 items-center text-sm text-cyan-400">
             <div className="w-fit rounded p-1 bg-gradient-to-r from-cyan-400 to-sky-400">
+              <IoArrowForward size={16} color="white" />
               <IoArrowForward size={16} color="white" />
             </div>
             Learn More

@@ -3,14 +3,17 @@ import RootLayout from "@/pages/layout";
 import EventCard from "@/components/cards/EventCard";
 import ProjectCard from "@/components/cards/ProjectCard";
 import { SponsorshipSection } from "@/components/SponsorshipSection";
+import { getAllEvents } from "@/lib/events";
 import { getEvents } from "@/lib/mongo/events";
 import { SimpleBtn } from "@/components/buttons/SimpleBtn";
 
 // Fetch all events and pass them as a prop to the Events component
 export async function getStaticProps() {
-  const { events } = await getEvents();
+  const events = await getAllEvents();
   return {
-    props: { events },
+    props: {
+      events,
+    },
   };
 }
 
@@ -121,8 +124,8 @@ export default function Home({ events }: any) {
           <div className="flex flex-row justify-center gap-5 sm:gap-6 md:gap-10">
             {events.slice(0, 3).map((event: any) => (
               <EventCard 
-                key={event._id}
-                _id={event._id}
+                key={event.slug}
+                _id={event.slug}
                name={event.name}
                 date={event.date}
                 location={event.location}

@@ -1,17 +1,16 @@
-import { getEvents } from "@/lib/mongo/events";
+import Link from "next/link";
+import { getAllEvents } from "@/lib/events.js";
 import RootLayout from "@/pages/layout";
 import EventCard from "@/components/cards/EventCard";
-import { SponsorshipSection } from "@/components/SponsorshipSection";
-import EventForm from "@/components/forms/EventForm";
 
-// Fetch all events and pass them as a prop to the Events component
 export async function getStaticProps() {
-  const events = await getEvents();
+  const events = await getAllEvents();
   return {
-    props: { events },
+    props: {
+      events,
+    },
   };
 }
-
 export default function Events({ events }: any) {
   return (
     <RootLayout>
@@ -26,27 +25,29 @@ export default function Events({ events }: any) {
           </p>
         </div>
 
-        <div className="w-fit grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 justify-items-center gap-6 sm:gap-10 pt-6">
-          {events.map((event: any, index: any) => (
-            <EventCard
-              key={event._id}
-              _id={event._id}
-              name={event.eventName}
-              date={event.date}
-              location={event.location}
-              time={event.time}
-              price={event.fee}
-              eventType={event.eventType}
-              description={""}
-              image={""}
-              organizer={""}
-              sponsors={""}
-            />
-          ))}
+        <div className="flex flex-row justify-center gap-7 flex-wrap">
+          {events.map((event: any) => {
+            return (
+              <div
+                key={event._id}
+                className="w-full sm:w-1/2 md:w-1/3 lg:w-1/3 xl:w-1/3 mb-10"
+              >
+                <EventCard
+                  key={event.slug}
+                  _id={event.slug}
+                  name={event.name}
+                  date={event.date}
+                  location={event.location}
+                  time={event.time}
+                  price={event.price}
+                  image={event.image}
+                  eventType={event.eventType}
+                />
+              </div>
+            );
+          })}
         </div>
       </div>
-      <SponsorshipSection />
-      <EventForm></EventForm>
     </RootLayout>
   );
 }
