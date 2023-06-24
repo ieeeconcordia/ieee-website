@@ -7,9 +7,9 @@
 }
 
 .markdown h2 {
-    @apply font-raleway font-bold text-headline-m text-gray-500 pb-3
+    @apply font-raleway font-bold text-black text-title-l pb-3
 }
 
-.markdown h2 {
-    @apply font-raleway font-bold text-headline-m text-gray-500 pb-3
+.markdown h3 {
+    @apply font-raleway font-bold text-title-m text-gray-500 pb-3
 }
