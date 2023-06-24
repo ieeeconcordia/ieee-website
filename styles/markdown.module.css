@@ -1,0 +1,15 @@
+.markdown {
+    @apply flex flex-col justify-start gap-7 px-section pb-16
+}
+
+.markdown h1 {
+    @apply font-lora font-bold text-center text-headline-l text-secondary pb-3
+}
+
+.markdown h2 {
+    @apply font-raleway font-bold text-headline-m text-gray-500 pb-3
+}
+
+.markdown h2 {
+    @apply font-raleway font-bold text-headline-m text-gray-500 pb-3
+}

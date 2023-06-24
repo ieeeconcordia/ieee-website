@@ -1,9 +1,11 @@
-import { getEventData, getEventSlugs } from '@/lib/events';
+import { getEventData, getEventSlugs } from "@/lib/events";
+import RootLayout from "../layout";
+import styles from "@/styles/markdown.module.css";
 
 export async function getStaticPaths() {
   const paths = getEventSlugs().map((slug) => ({
     params: {
-      slug: slug.replace(/\.md$/, ''),
+      slug: slug.replace(/\.md$/, ""),
     },
   }));
 
@@ -13,7 +15,7 @@ export async function getStaticPaths() {
   };
 }
 
-export async function getStaticProps({ params } : any ) {
+export async function getStaticProps({ params }: any) {
   const eventData = await getEventData(params.slug);
   return {
     props: {
@@ -24,10 +26,12 @@ export async function getStaticProps({ params } : any ) {
 
 export default function Event({ eventData }: any) {
   return (
-    <div>
+    <RootLayout>
       <h1>{eventData.name}</h1>
-      <div dangerouslySetInnerHTML={{ __html: eventData.contentHtml }} />
-    </div>
+      <div
+        className={styles.markdown}
+        dangerouslySetInnerHTML={{ __html: eventData.contentHtml }}
+      />
+    </RootLayout>
   );
 }
-

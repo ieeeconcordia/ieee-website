@@ -10,7 +10,7 @@ const raleway = Raleway({
 const lora = Lora({
   subsets: ["latin"],
   // this will be the css variable
-  
+
   variable: "--font-lora",
 });
 
