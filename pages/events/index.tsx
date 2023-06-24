@@ -6,7 +6,7 @@ import EventForm from "@/components/forms/EventForm";
 
 // Fetch all events and pass them as a prop to the Events component
 export async function getStaticProps() {
-  const { events } = await getEvents();
+  const events = await getEvents();
   return {
     props: { events },
   };

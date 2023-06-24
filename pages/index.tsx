@@ -44,24 +44,27 @@ export default function Home({ events }: any) {
           </div>
 
           <div className="w-fit grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 justify-items-center gap-6 sm:gap-10 pb-6">
-            {events.map((event: any, index: any) => index < 3 && (
-              <EventCard
-                key={event._id}
-                _id={event._id}
-                name={event.eventName}
-                date={event.date}
-                location={event.location}
-                time={event.time}
-                price={event.fee}
-                eventType={event.eventType}
-                description={""}
-                image={""}
-                organizer={""}
-                sponsors={""}
-              />
-            ))}
+            {events.map(
+              (event: any, index: any) =>
+                index < 3 && (
+                  <EventCard
+                    key={event._id}
+                    _id={event._id}
+                    name={event.eventName}
+                    date={event.date}
+                    location={event.location}
+                    time={event.time}
+                    price={event.fee}
+                    eventType={event.eventType}
+                    description={""}
+                    image={""}
+                    organizer={""}
+                    sponsors={""}
+                  />
+                )
+            )}
           </div>
-          <SimpleBtn text="See more..." href="/events/"/>
+          <SimpleBtn text="See more..." href="/events/" />
         </section>
 
         <section className="flex flex-col text-center items-center justify-items-center gap-6 px-8 pb-16 sm:px-20 xl:px-section md:pb-14">
@@ -81,7 +84,7 @@ export default function Home({ events }: any) {
             <ProjectCard />
           </div>
 
-          <SimpleBtn text="See more..." href="/projects"/>
+          <SimpleBtn text="See more..." href="/projects" />
         </section>
 
         {/* 
