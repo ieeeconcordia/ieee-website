@@ -45,11 +45,8 @@ export default function EventCard({
           className="w-full object-cover rounded-t-xl"
         />
       </div>
-      <div className="w-full flex flex-col px-4 gap-3 text-start rounded-b-xl">
+      <div className="w-full flex flex-col px-4 pb-4 gap-3 text-start rounded-b-xl">
         <div>
-          <h3 className="w-full text-title-l font-semibold font-raleway text-black">
-            {name}
-          </h3>
           <h3 className="w-full text-title-l font-semibold font-raleway text-black">
             {name}
           </h3>
@@ -74,7 +71,6 @@ export default function EventCard({
         <Link href={`/events/${_id}`}>
           <div className="flex flex-row gap-2 items-center text-sm text-cyan-400">
             <div className="w-fit rounded p-1 bg-gradient-to-r from-cyan-400 to-sky-400">
-              <IoArrowForward size={16} color="white" />
               <IoArrowForward size={16} color="white" />
             </div>
             Learn More

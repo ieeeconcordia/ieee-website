@@ -50,16 +50,16 @@ export default function Home({ events }: any) {
               (event: any, index: any) =>
                 index < 3 && (
                   <EventCard
-                    key={event._id}
-                    _id={event._id}
-                    name={event.eventName}
+                    key={event.slug}
+                    _id={event.slug}
+                    name={event.name}
                     date={event.date}
                     location={event.location}
                     time={event.time}
-                    price={event.fee}
+                    price={event.price}
                     eventType={event.eventType}
-                    description={""}
-                    image={""}
+                    description={event.description}
+                    image={event.image}
                     organizer={""}
                     sponsors={""}
                   />

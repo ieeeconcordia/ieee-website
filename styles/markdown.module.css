@@ -1,15 +1,36 @@
 .markdown {
-    @apply flex flex-col justify-start gap-7 px-section pb-16
+    @apply max-w-4xl md:max-w-full flex flex-col gap-2 px-8 pb-16 sm:px-20 xl:px-section md:pb-20
 }
 
 .markdown h1 {
-    @apply font-lora font-bold text-center text-headline-l text-secondary pb-3
+    @apply font-lora font-bold text-center text-headline-l text-secondary pb-4;
+
 }
 
 .markdown h2 {
-    @apply font-raleway font-bold text-black text-title-l pb-3
+    @apply font-bold font-raleway text-title-l text-secondary pt-2
 }
 
 .markdown h3 {
-    @apply font-raleway font-bold text-title-m text-gray-500 pb-3
+    @apply font-raleway font-semibold text-title-m text-gray-600 pt-2
+}
+
+.markdown img {
+    @apply w-full max-h-80 object-cover rounded-lg mb-2
+}
+
+.markdown strong {
+    @apply font-raleway font-bold 
+}
+
+.markdown p {
+    @apply font-raleway text-gray-600 md:text-lg
+}
+
+.markdown ul {
+    @apply m-auto px-4 flex flex-col lg:flex-row items-start md:justify-center gap-2 md:gap-6 p-2 bg-slate-200 rounded-lg
+}
+
+.markdown li {
+    @apply text-lg md:text-xl 
 }

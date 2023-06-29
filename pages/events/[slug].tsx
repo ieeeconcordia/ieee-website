@@ -27,7 +27,6 @@ export async function getStaticProps({ params }: any) {
 export default function Event({ eventData }: any) {
   return (
     <RootLayout>
-      <h1>{eventData.name}</h1>
       <div
         className={styles.markdown}
         dangerouslySetInnerHTML={{ __html: eventData.contentHtml }}

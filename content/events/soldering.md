@@ -11,13 +11,13 @@ eventType: "Competition"
 sponsors: ["Sponsors "]
 ---
 
-# Event Name
+# Soldering
 
-![]("https://picsum.photos/seed/picsum/536/354")
+![](https://picsum.photos/seed/picsum/536/354)
 
-**Date**: 2023-06-09
-**Time**: 14:00
-**Location** : SGW 
+- **Date**: 2023-06-09
+- **Time**: 14:00
+- **Location**: SGW - Hall Building 
 
 ## Description
 

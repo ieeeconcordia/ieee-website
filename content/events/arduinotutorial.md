@@ -11,13 +11,13 @@ eventType: "tutorial"
 sponsors: ["Sponsors "]
 ---
 
-# Event Name
+# Arduino Tutorial
 
 ![Event Image](/images/event-image.jpg)
 
-**Date**: 2023-06-09
-**Time**: 14:00
-**Location** : 
+- **Date**: 2023-06-09
+- **Time**: 14:00
+- **Location**: 
 
 ## Description
 
