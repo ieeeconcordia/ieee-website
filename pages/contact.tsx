@@ -1,14 +1,17 @@
 import { SponsorshipSection } from "@/components/SponsorshipSection";
 import RootLayout from "./layout";
 import { useState } from "react";
+import { MdCheckCircleOutline } from "react-icons/md";
 ("use client");
 
-export default function contact() {
+export default function Contact() {
   const [email, setEmail] = useState("");
   const [subject, setSubject] = useState("");
-  const [request, setRequest] = useState("");
+  const [request, setRequest] = useState("it");
   const [message, setMessage] = useState("");
   const [error, setError] = useState([]);
+
+  const [successMessage, setSuccessMessage] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -18,7 +21,7 @@ export default function contact() {
     console.log("Request: ", request);
     console.log("Message: ", message);
 
-    const res = await fetch("api/users", {
+    const res = await fetch("api/contact", {
       method: "POST",
       headers: {
         "Content-type": "application/json",
@@ -32,7 +35,17 @@ export default function contact() {
     });
 
     const { msg } = await res.json();
-    setError(msg);
+
+    if (msg) {
+      setSuccessMessage(msg);
+
+      // Reset the input fields on successful email sending
+      setEmail("");
+      setSubject("");
+      setRequest("IT");
+      setMessage("");
+    }
+
     console.log(error);
   };
 
@@ -47,6 +60,25 @@ export default function contact() {
             Forem ipsum dolora asdklasjdkasdj sit amet, consectetur adipiscing
             elit. Etiam eu turpis molestie, dictum est a
           </p>
+          {successMessage != "" && (
+            <div
+              className="bg-teal-100 border-t-4 border-teal-500 rounded-b text-teal-900 px-4 py-3 shadow-md"
+              role="alert"
+            >
+              <div className="flex flex-row gap-4">
+                <div className="m-auto">
+                  <MdCheckCircleOutline size={25} />
+                </div>
+                <div className="flex flex-col justify-start items-start">
+                  <p className="font-bold">Email sent successfully!</p>
+                  <p className="text-sm">
+                    The IEEE Concordia team will get back to you asap. Thank
+                    you!
+                  </p>
+                </div>
+              </div>
+            </div>
+          )}
           <form
             onSubmit={handleSubmit}
             action="#"
@@ -85,19 +117,20 @@ export default function contact() {
                 Type of Request
               </label>
               <select
+                className="p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500"
                 onChange={(e) => setRequest(e.target.value)}
                 value={request}
                 name="TypeofReq"
                 id="request"
-                placeholder=""
+                placeholder="Option"
                 required
               >
-                <option value="it">IT</option>
-                <option value="lab">Lab Related</option>
-                <option value="events">Events</option>
-                <option value="projects">Projects</option>
-                <option value="Academics">Academics</option>
-                <option value="other">Other</option>
+                <option value="IT">IT</option>
+                <option value="Lab related">Lab Related</option>
+                <option value="Academics">Events (Tutorials)</option>
+                <option value="Competitions">Events (Competitions)</option>
+                <option value="Projects">Projects</option>
+                <option value="Other">Other</option>
               </select>
             </div>
             <div className="sm:col-span-2">
@@ -122,9 +155,6 @@ export default function contact() {
               </button>
             </div>
           </form>
-          <div className="bg-slate-100 flex flex-col">
-            <div className="text-red-600 px-5 py-2">Error Message</div>
-          </div>
         </div>
 
         <SponsorshipSection />
