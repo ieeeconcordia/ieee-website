@@ -1,7 +1,10 @@
+import Example from "@/components/Example";
+import Navbar from "@/components/navbar";
+
 export default function Laboratory() {
-    return (
-      <>
-        <h1>Laboratory Screen</h1>
-      </>
-    )
-  }
+  return (
+    <>
+      <Navbar />
+    </>
+  );
+}

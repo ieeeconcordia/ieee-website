@@ -1,38 +1,33 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { slide as Menu } from "react-burger-menu";
-
-// ...
-
 import Link from "next/link";
 import Image from "next/image";
 import logo from "../public/logo.png";
 import { SponsorshipBtnNav } from "./buttons/SponsorshipBtn";
 import { IoMenuOutline } from "react-icons/io5";
 import BurgerMenu from "./BurgerMenu";
+import Example from "./Example";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
+  const [isMobile, setIsMobile] = useState(false);
   const handleMenuToggle = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  // const burgerMenu = {
-  //     <Menu isOpen={isMenuOpen} onStateChange={state => setIsMenuOpen(state.isOpen)} right>
-  //         <Link href="/about" onClick={handleMenuToggle}>
-  //           <a>About Us</a>
-  //         </Link>
-  //         <Link href="/events" onClick={handleMenuToggle}>
-  //           <a>Events</a>
-  //         </Link>
-  //         <Link href="/projects" onClick={handleMenuToggle}>
-  //           <a>Projects</a>
-  //         </Link>
-  //         <Link href="/contact" onClick={handleMenuToggle}>
-  //           <a>Contact Us</a>
-  //         </Link>
-  //       </Menu>
-  // }
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768); // Adjust the breakpoint as needed
+    };
+
+    handleResize(); // Check the initial screen size
+
+    window.addEventListener("resize", handleResize); // Listen for resize events
+
+    return () => {
+      window.removeEventListener("resize", handleResize); // Clean up the event listener
+    };
+  }, []);
 
   return (
     <nav className="nav_container flex flex-col items-center sm:gap-3 ">
@@ -45,34 +40,35 @@ export default function Navbar() {
             <Image src={logo} alt={"IEEE Concordia"} className="w-20 h-20" />
           </Link>
         </div>
+        <div>
+          {isMobile ? (
+            // Render the hamburger menu for small screens
+            <Example />
+          ) : (
+            // Render the regular navbar for large screens
+            <div className="flex flex-row items-center justify-between mt-4 md:mt-0 gap-6">
+              <ul className="flex flex-row items-center font-raleway text-label-l font-bold gap-6">
+                <li>
+                  <Link href="/about">About Us</Link>
+                </li>
 
-        <div className="md:hidden">
-          <BurgerMenu />
-        </div>
+                <li>
+                  <Link href="/events">Events</Link>
+                </li>
 
-        <div className="hidden md:block">
-          <div className="flex flex-row items-center justify-between mt-4 md:mt-0 gap-6">
-            <ul className="flex flex-row items-center font-raleway text-label-l font-bold gap-6">
-              <li>
-                <Link href="/about">About Us</Link>
-              </li>
+                <li>
+                  <Link href="/projects">Projects</Link>
+                </li>
 
-              <li>
-                <Link href="/events">Events</Link>
-              </li>
+                <li className="line-through decoration-2">Lab</li>
 
-              <li>
-                <Link href="/projects">Projects</Link>
-              </li>
-
-              <li className="line-through decoration-2">Lab</li>
-
-              <li>
-                <Link href="contact">Contact us</Link>
-              </li>
-            </ul>
-            <SponsorshipBtnNav />
-          </div>
+                <li>
+                  <Link href="contact">Contact us</Link>
+                </li>
+              </ul>
+              <SponsorshipBtnNav />
+            </div>
+          )}
         </div>
       </div>
     </nav>
