@@ -1,10 +1,11 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, Suspense } from "react";
 import RootLayout from "@/pages/layout";
 import EventCard from "@/components/cards/EventCard";
 import ProjectCard from "@/components/cards/ProjectCard";
 import { SponsorshipSection } from "@/components/SponsorshipSection";
 import { getAllEvents } from "@/lib/events";
 import { SimpleBtn } from "@/components/buttons/SimpleBtn";
+import Loading from "@/components/animations/Loading";
 
 // Fetch all events and pass them as a prop to the Events component
 export async function getStaticProps() {
@@ -17,6 +18,15 @@ export async function getStaticProps() {
 }
 
 export default function Home({ events }: any) {
+  const [loading, setLoading] = useState(true); // Add a loading state
+
+  useEffect(() => {
+    // Simulate async loading
+    setTimeout(() => {
+      setLoading(false);
+    }, 2000); // Set a timeout to simulate loading time
+  }, []);
+
   return (
     <div className="">
       <RootLayout>
@@ -44,28 +54,29 @@ export default function Home({ events }: any) {
               elit. Etiam eu turpis molestie, dictum est a
             </p>
           </div>
-
-          <div className="w-fit grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 justify-items-center gap-6 sm:gap-10 pb-6">
-            {events.map(
-              (event: any, index: any) =>
-                index < 3 && (
-                  <EventCard
-                    key={event.slug}
-                    _id={event.slug}
-                    name={event.name}
-                    date={event.date}
-                    location={event.location}
-                    time={event.time}
-                    price={event.price}
-                    eventType={event.eventType}
-                    description={event.description}
-                    image={event.image}
-                    organizer={""}
-                    sponsors={""}
-                  />
-                )
-            )}
-          </div>
+          <Suspense fallback={<Loading />}>
+            <div className="w-fit grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 justify-items-center gap-6 sm:gap-10 pb-6">
+              {events.map(
+                (event: any, index: any) =>
+                  index < 3 && (
+                    <EventCard
+                      key={event.slug}
+                      _id={event.slug}
+                      name={event.name}
+                      date={event.date}
+                      location={event.location}
+                      time={event.time}
+                      price={event.price}
+                      eventType={event.eventType}
+                      description={event.description}
+                      image={event.image}
+                      organizer={""}
+                      sponsors={""}
+                    />
+                  )
+              )}
+            </div>
+          </Suspense>
           <SimpleBtn text="See more..." href="/events/" />
         </section>
 

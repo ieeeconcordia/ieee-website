@@ -34,7 +34,7 @@ export default function EventCard({
   sponsors,
 }: EventProps) {
   return (
-    <div className="w-80 flex flex-col justify-start bg-white border rounded-xl">
+    <div className="w-80 flex flex-col justify-start bg-white border rounded-xl shadow-md">
       <div className="w-full h-fit bg-slate-400 rounded-t-xl">
         <div className="absolute w-32 p-1 bg-sky-400 rounded-tl-lg rounded-br-lg text-white">
           {eventType}

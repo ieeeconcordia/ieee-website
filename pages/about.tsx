@@ -77,7 +77,10 @@ export default function About() {
             <h2 className="text-center font-raleway font-semibold text-headline-l text-secondary">
               Lab Supervisors
             </h2>
-            <div className="w-fit grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 justify-items-center gap-6 sm:gap-10"></div>
+            <p className="font-raleway text-title-gray text-title-m sm:text-headline-s">
+              Forem ipsum dolora asdklasjdkasdj sit amet, consectetur adipiscing
+              elit. Etiam eu turpis molestie, dictum est a
+            </p>
             <SponsorshipBtn text={"Become a lab supervisor!"} />
           </div>
         </section>

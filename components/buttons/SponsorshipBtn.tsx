@@ -7,7 +7,7 @@ export const SponsorshipBtn = (props: any) => {
     <Link href={""}>
       <div
         className={
-          " w-fit py-3 px-5 bg-gradient-to-r from-sky-400 via-cyan-400 to-sky-400 text-white font-raleway font-semibold text-label-l rounded-md"
+          " w-fit py-3 px-5 bg-gradient-to-r from-sky-400 via-cyan-400 to-sky-400 text-white font-raleway font-semibold text-label-l rounded-md shadow-md"
         }
       >
         {props.text}
@@ -21,7 +21,7 @@ export const SponsorshipBtnNav = () => {
     <Link href={"/sponsorship"}>
       <div
         className={
-          " w-fit py-3 px-5 bg-gradient-to-r from-sky-400 via-cyan-400 to-sky-400 text-white font-raleway font-semibold text-label-l rounded-md"
+          " w-fit py-3 px-5 bg-gradient-to-r from-sky-400 via-cyan-400 to-sky-400 text-white font-raleway font-semibold text-label-l rounded-md shadow-md"
         }
       >
         Sponsorship!
