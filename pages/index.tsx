@@ -4,12 +4,14 @@ import EventCard from "@/components/cards/EventCard";
 import ProjectCard from "@/components/cards/ProjectCard";
 import { SponsorshipSection } from "@/components/SponsorshipSection";
 import { getAllEvents } from "@/lib/events";
+import { getEvents } from "@/lib/mongo/events";
 import { SimpleBtn } from "@/components/buttons/SimpleBtn";
 import Loading from "@/components/animations/Loading";
 
 // Fetch all events and pass them as a prop to the Events component
 export async function getStaticProps() {
   const events = await getAllEvents();
+  console.log(events)
   return {
     props: {
       events,
@@ -19,7 +21,7 @@ export async function getStaticProps() {
 
 export default function Home({ events }: any) {
   const [loading, setLoading] = useState(true); // Add a loading state
-
+  console.log(events.length)
   useEffect(() => {
     // Simulate async loading
     setTimeout(() => {
@@ -44,7 +46,7 @@ export default function Home({ events }: any) {
           </p>
         </section>
 
-        <section className="flex flex-col text-center items-center justify-items-center gap-6 px-8 pb-16 sm:px-20 xl:px-section md:pb-14">
+        <section className="flex flex-col text-center items-center justify-items-center gap-8 px-8 pb-16 sm:px-20 xl:px-section md:pb-14">
           <div className="">
             <h2 className="font-lora font-bold text-headline-m sm:text-headline-l text-secondary pb-3">
               Events
@@ -54,29 +56,43 @@ export default function Home({ events }: any) {
               elit. Etiam eu turpis molestie, dictum est a
             </p>
           </div>
-          <Suspense fallback={<Loading />}>
-            <div className="w-fit grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 justify-items-center gap-6 sm:gap-10 pb-6">
-              {events.map(
-                (event: any, index: any) =>
-                  index < 3 && (
-                    <EventCard
-                      key={event.slug}
-                      _id={event.slug}
-                      name={event.name}
-                      date={event.date}
-                      location={event.location}
-                      time={event.time}
-                      price={event.price}
-                      eventType={event.eventType}
-                      description={event.description}
-                      image={event.image}
-                      organizer={""}
-                      sponsors={""}
-                    />
-                  )
-              )}
+          {events.length == 0 ? (
+            <div className="w-full flex flex-col text-center justify-center ">
+              <div className="font-raleway text-display-s font-semibold">
+                No events?
+              </div>
+              <div className="text-title-gray text-title-m">
+                Check in later for any updates!
+              </div>
             </div>
-          </Suspense>
+          ) : (
+            <Suspense fallback={<Loading />}>
+              <div
+                className="w-fit grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 justify-items-center gap-6 sm:gap-10 
+            "
+              >
+                {events.map(
+                  (event: any, index: any) =>
+                    index < 3 && (
+                      <EventCard
+                        key={event.slug}
+                        _id={event.slug}
+                        name={event.name}
+                        date={event.date}
+                        location={event.location}
+                        time={event.time}
+                        price={event.price}
+                        eventType={event.eventType}
+                        description={event.description}
+                        image={event.image}
+                        organizer={""}
+                        sponsors={""}
+                      />
+                    )
+                )}
+              </div>
+            </Suspense>
+          )}
           <SimpleBtn text="See more..." href="/events/" />
         </section>
 

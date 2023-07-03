@@ -13,7 +13,7 @@ sponsors: ["Sponsors "]
 
 # Arduino Tutorial
 
-![Event Image](/images/event-image.jpg)
+![Event Image](/uploads/Arduino_Tutorial.png)
 
 - **Date**: 2023-06-09
 - **Time**: 14:00

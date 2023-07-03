@@ -5,7 +5,7 @@ location: "SGW"
 time: "21:51"
 description: This is a short description of the event. Press likeif you likey
 price: 10
-image: "https://picsum.photos/id/1060/536/354?blur=2"
+image: "/uploads/Arduino_Tutorial.png"
 organizer: Alexandre Fontaine
 eventType: "Competition"
 sponsors: ["Sponsors "]
