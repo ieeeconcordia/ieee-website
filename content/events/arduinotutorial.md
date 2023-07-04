@@ -1,7 +1,7 @@
 ---
 name: "Arduino tutorial" 
 date: "2023-06-09"
-location: "SGW"
+location: "Hall Building"
 time: 21:41
 description: This is a short description of the event. Press likeif you likey
 price: 10
@@ -11,13 +11,11 @@ eventType: "tutorial"
 sponsors: ["Sponsors "]
 ---
 
-# Arduino Tutorial
-
 ![Event Image](/uploads/Arduino_Tutorial.png)
 
 - **Date**: 2023-06-09
 - **Time**: 14:00
-- **Location**: 
+- **Location**: Hall Building
 
 ## Description
 
