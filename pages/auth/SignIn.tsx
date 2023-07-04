@@ -1,8 +1,11 @@
 import { useState } from "react";
 import { auth } from "../../lib/firebase";
 import { signInWithEmailAndPassword } from "firebase/auth";
+import { useRouter } from "next/router";
 
 export default function GoogleSignInButton() {
+  const router = useRouter()
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -12,6 +15,8 @@ export default function GoogleSignInButton() {
         // Signed in
         const user = userCredential.user;
         console.log(user);
+
+        router.push()
         // ...
       })
       .catch((error) => {
@@ -21,7 +26,7 @@ export default function GoogleSignInButton() {
   };
 
   return (
-    <section className="bg-gray-500 ">
+    <section className="bg-gray-500 h-screen">
       <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
         <div className="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0">
           <div className="p-6 space-y-4 md:space-y-6 sm:p-8">
