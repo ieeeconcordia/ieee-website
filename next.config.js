@@ -1,24 +1,22 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-   experimental:{ 
+  experimental: {
     appDir: true,
-    erverComponentsExternalPackages: ["mongoose"]
+    erverComponentsExternalPackages: ["mongoose"],
   },
   webpack: (config) => {
     config.experiments = { ...config.experiments, topLevelAwait: true };
     return config;
   },
-
-}
-
-module.exports = nextConfig
+};
+module.exports = nextConfig;
 module.exports = {
   async rewrites() {
     return [
       {
-        source: '/uploads/:path*',
-        destination: '/api/uploads/:path*',
+        source: "/uploads/:path*",
+        destination: "/api/uploads/:path*",
       },
     ];
   },
