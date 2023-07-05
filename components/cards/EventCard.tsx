@@ -34,15 +34,15 @@ export default function EventCard({
   sponsors,
 }: EventProps) {
   return (
-    <div className="w-80 flex flex-col justify-start bg-white border rounded-xl shadow-md">
+    <div className="w-80 flex flex-col justify-start bg-white border overflow-hidden rounded-xl shadow-md">
       <div className="w-full h-52 bg-slate-400 rounded-t-xl">
-        <div className="absolute w-32 p-1 bg-sky-400 rounded-tl-lg rounded-br-lg text-white">
+        <div className="absolute w-32 p-1 bg-sky-400 rounded-tl-xl rounded-br-lg text-white">
           {eventType}
         </div>
         <img
           src={`/api/uploads/${encodeURIComponent(image)}`}
           alt={name}
-          className="w-full object-cover rounded-t-xl max-h-full"
+          className="w-full object-cover overflow-hidden max-h-full"
         />
       </div>
       <div className="w-full flex flex-col px-4 pb-4 gap-3 text-start rounded-b-xl">

@@ -1,8 +1,22 @@
 import RootLayout from "@/pages/layout";
 import ProjectCard from "@/components/cards/ProjectCard";
 import { SponsorshipSection } from "@/components/SponsorshipSection";
+import { getAllProjects } from "@/lib/projects";
+import { Suspense } from "react";
+import Loading from "@/components/animations/Loading";
 
-export default function Projects() {
+
+export async function getStaticProps() {
+  const projects = await getAllProjects();
+  console.log(projects)
+  return {
+    props: {
+      projects,
+    },
+  };
+}
+
+export default function Projects({ projects }: any) {
   return (
     <>
       <RootLayout>
@@ -14,11 +28,43 @@ export default function Projects() {
             Forem ipsum dolora asdklasjdkasdj sit amet, consectetur adipiscing
             elit. Etiam eu turpis molestie, dictum est a
           </p>
-          <div className="w-fit grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 justify-items-center gap-6 sm:gap-10 pt-6">
-            <ProjectCard />
-            <ProjectCard />
-            <ProjectCard />
-          </div>
+          {projects.length == 0 ? (
+            <div className="w-full flex flex-col text-center justify-center ">
+              <div className="font-raleway text-display-s font-semibold">
+                No events?
+              </div>
+              <div className="text-title-gray text-title-m">
+                Check in later for any updates!
+              </div>
+            </div>
+          ) : (
+            <Suspense fallback={<Loading />}>
+              <div
+                className="w-fit grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 justify-items-center gap-6 sm:gap-10 
+            "
+              >
+                {projects.map(
+                  (project: any, index: any) =>
+                    (
+                      <ProjectCard
+                        key={project.slug}
+                        _id={project.slug}
+                        name={project.name}
+                        date={project.date}
+                        location={project.location}
+                        time={project.time}
+                        price={project.price}
+                        eventType={project.eventType}
+                        description={project.description}
+                        image={project.image}
+                        organizer={""}
+                        sponsors={""}
+                      />
+                    )
+                )}
+              </div>
+            </Suspense>
+          )}
         </div>
 
         <SponsorshipSection />

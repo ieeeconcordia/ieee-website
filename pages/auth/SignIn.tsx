@@ -16,7 +16,7 @@ export default function GoogleSignInButton() {
         const user = userCredential.user;
         console.log(user);
 
-        router.push()
+        router.push("/")
         // ...
       })
       .catch((error) => {

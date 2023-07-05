@@ -2,6 +2,7 @@ import Link from "next/link";
 import { getAllEvents } from "@/lib/events.js";
 import RootLayout from "@/pages/layout";
 import EventCard from "@/components/cards/EventCard";
+import { SponsorshipSection } from "@/components/SponsorshipSection";
 
 export async function getStaticProps() {
   const events = await getAllEvents();
@@ -44,6 +45,8 @@ export default function Events({ events }: any) {
           ))}
         </div>
       </div>
+
+      <SponsorshipSection />
     </RootLayout>
   );
 }

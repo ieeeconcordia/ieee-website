@@ -4,30 +4,34 @@ import EventCard from "@/components/cards/EventCard";
 import ProjectCard from "@/components/cards/ProjectCard";
 import { SponsorshipSection } from "@/components/SponsorshipSection";
 import { getAllEvents } from "@/lib/events";
-import { getEvents } from "@/lib/mongo/events";
+import { getAllProjects } from "@/lib/projects";
 import { SimpleBtn } from "@/components/buttons/SimpleBtn";
 import Loading from "@/components/animations/Loading";
 
 // Fetch all events and pass them as a prop to the Events component
 export async function getStaticProps() {
   const events = await getAllEvents();
-  console.log(events)
+  const projects = await getAllProjects()
+  console.log(projects)
   return {
     props: {
       events,
+      projects,
     },
   };
 }
 
-export default function Home({ events }: any) {
-  const [loading, setLoading] = useState(true); // Add a loading state
-  console.log(events.length)
-  useEffect(() => {
-    // Simulate async loading
-    setTimeout(() => {
-      setLoading(false);
-    }, 2000); // Set a timeout to simulate loading time
-  }, []);
+export default function Home({ events, projects }: any) {
+ 
+  // Simulate lading animation
+  // const [loading, setLoading] = useState(true); // Add a loading state
+
+  // useEffect(() => {
+  //   // Simulate async loading
+  //   setTimeout(() => {
+  //     setLoading(false);
+  //   }, 2000); // Set a timeout to simulate loading time
+  // }, []);
 
   return (
     <div className="">
@@ -107,11 +111,43 @@ export default function Home({ events }: any) {
             </p>
           </div>
 
-          <div className="w-fit grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 justify-items-center gap-6 sm:gap-10 pb-6">
-            <ProjectCard />
-            <ProjectCard />
-            <ProjectCard />
-          </div>
+          {projects.length == 0 ? (
+            <div className="w-full flex flex-col text-center justify-center ">
+              <div className="font-raleway text-display-s font-semibold">
+                No events?
+              </div>
+              <div className="text-title-gray text-title-m">
+                Check in later for any updates!
+              </div>
+            </div>
+          ) : (
+            <Suspense fallback={<Loading />}>
+              <div
+                className="w-fit grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 justify-items-center gap-6 sm:gap-10 
+            "
+              >
+                {projects.map(
+                  (project: any, index: any) =>
+                    index < 3 && (
+                      <ProjectCard
+                        key={project.slug}
+                        _id={project.slug}
+                        name={project.name}
+                        date={project.date}
+                        location={project.location}
+                        time={project.time}
+                        price={project.price}
+                        eventType={project.eventType}
+                        description={project.description}
+                        image={project.image}
+                        organizer={""}
+                        sponsors={""}
+                      />
+                    )
+                )}
+              </div>
+            </Suspense>
+          )}
 
           <SimpleBtn text="See more..." href="/projects" />
         </section>
