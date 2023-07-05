@@ -53,12 +53,12 @@ export default function Contact() {
     <>
       <RootLayout>
         <div className="flex flex-col text-center items-center justify-items-center gap-6 px-8 pb-16 sm:px-20 xl:px-section md:pb-14">
-          <h2 className="font-lora font-bold text-headline-m sm:text-headline-l text-secondary pb-3">
+          <h2 className="font-lora font-bold text-headline-m sm:text-display-m text-secondary pb-6">
             Contact Us
           </h2>
-          <p className="text-title-m font-raleway text-title-gray">
-            Forem ipsum dolora asdklasjdkasdj sit amet, consectetur adipiscing
-            elit. Etiam eu turpis molestie, dictum est a
+          <p className="font-raleway text-center text-title-gray text-title-m sm:text-title-l">
+            Any questions, inquiries, and feedback, feel free to get in touch
+            via email or through the form below!
           </p>
           {successMessage != "" && (
             <div

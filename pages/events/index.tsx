@@ -17,12 +17,13 @@ export default function Events({ events }: any) {
     <RootLayout>
       <div className="flex flex-col text-center items-center justify-items-center gap-6 px-8 pb-16 sm:px-20 xl:px-section md:pb-14">
         <div className="">
-          <h2 className="font-lora font-bold text-headline-m sm:text-headline-l text-secondary pb-3">
+          <h2 className="font-lora font-bold text-headline-m sm:text-display-m text-secondary pb-6">
             Events
           </h2>
-          <p className="font-raleway text-title-gray text-title-m sm:text-headline-s">
-            Forem ipsum dolora asdklasjdkasdj sit amet, consectetur adipiscing
-            elit. Etiam eu turpis molestie, dictum est a
+          <p className="font-raleway text-start sm:text-center text-title-gray text-title-m sm:text-title-l">
+            Expand your knowledge with our academic events. Network and connect
+            with like-minded individuals at our social events, and showcase your
+            skills in our exciting competitions.
           </p>
         </div>
 

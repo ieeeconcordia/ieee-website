@@ -35,14 +35,14 @@ export default function About() {
                 style={{ position: "relative", zIndex: 2 }}
                 className="px-8 sm:px-20 xl:px-section pt-7"
               >
-                <p className="font-raleway text-center font-title-gray text-title-m">
-                  Forem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
-                  eu turpis molestie, dictum est a, mattis tellus. Sed
-                  dignissim, metus nec fringilla accumsan, risus sem
-                  sollicitudin lacus, ut interdum tellus elit sed risus.
-                  Maecenas eget condimentum velit, sit amet feugiat lectus.
-                  Class aptent taciti sociosqu ad litora torquent per conubia
-                  nostra, per inceptos himenaeos.
+                <p className="font-raleway text-start text-title-gray text-title-m sm:text-title-l">
+                  We are a dynamic team of enthusiastic students, united by our
+                  shared love for learning, growth, and community. Together, we
+                  organize engaging events, promote academic and skill
+                  development, and create an inclusive environment where every
+                  student can thrive. Join us as we embark on this exciting
+                  journey, connecting students, fostering friendships, and
+                  making unforgettable memories along the way.
                 </p>
               </div>
             </div>
@@ -50,7 +50,7 @@ export default function About() {
           {/* Exec Team */}
           <div className="container flex flex-col justify-center items-center gap-6">
             <h2 className="text-center font-raleway font-semibold text-headline-l text-secondary">
-              Exec Team
+              Meet our team
             </h2>
             <div className="w-fit grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 justify-items-center gap-6 sm:gap-10">
               {execTeam.map(
@@ -73,13 +73,21 @@ export default function About() {
           </div>
 
           {/* Lab Supervisors */}
-          <div className="container flex flex-col justify-center items-center gap-6">
+          <div className="flex flex-col justify-center items-center gap-6 px-8 sm:px-20 xl:px-section">
             <h2 className="text-center font-raleway font-semibold text-headline-l text-secondary">
               Lab Supervisors
             </h2>
-            <p className="font-raleway text-title-gray text-title-m sm:text-headline-s">
-              Forem ipsum dolora asdklasjdkasdj sit amet, consectetur adipiscing
-              elit. Etiam eu turpis molestie, dictum est a
+            <p className="font-raleway text-title-gray text-title-m sm:text-headline-s text-start">
+              Lab Supervisors play a vital role in keeping our lab open and
+              accessible to all members. As a Lab Supervisor, you'll have the
+              privilege of accessing the lab whenever you want and you get to
+              experiment in a fully equipped lab.
+              <br />
+              <br />
+              In exchange for this incredible opportunity, we simply ask for
+              your commitment to supervise the lab for just 2 hours a week. By
+              dedicating this small amount of time, you help us ensure that all
+              students members or not can have the chance to use the lab.
             </p>
             <SponsorshipBtn text={"Become a lab supervisor!"} />
           </div>

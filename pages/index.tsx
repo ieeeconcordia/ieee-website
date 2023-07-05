@@ -11,8 +11,8 @@ import Loading from "@/components/animations/Loading";
 // Fetch all events and pass them as a prop to the Events component
 export async function getStaticProps() {
   const events = await getAllEvents();
-  const projects = await getAllProjects()
-  console.log(projects)
+  const projects = await getAllProjects();
+  console.log(projects);
   return {
     props: {
       events,
@@ -22,7 +22,6 @@ export async function getStaticProps() {
 }
 
 export default function Home({ events, projects }: any) {
- 
   // Simulate lading animation
   // const [loading, setLoading] = useState(true); // Add a loading state
 
@@ -40,24 +39,27 @@ export default function Home({ events, projects }: any) {
           <h4 className="font-raleway font-semibold text-headline-l text-secondary">
             About IEEE Concordia
           </h4>
-          <p className="font-raleway font-title-gray text-title-m ">
-            Forem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu
-            turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus
-            nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum
-            tellus elit sed risus. Maecenas eget condimentum velit, sit amet
-            feugiat lectus. Class aptent taciti sociosqu ad litora torquent per
-            conubia nostra, per inceptos himenaeos.
+          <p className="font-raleway font-title-gray text-title-m sm:text-title-l ">
+            <b>IEEE Concordia Student Branch</b> is a student chapter of IEEE
+            (Institute of Electrical and Electronics Engineers), the world's
+            largest technical professional organization. Our mission, just like
+            IEEE, is to foster technical and professional excellence. Through
+            networking events, tutorials, and competitions and our lab we foster
+            a supportive community where you can discover your passion and excel
+            in your personal and professional growth and have fun in the
+            process!
           </p>
         </section>
 
         <section className="flex flex-col text-center items-center justify-items-center gap-8 px-8 pb-16 sm:px-20 xl:px-section md:pb-14">
           <div className="">
-            <h2 className="font-lora font-bold text-headline-m sm:text-headline-l text-secondary pb-3">
+            <h2 className="font-lora font-bold text-headline-m sm:text-display-m text-secondary pb-6">
               Events
             </h2>
-            <p className="font-raleway text-title-gray text-title-m sm:text-headline-s">
-              Forem ipsum dolora asdklasjdkasdj sit amet, consectetur adipiscing
-              elit. Etiam eu turpis molestie, dictum est a
+            <p className="font-raleway text-start sm:text-center text-title-gray text-title-m sm:text-headline-s">
+              <b>Expand your knowledge</b> with our academic events. <b>Network and
+              connect</b> with like-minded individuals at our social events, and{" "}
+              <b>showcase your skills</b> in our exciting competitions.
             </p>
           </div>
           {events.length == 0 ? (
@@ -102,12 +104,15 @@ export default function Home({ events, projects }: any) {
 
         <section className="flex flex-col text-center items-center justify-items-center gap-6 px-8 pb-16 sm:px-20 xl:px-section md:pb-14">
           <div className="">
-            <h2 className="font-lora font-bold text-headline-m sm:text-headline-l text-secondary pb-3">
+            <h2 className="font-lora  font-bold text-headline-m sm:text-display-m text-secondary pb-6">
               Projects
             </h2>
-            <p className="font-raleway text-title-gray text-title-m sm:text-headline-s">
-              Forem ipsum dolora asdklasjdkasdj sit amet, consectetur adipiscing
-              elit. Etiam eu turpis molestie, dictum est a
+            <p className="font-raleway text-start sm:text-center text-title-gray text-title-m sm:text-headline-s">
+              Starting and finishing projects as a student can be daunting. Join
+              our planned <b>projects in groups of 3 or 4 for 2-3 weeks</b>, with the
+              guidance of our Director of Projects. Get support from start to
+              finish and collaborate with like-minded peers. Take the first step
+              and join our community today.
             </p>
           </div>
 
