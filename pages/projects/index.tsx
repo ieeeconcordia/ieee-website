@@ -4,6 +4,7 @@ import { SponsorshipSection } from "@/components/SponsorshipSection";
 import { getAllProjects } from "@/lib/projects";
 import { Suspense } from "react";
 import Loading from "@/components/animations/Loading";
+import ProjectsPlaceHolder from "@/components/placeholder/ProjectsPlaceholder";
 
 export async function getStaticProps() {
   const projects = await getAllProjects();
@@ -20,7 +21,7 @@ export default function Projects({ projects }: any) {
     <>
       <RootLayout>
         <div className="flex flex-col text-center items-center justify-items-center gap-6 px-8 pb-16 sm:px-20 xl:px-section md:pb-14">
-          <h2 className="font-lora font-bold text-headline-m sm:text-display-m text-secondary pb-6">
+          <h2 className="font-lora font-bold text-headline-m md:text-display-m text-secondary pb-6">
             Projects
           </h2>
           <p className="font-raleway text-start text-title-gray text-title-m sm:text-title-l">
@@ -29,24 +30,16 @@ export default function Projects({ projects }: any) {
             groups of 3 or 4 for 2-3 weeks, with the support of our dedicated
             Director of Projects. Our Director of Projects will be there to
             answer any questions you may have and provide guidance throughout
-            the entire process. 
-            <br/>
-            <br/>
-            By joining these planned projects, you'll not
-            only get started on your project but also receive support to help
-            you successfully complete it. Collaborate with like-minded peers,
-            overcome obstacles together, and achieve your project goals with
-            confidence.
+            the entire process.
+            <br />
+            <br />
+            By joining these planned projects, you'll not only get started on
+            your project but also receive support to help you successfully
+            complete it. Collaborate with like-minded peers, overcome obstacles
+            together, and achieve your project goals with confidence.
           </p>
           {projects.length == 0 ? (
-            <div className="w-full flex flex-col text-center justify-center shadow-md p-4 border border-gray-200 rounded-lg">
-              <div className="font-raleway text-display-s font-semibold">
-                No events?
-              </div>
-              <div className="text-title-gray text-title-m">
-                Check in later for any updates!
-              </div>
-            </div>
+            <ProjectsPlaceHolder />
           ) : (
             <Suspense fallback={<Loading />}>
               <div

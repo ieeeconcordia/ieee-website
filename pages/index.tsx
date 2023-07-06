@@ -7,6 +7,8 @@ import { getAllEvents } from "@/lib/events";
 import { getAllProjects } from "@/lib/projects";
 import { SimpleBtn } from "@/components/buttons/SimpleBtn";
 import Loading from "@/components/animations/Loading";
+import EventsPlaceHolder from "@/components/placeholder/EventsPlaceholder";
+import ProjectsPlaceHolder from "@/components/placeholder/ProjectsPlaceholder";
 
 // Fetch all events and pass them as a prop to the Events component
 export async function getStaticProps() {
@@ -57,20 +59,14 @@ export default function Home({ events, projects }: any) {
               Events
             </h2>
             <p className="font-raleway text-start sm:text-center text-title-gray text-title-m sm:text-headline-s">
-              <b>Expand your knowledge</b> with our academic events. <b>Network and
-              connect</b> with like-minded individuals at our social events, and{" "}
-              <b>showcase your skills</b> in our exciting competitions.
+              <b>Expand your knowledge</b> with our academic events.{" "}
+              <b>Network and connect</b> with like-minded individuals at our
+              social events, and <b>showcase your skills</b> in our exciting
+              competitions.
             </p>
           </div>
           {events.length == 0 ? (
-            <div className="w-full flex flex-col text-center justify-center ">
-              <div className="font-raleway text-display-s font-semibold">
-                No events?
-              </div>
-              <div className="text-title-gray text-title-m">
-                Check in later for any updates!
-              </div>
-            </div>
+            <EventsPlaceHolder />
           ) : (
             <Suspense fallback={<Loading />}>
               <div
@@ -99,7 +95,11 @@ export default function Home({ events, projects }: any) {
               </div>
             </Suspense>
           )}
-          <SimpleBtn text="See more..." href="/events/" />
+          {events.length == 0 ? (
+            <></>
+          ) : (
+            <SimpleBtn text="See more..." href="/projects" />
+          )}
         </section>
 
         <section className="flex flex-col text-center items-center justify-items-center gap-6 px-8 pb-16 sm:px-20 xl:px-section md:pb-14">
@@ -109,22 +109,15 @@ export default function Home({ events, projects }: any) {
             </h2>
             <p className="font-raleway text-start sm:text-center text-title-gray text-title-m sm:text-headline-s">
               Starting and finishing projects as a student can be daunting. Join
-              our planned <b>projects in groups of 3 or 4 for 2-3 weeks</b>, with the
-              guidance of our Director of Projects. Get support from start to
-              finish and collaborate with like-minded peers. Take the first step
-              and join our community today.
+              our planned <b>projects in groups of 3 or 4 for 2-3 weeks</b>,
+              with the guidance of our Director of Projects. Get support from
+              start to finish and collaborate with like-minded peers. Take the
+              first step and join our community today.
             </p>
           </div>
 
           {projects.length == 0 ? (
-            <div className="w-full flex flex-col text-center justify-center ">
-              <div className="font-raleway text-display-s font-semibold">
-                No events?
-              </div>
-              <div className="text-title-gray text-title-m">
-                Check in later for any updates!
-              </div>
-            </div>
+            <ProjectsPlaceHolder />
           ) : (
             <Suspense fallback={<Loading />}>
               <div
@@ -154,7 +147,11 @@ export default function Home({ events, projects }: any) {
             </Suspense>
           )}
 
-          <SimpleBtn text="See more..." href="/projects" />
+          {projects.length == 0 ? (
+            <></>
+          ) : (
+            <SimpleBtn text="See more..." href="/projects" />
+          )}
         </section>
 
         {/* 
