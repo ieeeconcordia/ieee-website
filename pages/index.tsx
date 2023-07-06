@@ -43,13 +43,13 @@ export default function Home({ events, projects }: any) {
           </h4>
           <p className="font-raleway text-title-m sm:text-title-l ">
             <b>IEEE Concordia Student Branch</b> is a student chapter of IEEE
-            (Institute of Electrical and Electronics Engineers), the world&apos;s
-            largest technical professional organization. Our mission, just like
-            IEEE, is to foster technical and professional excellence. Through
-            networking events, tutorials, and competitions and our lab we foster
-            a supportive community where you can discover your passion and excel
-            in your personal and professional growth and have fun in the
-            process!
+            (Institute of Electrical and Electronics Engineers), the
+            world&apos;s largest technical professional organization. Our
+            mission, just like IEEE, is to foster technical and professional
+            excellence. Through networking events, tutorials, and competitions
+            and our lab we foster a supportive community where you can discover
+            your passion and excel in your personal and professional growth and
+            have fun in the process!
           </p>
         </section>
 
@@ -59,10 +59,9 @@ export default function Home({ events, projects }: any) {
               Events
             </h2>
             <p className="font-raleway text-start sm:text-center text-gray-700 text-title-m sm:text-headline-s">
-              <b>Expand your knowledge</b> with our academic events.{" "}
-              Network and connect with like-minded individuals at our
-              social events, and showcase your skills in our exciting
-              competitions.
+              <b>Expand your knowledge</b> with our academic events. Network and
+              connect with like-minded individuals at our social events, and
+              showcase your skills in our exciting competitions.
             </p>
           </div>
           {events.length == 0 ? (

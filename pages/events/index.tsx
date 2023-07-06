@@ -3,6 +3,7 @@ import { getAllEvents } from "@/lib/events.js";
 import RootLayout from "@/pages/layout";
 import EventCard from "@/components/cards/EventCard";
 import { SponsorshipSection } from "@/components/SponsorshipSection";
+import EventsPlaceHolder from "@/components/placeholder/EventsPlaceholder";
 
 export async function getStaticProps() {
   const events = await getAllEvents();
@@ -27,24 +28,36 @@ export default function Events({ events }: any) {
           </p>
         </div>
 
-        <div className="w-fit grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 justify-items-center gap-6 sm:gap-10 pt-6">
-          {events.map((event: any, index: any) => (
-            <EventCard
-              key={event.slug}
-              _id={event.slug}
-              name={event.name}
-              date={event.date}
-              location={event.location}
-              time={event.time}
-              price={event.price}
-              eventType={event.eventType}
-              description={event.description}
-              image={event.image}
-              organizer={""}
-              sponsors={""}
-            />
-          ))}
-        </div>
+        {events.length == 0 ? (
+          <EventsPlaceHolder />
+        ) : (
+          <Suspense fallback={<Loading />}>
+            <div
+              className="w-fit grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 justify-items-center gap-6 sm:gap-10 
+            "
+            >
+              {events.map(
+                (event: any, index: any) =>
+                  index < 3 && (
+                    <EventCard
+                      key={event.slug}
+                      _id={event.slug}
+                      name={event.name}
+                      date={event.date}
+                      location={event.location}
+                      time={event.time}
+                      price={event.price}
+                      eventType={event.eventType}
+                      description={event.description}
+                      image={event.image}
+                      organizer={""}
+                      sponsors={""}
+                    />
+                  )
+              )}
+            </div>
+          </Suspense>
+        )}
       </div>
 
       <SponsorshipSection />

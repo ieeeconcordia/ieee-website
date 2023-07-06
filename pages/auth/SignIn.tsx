@@ -1,28 +1,27 @@
 import { useState } from "react";
-import { auth } from "../../lib/firebase";
-import { signInWithEmailAndPassword } from "firebase/auth";
+// import { auth } from "../../lib/firebase";
+// import { signInWithEmailAndPassword } from "firebase/auth";
 import { useRouter } from "next/router";
 
 export default function GoogleSignInButton() {
-  const router = useRouter()
+  const router = useRouter();
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   const handleSignIn = async () => {
-    signInWithEmailAndPassword(auth, email, password)
-      .then((userCredential) => {
-        // Signed in
-        const user = userCredential.user;
-        console.log(user);
-
-        router.push("/")
-        // ...
-      })
-      .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-      });
+    // signInWithEmailAndPassword(auth, email, password)
+    //   .then((userCredential) => {
+    //     // Signed in
+    //     const user = userCredential.user;
+    //     console.log(user);
+    //     router.push("/")
+    //     // ...
+    //   })
+    //   .catch((error) => {
+    //     const errorCode = error.code;
+    //     const errorMessage = error.message;
+    //   });
   };
 
   return (

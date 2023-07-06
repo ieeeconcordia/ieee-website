@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { auth } from "../../lib/firebase";
-import { createUserWithEmailAndPassword } from "firebase/auth";
+// import { auth } from "../../lib/firebase";
+// import { createUserWithEmailAndPassword } from "firebase/auth";
 import { useRouter } from "next/router";
 
 export default function SignUp() {
@@ -11,19 +11,19 @@ export default function SignUp() {
   const [confirmPassword, setConfirmPassword] = useState("");
 
   const handleSignUp = async () => {
-    createUserWithEmailAndPassword(auth, email, password)
-      .then((userCredential) => {
-        // Signed in
-        const user = userCredential.user;
-        console.log(user);
-        router.push("/auth/SignIn")
-        // ...
-      })
-      .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        // ..
-      });
+    // createUserWithEmailAndPassword(auth, email, password)
+    //   .then((userCredential) => {
+    //     // Signed in
+    //     const user = userCredential.user;
+    //     console.log(user);
+    //     router.push("/auth/SignIn")
+    //     // ...
+    //   })
+    //   .catch((error) => {
+    //     const errorCode = error.code;
+    //     const errorMessage = error.message;
+    //     // ..
+    //   });
   };
 
   return (
