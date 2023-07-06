@@ -13,7 +13,7 @@ export default function Contact() {
 
   const [successMessage, setSuccessMessage] = useState("");
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: { preventDefault: () => void; }) => {
     e.preventDefault();
 
     console.log("Email: ", email);
@@ -53,10 +53,10 @@ export default function Contact() {
     <>
       <RootLayout>
         <div className="flex flex-col text-center items-center justify-items-center gap-6 px-8 pb-16 sm:px-20 xl:px-section md:pb-14">
-          <h2 className="font-lora font-bold text-headline-m sm:text-display-m text-secondary pb-6">
+          <h2 className="font-lora font-bold text-headline-l sm:text-display-m text-secondary pb-6">
             Contact Us
           </h2>
-          <p className="font-raleway text-center text-title-gray text-title-m sm:text-title-l">
+          <p className="font-raleway text-center text-gray-700 text-title-m sm:text-title-l">
             Any questions, inquiries, and feedback, feel free to get in touch
             via email or through the form below!
           </p>

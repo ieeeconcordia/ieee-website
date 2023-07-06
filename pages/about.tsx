@@ -28,14 +28,14 @@ export default function About() {
             &ldquo;The people behind the work&ldquo;
           </h4>
         </div>
-        <section className="flex flex-col items-center gap-16 pt-container pb-20">
+        <section className="flex flex-col items-center gap-10 pt-container pb-20">
           <div className="">
             <div className="relative">
               <div
                 style={{ position: "relative", zIndex: 2 }}
-                className="px-8 sm:px-20 xl:px-section pt-7"
+                className="px-8 sm:px-20 xl:px-section"
               >
-                <p className="font-raleway text-start text-title-gray text-title-m sm:text-title-l">
+                <p className="font-raleway text-start text-gray-700 text-title-m sm:text-title-l pt-8">
                   We are a dynamic team of enthusiastic students, united by our
                   shared love for learning, growth, and community. Together, we
                   organize engaging events, promote academic and skill
@@ -77,9 +77,9 @@ export default function About() {
             <h2 className="text-center font-raleway font-semibold text-headline-l text-secondary">
               Lab Supervisors
             </h2>
-            <p className="font-raleway text-title-gray text-title-m sm:text-headline-s text-start">
+            <p className="font-raleway text-gray-700 text-title-m sm:text-headline-s text-start">
               Lab Supervisors play a vital role in keeping our lab open and
-              accessible to all members. As a Lab Supervisor, you'll have the
+              accessible to all members. As a Lab Supervisor, you&apos;ll have the
               privilege of accessing the lab whenever you want and you get to
               experiment in a fully equipped lab.
               <br />

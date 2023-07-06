@@ -2,6 +2,7 @@ import { Fragment, useState } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import { MdClose, MdMenu } from "react-icons/md";
 import Link from "next/link";
+import { SponsorshipBtnNav } from "./buttons/SponsorshipBtn";
 
 export default function Example() {
   const [open, setOpen] = useState(false);
@@ -68,6 +69,10 @@ export default function Example() {
                         {/* Your content */}
                         <ul className="flex flex-col items-start font-raleway text-display-s font-bold gap-6 pt-8">
                           <li>
+                            <Link href="/">Home</Link>
+                          </li>
+
+                          <li>
                             <Link href="/about">About Us</Link>
                           </li>
 
@@ -79,10 +84,13 @@ export default function Example() {
                             <Link href="/projects">Projects</Link>
                           </li>
 
-                          <li className="line-through decoration-2">Lab</li>
+                          <li className="line-through decoration-2 text-gray-400">Lab</li>
 
                           <li>
                             <Link href="contact">Contact us</Link>
+                          </li>
+                          <li className="m-auto">
+                          <SponsorshipBtnNav />
                           </li>
                         </ul>
                       </div>

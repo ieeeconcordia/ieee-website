@@ -34,8 +34,8 @@ export default function EventCard({
   sponsors,
 }: EventProps) {
   return (
-    <div className="w-80 flex flex-col justify-start bg-white border overflow-hidden rounded-xl shadow-md">
-      <div className="w-full h-52 bg-slate-400 rounded-t-xl">
+    <div className="w-72 sm:w-80 flex flex-col justify-start bg-white border overflow-hidden rounded-xl shadow-md">
+      <div className="w-full h-48 sm:h-52 bg-slate-400 rounded-t-xl">
         <div className="absolute w-32 p-1 bg-sky-400 rounded-tl-xl rounded-br-lg text-white">
           {eventType}
         </div>
@@ -45,15 +45,15 @@ export default function EventCard({
           className="w-full object-cover overflow-hidden max-h-full"
         />
       </div>
-      <div className="w-full flex flex-col px-4 pb-4 gap-3 text-start rounded-b-xl">
+      <div className="w-full flex flex-col px-4 pb-4 gap-2 sm-gap-3 text-start rounded-b-xl">
         <div>
           <h3 className="w-full text-title-l font-semibold font-raleway text-black">
             {name}
           </h3>
-          <p className="italic text-sm font-light">Additional tags</p>
+          <p className="italic text-base font-light">Additional tags</p>
         </div>
 
-        <div className="flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:gap-6">
+        <div className="flex flex-row items-start sm:items-center gap-2 sm:gap-6">
           <div className="flex flex-row items-center text-sm gap-1 text-gray-600">
             <IoTimeOutline size={24} color="gray" /> {date}
           </div>
@@ -62,7 +62,7 @@ export default function EventCard({
           </div>
         </div>
 
-        <p className="text-sm text-gray-600 line-clamp-3">
+        <p className="text-base text-gray-600 line-clamp-3">
           Forem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu
           turpis molestie, dictum est a, mattis tellus
         </p>

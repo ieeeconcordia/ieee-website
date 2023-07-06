@@ -28,7 +28,7 @@
 }
 
 .markdown ul {
-    @apply m-auto px-4 flex flex-col lg:flex-row items-start md:justify-center gap-2 md:gap-6 p-2 bg-slate-200 rounded-lg
+    @apply m-auto px-4 flex flex-col lg:flex-row items-start md:justify-center gap-4 md:gap-6 p-2 bg-slate-200 rounded-lg
 }
 
 .markdown li {

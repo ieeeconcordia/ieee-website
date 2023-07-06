@@ -37,13 +37,13 @@ export default function Home({ events, projects }: any) {
   return (
     <div className="">
       <RootLayout>
-        <section className="max-w-4xl md:max-w-full flex flex-col gap-6 px-8 pb-16 sm:px-20 xl:px-section md:pb-20">
+        <section className="max-w-4xl md:max-w-full flex flex-col gap-6 px-8 pb-10 sm:px-20 xl:px-section md:pb-20">
           <h4 className="font-raleway font-semibold text-headline-l text-secondary">
             About IEEE Concordia
           </h4>
-          <p className="font-raleway font-title-gray text-title-m sm:text-title-l ">
+          <p className="font-raleway text-title-m sm:text-title-l ">
             <b>IEEE Concordia Student Branch</b> is a student chapter of IEEE
-            (Institute of Electrical and Electronics Engineers), the world's
+            (Institute of Electrical and Electronics Engineers), the world&apos;s
             largest technical professional organization. Our mission, just like
             IEEE, is to foster technical and professional excellence. Through
             networking events, tutorials, and competitions and our lab we foster
@@ -53,15 +53,15 @@ export default function Home({ events, projects }: any) {
           </p>
         </section>
 
-        <section className="flex flex-col text-center items-center justify-items-center gap-8 px-8 pb-16 sm:px-20 xl:px-section md:pb-14">
+        <section className="flex flex-col text-center items-center justify-items-center gap-8 px-8 pb-10 sm:px-20 xl:px-section md:pb-14">
           <div className="">
-            <h2 className="font-lora font-bold text-headline-m sm:text-display-m text-secondary pb-6">
+            <h2 className="font-lora font-bold text-headline-l sm:text-display-m text-secondary pb-6">
               Events
             </h2>
-            <p className="font-raleway text-start sm:text-center text-title-gray text-title-m sm:text-headline-s">
+            <p className="font-raleway text-start sm:text-center text-gray-700 text-title-m sm:text-headline-s">
               <b>Expand your knowledge</b> with our academic events.{" "}
-              <b>Network and connect</b> with like-minded individuals at our
-              social events, and <b>showcase your skills</b> in our exciting
+              Network and connect with like-minded individuals at our
+              social events, and showcase your skills in our exciting
               competitions.
             </p>
           </div>
@@ -102,12 +102,12 @@ export default function Home({ events, projects }: any) {
           )}
         </section>
 
-        <section className="flex flex-col text-center items-center justify-items-center gap-6 px-8 pb-16 sm:px-20 xl:px-section md:pb-14">
+        <section className="flex flex-col text-center items-center justify-items-center gap-6 px-8 pb-10 sm:px-20 xl:px-section md:pb-14">
           <div className="">
-            <h2 className="font-lora  font-bold text-headline-m sm:text-display-m text-secondary pb-6">
+            <h2 className="font-lora  font-bold text-headline-l sm:text-display-m text-secondary pb-6">
               Projects
             </h2>
-            <p className="font-raleway text-start sm:text-center text-title-gray text-title-m sm:text-headline-s">
+            <p className="font-raleway text-start sm:text-center text-gray-700 text-title-m sm:text-headline-s">
               Starting and finishing projects as a student can be daunting. Join
               our planned <b>projects in groups of 3 or 4 for 2-3 weeks</b>,
               with the guidance of our Director of Projects. Get support from
@@ -153,73 +153,6 @@ export default function Home({ events, projects }: any) {
             <SimpleBtn text="See more..." href="/projects" />
           )}
         </section>
-
-        {/* 
-
-        <section className="flex flex-col text-center justify-center gap-6 px-8 pb-16 sm:px-20 xl:px-section md:pb-20">
-          <div className="">
-            <h2 className="font-lora font-bold text-headline-m sm:text-headline-l text-secondary pb-3">
-              Projects
-            </h2>
-            <p className="font-raleway text-title-gray text-title-m sm:text-headline-s">
-              Forem ipsum dolora asdklasjdkasdj sit amet, consectetur adipiscing
-              elit. Etiam eu turpis molestie, dictum est a
-            </p>
-          </div>
-
-          <div className="flex flex-col lg:flex-row items-center justify-center gap-10">
-          <ProjectCard />
-            <ProjectCard />
-            <ProjectCard />
-          </div>
-        </section>
-
-        {/* <section className="flex flex-col gap-16 text-center justify-center px-section pb-20">
-          <div className="">
-            <h2 className="font-lora font-bold text-headline-l text-secondary pb-3">
-              Events
-            </h2>
-            <p className="font-raleway text-title-m text-title-gray">
-              Forem ipsum dolora asdklasjdkasdj sit amet, consectetur adipiscing
-              elit. Etiam eu turpis molestie, dictum est a
-            </p>
-          </div>
-
-          <div className="flex flex-row justify-center gap-5 sm:gap-6 md:gap-10">
-            {events.slice(0, 3).map((event: any) => (
-              <EventCard 
-                key={event.slug}
-                _id={event.slug}
-               name={event.name}
-                date={event.date}
-                location={event.location}
-                time={event.time}
-                price={event.price}
-                image={event.image}
-                eventType={event.eventType}
-              />
-            ))}
-          </div>
-        </section>
-
-        <section className="flex flex-col gap-16 text-center justify-center px-section pb-20">
-          <div className="">
-            <h2 className="font-lora font-bold text-headline-l text-secondary pb-3">
-              Projects
-            </h2>
-            <p className="font-raleway text-title-m text-title-gray">
-              Forem ipsum dolora asdklasjdkasdj sit amet, consectetur adipiscing
-              elit. Etiam eu turpis molestie, dictum est a
-            </p>
-          </div>
-          <div className="flex flex-row justify-center gap-10">
-            <ProjectCard />
-            <ProjectCard />
-            <ProjectCard />
-          </div>
-        </section>
-
-         */}
         <SponsorshipSection />
       </RootLayout>
     </div>

@@ -7,7 +7,7 @@ export const SponsorshipSection = () => {
   return (
     <div className="flex flex-col bg-sponsorship gap-16 text-start items-center px-8 py-10 pb-16 sm:px-20 xl:px-section md:pb-14">
       <div>
-        <h2 className="font-lora font-bold text-headline-m sm:text-display-m text-center text-white pb-12">
+        <h2 className="font-lora font-bold text-headline-l sm:text-display-m text-center text-white pb-12">
           Sponsors
         </h2>
         <p className="font-raleway text-title-m sm:text-title-l text-white">
