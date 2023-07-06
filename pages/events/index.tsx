@@ -1,9 +1,10 @@
-import Link from "next/link";
 import { getAllEvents } from "@/lib/events.js";
 import RootLayout from "@/pages/layout";
 import EventCard from "@/components/cards/EventCard";
 import { SponsorshipSection } from "@/components/SponsorshipSection";
 import EventsPlaceHolder from "@/components/placeholder/EventsPlaceholder";
+import Loading from "@/components/animations/Loading";
+import { Suspense } from "react";
 
 export async function getStaticProps() {
   const events = await getAllEvents();
