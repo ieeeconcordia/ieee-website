@@ -49,7 +49,7 @@ export const Member = ({
             {firstName + " " + lastName}
           </h3>
           <p className=" text-label-l font-light">
-            {position} - {program}
+            {position} - {program == "" ? "B.Eng" : program}
           </p>
         </div>
 
@@ -59,10 +59,15 @@ export const Member = ({
             {" "}
             <IoMailOutline size={35} />
           </Link>
-          <Link href={linkedIn}>
-            {" "}
-            <IoLogoLinkedin size={28} />
-          </Link>
+
+          {linkedIn == "" ? (
+            <></>
+          ) : (
+            <Link href={linkedIn}>
+              {" "}
+              <IoLogoLinkedin size={28} />
+            </Link>
+          )}
         </div>
       </div>
     </div>

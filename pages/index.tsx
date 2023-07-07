@@ -41,7 +41,7 @@ export default function Home({ events, projects }: any) {
           <h4 className="font-raleway font-semibold text-headline-l text-secondary">
             About IEEE Concordia
           </h4>
-          <p className="font-raleway text-title-m sm:text-title-l ">
+          <p className="font-raleway text-title-s sm:text-title-m ">
             <b>IEEE Concordia Student Branch</b> is a student chapter of IEEE
             (Institute of Electrical and Electronics Engineers), the
             world&apos;s largest technical professional organization. Our
@@ -55,7 +55,7 @@ export default function Home({ events, projects }: any) {
 
         <section className="flex flex-col text-center items-center justify-items-center gap-8 px-8 pb-10 sm:px-20 xl:px-section md:pb-14">
           <div className="">
-            <h2 className="font-lora font-bold text-headline-l sm:text-display-m text-secondary pb-6">
+            <h2 className="font-lora font-bold text-headline-l sm:text-display-m text-secondary pb-8">
               Events
             </h2>
             <p className="font-raleway text-start sm:text-center text-gray-700 text-title-m sm:text-headline-s">
@@ -103,7 +103,7 @@ export default function Home({ events, projects }: any) {
 
         <section className="flex flex-col text-center items-center justify-items-center gap-6 px-8 pb-10 sm:px-20 xl:px-section md:pb-14">
           <div className="">
-            <h2 className="font-lora  font-bold text-headline-l sm:text-display-m text-secondary pb-6">
+            <h2 className="font-lora  font-bold text-headline-l sm:text-display-m text-secondary pb-8">
               Projects
             </h2>
             <p className="font-raleway text-start sm:text-center text-gray-700 text-title-m sm:text-headline-s">

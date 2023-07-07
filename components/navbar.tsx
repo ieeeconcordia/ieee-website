@@ -48,7 +48,10 @@ export default function Navbar() {
             // Render the regular navbar for large screens
             <div className="flex flex-row items-center justify-between mt-4 md:mt-0 gap-6">
               <ul className="flex flex-row items-center font-raleway text-label-l font-bold gap-6">
-                
+                <li>
+                  <Link href="/">Home</Link>
+                </li>
+
                 <li>
                   <Link href="/about">About Us</Link>
                 </li>

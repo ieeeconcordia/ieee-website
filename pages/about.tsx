@@ -3,9 +3,12 @@ import RootLayout from "./layout";
 import { SponsorshipBtn } from "@/components/buttons/SponsorshipBtn";
 import { SponsorshipSection } from "@/components/SponsorshipSection";
 import { useEffect, useState } from "react";
+import { TypeAnimation } from "react-type-animation";
+import TypingAnimation from "@/components/animations/TypingAnimation";
 
 export default function About() {
   const [execTeam, setExecTeam] = useState([]);
+  const [windowWidth, setWindowWidth] = useState(0);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -15,18 +18,34 @@ export default function About() {
     };
 
     fetchData();
+
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
   }, []);
 
   return (
     <>
       <RootLayout>
         <div className="w-full bg-center bg-no-repeat bg-cover bg-execTeam ">
-          <h4
-            className="bg-black bg-opacity-75 text-center font-raleway font-bold text-5xl text-white py-16"
+          <div
+            className="bg-black bg-opacity-75 text-center font-raleway font-bold text-4xl md:text-5xl text-white py-16"
             style={{ zIndex: "1" }}
           >
-            &ldquo;The people behind the work&ldquo;
-          </h4>
+            {windowWidth < 540 ? (
+              "The students behind the work!"
+            ) : (
+              <TypingAnimation />
+            )}
+          </div>
         </div>
         <section className="flex flex-col items-center gap-10 pt-container pb-20">
           <div className="">
@@ -35,7 +54,7 @@ export default function About() {
                 style={{ position: "relative", zIndex: 2 }}
                 className="px-8 sm:px-20 xl:px-section"
               >
-                <p className="font-raleway text-start text-gray-700 text-title-m sm:text-title-l pt-8">
+                <p className="font-raleway text-start text-gray-700 text-title-s sm:text-title-m pt-8">
                   We are a dynamic team of enthusiastic students, united by our
                   shared love for learning, growth, and community. Together, we
                   organize engaging events, promote academic and skill
@@ -77,11 +96,11 @@ export default function About() {
             <h2 className="text-center font-raleway font-semibold text-headline-l text-secondary">
               Lab Supervisors
             </h2>
-            <p className="font-raleway text-gray-700 text-title-m sm:text-headline-s text-start">
+            <p className="font-raleway text-gray-700 text-title-s sm:text-title-m text-start">
               Lab Supervisors play a vital role in keeping our lab open and
-              accessible to all members. As a Lab Supervisor, you&apos;ll have the
-              privilege of accessing the lab whenever you want and you get to
-              experiment in a fully equipped lab.
+              accessible to all members. As a Lab Supervisor, you&apos;ll have
+              the privilege of accessing the lab whenever you want and you get
+              to experiment in a fully equipped lab.
               <br />
               <br />
               In exchange for this incredible opportunity, we simply ask for
