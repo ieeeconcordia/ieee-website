@@ -1,19 +1,19 @@
 ---
-name: "Soldering" 
-date: "2023-06-09"
-location: "SGW"
-time: "21:51"
-description: This is a short description of the event. Press likeif you likey
+name: "Upcoming Projects" 
+date: "Time/Duration"
+location: "Location"
+time: "Time"
+description: This is where all the upcoming projects will be displayed. Stay up to date with this cool little view.
 price: 10
-image: "/uploads/Arduino_Tutorial.png"
-organizer: Alexandre Fontaine
-eventType: "Competition"
+image: "/uploads/Upcoming_Projects.JPG"
+organizer: IEEE Concordia
+eventType: "Upcoming"
 sponsors: ["Sponsors "]
 ---
 
-- **Date**: 2023-06-09
-- **Time**: 14:00
-- **Location**: SGW - Hall Building 
+- **Date**: TBA
+- **Time**: TBA
+- **Location**: TBA
 
 ## Description
 

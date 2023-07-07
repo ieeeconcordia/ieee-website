@@ -53,16 +53,11 @@ export default function ProjectCard({
           <p className="italic text-base font-light">Additional tags</p>
         </div>
 
+        <div className="flex flex-row items-center text-sm gap-1 text-gray-600">
+          <IoTimeOutline size={24} color="gray" /> {date}
+        </div>
 
-          <div className="flex flex-row items-center text-sm gap-1 text-gray-600">
-            <IoTimeOutline size={24} color="gray" /> {date}
-          </div>
-
-
-        <p className="text-base text-gray-600 line-clamp-3">
-          Forem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu
-          turpis molestie, dictum est a, mattis tellus
-        </p>
+        <p className="text-base text-gray-600 line-clamp-3">{description}</p>
 
         {/* Learn more */}
         <Link href={`/projects/${_id}`}>

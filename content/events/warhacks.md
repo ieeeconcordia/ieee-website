@@ -1,11 +1,11 @@
 ---
-name: "Warhacks" 
-date: "2023-06-09"
-location: "SGW"
-time: "21:51"
-description: This is a short description of the event. Press likeif you likey
+name: "Upcoming Events" 
+date: "Date"
+location: "location"
+time: "Time"
+description: This is where all the upcoming events will be displayed. Stay up to date with this cool little view.
 price: 10
-image: "/uploads/Arduino_Tutorial.png"
+image: "/uploads/Upcoming_Events.jpg"
 organizer: Alexandre Fontaine
 eventType: "Competition"
 sponsors: ["Sponsors "]

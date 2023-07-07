@@ -62,10 +62,7 @@ export default function EventCard({
           </div>
         </div>
 
-        <p className="text-base text-gray-600 line-clamp-3">
-          Forem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu
-          turpis molestie, dictum est a, mattis tellus
-        </p>
+        <p className="text-base text-gray-600 line-clamp-3">{description}</p>
 
         {/* Learn more */}
         <Link href={`/events/${_id}`}>
