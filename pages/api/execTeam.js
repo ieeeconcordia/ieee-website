@@ -2,7 +2,7 @@ import csv from "csv-parser";
 import fs from "fs";
 
 export default function handler(req, res) {
-  const filePath = "./ExecTeam2023-2024.csv";
+  const filePath = "./public/ExecTeam2023-2024.csv";
   const results = [];
   var index = 0;
 

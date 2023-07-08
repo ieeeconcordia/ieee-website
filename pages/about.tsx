@@ -14,6 +14,7 @@ export default function About() {
     const fetchData = async () => {
       const response = await fetch("/api/execTeam");
       const data = await response.json();
+      console.log(data);
       setExecTeam(data); // store the response from the API route
     };
 
