@@ -19,10 +19,10 @@ export default function Events({ events }: any) {
     <RootLayout>
       <div className="flex flex-col text-center items-center justify-items-center gap-6 px-8 pb-16 sm:px-20 xl:px-section md:pb-14">
         <div className="">
-          <h2 className="font-lora font-bold text-headline-l sm:text-display-m text-secondary pb-6">
+          <h2 className="font-lora font-bold text-headline-l text-secondary pb-6">
             Events
           </h2>
-          <p className="font-raleway text-start sm:text-center text-gray-700 text-title-m sm:text-title-l">
+          <p className="font-raleway text-center text-gray-700 text-title-s md:text-lg">
             Expand your knowledge with our academic events. Network and connect
             with like-minded individuals at our social events, and showcase your
             skills in our exciting competitions.

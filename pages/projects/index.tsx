@@ -21,22 +21,16 @@ export default function Projects({ projects }: any) {
     <>
       <RootLayout>
         <div className="flex flex-col text-center items-center justify-items-center gap-6 px-8 pb-16 sm:px-20 xl:px-section md:pb-14">
-          <h2 className="font-lora font-bold text-headline-l md:text-display-m text-secondary pb-6">
+          <h2 className="font-lora font-bold text-headline-l text-secondary pb-6">
             Projects
           </h2>
-          <p className="font-raleway text-start text-gray-700 text-title-m sm:text-title-l">
+          <p className="font-raleway text-center text-gray-700 text-title-s md:text-lg">
             Starting projects as a student can be daunting, and finishing them
-            can be just as challenging. That&apos;s why we offer planned <b>projects in
-            groups of 3 or 4 for 2-3 weeks</b>, with the support of our dedicated
-            Director of Projects. Our Director of Projects will be there to
-            answer any questions you may have and provide guidance throughout
-            the entire process.
-            <br />
-            <br />
-            By joining these planned projects, you&apos;ll not only get started on
-            your project but also receive support to help you successfully
-            complete it. Collaborate with like-minded peers, overcome obstacles
-            together, and achieve your project goals with confidence.
+            can be just as challenging. That&apos;s why we offer planned{" "}
+            <b>projects in groups of 3 or 4 for 2-3 weeks</b>, with the support
+            of our dedicated Director of Projects. Our Director of Projects will
+            be there to answer any questions you may have and provide guidance
+            throughout the entire process.
           </p>
           {projects.length == 0 ? (
             <ProjectsPlaceHolder />

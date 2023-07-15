@@ -22,13 +22,9 @@ export const SponsorshipSection = () => {
         <h2 className="font-lora font-bold text-headline-l text-center text-white pb-12 px-8 sm:px-20 xl:px-section">
           Sponsors
         </h2>
-        <p className="font-raleway text-title-s sm:text-base text-white px-8 sm:px-20 xl:px-section">
-          Our sponsors are vital to our success, and we are deeply grateful for
-          their support. With their generosity, we can host a variety of events
-          and projects and provide cutting-edge equipment for electrical and
-          electronics endeavors. From technical expertise to essential products
-          and funding,{" "}
-          <b>our sponsors enable us to strive for technical excellence</b>.
+        <p className="font-raleway text-center text-title-s md:text-lg text-white px-8 sm:px-20 xl:px-section">
+          From technical expertise to essential products and funding, our
+          sponsors enable us to strive for technical excellence.
         </p>
       </div>
 
@@ -44,14 +40,6 @@ export const SponsorshipSection = () => {
           />
         ))}
       </div>
-
-      <p className="font-raleway text-title-m sm:text-title-l text-white px-8 sm:px-20 xl:px-section">
-        As a sponsor of Concordia IEEE, you{" "}
-        <b>become an integral part of our association</b>, making a positive
-        impact on tutorials, competitions, and the wider university community.
-        Join us and help empower future engineers as they pursue excellence.
-        Together, we can achieve remarkable growth and accomplish great things.
-      </p>
       <SponsorshipBtn text={"Become a sponsor!"} />
     </div>
   );

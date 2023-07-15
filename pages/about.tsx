@@ -55,7 +55,7 @@ export default function About() {
                 style={{ position: "relative", zIndex: 2 }}
                 className="px-8 sm:px-20 xl:px-section"
               >
-                <p className="font-raleway text-start text-gray-700 text-title-s sm:text-title-m pt-8">
+                <p className="font-raleway text-start text-gray-700 text-title-s md:text-lg pt-8">
                   We are a dynamic team of enthusiastic students, united by our
                   shared love for learning, growth, and community. Together, we
                   organize engaging events, promote academic and skill
@@ -97,7 +97,7 @@ export default function About() {
             <h2 className="text-center font-raleway font-semibold text-headline-l text-secondary">
               Lab Supervisors
             </h2>
-            <p className="font-raleway text-gray-700 text-title-s sm:text-title-m text-start">
+            <p className="font-raleway text-gray-700 text-title-s md:text-lg text-center">
               Lab Supervisors play a vital role in keeping our lab open and
               accessible to all members. As a Lab Supervisor, you&apos;ll have
               the privilege of accessing the lab whenever you want and you get

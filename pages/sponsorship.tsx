@@ -65,6 +65,46 @@ export default function Sponsorship() {
           ))}
         </div>
       </div>
+
+      {/* To be used */}
+
+      {/* <div className="flex flex-col bg-sponsorship gap-16 text-start items-center  py-10 pb-16 md:pb-14">
+      <div>
+        <h2 className="font-lora font-bold text-headline-l text-center text-white pb-12 px-8 sm:px-20 xl:px-section">
+          Sponsors
+        </h2>
+        <p className="font-raleway text-title-s md:text-lg text-white px-8 sm:px-20 xl:px-section">
+          Our sponsors are vital to our success, and we are deeply grateful for
+          their support. With their generosity, we can host a variety of events
+          and projects and provide cutting-edge equipment for electrical and
+          electronics endeavors. From technical expertise to essential products
+          and funding,{" "}
+          <b>our sponsors enable us to strive for technical excellence</b>.
+        </p>
+      </div>
+
+      <div className="flex flex-wrap justify-center gap-8 px-4 md:px-16 xl:px-32">
+        {images.map((image) => (
+          <Image
+            className="w-40 rounded-lg shadow-lg"
+            width={150}
+            height={100}
+            alt={"alt"}
+            src={`/sponsors/${image}`}
+            key={image}
+          />
+        ))}
+      </div>
+
+      <p className="font-raleway text-title-m md:text-lg text-white px-8 sm:px-20 xl:px-section">
+        As a sponsor of Concordia IEEE, you{" "}
+        <b>become an integral part of our association</b>, making a positive
+        impact on tutorials, competitions, and the wider university community.
+        Join us and help empower future engineers as they pursue excellence.
+        Together, we can achieve remarkable growth and accomplish great things.
+      </p>
+      <SponsorshipBtn text={"Become a sponsor!"} />
+    </div> */}
     </RootLayout>
   );
 }

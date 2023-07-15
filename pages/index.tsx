@@ -41,7 +41,7 @@ export default function Home({ events, projects }: any) {
           <h4 className="font-raleway font-semibold text-headline-l  text-secondary">
             About IEEE Concordia
           </h4>
-          <p className="font-raleway text-title-s sm:text-base ">
+          <p className="font-raleway text-title-s md:text-lg ">
             IEEE Concordia Student Branch is a student chapter of IEEE
             (Institute of Electrical and Electronics Engineers), the
             world&apos;s largest technical professional organization. Our
@@ -58,7 +58,7 @@ export default function Home({ events, projects }: any) {
             <h2 className="font-lora font-bold text-headline-l text-secondary pb-8">
               Events
             </h2>
-            <p className="font-raleway text-center text-gray-700 text-title-s sm:text-base">
+            <p className="font-raleway text-center text-gray-700 text-title-s md:text-lg">
               Expand your knowledge with our academic events. Network and
               connect with like-minded individuals at our social events, and
               showcase your skills in our exciting competitions.
@@ -103,10 +103,10 @@ export default function Home({ events, projects }: any) {
 
         <section className="flex flex-col text-center items-center justify-items-center gap-6 px-8 pb-10 sm:px-20 xl:px-section md:pb-14">
           <div className="">
-            <h2 className="font-lora  font-bold text-headline-l sm:text-display-m text-secondary pb-8">
+            <h2 className="font-lora  font-bold text-headline-l text-secondary pb-8">
               Projects
             </h2>
-            <p className="font-raleway text-center text-gray-700 text-title-s sm:text-headline-s">
+            <p className="font-raleway sm:text-center text-gray-700 text-title-s md:text-lg">
               Starting and finishing projects as a student can be daunting. Join
               our planned projects in groups of 3 or 4 for 2-3 weeks, with the
               guidance of our Director of Projects.
