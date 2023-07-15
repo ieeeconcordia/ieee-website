@@ -15,7 +15,7 @@ export default function SponsorsMarquee() {
     fetchData();
   }, []);
   return (
-    <div className="bg-gray-400">
+    <div className="">
       <Marquee>
         {images.map((image) => (
           <img

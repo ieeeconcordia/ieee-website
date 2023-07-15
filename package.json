@@ -36,6 +36,7 @@
     "react-type-animation": "^3.1.0",
     "remark": "^14.0.3",
     "remark-html": "^15.0.2",
+    "split-type": "^0.3.3",
     "typescript": "5.0.3",
     "uuid": "^9.0.0"
   },

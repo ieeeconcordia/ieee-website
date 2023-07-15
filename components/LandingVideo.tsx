@@ -1,4 +1,5 @@
 import React from "react";
+import HomeTypingAnimation from "./animations/HomeTypingAnimation";
 
 export default function LandingVideo() {
   return (
@@ -11,10 +12,8 @@ export default function LandingVideo() {
           muted
           loop
         />
-        <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center">
-          <h1 className="text-4xl md:text-6xl lg:text-7xl text-center text-white font-bold px-3">
-            Your Bold White Text
-          </h1>
+        <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center text-4xl md:text-6xl lg:text-7xl text-center text-white font-raleway font-bold">
+          <HomeTypingAnimation />
         </div>
       </div>
     </div>
