@@ -19,10 +19,10 @@ export const SponsorshipSection = () => {
   return (
     <div className="flex flex-col bg-sponsorship gap-16 text-start items-center  py-10 pb-16 md:pb-14">
       <div>
-        <h2 className="font-lora font-bold text-headline-l sm:text-display-m text-center text-white pb-12 px-8 sm:px-20 xl:px-section">
+        <h2 className="font-lora font-bold text-headline-l text-center text-white pb-12 px-8 sm:px-20 xl:px-section">
           Sponsors
         </h2>
-        <p className="font-raleway text-title-m sm:text-title-l text-white px-8 sm:px-20 xl:px-section">
+        <p className="font-raleway text-title-s sm:text-base text-white px-8 sm:px-20 xl:px-section">
           Our sponsors are vital to our success, and we are deeply grateful for
           their support. With their generosity, we can host a variety of events
           and projects and provide cutting-edge equipment for electrical and

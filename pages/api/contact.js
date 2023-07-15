@@ -16,9 +16,9 @@ export default async function handler(req, res) {
     if (request == "Competitions") emailTo = "competitions@ieeeconcordia.ca";
 
     const msg = {
-      to: "webmaster@ieeeconcordia.ca", // Change to your recipient
+      to: emailTo, // Change to your recipient
       from: "no-reply@ieeeconcordia.ca", // Change to your verified sender
-      subject: "Ticket: " + subject,
+      subject: "[" + request + "] " + subject,
       html: `
       <head>
         <title>New Support Ticket</title>

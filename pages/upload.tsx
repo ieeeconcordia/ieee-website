@@ -39,7 +39,7 @@ export default function Upload() {
       const { imagePath, imageFilePath } = await responseImg.json();
 
       // Do something with the image and file paths, e.g., store them in state or database
-      console.log(mdFilePath, mdFilePath);
+      console.log(markdownPath, mdFilePath);
       console.log(imagePath, imageFilePath);
     } catch (error) {
       console.error(error);

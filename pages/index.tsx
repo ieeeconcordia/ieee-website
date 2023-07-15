@@ -38,11 +38,11 @@ export default function Home({ events, projects }: any) {
     <div className="">
       <RootLayout>
         <section className="max-w-4xl md:max-w-full flex flex-col gap-6 px-8 pb-10 sm:px-20 xl:px-section md:pb-20">
-          <h4 className="font-raleway font-semibold text-headline-l text-secondary">
+          <h4 className="font-raleway font-semibold text-headline-l  text-secondary">
             About IEEE Concordia
           </h4>
-          <p className="font-raleway text-title-s sm:text-title-m ">
-            <b>IEEE Concordia Student Branch</b> is a student chapter of IEEE
+          <p className="font-raleway text-title-s sm:text-base ">
+            IEEE Concordia Student Branch is a student chapter of IEEE
             (Institute of Electrical and Electronics Engineers), the
             world&apos;s largest technical professional organization. Our
             mission, just like IEEE, is to foster technical and professional
@@ -55,11 +55,11 @@ export default function Home({ events, projects }: any) {
 
         <section className="flex flex-col text-center items-center justify-items-center gap-8 px-8 pb-10 sm:px-20 xl:px-section md:pb-14">
           <div className="">
-            <h2 className="font-lora font-bold text-headline-l sm:text-display-m text-secondary pb-8">
+            <h2 className="font-lora font-bold text-headline-l text-secondary pb-8">
               Events
             </h2>
-            <p className="font-raleway text-start sm:text-center text-gray-700 text-title-m sm:text-headline-s">
-              <b>Expand your knowledge</b> with our academic events. Network and
+            <p className="font-raleway text-center text-gray-700 text-title-s sm:text-base">
+              Expand your knowledge with our academic events. Network and
               connect with like-minded individuals at our social events, and
               showcase your skills in our exciting competitions.
             </p>
@@ -97,7 +97,7 @@ export default function Home({ events, projects }: any) {
           {events.length == 0 ? (
             <></>
           ) : (
-            <SimpleBtn text="See more..." href="/projects" />
+            <SimpleBtn text="See more..." href="/events" />
           )}
         </section>
 
@@ -106,12 +106,10 @@ export default function Home({ events, projects }: any) {
             <h2 className="font-lora  font-bold text-headline-l sm:text-display-m text-secondary pb-8">
               Projects
             </h2>
-            <p className="font-raleway text-start sm:text-center text-gray-700 text-title-m sm:text-headline-s">
+            <p className="font-raleway text-center text-gray-700 text-title-s sm:text-headline-s">
               Starting and finishing projects as a student can be daunting. Join
-              our planned <b>projects in groups of 3 or 4 for 2-3 weeks</b>,
-              with the guidance of our Director of Projects. Get support from
-              start to finish and collaborate with like-minded peers. Take the
-              first step and join our community today.
+              our planned projects in groups of 3 or 4 for 2-3 weeks, with the
+              guidance of our Director of Projects.
             </p>
           </div>
 

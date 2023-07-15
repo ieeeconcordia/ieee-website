@@ -64,8 +64,6 @@ export default function Navbar() {
                   <Link href="/projects">Projects</Link>
                 </li>
 
-                <li className="line-through decoration-2 text-gray-400">Lab</li>
-
                 <li>
                   <Link href="contact">Contact us</Link>
                 </li>

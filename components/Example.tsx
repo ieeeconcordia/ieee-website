@@ -84,13 +84,11 @@ export default function Example() {
                             <Link href="/projects">Projects</Link>
                           </li>
 
-                          <li className="line-through decoration-2 text-gray-400">Lab</li>
-
                           <li>
                             <Link href="contact">Contact us</Link>
                           </li>
-                          <li className="m-auto">
-                          <SponsorshipBtnNav />
+                          <li className="w-full">
+                            <SponsorshipBtnNav />
                           </li>
                         </ul>
                       </div>

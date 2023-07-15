@@ -42,6 +42,7 @@ module.exports = {
         "title-gray": "#5F5F5F",
         sponsorship: "#006999",
         discord: "#5865F2",
+        "ieee-green": "#21CBBB",
       },
       backgroundImage: {
         execTeam:
