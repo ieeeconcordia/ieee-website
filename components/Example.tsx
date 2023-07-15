@@ -15,7 +15,7 @@ export default function Example() {
         onClick={() => setOpen(true)} // Open the menu when the button is clicked
       >
         <span className="sr-only">Open menu</span>
-        <MdMenu size={35} aria-hidden="true" />
+        <MdMenu size={35} color="white" aria-hidden="true" />
       </button>
       <Transition.Root show={open} as={Fragment}>
         <Dialog as="div" className="relative z-10" onClose={setOpen}>
@@ -28,7 +28,7 @@ export default function Example() {
             leaveFrom="opacity-100"
             leaveTo="opacity-0"
           >
-            <div className="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" />
+            <div className="fixed inset-0 bg-black bg-opacity-75 transition-opacity" />
           </Transition.Child>
 
           <div className="fixed inset-0 overflow-hidden">

@@ -1,4 +1,4 @@
-import Navbar from "@/components/navbar";
+import Navbar from "@/components/navbar/Navbar";
 import Footer from "@/components/Footer";
 import EventCard from "@/components/cards/EventCard";
 import { SimpleBtn } from "@/components/buttons/SimpleBtn";

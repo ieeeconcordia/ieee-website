@@ -19,8 +19,8 @@ export default function Sponsorship() {
 
   return (
     <RootLayout>
-      <div className="flex flex-col items-center justify-items-center px-8 pb-16 sm:px-20 xl:px-section md:pb-14 ">
-        <div className="w-full flex flex-col gap-8">
+      <div className="flex flex-col gap-16 text-start items-center py-10 pb-16 md:pb-14">
+        {/* <div className="w-full flex flex-col gap-8">
           <h2 className="font-lora font-bold text-center text-headline-m sm:text-headline-l text-secondary pb-3">
             Sponsorship
           </h2>
@@ -64,11 +64,11 @@ export default function Sponsorship() {
             />
           ))}
         </div>
-      </div>
+      </div> */}
 
-      {/* To be used */}
+        {/* To be used */}
 
-      {/* <div className="flex flex-col bg-sponsorship gap-16 text-start items-center  py-10 pb-16 md:pb-14">
+        {/* <div className="flex flex-col bg-sponsorship gap-16 text-start items-center  py-10 pb-16 md:pb-14">
       <div>
         <h2 className="font-lora font-bold text-headline-l text-center text-white pb-12 px-8 sm:px-20 xl:px-section">
           Sponsors
@@ -104,7 +104,32 @@ export default function Sponsorship() {
         Together, we can achieve remarkable growth and accomplish great things.
       </p>
       <SponsorshipBtn text={"Become a sponsor!"} />
+      
     </div> */}
+
+        <div>
+          <h2 className="font-lora font-bold text-headline-l text-secondary text-center pb-12 px-8 sm:px-20 xl:px-section">
+            Sponsors
+          </h2>
+          <p className="font-raleway text-center text-title-s md:text-lg px-8 sm:px-20 xl:px-section">
+            From technical expertise to essential products and funding, our
+            sponsors enable us to strive for technical excellence.
+          </p>
+        </div>
+      </div>
+
+      <div className="flex flex-wrap justify-center gap-8 px-4 md:px-16 xl:px-32">
+        {images.map((image) => (
+          <Image
+            className="w-40 rounded-lg shadow-lg"
+            width={150}
+            height={100}
+            alt={"alt"}
+            src={`/sponsors/${image}`}
+            key={image}
+          />
+        ))}
+      </div>
     </RootLayout>
   );
 }
