@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import sponsors from "../public/sponsors/DummySponsor.png";
 import Image from "next/image";
 import { SponsorshipBtn } from "./buttons/SponsorshipBtn";
+import SponsorsMarquee from "./animations/SponsorsMarquee";
 
 export const SponsorshipSection = () => {
   const [images, setImages] = useState([]);
@@ -28,18 +29,8 @@ export const SponsorshipSection = () => {
         </p>
       </div>
 
-      <div className="flex flex-wrap justify-center gap-8 px-4 md:px-16 xl:px-32">
-        {images.map((image) => (
-          <Image
-            className="w-40 rounded-lg shadow-lg"
-            width={150}
-            height={100}
-            alt={"alt"}
-            src={`/sponsors/${image}`}
-            key={image}
-          />
-        ))}
-      </div>
+      <SponsorsMarquee />
+
       <SponsorshipBtn text={"Become a sponsor!"} />
     </div>
   );
