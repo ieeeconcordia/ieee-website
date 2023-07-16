@@ -41,8 +41,8 @@ export default function HomeTypingAnimation() {
   }, []);
 
   return (
-    <div>
-      <div ref={divRef} className="font-bold">
+    <div className="">
+      <div ref={divRef} className="font-bold text-gray-100 ">
         IEEE Concordia
       </div>
       {animationComplete ? (

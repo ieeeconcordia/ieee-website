@@ -40,6 +40,8 @@ module.exports = {
         "footer-fd": "#FFFFFF",
         tertiary: "#FFD100",
         "title-gray": "#5F5F5F",
+        "nav-item-dark": "#002333",
+        "nav-item-light": "#F5FCFF",
         sponsorship: "#006999",
         discord: "#5865F2",
         "ieee-green": "#21CBBB",
