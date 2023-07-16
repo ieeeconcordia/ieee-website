@@ -73,7 +73,7 @@ export default function About() {
               Meet our team
             </h2>
             <div className="w-fit grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 justify-items-center gap-6 sm:gap-10">
-              {execTeam.map(
+              {/* {execTeam.map(
                 (member: any, index: any) =>
                   member["Status"] == "Active" && (
                     <Member
@@ -88,7 +88,148 @@ export default function About() {
                       image={member["Image"]}
                     />
                   )
-              )}
+              )} */}
+
+              <Member
+                firstName={"Shami Ivan"}
+                lastName={"Senga"}
+                position={"Branch Chair"}
+                program={"B.Eng. Coen."}
+                discord={"cmumind#8981"}
+                emailIEEE={"chair@ieeeconcordia.ca"}
+                linkedIn={""}
+                image={"Ivan.JPG"}
+              />
+              <Member
+                firstName={"Yara"}
+                lastName={"Stouhi"}
+                position={"Branch Treasurer"}
+                program={"B.Eng. Coen."}
+                discord={"yara#4460"}
+                emailIEEE={"treasurer@ieeeconcordia.ca"}
+                linkedIn={""}
+                image={"Yara.JPG"}
+              />
+              <Member
+                firstName={"Kartik"}
+                lastName={"Teotia"}
+                position={"Branch Vice-Chair"}
+                program={"B.Eng. Elec."}
+                discord={"Kartik T#7583"}
+                emailIEEE={"vicechair@ieeeconcordia.ca"}
+                linkedIn={""}
+                image={"Kartik.JPG"}
+              />
+              <Member
+                firstName={"Sabine"}
+                lastName={"Hleiss"}
+                position={"Branch Secretary"}
+                program={""}
+                discord={"sabine#6480"}
+                emailIEEE={"secretary@ieeeconcordia.ca"}
+                linkedIn={""}
+                image={""}
+              />
+              <Member
+                firstName={"Alexandre"}
+                lastName={"Fontaine"}
+                position={"Branch Academics"}
+                program={"B.Eng. Elec."}
+                discord={"zwaky#7372"}
+                emailIEEE={"academics@ieeeconcordia.ca"}
+                linkedIn={""}
+                image={"Alex.jpg"}
+              />
+              <Member
+                firstName={"Rayan"}
+                lastName={"Alkayal"}
+                position={"Director of IT"}
+                program={""}
+                discord={"itsrhino_"}
+                emailIEEE={"itdirector@ieeeconcordia.ca"}
+                linkedIn={""}
+                image={""}
+              />
+              <Member
+                firstName={"Juan"}
+                lastName={"Vergas"}
+                position={"Director of IT"}
+                program={""}
+                discord={"sum_re1"}
+                emailIEEE={"itdirector@ieeeconcordia.ca"}
+                linkedIn={""}
+                image={""}
+              />
+              <Member
+                firstName={"Houssam Eddine"}
+                lastName={"Righi"}
+                position={"Branch Webmaster"}
+                program={"B.Eng. Soen."}
+                discord={"hoorii"}
+                emailIEEE={"webmaster@ieeeconcordia.ca"}
+                linkedIn={""}
+                image={"Houssam.JPG"}
+              />
+              <Member
+                firstName={"Ardlan"}
+                lastName={"Jamshidi"}
+                position={"Director of Competitions"}
+                program={"B.Eng. Elec."}
+                discord={"ardianapolis#7436"}
+                emailIEEE={"competitions@ieeeconcordia.ca"}
+                linkedIn={""}
+                image={""}
+              />
+              <Member
+                firstName={"Mathias"}
+                lastName={"Desrochers"}
+                position={"Director of Lab Services"}
+                program={"B.Eng. Elec."}
+                discord={"M3thRocks#6275"}
+                emailIEEE={"services@ieeeconcordia.ca"}
+                linkedIn={""}
+                image={""}
+              />
+              <Member
+                firstName={"Kaden"}
+                lastName={""}
+                position={"Director of Lab Services"}
+                program={"B.Eng. Elec."}
+                discord={"M3thRocks#6275"}
+                emailIEEE={"services@ieeeconcordia.ca"}
+                linkedIn={""}
+                image={""}
+              />
+              <Member
+                firstName={"Minh"}
+                lastName={"Huynh"}
+                position={"Director of Warhacks"}
+                program={""}
+                discord={"saucy0662"}
+                emailIEEE={"warhacks@ieeeconcordia.ca"}
+                linkedIn={""}
+                image={""}
+              />
+              <Member
+                firstName={"Mazen"}
+                lastName={"Mohamed"}
+                position={"Director of Projects"}
+                program={""}
+                discord={"_.mazen._"}
+                emailIEEE={"projects@ieeeconcordia.ca"}
+                linkedIn={""}
+                image={""}
+              />
+              <Member
+                firstName={"Rahil"}
+                lastName={"Kaddad"}
+                position={"Director of External"}
+                program={"B.Eng Elec"}
+                discord={"rahilkakkad"}
+                emailIEEE={"external@ieeeconcordia.ca"}
+                linkedIn={""}
+                image={""}
+              />
             </div>
           </div>
 
