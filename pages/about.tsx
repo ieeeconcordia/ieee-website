@@ -72,7 +72,7 @@ export default function About() {
             <h2 className="text-center font-raleway font-semibold text-headline-l text-secondary">
               Meet our team
             </h2>
-            <div className="w-fit grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 justify-items-center gap-6 sm:gap-10">
+            <div className="w-fit grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 justify-items-center gap-4 sm:gap-10">
               {/* {execTeam.map(
                 (member: any, index: any) =>
                   member["Status"] == "Active" && (
@@ -191,7 +191,7 @@ export default function About() {
                 image={""}
               />
               <Member
-                firstName={"Kaden"}
+                firstName={"Kaden Perelmiter"}
                 lastName={""}
                 position={"Director of Lab Services"}
                 program={"B.Eng. Elec."}
