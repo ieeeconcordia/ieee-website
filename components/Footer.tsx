@@ -19,37 +19,37 @@ export default function Footer() {
             <h3 className="text-lg text-gray-100 font-bold mb-4">IEEE LINKS</h3>
             <ul className="list-none flex flex-col gap-2">
               <li className="">
-                <a href="#" className="text-white hover:text-gray-100">
+                <a href="https://www.ieee.org/" className="text-white hover:text-gray-100">
                   IEEE Global
                 </a>
               </li>
               <li className="">
-                <a href="#" className="text-gray-300 hover:text-gray-100">
+                <a href="https://students.ieee.org/student-members/" className="text-gray-300 hover:text-gray-100">
                   IEEE students
                 </a>
               </li>
               <li className="">
-                <a href="#" className="text-gray-400 hover:text-gray-100">
+                <a href="https://www.ieee.ca/en/" className="text-gray-400 hover:text-gray-100">
                   IEEE Canada
                 </a>
               </li>
               <li className="">
-                <a href="#" className="text-gray-400 hover:text-gray-100">
+                <a href="https://site.ieee.org/r7-sac/" className="text-gray-400 hover:text-gray-100">
                   IEEE Student Activities
                 </a>
               </li>
               <li className="">
-                <a href="#" className="text-gray-400 hover:text-gray-100">
+                <a href="https://montreal.ieee.ca/en/home/" className="text-gray-400 hover:text-gray-100">
                   IEEE Montreal
                 </a>
               </li>
               <li className="">
-                <a href="#" className="text-gray-400 hover:text-gray-100">
+                <a href="https://ieeecanadianfoundation.org/" className="text-gray-400 hover:text-gray-100">
                   IEEE Canada Foundation
                 </a>
               </li>
               <li className="">
-                <a href="#" className="text-gray-400 hover:text-gray-100">
+                <a href="https://students.ieee.org/student-members/#studentbranches" className="text-gray-400 hover:text-gray-100">
                   Find a student branch near you
                 </a>
               </li>
@@ -63,22 +63,22 @@ export default function Footer() {
             </h3>
             <ul className="list-none flex flex-col gap-2">
               <li className="">
-                <a href="#" className="text-gray-400 hover:text-gray-100">
+                <a href="https://www.concordia.ca/" className="text-gray-400 hover:text-gray-100">
                   Concordia University
                 </a>
               </li>
               <li className="">
-                <a href="#" className="text-gray-400 hover:text-gray-100">
+                <a href="https://ecaconcordia.ca/" className="text-gray-400 hover:text-gray-100">
                   ECA Concordia
                 </a>
               </li>
               <li className="">
-                <a href="#" className="text-gray-400 hover:text-gray-100">
+                <a href="https://csu.qc.ca/" className="text-gray-400 hover:text-gray-100">
                   CSU Concondia
                 </a>
               </li>
               <li className="">
-                <a href="#" className="text-gray-400 hover:text-gray-100">
+                <a href="https://drive.google.com/file/d/1eeVua6x_pNREAqsbI5r3RlAHoPcxtSI3/view?usp=sharing" className="text-gray-400 hover:text-gray-100">
                   Policies
                 </a>
               </li>

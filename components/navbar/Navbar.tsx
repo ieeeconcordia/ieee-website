@@ -3,7 +3,9 @@ import Link from "next/link";
 import Image from "next/image";
 import logo from "../../public/logo.png";
 import { SponsorshipBtnNav } from "../buttons/SponsorshipBtn";
-import Example from "../Example";
+import Example from "./Example";
+import MobileHomeNav from "./Example";
+import MobileNav from "./MobileNav";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -41,7 +43,7 @@ export default function Navbar() {
         <div>
           {isMobile ? (
             // Render the hamburger menu for small screens
-            <Example />
+            <MobileNav />
           ) : (
             // Render the regular navbar for large screens
             <div className="flex flex-row items-center justify-between mt-4 md:mt-0 gap-6">

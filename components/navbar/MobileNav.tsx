@@ -2,9 +2,9 @@ import { Fragment, useState } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import { MdClose, MdMenu } from "react-icons/md";
 import Link from "next/link";
-import { SponsorshipBtnNav } from "./buttons/SponsorshipBtn";
+import { SponsorshipBtnNav } from "../buttons/SponsorshipBtn";
 
-export default function Example() {
+export default function MobileNav() {
   const [open, setOpen] = useState(false);
 
   return (
@@ -15,7 +15,7 @@ export default function Example() {
         onClick={() => setOpen(true)} // Open the menu when the button is clicked
       >
         <span className="sr-only">Open menu</span>
-        <MdMenu size={35} color="white" aria-hidden="true" />
+        <MdMenu size={35} color="black" aria-hidden="true" />
       </button>
       <Transition.Root show={open} as={Fragment}>
         <Dialog as="div" className="relative z-10" onClose={setOpen}>

@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import logo from "../../public/logo-white.png";
 import { SponsorshipBtnNav } from "../buttons/SponsorshipBtn";
-import Example from "../Example";
+import Example from "./Example";
 
 export default function HomeNavbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
