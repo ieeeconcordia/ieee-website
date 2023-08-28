@@ -250,7 +250,10 @@ export default function About() {
               dedicating this small amount of time, you help us ensure that all
               students members or not can have the chance to use the lab.
             </p>
-            <SponsorshipBtn text={"Become a lab supervisor!"} />
+            <SponsorshipBtn
+              text="Become a lab supervisor!"
+              link="https://docs.google.com/forms/d/e/1FAIpQLSfdBIGKD9NaIhjVVMSaKSyN22pzhVWBu3tJYn8OV8LVVigwQQ/viewform"
+            />
           </div>
         </section>
         <SponsorshipSection />

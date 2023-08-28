@@ -5,10 +5,19 @@ import { getAllProjects } from "@/lib/projects";
 import { Suspense } from "react";
 import Loading from "@/components/animations/Loading";
 import ProjectsPlaceHolder from "@/components/placeholder/ProjectsPlaceholder";
+import { firestore } from "@/lib/firebase";
+import { getDocs, collection, DocumentData } from "firebase/firestore";
 
 export async function getStaticProps() {
-  const projects = await getAllProjects();
-  console.log(projects);
+  const projectsQuerySnapshot = await getDocs(collection(firestore, "Project"));
+  const projects: { id: string; data: DocumentData }[] = [];
+  projectsQuerySnapshot.forEach((doc) => {
+    projects.push({
+      id: doc.id,
+      data: doc.data(),
+    });
+    console.log("Event: " + doc.data());
+  });
   return {
     props: {
       projects,
@@ -42,16 +51,16 @@ export default function Projects({ projects }: any) {
               >
                 {projects.map((project: any, index: any) => (
                   <ProjectCard
-                    key={project.slug}
-                    _id={project.slug}
-                    name={project.name}
-                    date={project.date}
-                    location={project.location}
-                    time={project.time}
-                    price={project.price}
-                    eventType={project.eventType}
-                    description={project.description}
-                    image={project.image}
+                    key={project.id}
+                    _id={project.id}
+                    name={project.data.title}
+                    date={project.data.date}
+                    location={project.data.location}
+                    time={project.data.time}
+                    price={project.data.price}
+                    eventType={project.data.eventType}
+                    description={project.data.description}
+                    image={project.data.image}
                     organizer={""}
                     sponsors={""}
                   />

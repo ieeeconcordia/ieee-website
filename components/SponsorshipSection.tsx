@@ -31,7 +31,7 @@ export const SponsorshipSection = () => {
 
       <SponsorsMarquee />
 
-      <SponsorshipBtn text={"Become a sponsor!"} />
+      <SponsorshipBtn text={"Become a sponsor!"} link="/sponsorship" />
     </div>
   );
 };

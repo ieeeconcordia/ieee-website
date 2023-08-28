@@ -37,7 +37,7 @@ export default function EventCard({
           {eventType}
         </div>
         <img
-          src={`/api/uploads/${encodeURIComponent(image)}`}
+          src={image}
           alt={name}
           className="w-full object-cover overflow-hidden max-h-full"
         />

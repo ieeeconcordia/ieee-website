@@ -32,7 +32,7 @@ export default function HomeNavbar() {
       <div className="w-full md:w-fit bg-yellow-400 md:rounded-b-xl text-center text-black font-raleway font-bold align-middle py-2 px-8 gap-0">
         Lab Status: Unavailable
       </div>
-      <div className="flex flex-row items-center w-full justify-between px-4 md:px-12 py-4 md:py-6">
+      <div className="flex flex-row items-center w-full justify-between px-4 md:px-12 py-2 md:py-2">
         <div className="flex items-center">
           <Link href={"/"}>
             <Image

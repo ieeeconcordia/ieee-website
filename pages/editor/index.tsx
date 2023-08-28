@@ -61,11 +61,10 @@ export default function MyEditor() {
   };
 
   const handleSubmit = async () => {
-    // upload image to cloudinary
-    const imageURL = await uploadImageCallBack(selectedImage);
-
-    // Add a new document with a generated id.
-    if (htmlContent) {
+    if (selectedImage && htmlContent) {
+      // upload image to cloudinary
+      const imageURL = await uploadImageCallBack(selectedImage);
+      // upload all the data as a firestore document
       const docRef = await addDoc(collection(firestore, eventType), {
         title: eventTitle,
         date: eventDate,
@@ -136,6 +135,9 @@ export default function MyEditor() {
       <button onClick={handleSubmit}>Submit</button>
       <h2>
         <Link href="/">Back to home</Link>
+      </h2>
+      <h2>
+        <Link href="/editor/list">See list</Link>
       </h2>
       <div className="m-16 border-2 ">
         <img src={selectedImageURL} alt="Event Image" className="w-1/2" />
