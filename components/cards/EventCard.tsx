@@ -28,10 +28,7 @@ export default function EventCard({
   time,
   description,
   image,
-  price,
-  organizer,
   eventType,
-  sponsors,
 }: EventProps) {
   return (
     <div className="w-72 sm:w-80 flex flex-col justify-start bg-white border overflow-hidden rounded-xl shadow-md">

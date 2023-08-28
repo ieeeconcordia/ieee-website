@@ -1,13 +1,41 @@
-import LandingVideo from "@/components/LandingVideo";
-import { useEffect, useRef } from "react";
-import gsap from "gsap";
-import ImageCarousel from "@/components/animations/Carousel";
-import SponsorsMarquee from "@/components/animations/SponsorsMarquee";
+// components/ImageUploader.js
+import React, { useState } from "react";
+import cloudinary from "@/lib/cloudinary";
 
-export default function Laboratory() {
+function ImageUploader() {
+  const [image, setImage] = useState(null);
+
+  const handleImageUpload = async (event: any) => {
+    console.log("Clicked");
+
+    const file = event.target.files[0];
+    console.log(file);
+
+    if (file) {
+      const formData = new FormData();
+      formData.append("file", file);
+      formData.append("upload_preset", "klyl1arw");
+
+      const response = await fetch(
+        "https://api.cloudinary.com/v1_1/ddds30vut/upload",
+        {
+          method: "POST",
+          body: formData,
+        }
+      );
+
+      const data = await response.json();
+      setImage(data.secure_url);
+    }
+  };
+
   return (
-    <>
-      <SponsorsMarquee />
-    </>
+    <div>
+      <input type="file" onChange={handleImageUpload} />
+      {image && <img src={image} alt="Uploaded" />}
+      <button onClick={handleImageUpload}> Submit </button>
+    </div>
   );
 }
+
+export default ImageUploader;
