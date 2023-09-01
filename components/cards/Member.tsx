@@ -1,9 +1,6 @@
-import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { IoLogoLinkedin, IoMail, IoMailOutline } from "react-icons/io5";
-import avatar from "@/public/avatar.webp";
-import { existsSync } from "node:fs";
 
 type memberProps = {
   firstName: string;
@@ -26,9 +23,7 @@ export const Member = ({
   program,
   image,
 }: memberProps) => {
-  console.log(image);
   const imagePath = "/execs/" + image;
-  console.log(imagePath);
 
   return (
     <div className="w-80 flex flex-col justify-start bg-white border rounded-xl mb-8 shadow-md">

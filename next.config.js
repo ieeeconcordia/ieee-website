@@ -3,7 +3,7 @@ const nextConfig = {
   reactStrictMode: true,
   experimental: {
     appDir: true,
-    erverComponentsExternalPackages: ["mongoose"],
+    serverComponentsExternalPackages: ["mongoose"],
   },
   webpack: (config) => {
     config.experiments = { ...config.experiments, topLevelAwait: true };

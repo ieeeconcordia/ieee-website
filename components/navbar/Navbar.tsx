@@ -69,7 +69,7 @@ export default function Navbar() {
                 </li>
 
                 <li>
-                  <Link href="contact">Contact us</Link>
+                  <Link href="/contact">Contact us</Link>
                 </li>
               </ul>
               <SponsorshipBtnNav />

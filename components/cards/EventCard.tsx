@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { useRouter } from "next/router";
 import React from "react";
 import {
   IoArrowForward,
@@ -18,6 +19,8 @@ type EventProps = {
   organizer: string;
   eventType: string;
   sponsors: string;
+  tags: string;
+  link: string;
 };
 
 export default function EventCard({
@@ -29,7 +32,17 @@ export default function EventCard({
   description,
   image,
   eventType,
+  tags,
+  link,
 }: EventProps) {
+  const router = useRouter();
+
+  const handleButtonClick = () => {
+    router.push({
+      pathname: `/events/${link}`,
+      query: _id,
+    });
+  };
   return (
     <div className="w-72 sm:w-80 flex flex-col justify-start bg-white border overflow-hidden rounded-xl shadow-md">
       <div className="w-full h-48 sm:h-52 bg-slate-400 rounded-t-xl">
@@ -37,9 +50,9 @@ export default function EventCard({
           {eventType}
         </div>
         <img
-          src={image}
+          src={"events/" + image}
           alt={name}
-          className="w-full object-cover overflow-hidden max-h-full"
+          className="w-full h-full bg-center object-cover overflow-hidden"
         />
       </div>
       <div className="w-full flex flex-col px-4 pb-4 gap-2 sm-gap-3 text-start rounded-b-xl">
@@ -47,7 +60,8 @@ export default function EventCard({
           <h3 className="w-full text-title-l font-semibold font-raleway text-black">
             {name}
           </h3>
-          <p className="italic text-base font-light">Additional tags</p>
+          {tags ? <p className="italic text-base font-light">{tags}</p> : <></>}
+          <p className="italic text-base font-light">{tags}</p>
         </div>
 
         <div className="flex flex-row items-start sm:items-center gap-2 sm:gap-6">
@@ -62,14 +76,14 @@ export default function EventCard({
         <p className="text-base text-gray-600 line-clamp-3">{description}</p>
 
         {/* Learn more */}
-        <Link href={`/events/${_id}`}>
+        <button onClick={handleButtonClick}>
           <div className="flex flex-row gap-2 items-center text-sm text-cyan-400">
             <div className="w-fit rounded p-1 bg-gradient-to-r from-cyan-400 to-sky-400">
               <IoArrowForward size={16} color="white" />
             </div>
             Learn More
           </div>
-        </Link>
+        </button>
       </div>
     </div>
   );

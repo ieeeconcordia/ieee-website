@@ -34,7 +34,6 @@ export default function EventForm() {
     });
 
     const data = await res.json();
-    console.log(data);
     alert("Event created!");
 
     // Reset the form
@@ -185,7 +184,8 @@ export default function EventForm() {
           id="sponsors"
           value={sponsors.join(", ")}
           onChange={(e) =>
-            setSponsors(e.target.value.split(",").map((s) => s.trim()))}
+            setSponsors(e.target.value.split(",").map((s) => s.trim()))
+          }
           className="border border-gray-300 rounded-md p-2"
         />
       </div>

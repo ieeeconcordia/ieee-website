@@ -1,5 +1,5 @@
 .markdown {
-    @apply max-w-4xl md:max-w-full flex flex-col gap-2 px-8 pb-16 sm:px-20 xl:px-section md:pb-20
+    @apply max-w-4xl md:max-w-full flex flex-col px-8 pb-16 sm:px-20 xl:px-section md:pb-20 rounded-xl
 }
 
 .markdown h1 {
@@ -8,7 +8,7 @@
 }
 
 .markdown h2 {
-    @apply font-bold font-raleway text-title-l text-secondary pt-2
+    @apply font-bold font-raleway text-title-l text-secondary
 }
 
 .markdown h3 {
@@ -16,7 +16,7 @@
 }
 
 .markdown img {
-    @apply w-full max-h-80 object-cover rounded-lg mb-2
+    @apply w-full max-h-80 object-cover rounded-t-xl shadow-lg
 }
 
 .markdown strong {
@@ -24,13 +24,17 @@
 }
 
 .markdown p {
-    @apply font-raleway text-gray-600 md:text-lg
+    @apply font-raleway text-gray-700 text-lg md:text-xl 
 }
 
 .markdown ul {
-    @apply m-auto px-4 flex flex-col lg:flex-row items-start md:justify-center gap-4 md:gap-6 p-2 bg-slate-200 rounded-lg
+    @apply m-auto px-8 flex flex-col md:flex-row items-start md:justify-center gap-4 md:gap-12 p-2 rounded list-disc
 }
 
 .markdown li {
-    @apply text-lg md:text-xl 
+    @apply text-lg md:text-xl font-semibold 
+}
+
+.markdown div {
+    @apply m-auto  p-8 md:px-16 md:pb-8 flex flex-col items-start md:justify-center gap-4 md:gap-6  bg-slate-200 rounded-b-xl shadow-lg
 }

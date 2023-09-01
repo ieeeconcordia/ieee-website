@@ -25,6 +25,11 @@ export default function MyEditor() {
   const [eventDate, setEventDate] = useState("");
   const [eventLocation, setEventLocation] = useState("");
   const [eventType, setEventType] = useState("");
+  const [eventTime, setEventTime] = useState("");
+  const [eventDescription, setEventDescription] = useState("");
+  const [eventPrice, setEventPrice] = useState("");
+  const [eventOrganizer, setEventOrganizer] = useState("");
+  const [eventSponsors, setEventSponsors] = useState("");
 
   // upload image to cloudinary and return the link
   const uploadImageCallBack = async (file: any) => {
@@ -35,6 +40,7 @@ export default function MyEditor() {
       formData.append("file", file);
       formData.append("upload_preset", "cdevi0uq");
       const response = await axios.post(url, formData);
+      console.log("Image uploaded");
       return response.data.url;
     } catch (error) {
       throw error;
@@ -69,6 +75,11 @@ export default function MyEditor() {
         title: eventTitle,
         date: eventDate,
         location: eventLocation,
+        time: eventTime,
+        description: eventDescription,
+        price: eventPrice,
+        organizer: eventOrganizer,
+        sponsors: eventSponsors,
         image: imageURL,
         eventHTML: htmlContent,
       });
@@ -82,42 +93,80 @@ export default function MyEditor() {
         <title>Editor</title>
       </Head>
       <div className="m-16 border-2 flex flex-col p-4 gap-2">
-        <label>Event Title</label>
+        <h2>Metadata</h2>
+        <p>
+          <i>* - required</i>
+        </p>
+        <label>Event Title*</label>
         <input
           type="text"
           className="border"
           onChange={(e) => setEventTitle(e.target.value)}
           required
         />
-        <label>Date</label>
+        <label>Date*</label>
         <input
           type="text"
           className="border"
           onChange={(e) => setEventDate(e.target.value)}
           required
         />
-        <label>Location</label>
+        <label>Location*</label>
         <input
           type="text"
           className="border"
           onChange={(e) => setEventLocation(e.target.value)}
           required
         />
-        <label>Type</label>
+        <label>Type*</label>
         <input
           type="text"
           className="border"
           onChange={(e) => setEventType(e.target.value)}
           required
         />
-        <label>Image</label>
+        <label>Time*</label>
+        <input
+          type="text"
+          className="border"
+          onChange={(e) => setEventTime(e.target.value)}
+          required
+        />
+        <label>Description* (Summary of the event in 1-2 lines.)</label>
+        <input
+          type="text"
+          className="border"
+          onChange={(e) => setEventDescription(e.target.value)}
+          required
+        />
+        <label>Price*</label>
+        <input
+          type="text"
+          className="border"
+          onChange={(e) => setEventPrice(e.target.value)}
+          required
+        />
+        <label>Organizer*</label>
+        <input
+          type="text"
+          className="border"
+          onChange={(e) => setEventOrganizer(e.target.value)}
+          required
+        />
+        <label>Sponsors</label>
+        <input
+          type="text"
+          className="border"
+          onChange={(e) => setEventSponsors(e.target.value)}
+        />
+        <label>Image*</label>
         <input
           type="file"
           accept="image/*"
           onChange={handleImageChange}
           required
         />
-        <label>Event Details Text</label>
+        <label>Event Details Text*</label>
         <div className="border">
           <Editor
             editorState={editorState}

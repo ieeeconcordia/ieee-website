@@ -16,11 +16,6 @@ export default function Contact() {
   const handleSubmit = async (e: { preventDefault: () => void }) => {
     e.preventDefault();
 
-    console.log("Email: ", email);
-    console.log("Subject: ", subject);
-    console.log("Request: ", request);
-    console.log("Message: ", message);
-
     const res = await fetch("api/contact", {
       method: "POST",
       headers: {
@@ -45,8 +40,6 @@ export default function Contact() {
       setRequest("IT");
       setMessage("");
     }
-
-    console.log(error);
   };
 
   return (
