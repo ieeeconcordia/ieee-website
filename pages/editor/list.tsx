@@ -38,7 +38,7 @@ export default function List() {
       <h1>list</h1>
       <div>
         <h2>Events</h2>
-        {events.map((event: any) => (
+        {/* {events.map((event: any) => (
           <EventCard
             key={event.id}
             _id={event.id}
@@ -53,7 +53,7 @@ export default function List() {
             organizer={""}
             sponsors={""}
           />
-        ))}
+        ))} */}
       </div>
     </div>
   );
