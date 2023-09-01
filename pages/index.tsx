@@ -145,7 +145,7 @@ export default function Home() {
                       organizer={""}
                       sponsors={""}
                       link={event.link}
-                      tags={event.Type}
+                      tags={""}
                     />
                   )
               )}

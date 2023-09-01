@@ -61,7 +61,6 @@ export default function EventCard({
             {name}
           </h3>
           {tags ? <p className="italic text-base font-light">{tags}</p> : <></>}
-          <p className="italic text-base font-light">{tags}</p>
         </div>
 
         <div className="flex flex-row items-start sm:items-center gap-2 sm:gap-6">

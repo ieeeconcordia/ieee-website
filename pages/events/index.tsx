@@ -120,7 +120,7 @@ export default function Events() {
                   organizer={""}
                   sponsors={""}
                   link={event.link}
-                  tags={event.Type}
+                  tags={""}
                 />
               ))}
             </div>
