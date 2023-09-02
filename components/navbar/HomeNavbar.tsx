@@ -38,7 +38,7 @@ export default function HomeNavbar() {
             <Image
               src={logo}
               alt={"IEEE Concordia"}
-              className="w-fit h-20 aspect-auto"
+              className="md:w-20 md:h-20 h-16 w-fit"
             />
           </Link>
         </div>

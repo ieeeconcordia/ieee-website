@@ -10,9 +10,9 @@ interface SponsorshipBtnProps {
 export const SponsorshipBtn = ({ link, text }: SponsorshipBtnProps) => {
   return (
     <Link href={link}>
-      <a className="inline-block py-4 px-6 bg-gradient-to-r from-sky-400 via-cyan-400 to-sky-400 text-white font-raleway font-semibold text-title-m rounded-md shadow-md">
+      <p className="inline-block py-4 px-6 bg-gradient-to-r from-sky-400 via-cyan-400 to-sky-400 text-white font-raleway font-semibold text-title-m rounded-md shadow-md">
         {text}
-      </a>
+      </p>
     </Link>
   );
 };

@@ -12,7 +12,7 @@ export default function LandingVideo() {
           muted
           loop
         />
-        <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center text-4xl md:text-6xl lg:text-7xl text-center text-gray-100 font-raleway font-bold">
+        <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center text-4xl md:text-6xl lg:text-7xl text-center text-gray-100 font-raleway font-bold px-4">
           <HomeTypingAnimation />
         </div>
       </div>
