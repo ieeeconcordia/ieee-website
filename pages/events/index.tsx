@@ -64,6 +64,20 @@ const events = [
     Image: "IEEE-Day.png",
     link: "ieee-day",
   },
+  {
+    Title: "Soldering Tutorial",
+    Date: "18th Mar, 2024",
+    Location: "TBA",
+    Type: "Academic",
+    Time: "14:00-16:00",
+    Description:
+      "Explore the fundamentals of soldering with our easy-to-follow tutorial. Learn how to create secure connections for various applications.",
+    Price: "TBA",
+    Organizer: "Alexandre Fontaine",
+    Sponsors: "TBA",
+    Image: "Soldering-Tutorial.png",
+    link: "soldering-tutorial",
+  },
 ];
 
 export async function getStaticProps() {
@@ -83,6 +97,7 @@ export async function getStaticProps() {
   };
 }
 export default function Events() {
+  console.log(new Date(events[0].Date));
   return (
     <RootLayout>
       <div className="flex flex-col text-center items-center justify-items-center gap-6 px-8 pb-16 sm:px-20 xl:px-section md:pb-14">

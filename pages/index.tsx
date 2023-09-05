@@ -85,6 +85,20 @@ const events = [
     Image: "IEEE-Day.png",
     link: "ieee-day",
   },
+  {
+    Title: "Soldering Tutorial",
+    Data: "18th Mar, 2024",
+    Location: "TBA",
+    Type: "Academic",
+    Time: "14:00-16:00",
+    Description:
+      "Explore the fundamentals of soldering with our easy-to-follow tutorial. Learn how to create secure connections for various applications.",
+    Price: "TBA",
+    Organizer: "Alexandre Fontaine",
+    Sponsors: "TBA",
+    Image: "Soldering-Tutorial.png",
+    link: "soldering-tutorial",
+  },
 ];
 
 const projects: any[] = [];
