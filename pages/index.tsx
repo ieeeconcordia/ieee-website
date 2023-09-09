@@ -12,7 +12,7 @@ import ProjectsPlaceHolder from "@/components/placeholder/ProjectsPlaceholder";
 import LandingVideo from "@/components/LandingVideo";
 import Navbar from "@/components/navbar/HomeNavbar";
 import Footer from "@/components/Footer";
-
+import eventlist from "@/content/eventslist";
 // Fetch all events and pass them as a prop to the Events component
 export async function getStaticProps() {
   const events = await getAllEvents();
@@ -27,79 +27,6 @@ export async function getStaticProps() {
     },
   };
 }
-
-const events = [
-  {
-    Title: "Robowars",
-    Date: "Mar 14th, 2024",
-    Location: "TBA",
-    Type: "Competition",
-    Time: "9:00-17:00",
-    Description:
-      "Robowars is a competitive robotic event that invites passionate and enthusiastic participants from all over Montreal and beyond to showcase their engineering skills.",
-    Price: "TBA",
-    Organizer: "Ardalan Jamshidi",
-    Sponsors: "TBA",
-    Image: "Robowars.png",
-    link: "robowars",
-  },
-  {
-    Title: "Warhacks",
-    Date: "Feb 18th, 2024",
-    Location: "TBA",
-    Type: "Competition",
-    Time: "TBA",
-    Description:
-      "Warhacks is a one-day event designed to introduce you to the world of hardware hackathon. Come spend the day with us, and you will get to build your robot from scratch.",
-    price: "TBA",
-    Organizer: "Minh Huynh",
-    Sponsors: "TBA",
-    Image: "Warhacks.png",
-    link: "warhacks",
-  },
-  {
-    Title: "IEEEXtreme",
-    Date: "Oct 28th, 2023",
-    Location: "TBA",
-    Type: "Competition",
-    Time: "TBA",
-    Description:
-      "IEEEXtreme is a global 24-hour marathon during which teams of three or four programmers are given a set of programming questions to solve.",
-    Price: "TBA",
-    Organizer: "Ardalan Jamshidi",
-    Sponsors: "TBA",
-    Image: "IEEEXtreme.png",
-    link: "ieeextreme",
-  },
-  {
-    Title: "IEEE Day",
-    Date: "Oct 3rd, 2023",
-    Location: "TBA",
-    Type: "Social",
-    Time: "TBA",
-    Description:
-      "IEEE Day is an annual celebration of IEEE around the world that recognizes and acknowledges the dedication and vision of IEEE.",
-    Price: "TBA",
-    Organizer: "Shami Ivan Senga",
-    Sponsors: "TBA",
-    Image: "IEEE-Day.png",
-    link: "ieee-day",
-  },
-  {
-    Title: "Soldering Tutorial",
-    Data: "18th Mar, 2024",
-    Location: "TBA",
-    Type: "Academic",
-    Time: "14:00-16:00",
-    Description:
-      "Explore the fundamentals of soldering with our easy-to-follow tutorial. Learn how to create secure connections for various applications.",
-    Price: "TBA",
-    Organizer: "Alexandre Fontaine",
-    Sponsors: "TBA",
-    Image: "Soldering-Tutorial.png",
-    link: "soldering-tutorial",
-  },
-];
 
 const projects: any[] = [];
 
@@ -134,7 +61,7 @@ export default function Home() {
             skills in our exciting competitions.
           </p>
         </div>
-        {events.length == 0 ? (
+        {eventlist.length == 0 ? (
           <EventsPlaceHolder />
         ) : (
           <Suspense fallback={<Loading />}>
@@ -142,7 +69,7 @@ export default function Home() {
               className="w-fit grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 justify-items-center gap-6 sm:gap-10 
             "
             >
-              {events.map(
+              {eventlist.map(
                 (event: any, index: any) =>
                   index < 3 && (
                     <EventCard
@@ -166,7 +93,7 @@ export default function Home() {
             </div>
           </Suspense>
         )}
-        {events.length == 0 ? (
+        {eventlist.length == 0 ? (
           <></>
         ) : (
           <SimpleBtn text="See more..." href="/events" />

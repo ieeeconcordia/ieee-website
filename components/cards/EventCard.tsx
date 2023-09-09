@@ -52,17 +52,18 @@ export default function EventCard({
         <img
           src={"events/" + image}
           alt={name}
-          className="w-full h-full bg-center object-cover overflow-hidden"
+          className="w-full h-full bg-center object-cover overflow-hidden "
         />
       </div>
-      <div className="w-full flex flex-col px-4 pb-4 gap-2 sm-gap-3 text-start rounded-b-xl">
+      <div className="w-full flex flex-col px-4 pb-4 gap-2 sm-gap-3 text-start rounded-b-xl flex-grow">
+        {" "}
+        {/* Add 'flex-grow' class here */}
         <div>
-          <h3 className="w-full text-title-l font-semibold font-raleway text-black">
+          <h3 className="w-full text-title-l font-semibold font-raleway text-black line-clamp-1">
             {name}
           </h3>
           {tags ? <p className="italic text-base font-light">{tags}</p> : <></>}
         </div>
-
         <div className="flex flex-row items-start sm:items-center gap-2 sm:gap-6">
           <div className="flex flex-row items-center text-sm gap-1 text-gray-600">
             <IoTimeOutline size={24} color="gray" /> {date}
@@ -71,11 +72,11 @@ export default function EventCard({
             <IoLocationSharp size={24} color="gray" /> {location}
           </div>
         </div>
-
         <p className="text-base text-gray-600 line-clamp-3">{description}</p>
-
         {/* Learn more */}
-        <button onClick={handleButtonClick}>
+        <button onClick={handleButtonClick} className="mt-auto">
+          {" "}
+          {/* Add 'mt-auto' class here */}
           <div className="flex flex-row gap-2 items-center text-sm text-cyan-400">
             <div className="w-fit rounded p-1 bg-gradient-to-r from-cyan-400 to-sky-400">
               <IoArrowForward size={16} color="white" />
