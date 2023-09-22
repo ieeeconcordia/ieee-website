@@ -20,7 +20,7 @@ export default function ModelingAndDesign() {
         <div>
           <ul>
             <li>Date: Sep 28th, 2023</li>
-            <li>Location: TBD</li>
+            <li>Location: EV Building - 2.184</li>
             <li>Time: 18:00-21:00</li>
           </ul>
           <h2 id="about-the-event">About The Event</h2>
@@ -44,19 +44,22 @@ export default function ModelingAndDesign() {
             installation process, reach out in advance and we will be glad to
             help.
           </p>
-          <span className="flex flex-col sm:flex-row gap-6"><Link
-            href={"https://events.vtools.ieee.org/m/373147"}
-            className="bg-blue-500 hover:bg-blue-700 text-white font-bold font-raleway py-2 px-4 rounded"
-          >
-            Register Now!
-          </Link>
-          <Link
-            href={"https://www.autodesk.ca/en/products/fusion-360/overview?term=1-YEAR&tab=subscription"}
-            className="bg-blue-500 hover:bg-blue-700 text-white font-bold font-raleway py-2 px-4 rounded"
-          >
-            Fusion 360
-          </Link></span>
-          
+          <span className="flex flex-col sm:flex-row gap-6">
+            <Link
+              href={"https://events.vtools.ieee.org/m/373147"}
+              className="bg-blue-500 hover:bg-blue-700 text-white font-bold font-raleway py-2 px-4 rounded"
+            >
+              Register Now!
+            </Link>
+            <Link
+              href={
+                "https://www.autodesk.ca/en/products/fusion-360/overview?term=1-YEAR&tab=subscription"
+              }
+              className="bg-blue-500 hover:bg-blue-700 text-white font-bold font-raleway py-2 px-4 rounded"
+            >
+              Fusion 360
+            </Link>
+          </span>
         </div>
       </div>
     </RootLayout>

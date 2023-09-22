@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { useDropzone } from "react-dropzone";
 import { EditorState, convertToRaw } from "draft-js";
 import dynamic from "next/dynamic";
 import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
@@ -7,9 +6,9 @@ import { stateToHTML } from "draft-js-export-html";
 import axios from "axios";
 import Head from "next/head";
 import Link from "next/link";
-import cloudinary from "@/lib/cloudinary";
-import { firestore } from "@/lib/firebase";
+import { firestore, storage } from "@/lib/firebase";
 import { collection, addDoc } from "firebase/firestore";
+import { ref, uploadBytes, uploadString } from "firebase/storage";
 
 const Editor = dynamic(
   () => import("react-draft-wysiwyg").then((mod) => mod.Editor),
@@ -51,6 +50,20 @@ export default function MyEditor() {
     const content = editorState.getCurrentContent();
     const rawContent = convertToRaw(content);
     console.log(rawContent);
+  };
+
+  const submitPost = () => {
+    const content = editorState.getCurrentContent();
+    const contentJSON = JSON.stringify(convertToRaw(content));
+    const rawContent = convertToRaw(content);
+    console.log(rawContent);
+
+    const storageRef = ref(storage, eventTitle);
+
+    // 'file' comes from the Blob or File API
+    uploadString(storageRef, contentJSON).then((snapshot) => {
+      console.log("Uploaded a raw string!");
+    });
   };
 
   const onChange = (editorState: any) => {
@@ -181,7 +194,7 @@ export default function MyEditor() {
         </div>
       </div>
 
-      <button onClick={handleSubmit}>Submit</button>
+      <button onClick={submitPost}>Submit</button>
       <h2>
         <Link href="/">Back to home</Link>
       </h2>

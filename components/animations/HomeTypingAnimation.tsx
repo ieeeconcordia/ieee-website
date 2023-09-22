@@ -57,7 +57,7 @@ export default function HomeTypingAnimation() {
             1000,
             "Challenge yourself!",
             1000,
-            "Learn today what you will use tommorow.",
+            "Learn today what you will use tomorrow.",
             1000,
           ]}
           wrapper="span"

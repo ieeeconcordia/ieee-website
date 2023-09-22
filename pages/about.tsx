@@ -170,10 +170,10 @@ export default function About() {
                 image={"Houssam.JPG"}
               />
               <Member
-                firstName={"Ardlan"}
+                firstName={"Ardalan"}
                 lastName={"Jamshidi"}
                 position={"Director of Competitions"}
-                program={"B.Eng. Elec."}
+                program={"B.Eng. Coen."}
                 discord={"ardianapolis#7436"}
                 emailIEEE={"competitions@ieeeconcordia.ca"}
                 linkedIn={""}

@@ -20,7 +20,7 @@ export default function IntroToMatlab() {
         <div>
           <ul>
             <li>Date: Oct 5th, 2023</li>
-            <li>Location: TBD</li>
+            <li>Location: MB Building - S1.435</li>
             <li>Time: 18:00-20:00</li>
           </ul>
           <h2 id="about-the-event">About The Event</h2>
@@ -56,9 +56,9 @@ export default function IntroToMatlab() {
             looking to enhance your computational skills or simply curious about
             the world of MATLAB, this workshop is the perfect starting point. No
             prior experience is required, so come ready to explore and
-            experiment! 
-            <br/>
-            <br/>
+            experiment!
+            <br />
+            <br />
             <b>Please RSVP to reserve your spot, as space is limited.</b>
           </p>
           <Link

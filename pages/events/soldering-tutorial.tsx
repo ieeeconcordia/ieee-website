@@ -19,8 +19,8 @@ export default function SolderingTutorial() {
         />
         <div>
           <ul>
-            <li>Date: Mar 18th, 2024</li>
-            <li>Location: TBA</li>
+            <li>Date: Oct 19th, 2023</li>
+            <li>Location: MB Building - 3.255</li>
             <li>Time: 14:00-16:00</li>
           </ul>
           <h2 id="about-the-event">About The Event</h2>

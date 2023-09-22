@@ -2,7 +2,7 @@ const eventlist = [
   {
     Title: "3D Modeling and Design",
     Date: "Sep 28th, 2023",
-    Location: "TBD",
+    Location: "EV - 2.184",
     Type: "Academic",
     Time: "18:00-21:00",
     Description:
@@ -30,7 +30,7 @@ const eventlist = [
   {
     Title: "Intro to Matlab",
     Date: "Oct 5th, 2023",
-    Location: "TBD",
+    Location: "MB - S1.435",
     Type: "Academic",
     Time: "18:00-20:00",
     Description:
@@ -44,7 +44,7 @@ const eventlist = [
   {
     Title: "Soldering Tutorial",
     Date: "Oct 19th, 2023",
-    Location: "TBD",
+    Location: "MB - 3.255",
     Type: "Academic",
     Time: "14:00-16:00",
     Description:
@@ -97,8 +97,6 @@ const eventlist = [
     Image: "Warhacks.png",
     link: "warhacks",
   },
-
-  
 
   {
     Title: "Intro to Lab Equipements",
