@@ -18,8 +18,6 @@ export async function getStaticProps() {
   const events = await getAllEvents();
   const projects = await getAllProjects();
 
-  console.log(process.env.MONGODB_URI);
-
   return {
     props: {
       events,
