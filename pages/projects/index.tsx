@@ -5,25 +5,26 @@ import { getAllProjects } from "@/lib/projects";
 import { Suspense } from "react";
 import Loading from "@/components/animations/Loading";
 import ProjectsPlaceHolder from "@/components/placeholder/ProjectsPlaceholder";
-import { firestore } from "@/lib/firebase";
+// import { firestore } from "@/lib/firebase";
 import { getDocs, collection, DocumentData } from "firebase/firestore";
+import projectlist from "@/content/projectlist";
 
-export async function getStaticProps() {
-  const projectsQuerySnapshot = await getDocs(collection(firestore, "Project"));
-  const projects: { id: string; data: DocumentData }[] = [];
-  projectsQuerySnapshot.forEach((doc) => {
-    projects.push({
-      id: doc.id,
-      data: doc.data(),
-    });
-    console.log("Event: " + doc.data());
-  });
-  return {
-    props: {
-      projects,
-    },
-  };
-}
+// export async function getStaticProps() {
+//   const projectsQuerySnapshot = await getDocs(collection(firestore, "Project"));
+//   const projects: { id: string; data: DocumentData }[] = [];
+//   projectsQuerySnapshot.forEach((doc) => {
+//     projects.push({
+//       id: doc.id,
+//       data: doc.data(),
+//     });
+//     console.log("Event: " + doc.data());
+//   });
+//   return {
+//     props: {
+//       projects,
+//     },
+//   };
+// }
 
 export default function Projects({ projects }: any) {
   return (
@@ -41,7 +42,7 @@ export default function Projects({ projects }: any) {
             be there to answer any questions you may have and provide guidance
             throughout the entire process.
           </p>
-          {projects.length == 0 ? (
+          {projectlist.length == 0 ? (
             <ProjectsPlaceHolder />
           ) : (
             <Suspense fallback={<Loading />}>
@@ -49,7 +50,7 @@ export default function Projects({ projects }: any) {
                 className="w-fit grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 justify-items-center gap-6 sm:gap-10 
             "
               >
-                {projects.map((project: any, index: any) => (
+                {projectlist.map((project: any, index: any) => (
                   <ProjectCard
                     key={project.id}
                     _id={project.id}

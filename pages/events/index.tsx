@@ -4,26 +4,26 @@ import { SponsorshipSection } from "@/components/SponsorshipSection";
 import EventsPlaceHolder from "@/components/placeholder/EventsPlaceholder";
 import Loading from "@/components/animations/Loading";
 import { Suspense } from "react";
-import { firestore } from "@/lib/firebase";
+// import { firestore } from "@/lib/firebase";
 import { getDocs, collection, DocumentData } from "firebase/firestore";
 import eventlist from "@/content/eventslist";
 
-export async function getStaticProps() {
-  const eventsQuerySnapshot = await getDocs(collection(firestore, "Event"));
-  const events: { id: string; data: DocumentData }[] = [];
-  eventsQuerySnapshot.forEach((doc) => {
-    events.push({
-      id: doc.id,
-      data: doc.data(),
-    });
-    console.log("Event: " + doc.data());
-  });
-  return {
-    props: {
-      events,
-    },
-  };
-}
+// export async function getStaticProps() {
+//   const eventsQuerySnapshot = await getDocs(collection(firestore, "Event"));
+//   const events: { id: string; data: DocumentData }[] = [];
+//   eventsQuerySnapshot.forEach((doc) => {
+//     events.push({
+//       id: doc.id,
+//       data: doc.data(),
+//     });
+//     console.log("Event: " + doc.data());
+//   });
+//   return {
+//     props: {
+//       events,
+//     },
+//   };
+// }
 export default function Events() {
   return (
     <RootLayout>
