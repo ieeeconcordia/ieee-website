@@ -4,6 +4,7 @@ import Image from "next/image";
 import logo from "../../public/logo-white.png";
 import { SponsorshipBtnNav } from "../buttons/SponsorshipBtn";
 import Example from "./Example";
+import LabStatus from "./LabStatus";
 
 export default function HomeNavbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -29,9 +30,10 @@ export default function HomeNavbar() {
 
   return (
     <nav className="nav_container w-full flex flex-col items-center sm:gap-3 absolute top-0 z-10">
-      <div className="w-full md:w-fit bg-yellow-400 md:rounded-b-xl text-center text-black font-raleway font-bold align-middle py-2 px-8 gap-0">
+      {/* <div className="w-full md:w-fit bg-yellow-400 md:rounded-b-xl text-center text-black font-raleway font-bold align-middle py-2 px-8 gap-0">
         Lab Status: Unavailable
-      </div>
+      </div> */}
+      <LabStatus />
       <div className="flex flex-row items-center w-full justify-between px-4 md:px-12 py-2 md:py-2">
         <div className="flex items-center">
           <Link href={"/"}>

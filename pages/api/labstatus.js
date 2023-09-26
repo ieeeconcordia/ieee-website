@@ -7,7 +7,7 @@ export default async function handler(req, res) {
     // Sort documents by the "timestamp" field in descending order
     const data = await collection
       .find({})
-      .sort({ timestamp: -1 })
+      .sort({ time: -1 })
       .limit(1)
       .toArray();
 
