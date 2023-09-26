@@ -14,6 +14,12 @@ export default function LabStatus() {
       });
   }, []);
 
+  const labLoading = (
+    <div className="w-full md:w-fit bg-gray-400 md:rounded-b-xl text-center text-black font-raleway font-bold align-middle py-2 px-8 gap-0">
+      Lab Status: Loading
+    </div>
+  );
+
   const labOpen = (
     <div className="w-full md:w-fit bg-green-400 md:rounded-b-xl text-center text-black font-raleway font-bold align-middle py-2 px-8 gap-0">
       Lab Status: Open 🎉
@@ -26,5 +32,5 @@ export default function LabStatus() {
     </div>
   );
 
-  return latestData ? labOpen : labClosed;
+  return request ? (latestData ? labOpen : labClosed) : labLoading;
 }
