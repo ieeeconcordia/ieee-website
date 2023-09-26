@@ -7,7 +7,6 @@ import Loading from "@/components/animations/Loading";
 import ProjectsPlaceHolder from "@/components/placeholder/ProjectsPlaceholder";
 // import { firestore } from "@/lib/firebase";
 import { getDocs, collection, DocumentData } from "firebase/firestore";
-import projectlist from "@/content/projectlist";
 
 // export async function getStaticProps() {
 //   const projectsQuerySnapshot = await getDocs(collection(firestore, "Project"));
@@ -42,7 +41,8 @@ export default function Projects({ projects }: any) {
             be there to answer any questions you may have and provide guidance
             throughout the entire process.
           </p>
-          {projectlist.length == 0 ? (
+          <ProjectsPlaceHolder />
+          {/* {projectlist.length == 0 ? (
             <ProjectsPlaceHolder />
           ) : (
             <Suspense fallback={<Loading />}>
@@ -68,7 +68,7 @@ export default function Projects({ projects }: any) {
                 ))}
               </div>
             </Suspense>
-          )}
+          )} */}
         </div>
 
         <SponsorshipSection />
