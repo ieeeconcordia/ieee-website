@@ -6,6 +6,7 @@ import { SponsorshipBtnNav } from "../buttons/SponsorshipBtn";
 import Example from "./Example";
 import MobileHomeNav from "./Example";
 import MobileNav from "./MobileNav";
+import LabStatus from "./LabStatus";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -31,9 +32,7 @@ export default function Navbar() {
 
   return (
     <nav className="nav_container w-full flex flex-col items-center sm:gap-3 top-0 z-50">
-      <div className="w-full md:w-fit bg-yellow-400 md:rounded-b-xl text-center text-black font-raleway font-bold align-middle py-2 px-8 gap-0">
-        Lab Status: Unavailable
-      </div>
+      <LabStatus />
       <div className="flex flex-row items-center w-full justify-between px-4 md:px-12">
         <div className="flex items-center">
           <Link href={"/"}>
