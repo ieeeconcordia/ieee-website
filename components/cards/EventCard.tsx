@@ -46,9 +46,15 @@ export default function EventCard({
   return (
     <div className="w-72 sm:w-80 flex flex-col justify-start bg-white border overflow-hidden rounded-xl shadow-md">
       <div className="w-full h-48 sm:h-52 bg-slate-400 rounded-t-xl">
-        <div className="absolute w-32 p-1 bg-sky-400 rounded-tl-xl rounded-br-lg text-white">
-          {eventType}
-        </div>
+        {eventType == "PASSED" ? (
+          <div className="absolute w-32 p-1 bg-red-500 rounded-tl-xl rounded-br-lg text-white">
+            {eventType}
+          </div>
+        ) : (
+          <div className="absolute w-32 p-1 bg-sky-400 rounded-tl-xl rounded-br-lg text-white">
+            {eventType}
+          </div>
+        )}
         <img
           src={"events/" + image}
           alt={name}

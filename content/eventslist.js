@@ -102,7 +102,7 @@ const eventlist = [
     Title: "Intro to Lab Equipements",
     Date: "Sep 14th, 2023",
     Location: "B-Annex 204",
-    Type: "Academic",
+    Type: "PASSED",
     Time: "18:00-21:00",
     Description:
       "Boost your electrical engineering knowledge with our tutorial tailored to ELEC 273 and ELEC 311, and excel in your coursework.",
