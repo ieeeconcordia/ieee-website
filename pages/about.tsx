@@ -127,7 +127,7 @@ export default function About() {
                 discord={"sabine#6480"}
                 emailIEEE={"secretary@ieeeconcordia.ca"}
                 linkedIn={""}
-                image={""}
+                image={"Sabine.JPG"}
               />
               <Member
                 firstName={"Alexandre"}
@@ -147,7 +147,7 @@ export default function About() {
                 discord={"itsrhino_"}
                 emailIEEE={"itdirector@ieeeconcordia.ca"}
                 linkedIn={""}
-                image={""}
+                image={"Rayan.JPG"}
               />
               <Member
                 firstName={"Juan"}
@@ -157,7 +157,7 @@ export default function About() {
                 discord={"sum_re1"}
                 emailIEEE={"itdirector@ieeeconcordia.ca"}
                 linkedIn={""}
-                image={""}
+                image={"Juan.JPG"}
               />
               <Member
                 firstName={"Houssam Eddine"}
@@ -177,7 +177,7 @@ export default function About() {
                 discord={"ardianapolis#7436"}
                 emailIEEE={"competitions@ieeeconcordia.ca"}
                 linkedIn={""}
-                image={""}
+                image={"Ardalan.JPG"}
               />
               <Member
                 firstName={"Mathias"}
@@ -187,7 +187,7 @@ export default function About() {
                 discord={"M3thRocks#6275"}
                 emailIEEE={"services@ieeeconcordia.ca"}
                 linkedIn={""}
-                image={""}
+                image={"Mathias.JPG"}
               />
               <Member
                 firstName={"Kaden Perelmiter"}
@@ -197,7 +197,7 @@ export default function About() {
                 discord={"M3thRocks#6275"}
                 emailIEEE={"services@ieeeconcordia.ca"}
                 linkedIn={""}
-                image={""}
+                image={"Kaden.JPG"}
               />
               <Member
                 firstName={"Minh"}
@@ -217,7 +217,7 @@ export default function About() {
                 discord={"_.mazen._"}
                 emailIEEE={"projects@ieeeconcordia.ca"}
                 linkedIn={""}
-                image={""}
+                image={"Mazen.JPG"}
               />
               <Member
                 firstName={"Rahil"}

@@ -1,6 +1,7 @@
 import "@/styles/globals.css";
 import type { AppProps } from "next/app";
 import { Raleway, Lora } from "next/font/google";
+import Head from "next/head";
 
 const raleway = Raleway({
   subsets: ["latin"],
@@ -17,6 +18,9 @@ const lora = Lora({
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <main>
+      <Head>
+        <link rel="icon" href="logo.png" />
+      </Head>
       <style jsx global>
         {`
           :root {

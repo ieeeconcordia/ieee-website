@@ -1,19 +1,5 @@
 const eventlist = [
   {
-    Title: "3D Modeling and Design",
-    Date: "Sep 28th, 2023",
-    Location: "EV - 2.184",
-    Type: "Academic",
-    Time: "18:00-21:00",
-    Description:
-      "Embark on a journey to master 3D modeling in our beginner's workshop and learn the skill used by designers, engineers, and artists worldwide",
-    Price: "TBD",
-    Organizer: "Alexandre Fontaine",
-    Sponsors: "TBD",
-    Image: "3D-Modeling-and-Design.png",
-    link: "3d-modeling-and-design",
-  },
-  {
     Title: "IEEE Day",
     Date: "Oct 3rd, 2023",
     Location: "TBD",
@@ -111,6 +97,20 @@ const eventlist = [
     Sponsors: "TBD",
     Image: "Intro-to-lab-equipement.png",
     link: "intro-to-lab-equipement",
+  },
+  {
+    Title: "3D Modeling and Design",
+    Date: "Sep 28th, 2023",
+    Location: "EV - 2.184",
+    Type: "PASSED",
+    Time: "18:00-21:00",
+    Description:
+      "Embark on a journey to master 3D modeling in our beginner's workshop and learn the skill used by designers, engineers, and artists worldwide",
+    Price: "TBD",
+    Organizer: "Alexandre Fontaine",
+    Sponsors: "TBD",
+    Image: "3D-Modeling-and-Design.png",
+    link: "3d-modeling-and-design",
   },
 ];
 

@@ -31,7 +31,7 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav className="nav_container w-full flex flex-col items-center sm:gap-3 top-0 z-50">
+    <nav className="nav_container w-full flex flex-col items-center sm:gap-3 top-0 z-50 pb-4">
       <LabStatus />
       <div className="flex flex-row items-center w-full justify-between px-4 md:px-12">
         <div className="flex items-center">

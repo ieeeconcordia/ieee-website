@@ -21,3 +21,10 @@ module.exports = {
     ];
   },
 };
+module.exports = {
+  // Other Next.js configurations...
+  images: {
+    loader: "imgix",
+    path: "/",
+  },
+};
