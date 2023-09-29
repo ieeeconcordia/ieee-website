@@ -8,15 +8,15 @@ import SponsorsMarquee from "@/components/animations/SponsorsMarquee";
 export default function Sponsorship() {
   const [images, setImages] = useState([]);
 
-  useEffect(() => {
-    const fetchData = async () => {
-      const response = await fetch("/api/images");
-      const data = await response.json();
-      setImages(data.images); // store the response from the API route
-    };
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     const response = await fetch("/api/images");
+  //     const data = await response.json();
+  //     setImages(data.images); // store the response from the API route
+  //   };
 
-    fetchData();
-  }, []);
+  //   fetchData();
+  // }, []);
 
   return (
     <RootLayout>
