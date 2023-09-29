@@ -5,7 +5,6 @@ sendgrid.setApiKey(process.env.SENDGRID_API_KEY);
 export default async function handler(req, res) {
   if (req.method === "POST") {
     const { email, subject, request, message } = req.body;
-    console.log(request);
 
     // Defining where the email gets sent depending on the topic
     var emailTo = "info@ieeeconcordia.ca";
@@ -98,10 +97,8 @@ export default async function handler(req, res) {
     };
     try {
       await sendgrid.send(msg);
-      console.log("Email sent");
       res.status(200).json({ msg: "Email sent successfully." });
     } catch (error) {
-      console.error(error);
       res.status(500).json({ msg: "Failed to send email." });
     }
   }

@@ -15,11 +15,9 @@ export default function handler(req, res) {
       results.push(data);
     })
     .on("end", () => {
-      console.log("CSV file successfully read.");
       res.status(200).json(results);
     })
     .on("error", (error) => {
-      console.error("Error reading CSV file:", error);
       res.status(500).json({ message: "Error reading CSV file." });
     });
 }

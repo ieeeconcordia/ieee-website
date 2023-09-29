@@ -6,10 +6,7 @@ function ImageUploader() {
   const [image, setImage] = useState(null);
 
   const handleImageUpload = async (event: any) => {
-    console.log("Clicked");
-
     const file = event.target.files[0];
-    console.log(file);
 
     if (file) {
       const formData = new FormData();
