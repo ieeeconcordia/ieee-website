@@ -19,7 +19,6 @@ export default function handler(req, res) {
         );
       });
 
-      console.log(images["images"]);
       res.status(200).json({ images });
     }
   });
