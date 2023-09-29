@@ -20,6 +20,7 @@ export default function App({ Component, pageProps }: AppProps) {
     <main>
       <Head>
         <link rel="icon" href="logo.png" />
+        <title>IEEE Concordia</title>
       </Head>
       <style jsx global>
         {`

@@ -1,7 +1,5 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import Image from "next/image";
-import logo from "../../public/logo-white.png";
 import { SponsorshipBtnNav } from "../buttons/SponsorshipBtn";
 import Example from "./Example";
 import LabStatus from "./LabStatus";
@@ -37,8 +35,8 @@ export default function HomeNavbar() {
       <div className="flex flex-row items-center w-full justify-between px-4 md:px-12 py-2 md:py-2">
         <div className="flex items-center">
           <Link href={"/"}>
-            <Image
-              src={logo}
+            <img
+              src="logo-white.png"
               alt={"IEEE Concordia"}
               className="md:w-20 md:h-20 h-16 w-fit"
             />
