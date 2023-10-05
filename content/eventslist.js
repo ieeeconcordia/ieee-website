@@ -1,19 +1,5 @@
 const eventlist = [
   {
-    Title: "IEEE Day",
-    Date: "Oct 3rd, 2023",
-    Location: "TBD",
-    Type: "Social",
-    Time: "TBD",
-    Description:
-      "IEEE Day is an annual celebration of IEEE around the world that recognizes and acknowledges the dedication and vision of IEEE.",
-    Price: "TBD",
-    Organizer: "Shami Ivan Senga",
-    Sponsors: "TBD",
-    Image: "IEEE-Day.png",
-    link: "ieee-day",
-  },
-  {
     Title: "Intro to Matlab",
     Date: "Oct 5th, 2023",
     Location: "MB - S1.435",
@@ -111,6 +97,20 @@ const eventlist = [
     Sponsors: "TBD",
     Image: "3D-Modeling-and-Design.png",
     link: "3d-modeling-and-design",
+  },
+  {
+    Title: "IEEE Day",
+    Date: "Oct 3rd, 2023",
+    Location: "TBD",
+    Type: "PASSED",
+    Time: "TBD",
+    Description:
+      "IEEE Day is an annual celebration of IEEE around the world that recognizes and acknowledges the dedication and vision of IEEE.",
+    Price: "TBD",
+    Organizer: "Shami Ivan Senga",
+    Sponsors: "TBD",
+    Image: "IEEE-Day.png",
+    link: "ieee-day",
   },
 ];
 

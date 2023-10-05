@@ -36,8 +36,8 @@ export default function Navbar() {
       <div className="flex flex-row items-center w-full justify-between px-4 md:px-12">
         <div className="flex items-center">
           <Link href={"/"}>
-            <Image
-              src={logo}
+            <img
+              src="logo.png"
               alt={"IEEE Concordia"}
               className="md:w-20 md:h-20 h-16 w-fit"
             />
