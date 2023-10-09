@@ -13,8 +13,8 @@ export default function SolderingTutorial() {
       </div>
       <div className={styles.markdown}>
         <img
-          src="Soldering-Tutorial.png"
-          alt="ISoldering Tutuorial Banner"
+          src="Intro-to-Soldering.png"
+          alt="Soldering Tutuorial Banner"
           className="w-full max-h-80 object-cover"
         />
         <div>

@@ -8,7 +8,7 @@ export default function ModelingAndDesign() {
     <RootLayout>
       <div className="max-w-4xl md:max-w-full flex flex-col px-8 sm:px-20 xl:px-section mb-2">
         <h1 className="font-lora font-bold text-center text-headline-l text-secondary pb-4">
-          3D Modeling and Design
+          3D Modeling and Design P2
         </h1>
       </div>
       <div className={styles.markdown}>
@@ -19,8 +19,8 @@ export default function ModelingAndDesign() {
         />
         <div>
           <ul>
-            <li>Date: Sep 28th, 2023</li>
-            <li>Location: EV Building - 2.184</li>
+            <li>Date: Oct 26th, 2023</li>
+            <li>Location: MB - 3.255</li>
             <li>Time: 18:00-21:00</li>
           </ul>
           <h2 id="about-the-event">About The Event</h2>
@@ -45,12 +45,6 @@ export default function ModelingAndDesign() {
             help.
           </p>
           <span className="flex flex-col sm:flex-row gap-6">
-            <Link
-              href={"https://events.vtools.ieee.org/m/373147"}
-              className="bg-blue-500 hover:bg-blue-700 text-white font-bold font-raleway py-2 px-4 rounded"
-            >
-              Register Now!
-            </Link>
             <Link
               href={
                 "https://www.autodesk.ca/en/products/fusion-360/overview?term=1-YEAR&tab=subscription"

@@ -28,11 +28,11 @@ export const Member = ({
   return (
     <div className="w-80 flex flex-col justify-start bg-white border rounded-xl mb-8 shadow-md">
       {/* Image */}
-      <div className="h-56 bg-slate-400 rounded-lg mx-4 mt-4">
+      <div className="h-56 bg-slate-400 rounded-t-lg">
         <img
           src={image ? imagePath : "/avatar.webp"}
           alt="User PP"
-          className="h-56 w-full object-cover rounded-lg"
+          className="h-56 w-full object-cover rounded-t-lg"
         />
       </div>
 

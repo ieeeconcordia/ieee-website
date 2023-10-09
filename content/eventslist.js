@@ -1,19 +1,5 @@
 const eventlist = [
   {
-    Title: "Intro to Matlab",
-    Date: "Oct 5th, 2023",
-    Location: "MB - S1.435",
-    Type: "Academic",
-    Time: "18:00-20:00",
-    Description:
-      "Unlock MATLAB's potential in our interactive workshop! Learn the basics, from navigating the interface to data visualization, with giveaways and free refreshments. Perfect for students or anyone curious about MATLAB.",
-    Price: "TBD",
-    Organizer: "Ngoc Son (Samuel) Tran",
-    Sponsors: "TBD",
-    Image: "Intro-to-Matlab.png",
-    link: "intro-to-matlab",
-  },
-  {
     Title: "Soldering Tutorial",
     Date: "Oct 19th, 2023",
     Location: "MB - 3.255",
@@ -24,8 +10,22 @@ const eventlist = [
     Price: "TBD",
     Organizer: "Alexandre Fontaine",
     Sponsors: "TBD",
-    Image: "Soldering-Tutorial.png",
+    Image: "Intro-to-Soldering.png",
     link: "soldering-tutorial",
+  },
+  {
+    Title: "3D Modeling and Design P2",
+    Date: "Oct 26th, 2023",
+    Location: "MB - 3.255",
+    Type: "Academic",
+    Time: "18:00-21:00",
+    Description:
+      "Embark on a journey to master 3D modeling in our beginner's workshop and learn the skill used by designers, engineers, and artists worldwide",
+    Price: "TBD",
+    Organizer: "Alexandre Fontaine",
+    Sponsors: "TBD",
+    Image: "3D-Modeling-and-Design.png",
+    link: "3d-modeling-and-design",
   },
   {
     Title: "IEEEXtreme",
@@ -40,6 +40,34 @@ const eventlist = [
     Sponsors: "TBD",
     Image: "IEEEXtreme.png",
     link: "ieeextreme",
+  },
+  {
+    Title: "Intro to Arduino",
+    Date: "Nov 9th, 2023",
+    Location: "H-620",
+    Type: "Academic",
+    Time: "TBD",
+    Description:
+      "Learn Arduino fundamentals and gain hands-on experience. Explore the microcontroller's vast applications and immediately apply your knowledge with guidance from experienced tutors.",
+    Price: "TBD",
+    Organizer: "Alexandre Fontaine",
+    Sponsors: "TBD",
+    Image: "Intro-to-Arduino.png",
+    link: "intro-to-arduino",
+  },
+  {
+    Title: "Intro to Transistors",
+    Date: "Nov 16th, 2023",
+    Location: "H-529",
+    Type: "Academic",
+    Time: "18h-21h",
+    Description:
+      "Reinforce your theoretical knowledge about transistors by building and experimenting with actual electric circuits.",
+    Price: "10",
+    Organizer: "Alexandre Fontaine",
+    Sponsors: "",
+    Image: "Intro-to-Transistors.png",
+    link: "intro-to-transistors",
   },
   {
     Title: "Robowars",
@@ -84,20 +112,7 @@ const eventlist = [
     Image: "Intro-to-lab-equipement.png",
     link: "intro-to-lab-equipement",
   },
-  {
-    Title: "3D Modeling and Design",
-    Date: "Sep 28th, 2023",
-    Location: "EV - 2.184",
-    Type: "PASSED",
-    Time: "18:00-21:00",
-    Description:
-      "Embark on a journey to master 3D modeling in our beginner's workshop and learn the skill used by designers, engineers, and artists worldwide",
-    Price: "TBD",
-    Organizer: "Alexandre Fontaine",
-    Sponsors: "TBD",
-    Image: "3D-Modeling-and-Design.png",
-    link: "3d-modeling-and-design",
-  },
+
   {
     Title: "IEEE Day",
     Date: "Oct 3rd, 2023",
@@ -111,6 +126,20 @@ const eventlist = [
     Sponsors: "TBD",
     Image: "IEEE-Day.png",
     link: "ieee-day",
+  },
+  {
+    Title: "Intro to Matlab",
+    Date: "Oct 5th, 2023",
+    Location: "MB - S1.435",
+    Type: "PASSED",
+    Time: "18:00-20:00",
+    Description:
+      "Unlock MATLAB's potential in our interactive workshop! Learn the basics, from navigating the interface to data visualization, with giveaways and free refreshments. Perfect for students or anyone curious about MATLAB.",
+    Price: "TBD",
+    Organizer: "Ngoc Son (Samuel) Tran",
+    Sponsors: "TBD",
+    Image: "Intro-to-Matlab.png",
+    link: "intro-to-matlab",
   },
 ];
 

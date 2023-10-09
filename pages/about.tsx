@@ -130,6 +130,16 @@ export default function About() {
                 image={"Sabine.JPG"}
               />
               <Member
+                firstName={"Achal"}
+                lastName={"Patel"}
+                position={"Branch Marketing"}
+                program={"B.Eng. Coen."}
+                discord={"zwaky#7372"}
+                emailIEEE={"academics@ieeeconcordia.ca"}
+                linkedIn={""}
+                image={"Achal.jpg"}
+              />
+              <Member
                 firstName={"Alexandre"}
                 lastName={"Fontaine"}
                 position={"Branch Academics"}
@@ -207,7 +217,7 @@ export default function About() {
                 discord={"saucy0662"}
                 emailIEEE={"warhacks@ieeeconcordia.ca"}
                 linkedIn={""}
-                image={""}
+                image={"Minh.jpg"}
               />
               <Member
                 firstName={"Mazen"}
