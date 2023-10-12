@@ -39,6 +39,14 @@ export default function SolderingTutorial() {
             knowledge is required. All fundamental soldering tools and materials
             will be provided.
           </p>
+          <Link
+            href={
+              "https://www.zeffy.com/en-CA/ticketing/d3673375-fc6d-4eba-af41-724ee6cbc217"
+            }
+            className="bg-blue-500 hover:bg-blue-700 text-white font-bold font-raleway py-2 px-4 rounded"
+          >
+            Register Now!
+          </Link>
         </div>
       </div>
     </RootLayout>
