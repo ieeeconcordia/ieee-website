@@ -137,7 +137,7 @@ export default function About() {
                 discord={"zwaky#7372"}
                 emailIEEE={"academics@ieeeconcordia.ca"}
                 linkedIn={""}
-                image={"Achal.jpg"}
+                image={"Achal.JPG"}
               />
               <Member
                 firstName={"Alexandre"}
