@@ -13,7 +13,7 @@ export default function IntroToTransistors() {
       </div>
       <div className={styles.markdown}>
         <img
-          src="Intro-to-transistors.webp"
+          src="intro-to-transistors.webp"
           alt="Intro to Transistors Banner"
           className="w-full max-h-80 object-cover"
         />
