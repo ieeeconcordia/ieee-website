@@ -10,7 +10,7 @@ const eventlist = [
     Price: "Free",
     Organizer: "Alexandre Fontaine",
     Sponsors: "TBD",
-    Image: "Intro-to-Material-Selection.webp",
+    Image: "Intro-to-material-selection.webp",
     link: "intro-to-material-selection",
   },
   {
@@ -38,7 +38,7 @@ const eventlist = [
     Price: "10",
     Organizer: "Alexandre Fontaine",
     Sponsors: "",
-    Image: "Intro-to-Transistors.webp",
+    Image: "Intro-to-transistors.webp",
     link: "intro-to-transistors",
   },
   {
