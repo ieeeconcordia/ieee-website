@@ -13,7 +13,7 @@ export default function IEEEday() {
       </div>
       <div className={styles.markdown}>
         <img
-          src="IEEE-Day.png"
+          src="IEEE-Day.webp"
           alt="IEEE-Day Banner"
           className="w-full max-h-80 object-cover"
         />

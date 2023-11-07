@@ -13,7 +13,7 @@ export default function IntroToArduino() {
       </div>
       <div className={styles.markdown}>
         <img
-          src="Intro-to-Arduino.png"
+          src="Intro-to-Arduino.webp"
           alt="Intro to Arduino Banner"
           className="w-full max-h-80 object-cover"
         />

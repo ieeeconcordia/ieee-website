@@ -13,7 +13,7 @@ export default function ModelingAndDesign() {
       </div>
       <div className={styles.markdown}>
         <img
-          src="3D-Modeling-and-Design.png"
+          src="3D-Modeling-and-Design.webp"
           alt="3D Modeling and Design Banner"
           className="w-full max-h-80 object-cover"
         />

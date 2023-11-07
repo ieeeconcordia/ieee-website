@@ -12,7 +12,7 @@ export default function Warhacks() {
       </div>
       <div className={styles.markdown}>
         <img
-          src="Warhacks.png"
+          src="Warhacks.webp"
           alt="Warhacks Banner"
           className="w-full max-h-80 object-cover"
         />

@@ -13,7 +13,7 @@ export default function Robowars() {
       </div>
       <div className={styles.markdown}>
         <img
-          src="Robowars.png"
+          src="Robowars.webp"
           alt="Robowars Banner"
           className="w-full max-h-80 object-cover"
         />

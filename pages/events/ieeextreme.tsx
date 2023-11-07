@@ -13,7 +13,7 @@ export default function IEEEXtreme() {
       </div>
       <div className={styles.markdown}>
         <img
-          src="IEEEXtreme.png"
+          src="IEEEXtreme.webp"
           alt="IEEEXtreme Banner"
           className="w-full max-h-80 object-cover"
         />

@@ -1,21 +1,35 @@
 const eventlist = [
   {
-    Title: "Intro to Arduino",
+    Title: "Intro to Material Selection",
     Date: "Nov 9th, 2023",
-    Location: "H-620",
+    Location: "H-529",
     Type: "Academic",
-    Time: "TBD",
+    Time: "18h-21h",
     Description:
-      "Learn Arduino fundamentals and gain hands-on experience. Explore the microcontroller's vast applications and immediately apply your knowledge with guidance from experienced tutors.",
-    Price: "TBD",
+      "Learn how to select the right material for your project and how to use it properly.",
+    Price: "Free",
     Organizer: "Alexandre Fontaine",
     Sponsors: "TBD",
-    Image: "Intro-to-Arduino.png",
+    Image: "Intro-to-Material-Selection.webp",
+    link: "intro-to-material-selection",
+  },
+  {
+    Title: "Intro to Arduino",
+    Date: "Nov 23rd, 2023",
+    Location: "H-620",
+    Type: "Academic",
+    Time: "18h-21h",
+    Description:
+      "Explore the world of electronics with our easy-to-follow Arduino tutorial, designed for beginners. Learn how to program your first microcontroller, creating exciting projects like LED displays and interactive sensors.",
+    Price: "10$ CAD",
+    Organizer: "Alexandre Fontaine",
+    Sponsors: "TBD",
+    Image: "Intro-to-Arduino.webp",
     link: "intro-to-arduino",
   },
   {
     Title: "Intro to Transistors",
-    Date: "Nov 16th, 2023",
+    Date: "Nov 30th, 2023",
     Location: "H-529",
     Type: "Academic",
     Time: "18h-21h",
@@ -24,7 +38,7 @@ const eventlist = [
     Price: "10",
     Organizer: "Alexandre Fontaine",
     Sponsors: "",
-    Image: "Intro-to-Transistors.png",
+    Image: "Intro-to-Transistors.webp",
     link: "intro-to-transistors",
   },
   {
@@ -38,7 +52,7 @@ const eventlist = [
     Price: "TBD",
     Organizer: "Ardalan Jamshidi",
     Sponsors: "TBD",
-    Image: "Robowars.png",
+    Image: "Robowars.webp",
     link: "robowars",
   },
   {
@@ -52,7 +66,7 @@ const eventlist = [
     price: "TBD",
     Organizer: "Minh Huynh",
     Sponsors: "TBD",
-    Image: "Warhacks.png",
+    Image: "Warhacks.webp",
     link: "warhacks",
   },
 
@@ -67,7 +81,7 @@ const eventlist = [
     Price: "$10 CAD",
     Organizer: "Alexandre Fontaine",
     Sponsors: "TBD",
-    Image: "Intro-to-lab-equipement.png",
+    Image: "Intro-to-lab-equipement.webp",
     link: "intro-to-lab-equipement",
   },
 
@@ -82,7 +96,7 @@ const eventlist = [
     Price: "TBD",
     Organizer: "Shami Ivan Senga",
     Sponsors: "TBD",
-    Image: "IEEE-Day.png",
+    Image: "IEEE-Day.webp",
     link: "ieee-day",
   },
   {
@@ -96,7 +110,7 @@ const eventlist = [
     Price: "TBD",
     Organizer: "Ngoc Son (Samuel) Tran",
     Sponsors: "TBD",
-    Image: "Intro-to-Matlab.png",
+    Image: "Intro-to-Matlab.webp",
     link: "intro-to-matlab",
   },
   {
@@ -110,7 +124,7 @@ const eventlist = [
     Price: "TBD",
     Organizer: "Alexandre Fontaine",
     Sponsors: "TBD",
-    Image: "Intro-to-Soldering.png",
+    Image: "Intro-to-Soldering.webp",
     link: "soldering-tutorial",
   },
   {
@@ -124,7 +138,7 @@ const eventlist = [
     Price: "TBD",
     Organizer: "Alexandre Fontaine",
     Sponsors: "TBD",
-    Image: "3D-Modeling-and-Design.png",
+    Image: "3D-Modeling-and-Design.webp",
     link: "3d-modeling-and-design",
   },
   {
@@ -138,7 +152,7 @@ const eventlist = [
     Price: "TBD",
     Organizer: "Ardalan Jamshidi",
     Sponsors: "TBD",
-    Image: "IEEEXtreme.png",
+    Image: "IEEEXtreme.webp",
     link: "ieeextreme",
   },
 ];

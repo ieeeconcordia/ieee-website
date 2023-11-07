@@ -13,7 +13,7 @@ export default function SolderingTutorial() {
       </div>
       <div className={styles.markdown}>
         <img
-          src="Intro-to-Soldering.png"
+          src="Intro-to-Soldering.webp"
           alt="Soldering Tutuorial Banner"
           className="w-full max-h-80 object-cover"
         />

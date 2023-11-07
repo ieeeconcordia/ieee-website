@@ -37,7 +37,7 @@ export default function Navbar() {
         <div className="flex items-center">
           <Link href={"/"}>
             <img
-              src="logo.png"
+              src="/logo.png"
               alt={"IEEE Concordia"}
               className="md:w-20 md:h-20 h-16 w-fit"
             />

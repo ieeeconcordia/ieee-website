@@ -13,7 +13,7 @@ export default function IntroToMatlab() {
       </div>
       <div className={styles.markdown}>
         <img
-          src="Intro-to-Matlab.png"
+          src="Intro-to-Matlab.webp"
           alt="Intro to Matlab Banner"
           className="w-full max-h-80 object-cover"
         />
