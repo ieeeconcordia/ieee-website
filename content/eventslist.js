@@ -10,7 +10,7 @@ const eventlist = [
     Price: "Free",
     Organizer: "Alexandre Fontaine",
     Sponsors: "TBD",
-    Image: "Intro-to-material-selection.webp",
+    Image: "Intro-to-material-selection.png",
     link: "intro-to-material-selection",
   },
   {
