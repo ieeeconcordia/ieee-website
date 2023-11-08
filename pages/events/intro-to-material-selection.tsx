@@ -13,7 +13,7 @@ export default function IntroToMaterialSelection() {
       </div>
       <div className={styles.markdown}>
         <img
-          src="Intro-to-material-selection.webp"
+          src="/events/Intro-to-material-selection.webp"
           alt="Material Selection Banner"
           className="w-full max-h-80 object-cover"
         />

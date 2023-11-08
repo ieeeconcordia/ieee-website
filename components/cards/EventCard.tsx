@@ -56,7 +56,7 @@ export default function EventCard({
           </div>
         )}
         <img
-          src={"events/" + image}
+          src={"/events/" + image}
           alt={name}
           className="w-full h-full bg-center object-cover overflow-hidden "
         />
