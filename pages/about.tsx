@@ -97,7 +97,7 @@ export default function About() {
                 discord={"cmumind#8981"}
                 emailIEEE={"chair@ieeeconcordia.ca"}
                 linkedIn={""}
-                image={"Ivan.JPG"}
+                image={"Ivan.webp"}
               />
               <Member
                 firstName={"Yara"}
@@ -107,7 +107,7 @@ export default function About() {
                 discord={"yara#4460"}
                 emailIEEE={"treasurer@ieeeconcordia.ca"}
                 linkedIn={""}
-                image={"Yara.JPG"}
+                image={"Yara.webp"}
               />
               <Member
                 firstName={"Kartik"}
@@ -117,7 +117,7 @@ export default function About() {
                 discord={"Kartik T#7583"}
                 emailIEEE={"vicechair@ieeeconcordia.ca"}
                 linkedIn={""}
-                image={"Kartik.JPG"}
+                image={"Kartik.webp"}
               />
               <Member
                 firstName={"Sabine"}
@@ -127,7 +127,7 @@ export default function About() {
                 discord={"sabine#6480"}
                 emailIEEE={"secretary@ieeeconcordia.ca"}
                 linkedIn={""}
-                image={"Sabine.JPG"}
+                image={"Sabine.webp"}
               />
               <Member
                 firstName={"Achal"}
@@ -137,7 +137,7 @@ export default function About() {
                 discord={"zwaky#7372"}
                 emailIEEE={"academics@ieeeconcordia.ca"}
                 linkedIn={""}
-                image={"Achal.JPG"}
+                image={"Achal.webp"}
               />
               <Member
                 firstName={"Alexandre"}
@@ -147,7 +147,7 @@ export default function About() {
                 discord={"zwaky#7372"}
                 emailIEEE={"academics@ieeeconcordia.ca"}
                 linkedIn={""}
-                image={"Alex.jpg"}
+                image={"Alex.webp"}
               />
               <Member
                 firstName={"Rayan"}
@@ -157,7 +157,7 @@ export default function About() {
                 discord={"itsrhino_"}
                 emailIEEE={"itdirector@ieeeconcordia.ca"}
                 linkedIn={""}
-                image={"Rayan.JPG"}
+                image={"Rayan.webp"}
               />
               <Member
                 firstName={"Juan"}
@@ -167,7 +167,7 @@ export default function About() {
                 discord={"sum_re1"}
                 emailIEEE={"itdirector@ieeeconcordia.ca"}
                 linkedIn={""}
-                image={"Juan.JPG"}
+                image={"Juan.webp"}
               />
               <Member
                 firstName={"Houssam Eddine"}
@@ -177,7 +177,7 @@ export default function About() {
                 discord={"hoorii"}
                 emailIEEE={"webmaster@ieeeconcordia.ca"}
                 linkedIn={""}
-                image={"Houssam.JPG"}
+                image={"Houssam.webp"}
               />
               <Member
                 firstName={"Ardalan"}
@@ -187,7 +187,7 @@ export default function About() {
                 discord={"ardianapolis#7436"}
                 emailIEEE={"competitions@ieeeconcordia.ca"}
                 linkedIn={""}
-                image={"Ardalan.JPG"}
+                image={"Ardalan.webp"}
               />
               <Member
                 firstName={"Mathias"}
@@ -197,7 +197,7 @@ export default function About() {
                 discord={"M3thRocks#6275"}
                 emailIEEE={"services@ieeeconcordia.ca"}
                 linkedIn={""}
-                image={"Mathias.JPG"}
+                image={"Mathias.webp"}
               />
               <Member
                 firstName={"Kaden Perelmiter"}
@@ -207,7 +207,7 @@ export default function About() {
                 discord={"M3thRocks#6275"}
                 emailIEEE={"services@ieeeconcordia.ca"}
                 linkedIn={""}
-                image={"Kaden.JPG"}
+                image={"Kaden.webp"}
               />
               <Member
                 firstName={"Minh"}
@@ -217,7 +217,7 @@ export default function About() {
                 discord={"saucy0662"}
                 emailIEEE={"warhacks@ieeeconcordia.ca"}
                 linkedIn={""}
-                image={"Minh.jpg"}
+                image={"Minh.webp"}
               />
               <Member
                 firstName={"Mazen"}
@@ -227,7 +227,7 @@ export default function About() {
                 discord={"_.mazen._"}
                 emailIEEE={"projects@ieeeconcordia.ca"}
                 linkedIn={""}
-                image={"Mazen.JPG"}
+                image={"Mazen.webp"}
               />
               <Member
                 firstName={"Rahil"}
