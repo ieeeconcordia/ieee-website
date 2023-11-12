@@ -1,19 +1,5 @@
 const eventlist = [
   {
-    Title: "Intro to Material Selection",
-    Date: "Nov 9th, 2023",
-    Location: "H-529",
-    Type: "Academic",
-    Time: "18h-21h",
-    Description:
-      "Learn how to select the right material for your project and how to use it properly.",
-    Price: "Free",
-    Organizer: "Alexandre Fontaine",
-    Sponsors: "TBD",
-    Image: "Intro-to-material-selection.png",
-    link: "intro-to-material-selection",
-  },
-  {
     Title: "Robowars Info Session",
     Date: "Nov 15th, 2023",
     Location: "H-655.02",
@@ -168,6 +154,20 @@ const eventlist = [
     Sponsors: "TBD",
     Image: "IEEEXtreme.webp",
     link: "ieeextreme",
+  },
+  {
+    Title: "Intro to Material Selection",
+    Date: "Nov 9th, 2023",
+    Location: "H-529",
+    Type: "PASSED",
+    Time: "18h-21h",
+    Description:
+      "Learn how to select the right material for your project and how to use it properly.",
+    Price: "Free",
+    Organizer: "Alexandre Fontaine",
+    Sponsors: "TBD",
+    Image: "Intro-to-material-selection.png",
+    link: "intro-to-material-selection",
   },
 ];
 
