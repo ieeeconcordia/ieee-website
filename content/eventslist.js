@@ -1,47 +1,5 @@
 const eventlist = [
   {
-    Title: "Robowars Info Session",
-    Date: "Nov 15th, 2023",
-    Location: "H-655.02",
-    Type: "Academic",
-    Time: "12h-13h",
-    Description:
-      "Learn more about Robowars, the biggest robotics competition in Montreal! ",
-    Price: "Free",
-    Organizer: "Ardalan Jamshidi",
-    Sponsors: "TBD",
-    Image: "robowars-info-session.webp",
-    link: "robowars-info-session",
-  },
-  {
-    Title: "Intro to Microcontrollers",
-    Date: "Nov 23rd, 2023",
-    Location: "H-537",
-    Type: "Academic",
-    Time: "18h-21h",
-    Description:
-      "Discover the magic of microcontrollers in our beginner-friendly workshop! Unleash your creativity and bring your electronic projects to life.",
-    Price: "20$ CAD",
-    Organizer: "Alexandre Fontaine",
-    Sponsors: "TBD",
-    Image: "Intro-to-Microcontrollers.webp",
-    link: "intro-to-microcontrollers",
-  },
-  {
-    Title: "Intro to Transistors",
-    Date: "Nov 30th, 2023",
-    Location: "H-529",
-    Type: "Academic",
-    Time: "18h-21h",
-    Description:
-      "Reinforce your theoretical knowledge about transistors by building and experimenting with actual electric circuits.",
-    Price: "10",
-    Organizer: "Alexandre Fontaine",
-    Sponsors: "",
-    Image: "Intro-to-transistors.webp",
-    link: "intro-to-transistors",
-  },
-  {
     Title: "Robowars",
     Date: "Mar 14th, 2024",
     Location: "TBD",
@@ -168,6 +126,34 @@ const eventlist = [
     Sponsors: "TBD",
     Image: "Intro-to-material-selection.png",
     link: "intro-to-material-selection",
+  },
+  {
+    Title: "Robowars Info Session",
+    Date: "Nov 15th, 2023",
+    Location: "H-655.02",
+    Type: "PASSED",
+    Time: "12h-13h",
+    Description:
+      "Learn more about Robowars, the biggest robotics competition in Montreal! ",
+    Price: "Free",
+    Organizer: "Ardalan Jamshidi",
+    Sponsors: "TBD",
+    Image: "robowars-info-session.webp",
+    link: "robowars-info-session",
+  },
+  {
+    Title: "Intro to Microcontrollers",
+    Date: "Nov 23rd, 2023",
+    Location: "H-537",
+    Type: "PASSED",
+    Time: "18h-21h",
+    Description:
+      "Discover the magic of microcontrollers in our beginner-friendly workshop! Unleash your creativity and bring your electronic projects to life.",
+    Price: "20$ CAD",
+    Organizer: "Alexandre Fontaine",
+    Sponsors: "TBD",
+    Image: "Intro-to-Microcontrollers.webp",
+    link: "intro-to-microcontrollers",
   },
 ];
 
