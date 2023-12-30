@@ -44,7 +44,10 @@ export default function EventCard({
     });
   };
   return (
-    <div className="w-72 sm:w-80 flex flex-col justify-start bg-white border overflow-hidden rounded-xl shadow-md">
+    <button
+      onClick={handleButtonClick}
+      className="w-72 sm:w-80 flex flex-col justify-start bg-white border overflow-hidden rounded-xl shadow-md hover:scale-105 transition duration-300"
+    >
       <div className="w-full h-48 sm:h-52 bg-slate-400 rounded-t-xl">
         {eventType == "PASSED" ? (
           <div className="absolute w-32 p-1 bg-red-500 rounded-tl-lg rounded-br-lg text-white">
@@ -91,6 +94,6 @@ export default function EventCard({
           </div>
         </button>
       </div>
-    </div>
+    </button>
   );
 }
