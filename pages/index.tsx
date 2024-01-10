@@ -12,23 +12,26 @@ import ProjectsPlaceHolder from "@/components/placeholder/ProjectsPlaceholder";
 import LandingVideo from "@/components/LandingVideo";
 import Navbar from "@/components/navbar/HomeNavbar";
 import Footer from "@/components/Footer";
-import eventlist from "@/content/eventslist";
-// Fetch all events and pass them as a prop to the Events component
-export async function getStaticProps() {
-  const events = await getAllEvents();
-  const projects = await getAllProjects();
+import EventCardList from "@/components/EventCardList";
 
-  return {
-    props: {
-      events,
-      projects,
-    },
-  };
-}
+// Fetch all events and pass them as a prop to the Events component
+// export async function getStaticProps() {
+//   const events = await getAllEvents();
+//   const projects = await getAllProjects();
+
+//   return {
+//     props: {
+//       events,
+//       projects,
+//     },
+//   };
+// }
 
 const projects: any[] = [];
 
 export default function Home() {
+  useEffect(() => {}, []);
+
   return (
     <div className="">
       <Navbar />
@@ -59,43 +62,7 @@ export default function Home() {
             skills in our exciting competitions.
           </p>
         </div>
-        {eventlist.length == 0 ? (
-          <EventsPlaceHolder />
-        ) : (
-          <Suspense fallback={<Loading />}>
-            <div
-              className="w-fit grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 justify-items-center gap-6 sm:gap-10 
-            "
-            >
-              {eventlist.map(
-                (event: any, index: any) =>
-                  index < 3 && (
-                    <EventCard
-                      key={event.id}
-                      _id={event.id}
-                      name={event.Title}
-                      date={event.Date}
-                      location={event.Location}
-                      time={event.Time}
-                      price={event.Price}
-                      eventType={event.Type}
-                      description={event.Description}
-                      image={event.Image}
-                      organizer={""}
-                      sponsors={""}
-                      link={event.link}
-                      tags={""}
-                    />
-                  )
-              )}
-            </div>
-          </Suspense>
-        )}
-        {eventlist.length == 0 ? (
-          <></>
-        ) : (
-          <SimpleBtn text="See more..." href="/events" />
-        )}
+        <EventCardList maxEvents={3} />
       </section>
 
       <section className="flex flex-col text-center items-center justify-items-center gap-6 px-8 pb-10 sm:px-20 xl:px-section md:pb-14">
