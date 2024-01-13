@@ -1,5 +1,5 @@
 .markdown {
-    @apply max-w-4xl md:max-w-full flex flex-col px-8 pb-16 sm:px-20 xl:px-section md:pb-20 rounded-xl
+    @apply max-w-4xl md:max-w-screen-2xl mx-auto flex flex-col px-8 pb-16 sm:px-20 xl:px-section md:pb-20 rounded-xl
 }
 
 .markdown h1 {

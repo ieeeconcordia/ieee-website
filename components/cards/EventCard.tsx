@@ -83,7 +83,7 @@ export default function EventCard({
         </div>
         <p className="text-base text-gray-600 line-clamp-3">{description}</p>
         {/* Learn more */}
-        <button onClick={handleButtonClick} className="mt-auto">
+        <div className="mt-auto">
           {" "}
           {/* Add 'mt-auto' class here */}
           <div className="flex flex-row gap-2 items-center text-sm text-cyan-400">
@@ -92,7 +92,7 @@ export default function EventCard({
             </div>
             Learn More
           </div>
-        </button>
+        </div>
       </div>
     </button>
   );
