@@ -41,6 +41,3 @@ next-env.d.ts
 .gitignore
 temp.txt
 .env*
-
-node_modules
-.env
