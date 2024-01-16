@@ -6,7 +6,7 @@ import Loading from "@/components/animations/Loading";
 import { Suspense } from "react";
 // import { firestore } from "@/lib/firebase";
 import { getDocs, collection, DocumentData } from "firebase/firestore";
-import eventlist from "@/content/eventslist";
+import { eventlist, splitAndSortEvents } from "@/content/eventslist";
 
 // export async function getStaticProps() {
 //   const eventsQuerySnapshot = await getDocs(collection(firestore, "Event"));
@@ -25,6 +25,13 @@ import eventlist from "@/content/eventslist";
 //   };
 // }
 export default function Events() {
+  const {
+    sortedUpcomingEvents: upcomingEvents,
+    sortedPassedEvents: passedEvents,
+  } = splitAndSortEvents(eventlist);
+  const events = upcomingEvents.concat(passedEvents);
+  console.log(events);
+
   return (
     <RootLayout>
       <div className="flex flex-col text-center items-center justify-items-center gap-6 px-8 pb-16 sm:px-20 xl:px-section md:pb-14">
@@ -39,7 +46,7 @@ export default function Events() {
           </p>
         </div>
 
-        {eventlist.length == 0 ? (
+        {events.length == 0 ? (
           <EventsPlaceHolder />
         ) : (
           <Suspense fallback={<Loading />}>
@@ -47,7 +54,7 @@ export default function Events() {
               className="w-fit grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 justify-items-center gap-6 sm:gap-10 
             "
             >
-              {eventlist.map((event: any, index: any) => (
+              {events.map((event: any, index: any) => (
                 <EventCard
                   key={event.id}
                   _id={event.id}

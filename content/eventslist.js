@@ -39,7 +39,7 @@ const eventlist = [
     Price: "$10 CAD",
     Organizer: "Alexandre Fontaine",
     Sponsors: "TBD",
-    Image: "Intro-to-lab-equipement.webp",
+    Image: "Intro-to-lab-equipement-2.png",
     link: "intro-to-lab-equipement",
   },
 
@@ -157,4 +157,76 @@ const eventlist = [
   },
 ];
 
-export default eventlist;
+function sortEventsByDate(events) {
+  return events.sort((a, b) => {
+    // Convert the date strings to Date objects
+    const dateA = new Date(
+      a.Date.replace("th", "")
+        .replace("rd", "")
+        .replace("st", "")
+        .replace("nd", "")
+    );
+    const dateB = new Date(
+      b.Date.replace("th", "")
+        .replace("rd", "")
+        .replace("st", "")
+        .replace("nd", "")
+    );
+
+    // Compare the Date objects
+    return dateA - dateB;
+  });
+}
+
+function sortEventsByDateDescending(events) {
+  return events.sort((a, b) => {
+    const dateA = new Date(
+      a.Date.replace("th", "")
+        .replace("rd", "")
+        .replace("st", "")
+        .replace("nd", "")
+    );
+    const dateB = new Date(
+      b.Date.replace("th", "")
+        .replace("rd", "")
+        .replace("st", "")
+        .replace("nd", "")
+    );
+
+    // Compare the Date objects in descending order
+    return dateB - dateA;
+  });
+}
+
+function splitAndSortEvents(events) {
+  const today = new Date();
+
+  // Split the events into upcoming and passed events
+  const upcomingEvents = events.filter(
+    (event) =>
+      new Date(
+        event.Date.replace("th", "")
+          .replace("rd", "")
+          .replace("st", "")
+          .replace("nd", "")
+      ) >= today
+  );
+  const passedEvents = events.filter(
+    (event) =>
+      new Date(
+        event.Date.replace("th", "")
+          .replace("rd", "")
+          .replace("st", "")
+          .replace("nd", "")
+      ) < today
+  );
+
+  // Sort each group separately
+  const sortedUpcomingEvents = sortEventsByDate(upcomingEvents);
+  const sortedPassedEvents = sortEventsByDateDescending(passedEvents);
+
+  // Concatenate the two groups
+  return { sortedUpcomingEvents, sortedPassedEvents };
+}
+
+export { eventlist, sortEventsByDateDescending, splitAndSortEvents };

@@ -13,7 +13,7 @@ export default function IntroToLabEquipement() {
       </div>
       <div className={styles.markdown}>
         <img
-          src="Intro-to-lab-equipement.webp"
+          src="Intro-to-lab-equipement-2.png"
           alt="IEEEXtreme Banner"
           className="w-full max-h-80 object-cover"
         />

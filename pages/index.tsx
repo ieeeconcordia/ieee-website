@@ -12,7 +12,7 @@ import ProjectsPlaceHolder from "@/components/placeholder/ProjectsPlaceholder";
 import LandingVideo from "@/components/LandingVideo";
 import Navbar from "@/components/navbar/HomeNavbar";
 import Footer from "@/components/Footer";
-import eventlist from "@/content/eventslist";
+import { eventlist, splitAndSortEvents } from "@/content/eventslist";
 // Fetch all events and pass them as a prop to the Events component
 export async function getStaticProps() {
   const events = await getAllEvents();
@@ -29,6 +29,13 @@ export async function getStaticProps() {
 const projects: any[] = [];
 
 export default function Home() {
+  const {
+    sortedUpcomingEvents: upcomingEvents,
+    sortedPassedEvents: passedEvents,
+  } = splitAndSortEvents(eventlist);
+  const events = upcomingEvents.concat(passedEvents);
+  console.log(events);
+
   return (
     <div className="">
       <Navbar />
@@ -59,7 +66,7 @@ export default function Home() {
             skills in our exciting competitions.
           </p>
         </div>
-        {eventlist.length == 0 ? (
+        {events.length == 0 ? (
           <EventsPlaceHolder />
         ) : (
           <Suspense fallback={<Loading />}>
@@ -67,7 +74,7 @@ export default function Home() {
               className="w-fit grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 justify-items-center gap-6 sm:gap-10 
             "
             >
-              {eventlist.map(
+              {events.map(
                 (event: any, index: any) =>
                   index < 3 && (
                     <EventCard
@@ -91,7 +98,7 @@ export default function Home() {
             </div>
           </Suspense>
         )}
-        {eventlist.length == 0 ? (
+        {events.length == 0 ? (
           <></>
         ) : (
           <SimpleBtn text="See more..." href="/events" />
