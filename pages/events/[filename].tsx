@@ -27,8 +27,8 @@ export default function IEEEXtreme(props: any) {
       </div>
       <div className={styles.markdown}>
         <img
-          src="IEEEXtreme.webp"
-          alt="IEEEXtreme Banner"
+          src={data.event.image}
+          alt={data.event.title}
           className="w-full max-h-80 object-cover"
         />
         <div>
