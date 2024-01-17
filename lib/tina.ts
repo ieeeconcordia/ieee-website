@@ -38,9 +38,7 @@ export async function getEvents() {
   const events = eventResponse.data?.eventConnection.edges;
   if (!events) return;
   // Check if event and event.node are not null before type conversion
-  const eventArray:
-    | SetStateAction<{ [key: string]: any }[]>
-    | { event: EventProps }[] = [];
+  const eventArray: any[] = [];
   events.forEach((event) => {
     if (event && event.node) {
       let date = date_format(event.node.date);
@@ -58,7 +56,7 @@ export async function getEvents() {
         sponsors: event.node.sponsors,
         tags: "",
         link: event.node._sys.filename,
-      } as EventProps;
+      };
       eventArray.push(temp);
     }
   });
