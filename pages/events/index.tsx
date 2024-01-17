@@ -4,27 +4,25 @@ import { SponsorshipSection } from "@/components/SponsorshipSection";
 import EventsPlaceHolder from "@/components/placeholder/EventsPlaceholder";
 import Loading from "@/components/animations/Loading";
 import { Suspense } from "react";
-// import { firestore } from "@/lib/firebase";
-import { getDocs, collection, DocumentData } from "firebase/firestore";
-import eventlist from "@/content/eventslist";
+import { getEvents } from "@/lib/tina";
+import { splitAndSortEvents } from "@/content/eventslist";
+import { get } from "http";
 
-// export async function getStaticProps() {
-//   const eventsQuerySnapshot = await getDocs(collection(firestore, "Event"));
-//   const events: { id: string; data: DocumentData }[] = [];
-//   eventsQuerySnapshot.forEach((doc) => {
-//     events.push({
-//       id: doc.id,
-//       data: doc.data(),
-//     });
-//     console.log("Event: " + doc.data());
-//   });
-//   return {
-//     props: {
-//       events,
-//     },
-//   };
-// }
-export default function Events() {
+export async function getStaticProps({ params }: any) {
+  const events = await getEvents();
+  return {
+    props: {
+      events,
+    },
+  };
+}
+export default function Events({ events }: any) {
+  const {
+    sortedUpcomingEvents: upcomingEvents,
+    sortedPassedEvents: passedEvents,
+  } = splitAndSortEvents(events);
+  events = upcomingEvents.concat(passedEvents);
+
   return (
     <RootLayout>
       <div className="flex flex-col text-center items-center justify-items-center gap-6 px-8 pb-16 sm:px-20 xl:px-section md:pb-14">
@@ -39,7 +37,7 @@ export default function Events() {
           </p>
         </div>
 
-        {eventlist.length == 0 ? (
+        {events.length == 0 ? (
           <EventsPlaceHolder />
         ) : (
           <Suspense fallback={<Loading />}>
@@ -47,18 +45,18 @@ export default function Events() {
               className="w-fit grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 justify-items-center gap-6 sm:gap-10 
             "
             >
-              {eventlist.map((event: any, index: any) => (
+              {events.map((event: any, index: any) => (
                 <EventCard
                   key={event.id}
                   _id={event.id}
-                  name={event.Title}
-                  date={event.Date}
-                  location={event.Location}
-                  time={event.Time}
-                  price={event.Price}
-                  eventType={event.Type}
-                  description={event.Description}
-                  image={event.Image}
+                  name={event.title}
+                  date={event.date}
+                  location={event.location}
+                  time={event.time}
+                  price={event.price}
+                  eventType={event.eventType}
+                  description={event.description}
+                  image={event.image}
                   organizer={""}
                   sponsors={""}
                   link={event.link}

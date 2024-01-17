@@ -43,15 +43,25 @@ export default function EventCard({
       query: _id,
     });
   };
+
+  // Function to check if the event date has passed
+  const isEventPassed = (eventDate: string) => {
+    const today = new Date();
+    const eventDateObj = new Date(eventDate);
+
+    // Compare the event date with today's date
+    return eventDateObj < today;
+  };
+
   return (
     <button
       onClick={handleButtonClick}
       className="w-72 sm:w-80 flex flex-col justify-start bg-white border overflow-hidden rounded-xl shadow-md hover:scale-105 transition duration-300"
     >
       <div className="w-full h-48 sm:h-52 bg-slate-400 rounded-t-xl">
-        {eventType == "PASSED" ? (
+        {isEventPassed(date) ? (
           <div className="absolute w-32 p-1 bg-red-500 rounded-tl-lg rounded-br-lg text-white">
-            {eventType}
+            PASSED
           </div>
         ) : (
           <div className="absolute w-32 p-1 bg-sky-400 rounded-tl-lg rounded-br-lg text-white">
@@ -59,7 +69,7 @@ export default function EventCard({
           </div>
         )}
         <img
-          src={"/events/" + image}
+          src={image}
           alt={name}
           className="w-full h-full bg-center object-cover overflow-hidden "
         />
