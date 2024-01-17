@@ -5,7 +5,7 @@ import EventsPlaceHolder from "@/components/placeholder/EventsPlaceholder";
 import Loading from "@/components/animations/Loading";
 import { Suspense } from "react";
 import { getEvents } from "@/lib/tina";
-import { eventlist, splitAndSortEvents } from "@/content/eventslist";
+import { splitAndSortEvents } from "@/content/eventslist";
 import { get } from "http";
 
 export async function getStaticProps({ params }: any) {
@@ -17,12 +17,11 @@ export async function getStaticProps({ params }: any) {
   };
 }
 export default function Events({ events }: any) {
-  // const {
-  //   sortedUpcomingEvents: upcomingEvents,
-  //   sortedPassedEvents: passedEvents,
-  // } = splitAndSortEvents(eventlist);
-  // const events = upcomingEvents.concat(passedEvents);
-  console.log(events);
+  const {
+    sortedUpcomingEvents: upcomingEvents,
+    sortedPassedEvents: passedEvents,
+  } = splitAndSortEvents(events);
+  events = upcomingEvents.concat(passedEvents);
 
   return (
     <RootLayout>

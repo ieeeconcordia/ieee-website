@@ -43,7 +43,6 @@ export async function getEvents() {
     | { event: EventProps }[] = [];
   events.forEach((event) => {
     if (event && event.node) {
-      console.log(event.node._sys.filename);
       let date = date_format(event.node.date);
       let temp = {
         _id: event.node.id,

@@ -11,7 +11,7 @@ description: >-
   enthusiasts. It includes a comprehensive kit and offers a platform to network,
   learn, and improve essential soldering skills in electronics and circuit
   design.
-image: /events/Intro-to-lab-equipement-2.png
+image: /events/Intro-to-Soldering.webp
 organizer: Alexandre
 ---
 
