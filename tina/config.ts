@@ -29,6 +29,77 @@ export default defineConfig({
   schema: {
     collections: [
       {
+        name: "event",
+        label: "Events",
+        path: "content/events",
+        fields: [
+          {
+            type: "string",
+            name: "title",
+            label: "Title",
+            isTitle: true,
+            required: true,
+          },
+          {
+            type: "datetime",
+            name: "date",
+            label: "Date",
+            required: true,
+          },
+          {
+            type: "string",
+            name: "location",
+            label: "Location",
+            required: true,
+          },
+          {
+            type: "string",
+            name: "time",
+            label: "Time (24h)",
+            required: true,
+          },
+          {
+            type: "number",
+            name: "price",
+            label: "Price",
+          },
+          {
+            type: "string",
+            name: "type",
+            label: "Event type",
+            required: true,
+          },
+          {
+            type: "string",
+            name: "description",
+            label: "Event Card Description",
+            required: true,
+          },
+          {
+            type: "image",
+            name: "image",
+            label: "Event Image",
+            required: true,
+          },
+          {
+            type: "string",
+            name: "organizer",
+            label: "Organizer",
+          },
+          {
+            type: "string",
+            name: "sponsors",
+            label: "Sponsors",
+          },
+          {
+            type: "rich-text",
+            name: "body",
+            label: "Body",
+            isBody: true,
+          },
+        ],
+      },
+      {
         name: "post",
         label: "Posts",
         path: "content/posts",

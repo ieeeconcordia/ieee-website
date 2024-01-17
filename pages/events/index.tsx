@@ -4,32 +4,24 @@ import { SponsorshipSection } from "@/components/SponsorshipSection";
 import EventsPlaceHolder from "@/components/placeholder/EventsPlaceholder";
 import Loading from "@/components/animations/Loading";
 import { Suspense } from "react";
-// import { firestore } from "@/lib/firebase";
-import { getDocs, collection, DocumentData } from "firebase/firestore";
+import { getEvents } from "@/lib/tina";
 import { eventlist, splitAndSortEvents } from "@/content/eventslist";
+import { get } from "http";
 
-// export async function getStaticProps() {
-//   const eventsQuerySnapshot = await getDocs(collection(firestore, "Event"));
-//   const events: { id: string; data: DocumentData }[] = [];
-//   eventsQuerySnapshot.forEach((doc) => {
-//     events.push({
-//       id: doc.id,
-//       data: doc.data(),
-//     });
-//     console.log("Event: " + doc.data());
-//   });
-//   return {
-//     props: {
-//       events,
-//     },
-//   };
-// }
-export default function Events() {
-  const {
-    sortedUpcomingEvents: upcomingEvents,
-    sortedPassedEvents: passedEvents,
-  } = splitAndSortEvents(eventlist);
-  const events = upcomingEvents.concat(passedEvents);
+export async function getStaticProps({ params }: any) {
+  const events = await getEvents();
+  return {
+    props: {
+      events,
+    },
+  };
+}
+export default function Events({ events }: any) {
+  // const {
+  //   sortedUpcomingEvents: upcomingEvents,
+  //   sortedPassedEvents: passedEvents,
+  // } = splitAndSortEvents(eventlist);
+  // const events = upcomingEvents.concat(passedEvents);
   console.log(events);
 
   return (
@@ -58,14 +50,14 @@ export default function Events() {
                 <EventCard
                   key={event.id}
                   _id={event.id}
-                  name={event.Title}
-                  date={event.Date}
-                  location={event.Location}
-                  time={event.Time}
-                  price={event.Price}
-                  eventType={event.Type}
-                  description={event.Description}
-                  image={event.Image}
+                  name={event.title}
+                  date={event.date}
+                  location={event.location}
+                  time={event.time}
+                  price={event.price}
+                  eventType={event.eventType}
+                  description={event.description}
+                  image={event.image}
                   organizer={""}
                   sponsors={""}
                   link={event.link}

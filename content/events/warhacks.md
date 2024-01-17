@@ -1,31 +1,32 @@
 ---
-name: "Upcoming Events" 
-date: "Date"
-location: "location"
-time: "Time"
-description: This is where all the upcoming events will be displayed. Stay up to date with this cool little view.
-price: 10
-image: "/uploads/Upcoming_Events.jpg"
-organizer: Alexandre Fontaine
-eventType: "Competition"
-sponsors: ["Sponsors "]
-tags: ""
+title: Warhacks
+date: 2024-01-28T05:00:00.000Z
+location: TBA
+time: '8:00 - 17:00'
+price: 0
+type: Competition
+description: >-
+  Warhacks is a one-day event designed to introduce you to the world of hardware
+  hackathon. Come spend the day with us, and you will get to build your robot
+  from scratch.
+image: /events/Warhacks.webp
+organizer: IEEE Concordia
 ---
 
-- **Date**: 2023-06-09
-- **Time**: 14:00
-- **Location**: SGW - Hall Building 
-- **Room**: H402
+## About the Event
 
-## Description
+Warhacks is a one-day event designed to introduce CEGEP students to the world of hardware hackathon. Come spend the day with us, and you will get to build your robot from scratch.
 
-This is a detailed description of the event. You can provide more information about the event, its purpose, and what attendees can expect.
+## What You Need
 
-### Why do we use it?
-It is a long established fact that a reader will be distracted by
- readable content of a page when looking at its layout. The point
-stribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+There is no previous knowledge needed, Warhacks offers different workshop tutorials that will teach you skills for robotics building. Things like programming, motor control, sensor reading, and much more will be covered during these tutorials.
 
-## Additional Information
+## The Competition
 
-Add any additional information or details about the event here.
+Working in teams of three or four, you will put your creativity to work and build a robot that will accomplish some given challenges. These challenges will be unveiled at the beginning of the competition.
+
+## Why Should I Attend
+
+Choosing where to continue your education after graduating is tough. What should I study, what university/ college should I go to? It can be hard to work out what you should study and where. We do not have a solution for that, but we offer an opportunity to explore one of your interests.
+
+[Warhacks.ca](Warhacks "warhacks.ca")

@@ -72,7 +72,7 @@ const eventlist = [
     link: "intro-to-matlab",
   },
   {
-    Title: "Soldering Tutorial",
+    Title: "Intro to Soldering",
     Date: "Oct 19th, 2023",
     Location: "MB - 3.255",
     Type: "PASSED",
