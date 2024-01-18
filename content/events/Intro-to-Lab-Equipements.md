@@ -1,7 +1,7 @@
 ---
 title: Intro to Lab Equipements
 date: 2024-01-25T05:00:00.000Z
-location: TBD
+location: IEEE Lab
 time: '18:00 - 21:00'
 price: 10
 type: Academic
