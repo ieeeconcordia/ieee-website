@@ -1,6 +1,6 @@
 ---
 title: Intro to Soldering SMD
-date: 2024-01-23T05:00:00.000Z
+date: 2024-02-06T05:00:00.000Z
 location: TBD
 time: '18:00 - 21:00'
 price: 10
