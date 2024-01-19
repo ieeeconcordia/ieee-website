@@ -29,4 +29,4 @@ Working in teams of three or four, you will put your creativity to work and buil
 
 Choosing where to continue your education after graduating is tough. What should I study, what university/ college should I go to? It can be hard to work out what you should study and where. We do not have a solution for that, but we offer an opportunity to explore one of your interests.
 
-[Warhacks.ca]("www.warhacks.ca")
+[Warhacks.ca]("https://www.warhacks.ca")
