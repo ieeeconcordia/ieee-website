@@ -9,7 +9,7 @@ description: >-
   Warhacks is a one-day event designed to introduce you to the world of hardware
   hackathon. Come spend the day with us, and you will get to build your robot
   from scratch.
-image: /events/Warhacks.webp
+image: /events/Warhacks-2024.webp
 organizer: IEEE Concordia
 ---
 
