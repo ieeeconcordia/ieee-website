@@ -24,4 +24,4 @@ This competition will allow you to demonstrate your engineering expertise and co
 
 We will also be hosting some training sessions prior to the competition so don't miss them.
 
-[Robowars.ca]()
+[Robowars.ca](www.robowars.ca)
