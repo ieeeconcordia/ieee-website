@@ -14,7 +14,7 @@ export default function IEEEXtreme(props: any) {
     data: props.data,
   });
 
-  console.log(props);
+  // console.log(props);
 
   const date = moment(data.event.date).format("MMMM Do, h:mm a");
 
@@ -22,7 +22,7 @@ export default function IEEEXtreme(props: any) {
     <RootLayout>
       <div className="max-w-4xl md:max-w-full flex flex-col px-8 sm:px-20 xl:px-section mb-2">
         <h1 className="font-lora font-bold text-center text-headline-l text-secondary pb-4">
-          IEEEXtreme
+          {data.event.title}
         </h1>
       </div>
       <div className={styles.markdown}>
