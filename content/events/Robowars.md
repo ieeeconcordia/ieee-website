@@ -8,7 +8,7 @@ description: >-
   Robowars is a competitive robotic event that invites passionate and
   enthusiastic participants from all over Montreal and beyond to showcase their
   engineering skills.
-image: /events/Robowars.webp
+image: /events/Robowars-2024.webp
 organizer: Ardalan
 ---
 
