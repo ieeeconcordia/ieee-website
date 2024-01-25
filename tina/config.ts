@@ -100,6 +100,50 @@ export default defineConfig({
         ],
       },
       {
+        name: "member",
+        label: "Members",
+        path: "content/members",
+        fields: [
+          {
+            type: "image",
+            name: "image",
+            label: "Image",
+            required: true,
+          },
+          {
+            type: "string",
+            name: "role",
+            label: "Role",
+            required: true,
+            isTitle: true,
+          },
+          {
+            type: "string",
+            name: "name",
+            label: "Name",
+            required: true,
+          },
+          {
+            type: "string",
+            name: "email",
+            label: "Email",
+            required: true,
+          },
+          {
+            type: "string",
+            name: "program",
+            label: "Program",
+            required: true,
+          },
+          {
+            type: "string",
+            name: "linkedIn",
+            label: "LinkedIn",
+            required: true,
+          },
+        ],
+      },
+      {
         name: "post",
         label: "Posts",
         path: "content/posts",

@@ -49,8 +49,14 @@ export default function EventCard({
     const today = new Date();
     const eventDateObj = new Date(eventDate);
 
+    // Set hours, minutes, seconds and milliseconds to 0 for both dates
+    today.setHours(0, 0, 0, 0);
+    eventDateObj.setHours(eventDateObj.getHours() + 5);
+
+    eventDateObj.setDate(eventDateObj.getDate() + 1);
+
     // Compare the event date with today's date
-    return eventDateObj < today;
+    return eventDateObj <= today;
   };
 
   return (
