@@ -22,11 +22,19 @@ function sortEventsByDateDescending(events) {
 function splitAndSortEvents(events) {
   const today = new Date();
 
+  // Get the timezone offset in minutes
+  const timezoneOffset = today.getTimezoneOffset() * 60 * 1000;
+
   // Split the events into upcoming and passed events
-  const upcomingEvents = events.filter(
-    (event) => new Date(event.date) >= today
+  const upcomingEvents = events.filter((event) => {
+    let temp = new Date(Date.parse(event.date) - timezoneOffset);
+    temp.setDate(temp.getDate() + 1);
+    temp.setHours(temp.getHours() + 5);
+    return temp >= today;
+  });
+  const passedEvents = events.filter(
+    (event) => new Date(Date.parse(event.date) - timezoneOffset) < today
   );
-  const passedEvents = events.filter((event) => new Date(event.date) < today);
 
   // Sort each group separately
   const sortedUpcomingEvents = sortEventsByDate(upcomingEvents);
