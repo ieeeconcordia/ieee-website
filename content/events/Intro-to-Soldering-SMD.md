@@ -1,7 +1,7 @@
 ---
 title: Intro to Soldering SMD
-date: 2024-02-06T05:00:00.000Z
-location: TBD
+date: 2024-03-19T04:00:00.000Z
+location: H-431
 time: '18:00 - 21:00'
 price: 10
 type: Academic
