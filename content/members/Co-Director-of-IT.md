@@ -1,5 +1,5 @@
 ---
-image: /execs/Rayan.webp
+image: /execs/Rayan (updated).webp
 role: Director of IT
 name: Rayan Alkayal
 email: itdirector@ieeeconcordia.ca
