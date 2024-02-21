@@ -5,20 +5,22 @@ import { SponsorshipSection } from "@/components/SponsorshipSection";
 import { useEffect, useState } from "react";
 import { TypeAnimation } from "react-type-animation";
 import TypingAnimation from "@/components/animations/TypingAnimation";
+import { getMembers } from "@/lib/tina";
 
-export default function About() {
-  const [execTeam, setExecTeam] = useState([]);
+export async function getStaticProps({ params }: any) {
+  const members = await getMembers();
+  return {
+    props: {
+      members,
+    },
+  };
+}
+
+export default function About({ members }: any) {
+  console.log(members);
   const [windowWidth, setWindowWidth] = useState(0);
 
   useEffect(() => {
-    const fetchData = async () => {
-      const response = await fetch("/api/execTeam");
-      const data = await response.json();
-      setExecTeam(data); // store the response from the API route
-    };
-
-    fetchData();
-
     const handleResize = () => {
       setWindowWidth(window.innerWidth);
     };
@@ -72,29 +74,24 @@ export default function About() {
               Meet our team
             </h2>
             <div className="w-fit grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 justify-items-center gap-4 sm:gap-10">
-              {/* {execTeam.map(
-                (member: any, index: any) =>
-                  member["Status"] == "Active" && (
-                    <Member
-                      key={member["id"]}
-                      firstName={member["First Name"]}
-                      lastName={member["Last Name"]}
-                      position={member["Position"]}
-                      program={member["Program"]}
-                      discord={member["Discord"]}
-                      emailIEEE={member["Email (IEEE)"]}
-                      linkedIn={member["LinkedIn"]}
-                      image={member["Image"]}
-                    />
-                  )
-              )} */}
-
-              <Member
+              {members.map((member: any, index: any) => (
+                <Member
+                  key={index}
+                  name={member.name}
+                  role={member.role}
+                  program={member.program}
+                  github={member.github}
+                  emailIEEE={member.emailIEEE}
+                  linkedIn={member.linkedin}
+                  image={member.image}
+                />
+              ))}
+              {/* <Member
                 firstName={"Shami Ivan"}
                 lastName={"Senga"}
                 position={"Branch Chair"}
                 program={"B.Eng. Coen."}
-                discord={"cmumind#8981"}
+                github={""}
                 emailIEEE={"chair@ieeeconcordia.ca"}
                 linkedIn={""}
                 image={"Ivan.webp"}
@@ -104,7 +101,7 @@ export default function About() {
                 lastName={"Stouhi"}
                 position={"Branch Treasurer"}
                 program={"B.Eng. Coen."}
-                discord={"yara#4460"}
+                github={""}
                 emailIEEE={"treasurer@ieeeconcordia.ca"}
                 linkedIn={""}
                 image={"Yara.webp"}
@@ -114,7 +111,7 @@ export default function About() {
                 lastName={"Teotia"}
                 position={"Branch Vice-Chair"}
                 program={"B.Eng. Elec."}
-                discord={"Kartik T#7583"}
+                github={""}
                 emailIEEE={"vicechair@ieeeconcordia.ca"}
                 linkedIn={""}
                 image={"Kartik.webp"}
@@ -124,7 +121,7 @@ export default function About() {
                 lastName={"Hleiss"}
                 position={"Branch Secretary"}
                 program={""}
-                discord={"sabine#6480"}
+                github={""}
                 emailIEEE={"secretary@ieeeconcordia.ca"}
                 linkedIn={""}
                 image={"Sabine.webp"}
@@ -134,7 +131,7 @@ export default function About() {
                 lastName={"Patel"}
                 position={"Branch Marketing"}
                 program={"B.Eng. Coen."}
-                discord={"zwaky#7372"}
+                github={"zwaky#7372"}
                 emailIEEE={"academics@ieeeconcordia.ca"}
                 linkedIn={""}
                 image={"Achal.webp"}
@@ -144,7 +141,7 @@ export default function About() {
                 lastName={"Fontaine"}
                 position={"Branch Academics"}
                 program={"B.Eng. Elec."}
-                discord={"zwaky#7372"}
+                github={"zwaky#7372"}
                 emailIEEE={"academics@ieeeconcordia.ca"}
                 linkedIn={""}
                 image={"Alex.webp"}
@@ -154,7 +151,7 @@ export default function About() {
                 lastName={"Alkayal"}
                 position={"Director of IT"}
                 program={""}
-                discord={"itsrhino_"}
+                github={"itsrhino_"}
                 emailIEEE={"itdirector@ieeeconcordia.ca"}
                 linkedIn={""}
                 image={"Rayan.webp"}
@@ -164,7 +161,7 @@ export default function About() {
                 lastName={"Vergas"}
                 position={"Director of IT"}
                 program={""}
-                discord={"sum_re1"}
+                github={"sum_re1"}
                 emailIEEE={"itdirector@ieeeconcordia.ca"}
                 linkedIn={""}
                 image={"Juan.webp"}
@@ -174,7 +171,7 @@ export default function About() {
                 lastName={"Righi"}
                 position={"Branch Webmaster"}
                 program={"B.Eng. Soen."}
-                discord={"hoorii"}
+                github={"hoorii"}
                 emailIEEE={"webmaster@ieeeconcordia.ca"}
                 linkedIn={""}
                 image={"Houssam.webp"}
@@ -184,7 +181,7 @@ export default function About() {
                 lastName={"Jamshidi"}
                 position={"Director of Competitions"}
                 program={"B.Eng. Coen."}
-                discord={"ardianapolis#7436"}
+                github={"ardianapolis#7436"}
                 emailIEEE={"competitions@ieeeconcordia.ca"}
                 linkedIn={""}
                 image={"Ardalan.webp"}
@@ -194,7 +191,7 @@ export default function About() {
                 lastName={"Desrochers"}
                 position={"Director of Lab Services"}
                 program={"B.Eng. Elec."}
-                discord={"M3thRocks#6275"}
+                github={"M3thRocks#6275"}
                 emailIEEE={"services@ieeeconcordia.ca"}
                 linkedIn={""}
                 image={"Mathias.webp"}
@@ -204,7 +201,7 @@ export default function About() {
                 lastName={""}
                 position={"Director of Lab Services"}
                 program={"B.Eng. Elec."}
-                discord={"M3thRocks#6275"}
+                github={"M3thRocks#6275"}
                 emailIEEE={"services@ieeeconcordia.ca"}
                 linkedIn={""}
                 image={"Kaden.webp"}
@@ -214,7 +211,7 @@ export default function About() {
                 lastName={"Huynh"}
                 position={"Director of Warhacks"}
                 program={""}
-                discord={"saucy0662"}
+                github={"saucy0662"}
                 emailIEEE={"warhacks@ieeeconcordia.ca"}
                 linkedIn={""}
                 image={"Minh.webp"}
@@ -224,7 +221,7 @@ export default function About() {
                 lastName={"Mohamed"}
                 position={"Director of Projects"}
                 program={""}
-                discord={"_.mazen._"}
+                github={"_.mazen._"}
                 emailIEEE={"projects@ieeeconcordia.ca"}
                 linkedIn={""}
                 image={"Mazen.webp"}
@@ -234,11 +231,11 @@ export default function About() {
                 lastName={"Kaddad"}
                 position={"Director of External"}
                 program={"B.Eng Elec"}
-                discord={"rahilkakkad"}
+                github={"rahilkakkad"}
                 emailIEEE={"external@ieeeconcordia.ca"}
                 linkedIn={""}
                 image={""}
-              />
+              /> */}
             </div>
           </div>
 

@@ -1,12 +1,17 @@
+import { link } from "fs";
 import Link from "next/link";
 import React from "react";
-import { IoLogoLinkedin, IoMail, IoMailOutline } from "react-icons/io5";
+import {
+  IoLogoGithub,
+  IoLogoLinkedin,
+  IoMail,
+  IoMailOutline,
+} from "react-icons/io5";
 
 type memberProps = {
-  firstName: string;
-  lastName: string;
-  position: string;
-  discord: string;
+  name: string;
+  role: string;
+  github: string;
   emailIEEE: string;
   linkedIn: string;
   program: string;
@@ -14,23 +19,24 @@ type memberProps = {
 };
 
 export const Member = ({
-  firstName,
-  lastName,
-  position,
-  discord,
+  name,
+  role,
+  github,
   emailIEEE,
   linkedIn,
   program,
   image,
 }: memberProps) => {
-  const imagePath = "/execs/" + image;
+  // Handles undefined values
+  linkedIn = linkedIn == undefined ? "" : linkedIn;
+  github = github == undefined ? "" : github;
 
   return (
     <div className="w-80 flex flex-col justify-start bg-white border rounded-xl mb-8 shadow-md">
       {/* Image */}
       <div className="h-56 bg-slate-400 rounded-t-lg">
         <img
-          src={image ? imagePath : "/avatar.webp"}
+          src={image ? image : "/avatar.webp"}
           alt="User PP"
           className="h-56 w-full object-cover rounded-t-lg"
         />
@@ -41,10 +47,10 @@ export const Member = ({
         {/* Name & Tags */}
         <div>
           <h3 className="w-full text-title-l font-semibold font-raleway text-black leading-5">
-            {firstName + " " + lastName}
+            {name}
           </h3>
           <p className=" text-label-l font-light">
-            {position} - {program == "" ? "B.Eng" : program}
+            {role} {program == "" ? " - B.Eng" : " - " + program}
           </p>
         </div>
 
@@ -61,6 +67,14 @@ export const Member = ({
             <Link href={linkedIn}>
               {" "}
               <IoLogoLinkedin size={28} />
+            </Link>
+          )}
+          {github == "" ? (
+            <></>
+          ) : (
+            <Link href={github}>
+              {" "}
+              <IoLogoGithub size={28} />
             </Link>
           )}
         </div>

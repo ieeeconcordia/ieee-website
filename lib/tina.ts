@@ -63,3 +63,28 @@ export async function getEvents() {
 
   return eventArray;
 }
+
+export async function getMembers() {
+  const memberResponse = await client.queries.memberConnection();
+  const members = memberResponse.data?.memberConnection.edges;
+  if (!members) return;
+  // Check if member and member.node are not null before type conversion
+  const memberArray: any[] = [];
+  members.forEach((member) => {
+    if (member && member.node) {
+      let temp = {
+        _id: member.node.id,
+        name: member.node.name,
+        role: member.node.role,
+        image: member.node.image,
+        linkedin: member.node.linkedin,
+        github: member.node.github,
+        email: member.node.email,
+        program: member.node.program,
+      };
+      memberArray.push(temp);
+    }
+  });
+
+  return memberArray;
+}

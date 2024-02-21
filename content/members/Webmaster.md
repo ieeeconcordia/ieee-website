@@ -1,9 +1,11 @@
 ---
+linkedIn: temp
 image: /IMG_9759.JPG
 role: Webmaster
 name: Houssam Eddine Righi
 email: webmaster@ieeeconcordia.ca
-program: Soen B.Eng
-linkedIn: temp
+program: SOEN
+linkedin: Test
+github: Test
 ---
 

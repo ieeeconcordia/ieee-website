@@ -19,7 +19,6 @@
     "draft-js-export-html": "^1.4.1",
     "eslint": "8.37.0",
     "eslint-config-next": "13.2.4",
-    "firebase": "^9.23.0",
     "fs": "^0.0.1-security",
     "gray-matter": "^4.0.3",
     "gsap": "^3.11.5",
