@@ -5,7 +5,7 @@ role: Webmaster
 name: Houssam Eddine Righi
 email: webmaster@ieeeconcordia.ca
 program: SOEN
-linkedin: Test
-github: Test
+linkedin: ''
+github: 'https://github.com/Horisofine'
 ---
 
