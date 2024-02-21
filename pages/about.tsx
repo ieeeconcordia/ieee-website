@@ -17,7 +17,6 @@ export async function getStaticProps({ params }: any) {
 }
 
 export default function About({ members }: any) {
-  console.log(members);
   const [windowWidth, setWindowWidth] = useState(0);
 
   useEffect(() => {
