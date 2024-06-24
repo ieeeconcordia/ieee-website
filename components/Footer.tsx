@@ -25,7 +25,7 @@ export default function Footer() {
               </li>
               <li className="">
                 <a href="https://students.ieee.org/student-members/" className="text-gray-300 hover:text-gray-100">
-                  IEEE students
+                  IEEE Students
                 </a>
               </li>
               <li className="">
@@ -78,13 +78,8 @@ export default function Footer() {
                 </a>
               </li>
               <li className="">
-                <a href="https://drive.google.com/file/d/1eeVua6x_pNREAqsbI5r3RlAHoPcxtSI3/view?usp=sharing" className="text-gray-400 hover:text-gray-100">
-                  Policies
-                </a>
-              </li>
-              <li className="">
-                <a href="#" className="text-gray-400 hover:text-gray-100">
-                  Administration
+                <a href="https://drive.google.com/file/d/1u_lXfp2X0j6Sz3W0pQbpdzgvA6uMft3z/view?usp=sharing" className="text-gray-400 hover:text-gray-100">
+                  Constitution
                 </a>
               </li>
             </ul>
