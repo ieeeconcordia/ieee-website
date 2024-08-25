@@ -1,6 +1,6 @@
 ---
-image: /team24-25/cropped/Camila.webp
-role: Director of Competitions and Lab Services
+image: /team24-25/resized/Camila.webp
+role: Director of Competitions & Lab Services
 name: Camila Kin Márquez
 email: competitionsdirector@ieeeconcordia.ca
 program: COEN
