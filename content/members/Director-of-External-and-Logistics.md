@@ -1,5 +1,5 @@
 ---
-image: /team24-25/IMG_7775.webp
+image: /team24-25/Isabella.webp
 role: Director of External & Logistics
 name: Isabella Del Zoppo
 email: externaldirector@ieeeconcordia.ca
