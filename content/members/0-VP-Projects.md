@@ -1,6 +1,6 @@
 ---
 image: /team24-25/Achal.webp
-role: VP Projects
+role: VP Projects & Director of Marketing
 name: Achal Patel
 email: projects@ieeeconcordia.ca
 program: COEN
