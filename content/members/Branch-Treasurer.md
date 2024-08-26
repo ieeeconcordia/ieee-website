@@ -1,8 +1,8 @@
 ---
 image: /execs/Yara.webp
-role: Branch Treasurer
+role: Director
 name: Yara Stouhi
-email: treasurer@ieeeconcordia.ca
+email: info@ieeeconcordia.ca
 program: COEN
 ---
 
