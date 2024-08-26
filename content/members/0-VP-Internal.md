@@ -1,6 +1,6 @@
 ---
 image: /avatar.webp
-role: VP Internal & Director of Projects
+role: VP Internal
 name: Amirreza Dalvandi
 email: logistics@ieeeconcordia.ca
 program: ELEC
