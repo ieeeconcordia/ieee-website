@@ -1,5 +1,5 @@
 ---
-image: /team24-25/Augusto.webp
+image: /team24-25/Augusto2.webp
 role: Branch Chair
 name: Augusto Mota Pinheiro
 email: chair@ieeeconcordia.ca
