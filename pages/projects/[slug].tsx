@@ -83,7 +83,6 @@ export default function Projects(props: any) {
             <li>Date: {data.project.startdate}</li>
             <li>Location: {data.project.location}</li>
             <li>Time: {data.project.time}</li>
-            <li>Body: {data.project.body}</li>
           </ul>
           <TinaMarkdown content={data.project.body} />
         </div>
