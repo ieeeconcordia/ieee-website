@@ -6,18 +6,20 @@ time: '18:00 - 21:00'
 price: 10
 type: Academic
 description: >-
-  Explore the fundamentals of soldering with our easy-to-follow tutorial. Learn
-  how to create secure connections for various applications.
+  Equip students with fundamental through-hole soldering skills, focusing on
+  safety, techniques, and practical application. Participants will gain
+  practical soldering skills, enabling them to confidently work on their
+  electronic projects.
 image: /events/Intro-to-Soldering.png
-organizer: Alexandre
+organizer: Samuel
 ---
 
 ## About The Event
 
-**Want to learn the art of soldering?** If YES, then this workshop is for you! Learning how to solder is an essential skill while working with electronic components, especially PCBs. Attending the tutorial gives you the unique opportunity to learn how to solder a PCB without damaging its components. By enhancing your soldering skills, you'll be pushing your innovation boundaries and you'll be able to invent new gadgets and repair damaged ones.
+Have you ever wanted to unlock the captivating world of soldering? If your answer is a resounding YES, then our "Intro to Soldering" workshop is tailor-made for you! Learn the art of soldering effortlessly in the workshop. Soldering is a vital skill for electronics, especially PCBs. With us, you'll master the technique, avoid damaging components, and open doors to innovation.
 
 ## What You Need
 
-This tutorial is designed for beginners; therefore, no previous knowledge is required. All fundamental soldering tools and materials will be provided.
+No experience needed! We supply all the essential tools and materials. Just bring your curiosity!
 
-[Register Now!](https://www.zeffy.com/en-CA/ticketing/d3673375-fc6d-4eba-af41-724ee6cbc217)
+[Register Now!](https://www.zeffy.com/en-CA/ticketing/a89b1199-d805-46c6-8685-b4085bfcf6a0)
