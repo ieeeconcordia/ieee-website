@@ -22,11 +22,15 @@ Welcome to the "Intro to Microcontrollers" workshop ⚒🤖, where you'll embark
 
 In this beginner-friendly session, you'll learn how to:
 
-* Take away your own ESP32 kit with lots of components like ESP32, breadboad, motor controller, and many sensors like IR, Temperature and Humidity, PRI sensors.
-* Understanding of basic functionality of the ESP32 microcontroller
-* Code using arduino IDE to program the microcontroller
-* Control lights with your phone
-* Use motion control with the help of a infrared sensor
+Take away your own ESP32 kit with lots of components like ESP32, breadboad, motor controller, and many sensors like IR, Temperature and Humidity, PRI sensors.
+
+Understanding of basic functionality of the ESP32 microcontroller
+
+Code using arduino IDE to program the microcontroller
+
+Control lights with your phone
+
+Use motion control with the help of a infrared sensor
 
 ## What You Need
 
