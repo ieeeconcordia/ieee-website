@@ -1,7 +1,7 @@
 ---
 title: Intro to Lab Equipment (Part 2)
 date: 2024-09-20T04:00:00.000Z
-location: 'IEEE Lab (B-Annex, Room B-204)'
+location: IEEE Lab
 time: '18:00 - 21:00'
 price: 0
 type: Academic
