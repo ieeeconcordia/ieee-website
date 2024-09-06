@@ -16,7 +16,7 @@ organizer: Samuel
 
 ## About The Event
 
-Have you ever wanted to unlock the captivating world of soldering? If your answer is a resounding YES, then our "Intro to Soldering" workshop is tailor-made for you! Learn the art of soldering effortlessly in the workshop. Soldering is a vital skill for electronics, especially PCBs. With us, you'll master the technique, avoid damaging components, and open doors to innovation.
+**Have you ever wanted to unlock the captivating world of soldering?** If your answer is a resounding YES, then our "Intro to Soldering" workshop is tailor-made for you! Learn the art of soldering effortlessly in the workshop. Soldering is a vital skill for electronics, especially PCBs. With us, you'll master the technique, avoid damaging components, and open doors to innovation.
 
 ## What You Need
 
