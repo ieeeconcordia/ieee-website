@@ -1,7 +1,7 @@
 ---
 title: Intro to Lab Equipment (Part 1)
-date: '2024-09-13T04:00:00.000Z'
-location: 'IEEE Lab (B-Annex, Room B-204)'
+date: 2024-09-13T04:00:00.000Z
+location: IEEE Lab
 time: '18:00 - 21:00'
 price: 0
 type: Academic
@@ -13,7 +13,6 @@ description: >-
 image: /events/Intro-to-lab-equipement-2.png
 organizer: Samuel
 ---
-
 
 ## About the Event 🤔
 
