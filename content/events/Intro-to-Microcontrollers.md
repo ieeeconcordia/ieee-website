@@ -5,7 +5,7 @@ location: H-431
 time: '18:00 - 21:00'
 type: Academic
 description: >-
-  Microcontrollers tutorials are essential for students to gain some hands on
+  Microcontroller tutorials are essential for students to gain some hands on
   experience and learn the basics for countless projects. We plan on hosting an
   intro to microcontrollers in embedded C, and motor control, all taught by an
   expert. We'll follow with some sensor data reading & finish with displaying
