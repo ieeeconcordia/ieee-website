@@ -1,6 +1,6 @@
 ---
 title: Intro to Microcontrollers
-date: 2024-11-07T05:00:00.000Z
+date: 2024-11-08T05:00:00.000Z
 location: H-431
 time: '18:00 - 21:00'
 type: Academic
