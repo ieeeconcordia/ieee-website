@@ -88,3 +88,31 @@ export async function getMembers() {
 
   return memberArray;
 }
+
+
+export async function getProjects() {
+  const projectResponse = await client.queries.projectsConnection();
+  const projects = projectResponse.data?.projectsConnection.edges;
+  if (!projects) return;
+
+  const projectArray: any[] = [];
+  projects.forEach((project) => {
+    if (project && project.node) {
+      let temp = {
+        _id: project.node.id,
+        title: project.node.title,
+        leader: project.node.leader,
+        startdate: project.node.startdate,
+        body: project.node.body,
+        image: project.node.image,
+        level: project.node.level,
+        enddate: project.node.enddate,
+        link: project.node._sys.filename,
+      };
+      projectArray.push(temp);
+    }
+  });
+
+  return projectArray;
+}
+
