@@ -20,5 +20,3 @@ Have you ever wanted to design your own creations and make them come to life? If
 ## What You Need
 
 No prior experience needed! Just bring your curiosity and laptop.
-
-[Register Now!](https://www.zeffy.com/en-CA/ticketing/b1445e81-86a5-464f-923c-dcd47c95c649)
