@@ -21,5 +21,3 @@ organizer: Samuel
 ## What You Need
 
 No experience needed! We supply all the essential tools and materials. Just bring your curiosity!
-
-[Register Now!](https://www.zeffy.com/en-CA/ticketing/a89b1199-d805-46c6-8685-b4085bfcf6a0)
