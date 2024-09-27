@@ -1,6 +1,6 @@
 ---
 title: Intro to Soldering
-date: 2024-09-27T04:00:00.000Z
+date: 2024-10-25T04:00:00.000Z
 location: H-431
 time: '18:00 - 21:00'
 price: 10
