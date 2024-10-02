@@ -1,6 +1,6 @@
 ---
 title: Intro to 3D Printing
-date: 2024-10-11T04:00:00.000Z
+date: 2024-10-10T04:00:00.000Z
 location: H-431
 time: '18:00 - 21:00'
 price: 10
