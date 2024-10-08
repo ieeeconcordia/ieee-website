@@ -1,9 +1,8 @@
 ---
-image: /team24-25/Oumayma.webp
+image: /avatar.webp
 role: Branch Vice Chair
 name: Oumayma Bennamoun
 email: vicechair@ieeeconcordia.ca
 program: COMP
-github: 'https://github.com/oumaymabennamoun'
 ---
 

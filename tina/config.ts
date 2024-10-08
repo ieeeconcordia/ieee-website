@@ -147,16 +147,36 @@ export default defineConfig({
         ],
       },
       {
-        name: "post",
-        label: "Posts",
-        path: "content/posts",
+        name: "projects",
+        label: "Projects",
+        path: "content/projects",
         fields: [
           {
             type: "string",
             name: "title",
             label: "Title",
-            isTitle: true,
             required: true,
+          },
+          {
+            type: "string",
+            name: "leader",
+            label: "Lead By",
+          },
+
+          {
+            type: "datetime",
+            name: "startdate",
+            label: "Start Date",
+          },
+          {
+            type: "datetime",
+            name: "enddate",
+            label: "End Date",
+          },
+          {
+            type: "string",
+            name: "level",
+            label: "Level",
           },
           {
             type: "rich-text",
@@ -164,11 +184,12 @@ export default defineConfig({
             label: "Body",
             isBody: true,
           },
+          {
+            type: "image",
+            name: "image",
+            label: "Image",
+          }
         ],
-        ui: {
-          // This is an DEMO router. You can remove this to fit your site
-          router: ({ document }) => `/demo/blog/${document._sys.filename}`,
-        },
       },
     ],
   },

@@ -15,6 +15,8 @@ export default function IEEEXtreme(props: any) {
   });
 
   // console.log(props);
+  console.log("Fetched event data:", data);
+
 
   const date = moment(data.event.date).format("MMMM Do, h:mm a");
 
