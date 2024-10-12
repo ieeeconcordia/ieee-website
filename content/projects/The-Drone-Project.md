@@ -5,6 +5,7 @@ startdate: 2024-06-28T04:00:00.000Z
 enddate: 2024-10-31T04:00:00.000Z
 level: Advanced
 image: /image (1).jpeg
+link: 'https://discord.gg/H6er4G98mg'
 ---
 
 ## About The Project

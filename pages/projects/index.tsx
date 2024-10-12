@@ -89,6 +89,7 @@ export default function Projects({ projects }: any) {
             </div>
           </Suspense>
         )}
+
       </div>
 
       <SponsorshipSection />

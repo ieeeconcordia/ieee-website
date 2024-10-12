@@ -122,6 +122,8 @@ import { useTina } from "tinacms/dist/react";
 import moment from "moment";
 import { TinaMarkdown } from "tinacms/dist/rich-text";
 import client from "@/tina/__generated__/client"; // Ensure the client is properly imported
+import Link from "next/link";
+import { BsDiscord } from "react-icons/bs";
 
 export default function Projects(props: any) {
   const { data } = useTina({
@@ -163,16 +165,32 @@ export default function Projects(props: any) {
       <ul className="list-disc pl-5">
             {/* Ensure each list item has a unique key to avoid the warning */}
             <li key="Duration">
-              Duration: {startDate} {endDate && `to ${endDate}`}</li>
-            {data.projects.leader && (
-              <li key="leader">Project Leader: {data.projects.leader}</li>
-            )}
+              <strong>Duration:</strong> {startDate} {endDate && `to ${endDate}`}</li>
             {data.projects.level && (
-              <li key="level">Level: {data.projects.level}</li>
+              <li key="level"> <strong>Level:</strong> {data.projects.level}</li>
             )}
           </ul>
         <TinaMarkdown content={data.projects.body} />
+        <ul className={styles.bottomContainer}>
+            {data.projects.leader && (
+              <>
+                <li className={styles.noBullet} key="anotherItem">
+                <Link
+                    href={data.projects.link}
+                    className="w-fit flex flex-row gap-2 justify-center items-center text-white bg-discord px-4 py-2 rounded-md shadow-md hover:shadow-lg"
+                  >
+                    <BsDiscord color="#ffffff" />
+                    IEEE Concordia
+                </Link>
+                </li>
+                <li className={styles.noBullet} key="leader">
+                  <strong>Project by:</strong> {data.projects.leader}
+                </li>
+              </>
+            )}
+          </ul>
       </div>
+
     </div>
   </RootLayout>
   );

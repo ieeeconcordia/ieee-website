@@ -188,6 +188,11 @@ export default defineConfig({
             type: "image",
             name: "image",
             label: "Image",
+          },
+          {
+            type: "string",
+            name: "link",
+            label: "Link"
           }
         ],
       },
