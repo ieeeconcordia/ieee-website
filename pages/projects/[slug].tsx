@@ -148,42 +148,33 @@ export default function Projects(props: any) {
 
   return (
     <RootLayout>
-      <div className="max-w-4xl md:max-w-full flex flex-col px-8 sm:px-20 xl:px-section mb-2">
-        <h1 className="font-lora font-bold text-center text-headline-l text-secondary pb-4">
-          {data.projects.title}
-        </h1>
-      </div>
-      <div className={styles.markdown}>
-        {/* Image Section */}
-        <img
-          src={data.projects.image}
-          alt={data.projects.title}
-          className="w-full max-h-80 object-cover"
-        />
-        
-        {/* Project Info Section */}
-        <div className="bg-gray-100 p-4 my-4 rounded-md shadow-md">
-          <ul className="list-disc pl-5">
+    <div className="max-w-4xl md:max-w-full flex flex-col px-8 sm:px-20 xl:px-section mb-2">
+      <h1 className="font-lora font-bold text-center text-headline-l text-secondary pb-4">
+        {data.projects.title}
+      </h1>
+    </div>
+    <div className={styles.markdown }>
+      <img
+        src={data.projects.image}
+        alt={data.projects.title}
+        className="w-full max-h-80 object-cover"
+      />
+      <div className={styles.normalFontLi}>
+      <ul className="list-disc pl-5">
             {/* Ensure each list item has a unique key to avoid the warning */}
-            <li key="date"><strong>Date:</strong> {startDate}</li>
-            {endDate && <li key="enddate"><strong>End Date:</strong> {endDate}</li>}
+            <li key="Duration">
+              Duration: {startDate} {endDate && `to ${endDate}`}</li>
             {data.projects.leader && (
-              <li key="leader"><strong>Project Leader:</strong> {data.projects.leader}</li>
+              <li key="leader">Project Leader: {data.projects.leader}</li>
             )}
             {data.projects.level && (
-              <li key="level"><strong>Level:</strong> {data.projects.level}</li>
+              <li key="level">Level: {data.projects.level}</li>
             )}
           </ul>
-        </div>
-
-        {/* About the Project Section */}
-        <div>
-         
-            <TinaMarkdown content={data.projects.body} />
-          
-        </div>
+        <TinaMarkdown content={data.projects.body} />
       </div>
-    </RootLayout>
+    </div>
+  </RootLayout>
   );
 }
 

@@ -42,3 +42,7 @@
 .markdown a {
     @apply bg-blue-500 hover:bg-blue-700 text-white font-bold font-raleway py-2 px-4 rounded
 }
+
+.normalFontLi li {
+    @apply font-normal
+}
