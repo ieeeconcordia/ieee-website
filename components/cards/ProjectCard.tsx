@@ -49,7 +49,7 @@ export default function ProjectCard({
       className="w-72 sm:w-80 flex flex-col justify-start bg-white border overflow-hidden rounded-xl shadow-md hover:scale-105 transition duration-300"
     >
       <div className="w-full h-48 sm:h-52 bg-slate-400 rounded-t-xl">
-        <div className="absolute w-32 p-1 bg-red-500 rounded-tl-lg rounded-br-lg text-white">
+        <div className="absolute w-32 p-1 bg-sky-400 rounded-tl-lg rounded-br-lg text-white">
           {level}
         </div>
 
