@@ -7,6 +7,7 @@ import Loading from "@/components/animations/Loading";
 import ProjectsPlaceHolder from "@/components/placeholder/ProjectsPlaceholder";
 import { getProjects } from "@/lib/tina";
 import { splitAndSortProjects } from "@/content/projectlist";
+import { BsDiscord } from "react-icons/bs";
 
 // import { firestore } from "@/lib/firebase";
 // import { getDocs, collection, DocumentData } from "firebase/firestore";
@@ -66,7 +67,13 @@ export default function Projects({ projects }: any) {
            </p>
         </div>
         {projects.length == 0 ? (
-          <ProjectsPlaceHolder />
+          <ProjectsPlaceHolder
+          title="No projects shown?"
+          message="Check in later or join our discord for updates!"
+          link="https://discord.gg/DECBMmcT3P"
+          linkText="IEEE Concordia"
+          linkIcon={<BsDiscord color="#ffffff" />}
+        />
         ) : (
           <Suspense fallback={<Loading />}>
             <div
@@ -87,9 +94,17 @@ export default function Projects({ projects }: any) {
                   />
               ))}
             </div>
+            {/* <ProjectsPlaceHolder
+              title="Join our discord for updates!"
+              message=""
+              link="https://discord.gg/DECBMmcT3P"
+              linkText="IEEE Concordia"
+              linkIcon={<BsDiscord color="#ffffff" />}
+              iconSize="text-3xl"
+            /> */}
           </Suspense>
-        )}
 
+        )}
       </div>
 
       <SponsorshipSection />

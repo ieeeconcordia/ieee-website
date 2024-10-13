@@ -47,7 +47,7 @@
     @apply font-normal
 }
 .bottomContainer {
-    @apply absolute bottom-4 left-0 right-0 flex justify-between px-4 relative;
+    @apply absolute bottom-4 left-0 right-0 flex justify-between px-5 relative;
 }
 
 .noBullet {
