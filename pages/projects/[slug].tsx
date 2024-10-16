@@ -156,11 +156,19 @@ export default function Projects(props: any) {
       </h1>
     </div>
     <div className={styles.markdown }>
-      <img
-        src={data.projects.image}
-        alt={data.projects.title}
-        className="w-full max-h-80 object-cover"
-      />
+      <div className="flex justify-center items-center w-full">
+        <img
+          src={data.projects.image}
+          alt={data.projects.title}
+          style={{
+            margin: '0 auto',
+            width: 'auto',
+            height: 'auto',
+            maxWidth: '60%', 
+            maxHeight: '400px', 
+          }}
+        />
+        </div>
       <div className={styles.normalFontLi}>
       <ul className="list-disc pl-5">
             {/* Ensure each list item has a unique key to avoid the warning */}
