@@ -1,0 +1,25 @@
+---
+title: Intro to Soldering
+date: 2024-10-24T04:00:00.000Z
+location: ECA B-Annex Lounge
+time: '18:30 - 21:30'
+price: 10
+type: Academic
+description: >-
+  Equip students with fundamental through-hole soldering skills, focusing on
+  safety, techniques, and practical application. Participants will gain
+  practical soldering skills, enabling them to confidently work on their
+  electronic projects.
+image: /events/Intro-to-Soldering.png
+organizer: Samuel
+---
+
+## About The Event
+
+**Have you ever wanted to unlock the captivating world of soldering?** If your answer is a resounding YES, then our "Intro to Soldering" workshop is tailor-made for you! Learn the art of soldering effortlessly in the workshop. Soldering is a vital skill for electronics, especially PCBs. With us, you'll master the technique, avoid damaging components, and open doors to innovation.
+
+## What You Need
+
+No experience needed! We supply all the essential tools and materials. Just bring your curiosity!
+
+[Register Now!](https://www.zeffy.com/en-CA/ticketing/a89b1199-d805-46c6-8685-b4085bfcf6a0)
