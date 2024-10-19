@@ -5,6 +5,10 @@ startdate: 2024-06-10T04:00:00.000Z
 enddate: 2024-08-31T04:00:00.000Z
 level: Advanced
 image: /image.jpeg
+gallery:
+  - /projects/iot/iot1.webp
+  - /projects/iot/iot2.webp
+  - /projects/iot/iot3.jpeg
 link: ' https://discord.gg/Cnu7N78DaK'
 blogLink: >-
   https://ieeeconcordia.notion.site/Projects-Original-cece1ac5a94d4affa9845ac8855afe3a
