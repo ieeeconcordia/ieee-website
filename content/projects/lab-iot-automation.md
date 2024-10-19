@@ -18,7 +18,4 @@ This project serves as the parent project, encompassing many individual projects
 
 We'll achieve this vision through a series of small, individual projects. These will be integrated one by one into an interconnected system of devices, all controllable through a single, locally hosted system (on Home Assistant).
 
-## Preparation
 
-1. **Printed the drone chassis from Polycarbonate (PC) using this excellent DC shaped model we found on printables.**
-   [Printables](https://www.printables.com/model/196607-6-fpv-drone)
