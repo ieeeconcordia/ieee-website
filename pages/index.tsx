@@ -142,7 +142,6 @@ export default function Home({ events, projects }: any) {
                       enddate={formatDate(project.enddate)}
                       level={project.level}
                       leader={project.leader}
-                      body={project.body}
                       image={project.image}  link={project.link}
                     />
                   )
