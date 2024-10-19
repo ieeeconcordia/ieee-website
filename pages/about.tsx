@@ -80,7 +80,7 @@ export default function About({ members }: any) {
                   role={member.role}
                   program={member.program}
                   github={member.github}
-                  emailIEEE={member.emailIEEE}
+                  emailIEEE={member.email} 
                   linkedIn={member.linkedin}
                   image={member.image}
                 />
