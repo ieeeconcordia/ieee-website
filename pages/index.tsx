@@ -13,22 +13,29 @@ import LandingVideo from "@/components/LandingVideo";
 import Navbar from "@/components/navbar/HomeNavbar";
 import Footer from "@/components/Footer";
 import { splitAndSortEvents } from "@/content/eventslist";
-import { getEvents } from "@/lib/tina";
-// Fetch all events and pass them as a prop to the Events component
+import { getEvents, getProjects } from "@/lib/tina";
 export async function getStaticProps() {
   const events = await getEvents();
-  // const projects = await getAllProjects();
-
+  const projects = await getProjects();
   return {
     props: {
+      projects,
       events,
     },
   };
 }
+export function formatDate(dateTime: string | number | Date) {
+  const date = new Date(dateTime);
+  return date.toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+  });
+}
 
 const projects: any[] = [];
 
-export default function Home({ events }: any) {
+export default function Home({ events, projects }: any) {
   const {
     sortedUpcomingEvents: upcomingEvents,
     sortedPassedEvents: passedEvents,
@@ -130,16 +137,12 @@ export default function Home({ events }: any) {
                     <ProjectCard
                       key={project.slug}
                       _id={project.slug}
-                      name={project.name}
-                      date={project.date}
-                      location={project.location}
-                      time={project.time}
-                      price={project.price}
-                      eventType={project.eventType}
-                      description={project.description}
-                      image={project.image}
-                      organizer={""}
-                      sponsors={""}
+                      title={project.title}
+                      startdate={formatDate(project.startdate)}
+                      enddate={formatDate(project.enddate)}
+                      level={project.level}
+                      leader={project.leader}
+                      image={project.image}  link={project.link}
                     />
                   )
               )}

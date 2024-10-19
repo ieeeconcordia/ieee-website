@@ -21,15 +21,13 @@ type EventProps = {
 function date_format(datestr: string) {
   const date = new Date(datestr);
 
-  const day = date.getUTCDate(); // returns the day of the month (from 1 to 31)
-  const month = date.getUTCMonth() + 1; // returns the month (from 0 to 11, so add 1 to get from 1 to 12)
-  const year = date.getUTCFullYear(); // returns the year
+  const day = date.getUTCDate(); 
+  const month = date.getUTCMonth() + 1;
+  const year = date.getUTCFullYear(); 
 
-  // Pad the day and month with a leading zero if they are less than 10
   const formattedDay = String(day).padStart(2, "0");
   const formattedMonth = String(month).padStart(2, "0");
 
-  // Construct the formatted date string
   return `${year}-${formattedMonth}-${formattedDay}`;
 }
 
@@ -37,7 +35,6 @@ export async function getEvents() {
   const eventResponse = await client.queries.eventConnection();
   const events = eventResponse.data?.eventConnection.edges;
   if (!events) return;
-  // Check if event and event.node are not null before type conversion
   const eventArray: any[] = [];
   events.forEach((event) => {
     if (event && event.node) {
@@ -68,7 +65,6 @@ export async function getMembers() {
   const memberResponse = await client.queries.memberConnection();
   const members = memberResponse.data?.memberConnection.edges;
   if (!members) return;
-  // Check if member and member.node are not null before type conversion
   const memberArray: any[] = [];
   members.forEach((member) => {
     if (member && member.node) {
@@ -88,3 +84,31 @@ export async function getMembers() {
 
   return memberArray;
 }
+
+
+export async function getProjects() {
+  const projectResponse = await client.queries.projectsConnection();
+  const projects = projectResponse.data?.projectsConnection.edges;
+  if (!projects) return;
+
+  const projectArray: any[] = [];
+  projects.forEach((project) => {
+    if (project && project.node) {
+      let temp = {
+        _id: project.node.id,
+        title: project.node.title,
+        leader: project.node.leader,
+        startdate: project.node.startdate,
+        body: project.node.body,
+        image: project.node.image,
+        level: project.node.level,
+        enddate: project.node.enddate,
+        link: project.node._sys.filename,
+      };
+      projectArray.push(temp);
+    }
+  });
+
+  return projectArray;
+}
+

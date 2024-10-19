@@ -1,6 +1,5 @@
 import { defineConfig } from "tinacms";
 
-// Your hosting provider likely exposes this as an environment variable
 const branch =
   process.env.GITHUB_BRANCH ||
   process.env.VERCEL_GIT_COMMIT_REF ||
@@ -10,9 +9,7 @@ const branch =
 export default defineConfig({
   branch,
 
-  // Get this from tina.io
   clientId: process.env.NEXT_PUBLIC_TINA_CLIENT_ID,
-  // Get this from tina.io
   token: process.env.TINA_TOKEN,
 
   build: {
@@ -25,7 +22,6 @@ export default defineConfig({
       publicFolder: "public",
     },
   },
-  // See docs on content modeling for more info on how to setup new content models: https://tina.io/docs/schema/
   schema: {
     collections: [
       {
@@ -147,16 +143,36 @@ export default defineConfig({
         ],
       },
       {
-        name: "post",
-        label: "Posts",
-        path: "content/posts",
+        name: "projects",
+        label: "Projects",
+        path: "content/projects",
         fields: [
           {
             type: "string",
             name: "title",
             label: "Title",
-            isTitle: true,
             required: true,
+          },
+          {
+            type: "string",
+            name: "leader",
+            label: "Lead By",
+          },
+
+          {
+            type: "datetime",
+            name: "startdate",
+            label: "Start Date",
+          },
+          {
+            type: "datetime",
+            name: "enddate",
+            label: "End Date",
+          },
+          {
+            type: "string",
+            name: "level",
+            label: "Level",
           },
           {
             type: "rich-text",
@@ -164,11 +180,30 @@ export default defineConfig({
             label: "Body",
             isBody: true,
           },
+          {
+            type: "image",
+            name: "image",
+            label: "Image",
+          },
+          {
+            type: "image",
+            list: true,  
+            name: "gallery",
+            label: "Gallery Images",
+            description: "Add images to showcase in the gallery",
+          },
+          {
+            type: "string",
+            name: "link",
+            label: "Link"
+          },
+          {
+            type: "string",
+            name: "blogLink",
+            label: "Notion Blog Link"
+          }
+          
         ],
-        ui: {
-          // This is an DEMO router. You can remove this to fit your site
-          router: ({ document }) => `/demo/blog/${document._sys.filename}`,
-        },
       },
     ],
   },

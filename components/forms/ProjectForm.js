@@ -2,7 +2,6 @@ import { useState } from "react";
 
 export default function ProjectForm() {
   const [name, setName] = useState("");
-  const [description, setDescription] = useState("");
   const [image, setImage] = useState("");
   const [startDate, setStartDate] = useState("");
   const [url, setUrl] = useState("");
@@ -16,7 +15,6 @@ export default function ProjectForm() {
 
     const project = {
       name,
-      description,
       image,
       startDate,
       url,
@@ -38,7 +36,6 @@ export default function ProjectForm() {
 
     // Reset the form
     setName("");
-    setDescription("");
     setImage("");
     setStartDate("");
     setUrl("");
@@ -63,20 +60,7 @@ export default function ProjectForm() {
         />
       </div>
 
-      <div className="flex flex-col">
-        <label
-          htmlFor="description"
-          className="text-sm font-medium text-gray-700"
-        >
-          Description:
-        </label>
-        <textarea
-          id="description"
-          value={description}
-          onChange={(e) => setDescription(e.target.value)}
-          className="border border-gray-300 rounded-md p-2"
-        />
-      </div>
+  
 
       <div className="flex flex-col">
         <label htmlFor="image" className="text-sm font-medium text-gray-700">
