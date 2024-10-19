@@ -66,7 +66,7 @@ export default function Projects(props: any) {
     : null;
 
   return (
-    <RootLayout>
+  <RootLayout>
     <div className="max-w-4xl md:max-w-full flex flex-col px-8 sm:px-20 xl:px-section mb-2">
       <h1 className="font-lora font-bold text-center text-headline-l text-secondary pb-4">
         {data.projects.title}
@@ -88,7 +88,7 @@ export default function Projects(props: any) {
         />
         </div>
       <div className={styles.normalFontLi}>
-      <ul className="list-disc pl-5">
+          <ul className="list-disc pl-5">
             {/* Ensure each list item has a unique key to avoid the warning */}
             <li key="Duration">
               <strong>Duration:</strong> {startDate} {endDate && `to ${endDate}`}</li>
@@ -97,17 +97,61 @@ export default function Projects(props: any) {
             )}
           </ul>
         <TinaMarkdown content={data.projects.body} />
-        <ul className={styles.bottomContainer}>
+          {showGallery && galleryImages.length > 0 && (
+              <div className="fixed inset-0 flex justify-center items-center" style={{ backgroundColor: 'rgba(0, 0, 0, 0.8)' }}>
+                <div className="relative w-auto h-auto max-w-full max-h-full flex justify-center items-center">
+                  <img
+                    src={galleryImages[currentImageIndex]}
+                    alt={`Gallery Image ${currentImageIndex + 1}`}
+                    className="object-contain max-w-full max-h-full"
+                    style={{ width: "auto", height: "auto", transform: "scale(2)" }}  // Magnifies the image by 10%
+                  />
+                  <button
+                    className="absolute left-0 top-1/2 transform -translate-y-1/2 text-black text-4xl"
+                    onClick={handlePrevImage}
+                  >
+                    <IoArrowBackCircle />
+                  </button>
+                  <button
+                    className="absolute right-0 top-1/2 transform -translate-y-1/2 text-black text-4xl"
+                    onClick={handleNextImage}
+                  >
+                    <IoArrowForwardCircle />
+                  </button>
+                  <button
+                    className="absolute top-1  right-1  p-2 text-black p-2"
+                    onClick={() => setShowGallery(false)}
+                    style={{ backgroundColor: 'white' }}
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            )
+          }
+
+        <div className="flex justify-center mt-[-20px]">
+          <div
+            className="flex items-center gap-2 cursor-pointer bg-gradient-to-r from-cyan-400 to-sky-400 rounded p-4 text-lg"
+            onClick={handleSeeMoreClick}
+          >
+            <IoArrowForward size={52} color="white" />
+            <span className="text-white">See More</span>
+          </div>
+          
+        </div>
+        {!showGallery && (
+          <ul className={styles.bottomContainer}>
             {data.projects.leader && (
               <>
                 <li className={styles.noBullet} key="anotherItem">
-                <Link
+                  <Link
                     href={data.projects.link}
                     className="w-fit flex flex-row gap-2 justify-center items-center text-white bg-discord px-5 py-2 rounded-md shadow-md hover:shadow-lg text-2xl"
                   >
                     <BsDiscord className="text-4xl" color="#ffffff" />
                     Join this Project!
-                </Link>
+                  </Link>
                 </li>
                 <li className={styles.noBullet} key="leader">
                   <strong>Project by:</strong> {data.projects.leader}
@@ -115,56 +159,12 @@ export default function Projects(props: any) {
               </>
             )}
           </ul>
-          {showGallery && galleryImages.length > 0 && (
-  <div className="fixed inset-0 flex justify-center items-center" style={{ backgroundColor: 'rgba(0, 0, 0, 0.8)' }}>
-    <div className="relative w-auto h-auto max-w-full max-h-full flex justify-center items-center">
-      <img
-        src={galleryImages[currentImageIndex]}
-        alt={`Gallery Image ${currentImageIndex + 1}`}
-        className="object-contain max-w-full max-h-full"
-        style={{ width: "auto", height: "auto", transform: "scale(2)" }}  // Magnifies the image by 10%
-      />
-      <button
-        className="absolute left-0 top-1/2 transform -translate-y-1/2 text-black text-4xl"
-        onClick={handlePrevImage}
-      >
-        <IoArrowBackCircle />
-      </button>
-      <button
-        className="absolute right-0 top-1/2 transform -translate-y-1/2 text-black text-4xl"
-        onClick={handleNextImage}
-      >
-        <IoArrowForwardCircle />
-      </button>
-      <button
-        className="absolute top-1  right-1  p-2 text-black p-2"
-        onClick={() => setShowGallery(false)}
-        style={{ backgroundColor: 'white' }}
-      >
-        Close
-      </button>
-    </div>
-  </div>
-)}
-
-
+        )}
       </div>
 
-      <div className="flex justify-center mt-[-20px]">
-        <div
-          className="flex items-center gap-2 cursor-pointer bg-gradient-to-r from-cyan-400 to-sky-400 rounded p-4 text-lg"
-          onClick={handleSeeMoreClick}
-        >
-          <IoArrowForward size={52} color="white" />
-          <span className="text-white">See More</span>
-        </div>
-      </div>
-
-      {/* Empty div to add space before the footer */}
-      <div className="my-12"></div>
-      </div>
 
     </div>
+    
   </RootLayout>
   );
 }
