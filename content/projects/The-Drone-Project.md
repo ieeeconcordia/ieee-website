@@ -11,7 +11,7 @@ gallery:
   - /projects/drone/drone3.webp
 link: 'https://discord.gg/H6er4G98mg'
 blogLink: >-
-  https://ieeeconcordia.notion.site/2d3dd6e2e3ed41ddaf99c1830824118d?v=8e0cd76667b0478cb36d43d2e71bbbe2&pvs=4
+  https://ieeeconcordia.notion.site/Projects-Original-cece1ac5a94d4affa9845ac8855afe3a
 ---
 
 ## About The Project

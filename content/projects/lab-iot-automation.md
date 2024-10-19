@@ -7,7 +7,7 @@ level: Advanced
 image: /image.jpeg
 link: ' https://discord.gg/Cnu7N78DaK'
 blogLink: >-
-  https://ieeeconcordia.notion.site/79ed5292fab14376b475695942efb602?v=eb672bb48ea9472faa33fcabbc2dbe41&pvs=4
+  https://ieeeconcordia.notion.site/Projects-Original-cece1ac5a94d4affa9845ac8855afe3a
 ---
 
 ## About
