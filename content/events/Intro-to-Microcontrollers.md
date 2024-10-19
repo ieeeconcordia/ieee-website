@@ -1,7 +1,7 @@
 ---
 title: Intro to Microcontrollers
-date: 2023-11-23T05:00:00.000Z
-location: H 537
+date: 2024-11-07T05:00:00.000Z
+location: MB 3.285
 time: '18:00 - 21:00'
 type: Academic
 description: >-
