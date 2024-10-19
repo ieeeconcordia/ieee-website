@@ -6,8 +6,11 @@ enddate: 2024-10-31T04:00:00.000Z
 level: Advanced
 image: /image (1).jpeg
 link: 'https://discord.gg/H6er4G98mg'
+gallery:
+  - /projects/drone/drone1.webp
+  - /projects/drone/dron2.webp
+  - /projects/drone/drone3.webp
 ---
-
 ## About The Project
 
 The objective of this project is to design, develop, and deploy a custom remote-controlled (RC) drone that showcases advanced features such as autonomous flight, real-time FPV (First Person View) video transmission, obstacle avoidance, and robust navigation capabilities. This project will involve a multidisciplinary team working collaboratively to integrate skills and technologies in aerodynamics, electronics, design, and software development.

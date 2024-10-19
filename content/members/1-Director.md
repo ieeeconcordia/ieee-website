@@ -1,6 +1,6 @@
 ---
 image: /team24-25/Yara.webp
-role: Director
+role: Senior Advisor
 name: Yara Stouhi
 email: info@ieeeconcordia.ca
 program: COEN

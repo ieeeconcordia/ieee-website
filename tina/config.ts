@@ -190,10 +190,18 @@ export default defineConfig({
             label: "Image",
           },
           {
+            type: "image",
+            list: true,  
+            name: "gallery",
+            label: "Gallery Images",
+            description: "Add images to showcase in the gallery",
+          },
+          {
             type: "string",
             name: "link",
             label: "Link"
           }
+          
         ],
       },
     ],

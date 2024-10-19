@@ -1,129 +1,13 @@
-/*import RootLayout from "../layout";
-import styles from "@/styles/markdown.module.css";
-import { useTina } from "tinacms/dist/react";
-import moment from "moment";
-import { TinaMarkdown } from "tinacms/dist/rich-text";
-import client from "@/tina/__generated__/client"; // Ensure the client is properly imported
-
-export default function Projects(props: any) {
-  const { data } = useTina({
-    query: props.query,
-    variables: props.variables,
-    data: props.data,
-  });
-
-  console.log("Fetched project data:", data);
-
-  // Safeguard: Ensure data.projects exists before accessing fields
-  if (!data?.projects) {
-    return <div>Error: Project data is missing!</div>;
-  }
-
-  // Formatting the start and end dates for display
-  const startDate = data.projects.startdate
-    ? moment(data.projects.startdate).format("MMMM Do, YYYY")
-    : "Start date not available";
-
-  const endDate = data.projects.enddate
-    ? moment(data.projects.enddate).format("MMMM Do, YYYY")
-    : null;
-
-  return (
-    <RootLayout>
-      <div className="max-w-4xl md:max-w-full flex flex-col px-8 sm:px-20 xl:px-section mb-2">
-        <h1 className="font-lora font-bold text-center text-headline-l text-secondary pb-4">
-          {data.projects.title}
-        </h1>
-      </div>
-      <div className={styles.markdown}>
-        {// image section}
-        <img
-          src={data.projects.image}
-          alt={data.projects.title}
-          className="w-full max-h-80 object-cover"
-        />
-        
-        {// project info section}
-        <div className="bg-gray-100 p-4 my-4 rounded-md shadow-md">
-          <ul className="list-disc pl-5">
-            <li><strong>Date:</strong> {startDate}</li>
-            {endDate && <li><strong>End Date:</strong> {endDate}</li>}
-            {data.projects.leader && (
-              <li><strong>Project Leader:</strong> {data.projects.leader}</li>
-            )}
-            {data.projects.level && (
-              <li><strong>Level:</strong> {data.projects.level}</li>
-            )}
-          </ul>
-        </div>
-
-        {// about project info section }
-        <div className="py-4">
-          <h2 className="font-semibold text-xl mb-4">About The Project</h2>
-
-          {//rendering tina body with markdown}
-          <TinaMarkdown content={data.projects.body} />
-        </div>
-      </div>
-    </RootLayout>
-  );
-}
-
-
-
-export const getStaticProps = async ({ params }: any) => {
-  let data = {};
-  let query = {};
-  let variables = { relativePath: `${params.slug}.md` };
-
-  try {
-    // Use the correct query (projects) to fetch the single project
-    const res = await client.queries.projects(variables);
-    query = res.query;
-    data = res.data;
-
-    // Log the full response to see if 'projects' is defined
-    console.log("Fetched data in getStaticProps:", res);
-
-   
-  } catch (error) {
-    console.error("Error fetching project data:", error);
-  }
-
-  return {
-    props: {
-      variables,
-      data, // Pass the single project data as a JSON serializable object
-      query,
-    },
-  };
-};
-
-export const getStaticPaths = async () => {
-  // Fetch the project slugs for generating the paths
-  const projectsListData = await client.queries.projectsConnection();
-
-  return {
-    paths: projectsListData.data.projectsConnection?.edges?.map((project) => ({
-      params: { slug: project?.node?._sys.filename }, // Ensure the slug matches the file name
-    })),
-    fallback: false, // `false` means non-existent pages return 404
-  };
-};
-
-*/
-// "The objective of this project is to design, develop, and deploy a custom remote-controlled (RC) drone that showcases advanced features such as autonomous flight, real-time FPV (First Person View) video transmission, obstacle avoidance and robust navigation capabilities. This project will involve a multidisciplinary team working collaboratively to integrate skills and technologies in aerodynamics, electronics, design and software development.
-
-// this file slug works but doesnt displayp orperly 
-
+import { useState, useEffect } from "react";
 import RootLayout from "../layout";
 import styles from "@/styles/markdown.module.css";
 import { useTina } from "tinacms/dist/react";
 import moment from "moment";
 import { TinaMarkdown } from "tinacms/dist/rich-text";
-import client from "@/tina/__generated__/client"; // Ensure the client is properly imported
+import client from "@/tina/__generated__/client";
 import Link from "next/link";
 import { BsDiscord } from "react-icons/bs";
+import { IoArrowForward, IoArrowBackCircle, IoArrowForwardCircle } from "react-icons/io5";
 
 export default function Projects(props: any) {
   const { data } = useTina({
@@ -133,6 +17,39 @@ export default function Projects(props: any) {
   });
 
   console.log("Fetched project data:", data);
+  const [showGallery, setShowGallery] = useState(false);
+  const [galleryImages, setGalleryImages] = useState<string[]>([]);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  const fetchGalleryImages = async () => {
+    try {
+      const imagePaths = data?.projects?.gallery || [];
+      setGalleryImages(imagePaths);
+    } catch (error) {
+      console.error("Error fetching gallery images:", error);
+    }
+  };
+
+  const handleSeeMoreClick = async () => {
+    await fetchGalleryImages();
+    setShowGallery(true);
+  };
+
+  const handleNextImage = () => {
+    setCurrentImageIndex((prevIndex) => (prevIndex + 1) % galleryImages.length);
+  };
+
+  const handlePrevImage = () => {
+    setCurrentImageIndex((prevIndex) =>
+      prevIndex === 0 ? galleryImages.length - 1 : prevIndex - 1
+    );
+  };
+
+  useEffect(() => {
+    if (showGallery && galleryImages.length > 0) {
+      setCurrentImageIndex(0);
+    }
+  }, [showGallery, galleryImages]);
 
   // Safeguard: Ensure data.projects exists before accessing fields
   if (!data?.projects) {
@@ -155,8 +72,9 @@ export default function Projects(props: any) {
         {data.projects.title}
       </h1>
     </div>
-    <div className={styles.markdown }>
-      <div className="flex justify-center items-center w-full">
+    
+      <div className={styles.markdown }>
+        <div className="flex justify-center items-center w-full">
         <img
           src={data.projects.image}
           alt={data.projects.title}
@@ -197,6 +115,53 @@ export default function Projects(props: any) {
               </>
             )}
           </ul>
+          {showGallery && galleryImages.length > 0 && (
+  <div className="fixed inset-0 flex justify-center items-center" style={{ backgroundColor: 'rgba(0, 0, 0, 0.8)' }}>
+    <div className="relative w-auto h-auto max-w-full max-h-full flex justify-center items-center">
+      <img
+        src={galleryImages[currentImageIndex]}
+        alt={`Gallery Image ${currentImageIndex + 1}`}
+        className="object-contain max-w-full max-h-full"
+        style={{ width: "auto", height: "auto", transform: "scale(2)" }}  // Magnifies the image by 10%
+      />
+      <button
+        className="absolute left-0 top-1/2 transform -translate-y-1/2 text-black text-4xl"
+        onClick={handlePrevImage}
+      >
+        <IoArrowBackCircle />
+      </button>
+      <button
+        className="absolute right-0 top-1/2 transform -translate-y-1/2 text-black text-4xl"
+        onClick={handleNextImage}
+      >
+        <IoArrowForwardCircle />
+      </button>
+      <button
+        className="absolute top-1  right-1  p-2 text-black p-2"
+        onClick={() => setShowGallery(false)}
+        style={{ backgroundColor: 'white' }}
+      >
+        Close
+      </button>
+    </div>
+  </div>
+)}
+
+
+      </div>
+
+      <div className="flex justify-center mt-[-20px]">
+        <div
+          className="flex items-center gap-2 cursor-pointer bg-gradient-to-r from-cyan-400 to-sky-400 rounded p-4 text-lg"
+          onClick={handleSeeMoreClick}
+        >
+          <IoArrowForward size={52} color="white" />
+          <span className="text-white">See More</span>
+        </div>
+      </div>
+
+      {/* Empty div to add space before the footer */}
+      <div className="my-12"></div>
       </div>
 
     </div>

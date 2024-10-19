@@ -1,8 +1,9 @@
 ---
 title: Intro to Soldering
-date: 2023-10-19T04:00:00.000Z
-location: MB 3.255
-time: '18:00 - 21:00'
+date: 2024-10-24T04:00:00.000Z
+location: ECA B-Annex Lounge
+time: '18:30 - 21:30'
+price: 10
 type: Academic
 description: >-
   Explore the fundamentals of soldering with our easy-to-follow tutorial. Learn

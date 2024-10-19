@@ -5,10 +5,6 @@ import { getAllProjects } from "@/lib/projects";
 import { Suspense } from "react";
 import Loading from "@/components/animations/Loading";
 import ProjectsPlaceHolder from "@/components/placeholder/ProjectsPlaceholder";
-import { getProjects } from "@/lib/tina";
-import { splitAndSortProjects } from "@/content/projectlist";
-import { BsDiscord } from "react-icons/bs";
-
 // import { firestore } from "@/lib/firebase";
 // import { getDocs, collection, DocumentData } from "firebase/firestore";
 
@@ -29,26 +25,6 @@ import { BsDiscord } from "react-icons/bs";
 //   };
 // }
 
-
-
-export async function getStaticProps({ params }: any) {
-  const projects = await getProjects();
-  return {
-    props: {
-      projects,
-    },
-  };
-}
-// utils/dateFormatter.js
-export function formatDate(dateTime: string | number | Date) {
-  const date = new Date(dateTime);
-  return date.toLocaleDateString('en-US', {
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric',
-  });
-}
-
 export default function Projects({ projects }: any) {
   return (
     <RootLayout>
@@ -58,54 +34,15 @@ export default function Projects({ projects }: any) {
             Projects
           </h2>
           <p className="font-raleway text-center text-gray-700 text-title-s md:text-lg">
-             Starting projects as a student can be daunting, and finishing them
-             can be just as challenging. That&apos;s why we offer planned{" "}
-             <b>projects in groups of 3 or 4 for 2-3 weeks</b>, with the support
-             of our dedicated Director of Projects. Our Director of Projects will
-             be there to answer any questions you may have and provide guidance
-             throughout the entire process.
-           </p>
+            Starting projects as a student can be daunting, and finishing them
+            can be just as challenging. That&apos;s why we offer planned{" "}
+            <b>projects in groups of 3 or 4 for 2-3 weeks</b>, with the support
+            of our dedicated Director of Projects. Our Director of Projects will
+            be there to answer any questions you may have and provide guidance
+            throughout the entire process.
+          </p>
+          <ProjectsPlaceHolder />
         </div>
-        {projects.length == 0 ? (
-          <ProjectsPlaceHolder
-          title="No projects shown?"
-          message="Check in later or join our discord for updates!"
-          link="https://discord.gg/DECBMmcT3P"
-          linkText="IEEE Concordia"
-          linkIcon={<BsDiscord color="#ffffff" />}
-        />
-        ) : (
-          <Suspense fallback={<Loading />}>
-            <div
-              className="w-fit grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 justify-items-center gap-6 sm:gap-10 
-            ">
-              {projects.map((project: any, index: any) => (
-                <ProjectCard
-                  key={project.id}
-                  _id={project.id}
-                  title={project.title}
-                  startdate={formatDate(project.startdate)}
-                  enddate={formatDate(project.enddate)}
-                  level={project.level}
-                  leader={project.leader}
-                  body={project.body}
-                  image={project.image} 
-                  link ={project.link}
-                  />
-              ))}
-            </div>
-            {/* <ProjectsPlaceHolder
-              title="Join our discord for updates!"
-              message=""
-              link="https://discord.gg/DECBMmcT3P"
-              linkText="IEEE Concordia"
-              linkIcon={<BsDiscord color="#ffffff" />}
-              iconSize="text-3xl"
-            /> */}
-          </Suspense>
-
-        )}
-      </div>
 
       <SponsorshipSection />
     </RootLayout>
