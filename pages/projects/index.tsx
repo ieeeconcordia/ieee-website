@@ -51,11 +51,7 @@ export default function Projects({ projects }: any) {
         {projects.length == 0 ? (
 
           <ProjectsPlaceHolder
-          title="No projects shown?"
-          message="Check in later or join our discord for updates!"
-          link="https://discord.gg/DECBMmcT3P"
-          linkText="IEEE Concordia"
-          linkIcon={<BsDiscord color="#ffffff" />}
+         
         />
         ) : (
           <Suspense fallback={<Loading />}>
@@ -71,7 +67,6 @@ export default function Projects({ projects }: any) {
                   enddate={formatDate(project.enddate)}
                   level={project.level}
                   leader={project.leader}
-                  body={project.body}
                   image={project.image} 
                   link ={project.link}
                   />
