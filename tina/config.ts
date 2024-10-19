@@ -200,6 +200,11 @@ export default defineConfig({
             type: "string",
             name: "link",
             label: "Link"
+          },
+          {
+            type: "string",
+            name: "blogLink",
+            label: "Notion Blog Link"
           }
           
         ],

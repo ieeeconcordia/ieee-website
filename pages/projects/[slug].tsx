@@ -129,14 +129,22 @@ export default function Projects(props: any) {
               </div>
             )
           }
-       {!showGallery && (
-        
+          <>
+          {!showGallery && (
           <li className={`${styles.noBullet} ${styles.rowItems}`} key="gallery" onClick={handleSeeMoreClick}>
             <strong>Gallery:</strong>
-            <span className="text-white">See More</span>
+            <span className="text-lg md:text-xl font-semibold text-white">See More</span>
             <IoArrowForward size={25} color="white" />
           </li>
       )}
+             {!showGallery && (
+            <a href={data.projects.blogLink} className={`${styles.noBullet} ${styles.rowItems} mb-5`} style={{ background: "#303030" }}>
+            <strong className=" text-lg md:text-xl font-semibold">Blogs:</strong>
+            <span className="text-lg md:text-xl font-semibold text-white">See More</span>
+            <IoArrowForward size={25} color="white" />
+            </a>
+          )}
+          </>
 
         {!showGallery && (
           <ul className={styles.bottomContainer}>
