@@ -129,17 +129,15 @@ export default function Projects(props: any) {
               </div>
             )
           }
-
-        <div className="flex justify-center mt-[-20px]">
-          <div
-            className="flex items-center gap-2 cursor-pointer bg-gradient-to-r from-cyan-400 to-sky-400 rounded p-4 text-lg"
-            onClick={handleSeeMoreClick}
-          >
-            <IoArrowForward size={52} color="white" />
+       {!showGallery && (
+        
+          <li className={`${styles.noBullet} ${styles.rowItems}`} key="gallery" onClick={handleSeeMoreClick}>
+            <strong>Gallery:</strong>
             <span className="text-white">See More</span>
-          </div>
-          
-        </div>
+            <IoArrowForward size={25} color="white" />
+          </li>
+      )}
+
         {!showGallery && (
           <ul className={styles.bottomContainer}>
             {data.projects.leader && (

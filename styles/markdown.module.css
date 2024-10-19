@@ -53,3 +53,6 @@
 .noBullet {
     @apply list-none;
 }
+.rowItems {
+    @apply w-fit flex flex-row gap-2 justify-center items-center text-white bg-discord px-5 py-2 m-3  rounded-md shadow-md hover:shadow-lg text-2xl
+}
