@@ -1,5 +1,5 @@
 ---
-image: /team24-25/Sam.webp
+image: /avatar.webp
 role: VP Academics
 name: Samuel Partous
 email: academics@ieeeconcordia.ca
