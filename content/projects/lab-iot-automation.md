@@ -2,7 +2,7 @@
 title: Lab IoT Automation
 leader: Achal Patel
 startdate: 2024-06-10T04:00:00.000Z
-enddate: 2024-08-31T04:00:00.000Z
+enddate: 2024-10-31T04:00:00.000Z
 level: Intermediate
 image: /image.jpeg
 gallery:
