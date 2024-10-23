@@ -11,7 +11,7 @@ gallery:
   - /projects/arm/arm3.webp
 link: 'https://discord.gg/yhkMxEQ28c'
 blogLink: >-
-  https://ieeeconcordia.notion.site/Projects-Original-cece1ac5a94d4affa9845ac8855afe3a
+  https://ieeeconcordia.notion.site/IEEE-Concordia-Projects-Department-11540a16c70980018766daf64ee0bdb3
 ---
 
 ## About
