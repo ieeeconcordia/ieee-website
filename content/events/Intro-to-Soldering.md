@@ -20,4 +20,4 @@ organizer: Alexandre
 
 This tutorial is designed for beginners; therefore, no previous knowledge is required. All fundamental soldering tools and materials will be provided.
 
-[Register Now!](https://www.zeffy.com/en-CA/ticketing/d3673375-fc6d-4eba-af41-724ee6cbc217)
+[Register Now!](https://www.zeffy.com/ticketing/a89b1199-d805-46c6-8685-b4085bfcf6a0)
