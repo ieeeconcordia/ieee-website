@@ -1,5 +1,5 @@
 ---
-image: /team24-25/Achal.webp
+image: /execs/ssss.JPG
 role: VP Projects
 name: Achal Patel
 email: projects@ieeeconcordia.ca
