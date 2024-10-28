@@ -20,8 +20,8 @@ export default function SponsorsMarquee() {
         {images.map((image) => (
           <img
             className="mx-1 bg-white rounded-lg"
-            width={150}
-            height={100}
+            width={300}
+            height={200}
             alt={"alt"}
             src={`/sponsors/${image}`}
             key={image}
