@@ -1,6 +1,6 @@
 ---
 image: /team24-25/Ethan.webp
-role: Director of Shutting Down the Wi-FI
+role: Director of Competitions & IT
 name: Ethan Logie
 email: itdirector@ieeeconcordia.ca
 program: COMP
