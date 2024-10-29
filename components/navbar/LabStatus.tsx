@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { connectToDatabase } from "@/lib/mongodb"; // Import the MongoDB connection function
 
 export default function LabStatus() {
   const [latestData, setLatestData] = useState(false);
@@ -9,7 +8,11 @@ export default function LabStatus() {
     fetch("/api/labstatus")
       .then((response) => response.json())
       .then((data) => {
-        setLatestData(data.status == "open");
+        setLatestData(data.status === "open");
+        setRequest(true);
+      })
+      .catch((error) => {
+        console.error('Error fetching lab status:', error);
         setRequest(true);
       });
   }, []);
