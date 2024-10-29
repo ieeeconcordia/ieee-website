@@ -1,4 +1,4 @@
-import { SUPABASE_URL, HEADERS } from "@/lib/supabase";
+import { SUPABASE_URL, HEADERS } from "@/lib/supabase.ts";
 
 export default async function handler(req, res) {
   if (req.method === "GET") {
