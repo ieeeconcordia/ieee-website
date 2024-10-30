@@ -28,4 +28,4 @@ Working in teams of three or four, you will put your creativity to work and buil
 
 Choosing where to continue your education after graduating is tough. What should I study, what university/college should I go to? We offer an opportunity to explore one of your interests.
 
-[botquest.ca](botquest.ca)
+[botquest.ca](https://botquest.ca/)
