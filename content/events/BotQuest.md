@@ -2,7 +2,7 @@
 title: BotQuest
 date: 2024-11-15T05:00:00.000Z
 location: 'Autodesk, Montreal'
-time: '8:00 - 18:30'
+time: '8:00 - 18:00'
 price: 0
 type: Competition
 description: >-
