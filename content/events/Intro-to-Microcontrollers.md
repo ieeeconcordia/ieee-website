@@ -37,4 +37,4 @@ A laptop (Windows, macOS, or Linux) to write and upload code to microcontrollers
 
 [Register](https://www.zeffy.com/ticketing/6c3517eb-8293-439f-b291-970a0459aab7)
 
-[https://denim-forest-d3a.notion.site/Intro-to-Microcontrollers-1352f9491c4f805abb12d9f4955a73c4?pvs=4](https://denim-forest-d3a.notion.site/Intro-to-Microcontrollers-1352f9491c4f805abb12d9f4955a73c4?pvs=4)
+[Notion](https://denim-forest-d3a.notion.site/Intro-to-Microcontrollers-1352f9491c4f805abb12d9f4955a73c4?pvs=4)
