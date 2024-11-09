@@ -1,13 +1,15 @@
 ---
-title: Intro to Soldering
-date: 2024-10-24T04:00:00.000Z
+title: 'Intro to Soldering Part 2 '
+date: 2024-11-14T05:00:00.000Z
 location: ECA B-Annex Lounge
-time: '18:30 - 21:30'
+time: '18:00 - 21:00'
 price: 10
 type: Academic
 description: >-
-  Explore the fundamentals of soldering with our easy-to-follow tutorial. Learn
-  how to create secure connections for various applications.
+  Equips students with fundamental soldering skills, focusing on safety,
+  techniques, and practical application. Participants will gain practical
+  soldering skills, enabling them to confidently work on their electronic
+  projects.
 image: /events/Intro-to-Soldering.png
 organizer: Alexandre
 ---
@@ -20,4 +22,4 @@ organizer: Alexandre
 
 This tutorial is designed for beginners; therefore, no previous knowledge is required. All fundamental soldering tools and materials will be provided.
 
-[Register Now!](https://www.zeffy.com/ticketing/a89b1199-d805-46c6-8685-b4085bfcf6a0)
+[Register Now!](https://www.zeffy.com/en-CA/ticketing/ieeeconcordia-intro-to-soldering-2--2024)
