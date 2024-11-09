@@ -1,5 +1,5 @@
 ---
-title: 'Intro to Soldering Part 2 '
+title: Intro to Soldering Redo
 date: 2024-11-14T05:00:00.000Z
 location: ECA B-Annex Lounge
 time: '18:00 - 21:00'
