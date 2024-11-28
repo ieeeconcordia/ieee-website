@@ -1,5 +1,6 @@
 import { useEffect, useState, Suspense } from "react";
 import RootLayout from "@/pages/layout";
+import React from "react";
 import EventCard from "@/components/cards/EventCard";
 import ProjectCard from "@/components/cards/ProjectCard";
 import { SponsorshipSection } from "@/components/SponsorshipSection";
@@ -12,8 +13,12 @@ import ProjectsPlaceHolder from "@/components/placeholder/ProjectsPlaceholder";
 import LandingVideo from "@/components/LandingVideo";
 import Navbar from "@/components/navbar/HomeNavbar";
 import Footer from "@/components/Footer";
+import Link from "next/link";
+
 import { splitAndSortEvents } from "@/content/eventslist";
 import { getEvents, getProjects } from "@/lib/tina";
+import { BsDiscord } from "react-icons/bs";
+
 export async function getStaticProps() {
   const events = await getEvents();
   const projects = await getProjects();
@@ -156,6 +161,26 @@ export default function Home({ events, projects }: any) {
           <SimpleBtn text="See more..." href="/projects" />
         )}
       </section>
+
+      <section className="flex flex-col text-center items-center justify-items-center gap-6 px-8 pb-10 sm:px-20 xl:px-section md:pb-14">
+        <div className="">
+      <div className="w-fit flex flex-col text-center justify-center items-center shadow-md mt-4 p-4 bg-gray-200 border border-gray-200 rounded-lg">
+      <div className="font-raleway text-display-s font-semibold justify-center">
+        Want to join IEEE? 
+      </div>
+      <div className="text-gray-700 text-title-m pb-4">
+        Join our discord for updates and get to know!
+      </div>
+      <Link
+        href={"https://discord.gg/DECBMmcT3P"}
+        className="w-fit flex flex-row gap-2 justify-center items-center text-white bg-discord px-4 py-2 rounded-md shadow-md hover:shadow-lg"
+      >
+        <BsDiscord color="#ffffff" />
+        IEEE Concordia
+      </Link>
+    </div>
+    </div>
+    </section>
       <SponsorshipSection />
       <Footer />
     </div>
