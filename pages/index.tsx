@@ -169,7 +169,7 @@ export default function Home({ events, projects }: any) {
         Want to join IEEE? 
       </div>
       <div className="text-gray-700 text-title-m pb-4">
-        Join our discord for updates and get to know!
+        Join our discord for updates and get to know us!
       </div>
       <Link
         href={"https://discord.gg/DECBMmcT3P"}
