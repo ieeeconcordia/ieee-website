@@ -1,5 +1,5 @@
 ---
-image: /team24-25/Ksenia.webp
+image: /team24-25/Ksenia2.webp
 role: Director of Marketing
 name: Ksenia Bzhitskikh
 email: marketingdirector@ieeeconcordia.ca
