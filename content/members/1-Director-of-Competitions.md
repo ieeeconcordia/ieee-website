@@ -4,5 +4,6 @@ role: Director of Competitions
 name: Luyun Chen
 email: competitionsdirector@ieeeconcordia.ca
 program: SOEN
+linkedin: 'https://www.linkedin.com/in/luyun-chen-0973852a9/'
 ---
 
