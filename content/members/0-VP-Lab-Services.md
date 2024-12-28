@@ -1,5 +1,5 @@
 ---
-image: /avatar.webp
+image: /team24-25/Mohammad.webp
 role: VP Lab Services
 name: Mohammad Sharafat
 email: services@ieeeconcordia.ca
