@@ -205,6 +205,34 @@ export default defineConfig({
           
         ],
       },
+      {
+        name: "sponsors",
+        label: "Sponsors",
+        path: "content/sponsors",
+        fields: [
+          {
+            type: "image",
+            list: true,  
+            name: "gold_sponsors",
+            label: "Gold sponsors",
+            description: "Add images to showcase in the gallery",
+          },
+          {
+            type: "image",
+            list: true,  
+            name: "sliver_sponsors",
+            label: "Sliver sponsors",
+            description: "Add images to showcase in the gallery",
+          },
+          {
+            type: "image",
+            list: true,  
+            name: "bronze_sponsors",
+            label: "Bronze sponsors",
+            description: "Add images to showcase in the gallery",
+          },
+        ],
+      },    
     ],
   },
 });
