@@ -38,6 +38,19 @@ export default function Sponsorship() {
           </p>
         </div>
 
+        {/* this gold sponsor is a placeholder */}
+        {/* <div className="my-4 mr-4 flex flex-wrap gap-4 bg-[#E7CB56] glass relative rounded-md bg-opacity-30 p-8">
+          <div className="absolute left-0 top-0 p-2 uppercase text-white bg-[#E7CB56] glass rounded-md font-bold tracking-widest">Gold</div>
+        </div> */}
+        {/* this silver sponsor is a placeholder */}
+        <div className="my-4 mr-4 flex flex-wrap gap-4 bg-gray-400 glass relative rounded-md bg-opacity-30 p-8">
+          <div className="absolute left-0 top-0 p-2 uppercase text-white bg-gray-400 glass rounded-md font-bold tracking-widest">Silver</div>
+        </div>
+        {/* this bronze sponsor is a placeholder */}
+        <div className="my-4 mr-4 flex flex-wrap gap-4 bg-[#CD7F32] glass relative rounded-md bg-opacity-30 p-8">
+          <div className="absolute left-0 top-0 p-2 uppercase text-white bg-[#CD7F32] glass rounded-md font-bold tracking-widest">Bronze</div>
+        </div>
+
         <SponsorsMarquee />
 
         <div>
