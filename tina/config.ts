@@ -209,30 +209,70 @@ export default defineConfig({
         name: "sponsors",
         label: "Sponsors",
         path: "content/sponsors",
+        
         fields: [
           {
-            type: "image",
-            list: true,  
-            name: "gold_sponsors",
-            label: "Gold sponsors",
-            description: "Add images to showcase in the gallery",
+            label: "Sponsors Image Sliver",
+            name: "Sliver_gallery",
+            type: "object",
+            list: true,
+            ui: {
+              itemProps: (item) => {
+                // Field values are accessed by item?.<Field name>
+                return { label: item?.title };
+              },
+            },
+            fields: [
+              {
+                label: "Title",
+                name: "title",
+                type: "string",
+              },
+              {
+                name: "image",
+                label: "Image",
+                type: "image",
+              },
+              {
+                name: "link",
+                label: "Link",
+                type: "string",
+              },
+            ],
           },
           {
-            type: "image",
-            list: true,  
-            name: "sliver_sponsors",
-            label: "Sliver sponsors",
-            description: "Add images to showcase in the gallery",
+            label: "Sponsors Image Bronze",
+            name: "Bronze_gallery",
+            type: "object",
+            list: true,
+            ui: {
+              itemProps: (item) => {
+                // Field values are accessed by item?.<Field name>
+                return { label: item?.title };
+              },
+            },
+            fields: [
+              {
+                label: "Title",
+                name: "title",
+                type: "string",
+              },
+              {
+                name: "image",
+                label: "Image",
+                type: "image",
+              },
+              {
+                name: "link",
+                label: "Link",
+                type: "string",
+              },
+            ],
           },
-          {
-            type: "image",
-            list: true,  
-            name: "bronze_sponsors",
-            label: "Bronze sponsors",
-            description: "Add images to showcase in the gallery",
-          },
+          // ...other sponsor types if any...
         ],
-      },    
+      },
+      // ...existing code...
     ],
   },
 });
