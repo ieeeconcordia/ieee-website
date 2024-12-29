@@ -1,5 +1,5 @@
 ---
-image: /team24-25/Elizabeth2.webp
+image: /team24-25/ElizabethOng.webp
 role: Director of IT & Marketing
 name: Elizabeth Ong
 email: marketingdirector@ieeeconcordia.ca
