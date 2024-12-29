@@ -1,5 +1,5 @@
 ---
-image: /team24-25/Houssam.webp
+image: /team24-25/HoussamRighi.webp
 role: VP Competitions
 name: Houssam Eddine Righi
 email: competitions@ieeeconcordia.ca
