@@ -1,5 +1,6 @@
 "use client";
 import client from "@/tina/__generated__/client";
+import { filter } from "lodash";
 import { useState, useEffect, SetStateAction } from "react";
 
 type EventProps = {
@@ -112,3 +113,25 @@ export async function getProjects() {
   return projectArray;
 }
 
+export async function getSponsors() {
+  const sponsorsResponse = await client.queries.sponsorsConnection();
+  const sponsors = sponsorsResponse.data?.sponsorsConnection.edges;
+  console.log()
+  console.log(sponsorsResponse)
+  if (!sponsors) return;
+
+  const sponsorArray: any[] = [];
+  sponsors.forEach((sponsor) => {
+    if (sponsor && sponsor.node) {
+      let temp = {
+        _id: sponsor.node.id,
+        bronze: sponsor.node.Bronze_gallery,
+        silver: sponsor.node.Sliver_gallery,
+        gold: sponsor.node.Gold_gallery,
+      };
+      sponsorArray.push(temp);
+    }
+  });
+
+  return sponsorArray;
+}

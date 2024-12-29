@@ -212,6 +212,35 @@ export default defineConfig({
         
         fields: [
           {
+            label: "Sponsors Image Gold",
+            name: "Gold_gallery",
+            type: "object",
+            list: true,
+            ui: {
+              itemProps: (item) => {
+                // Field values are accessed by item?.<Field name>
+                return { label: item?.title };
+              },
+            },
+            fields: [
+              {
+                label: "Title",
+                name: "title",
+                type: "string",
+              },
+              {
+                name: "image",
+                label: "Image",
+                type: "image",
+              },
+              {
+                name: "link",
+                label: "Link",
+                type: "string",
+              },
+            ],
+          },
+          {
             label: "Sponsors Image Sliver",
             name: "Sliver_gallery",
             type: "object",
