@@ -4,9 +4,22 @@ import sponsors from "@/public/sponsors/DummySponsor.png";
 import Image from "next/image";
 import Link from "next/link";
 import SponsorsMarquee from "@/components/animations/SponsorsMarquee";
+import { getSponsors } from "@/lib/tina";
+import { Sponsor } from "@/components/cards/SponsorCard";
 
-export default function Sponsorship() {
+
+export async function getStaticProps({ params }: any) {
+  const sponsorss = await getSponsors();
+  return {
+    props: {
+      sponsorss
+    },
+  };
+}
+
+export default function Sponsorship({ sponsorss }: any) {
   const [images, setImages] = useState([]);
+  console.log(sponsorss);
 
   // useEffect(() => {
   //   const fetchData = async () => {
@@ -20,6 +33,7 @@ export default function Sponsorship() {
 
   return (
     <RootLayout>
+      
       <div className="flex flex-col items-center justify-items-center px-8 pb-16 sm:px-20 xl:px-section md:pb-14 gap-8">
         <div className="">
           <h2 className="font-lora font-bold text-center text-headline-l text-secondary pb-6">
@@ -38,20 +52,52 @@ export default function Sponsorship() {
           </p>
         </div>
 
-        {/* this gold sponsor is a placeholder */}
-        {/* <div className="my-4 mr-4 flex flex-wrap gap-4 bg-[#E7CB56] glass relative rounded-md bg-opacity-30 p-8">
-          <div className="absolute left-0 top-0 p-2 uppercase text-white bg-[#E7CB56] glass rounded-md font-bold tracking-widest">Gold</div>
-        </div> */}
+        <div className="my-8 w-full self-center px-4 lg:mx-auto lg:max-w-screen-lg">
+                  {/* this gold sponsor is a placeholder */}
+          {sponsorss[0].gold && (   
+          <div className="my-4 mr-4 flex flex-wrap gap-4 bg-[#E4C742] glass relative rounded-md bg-opacity-30 p-8 w-full">
+            <div className="absolute left-0 top-0 p-2 uppercase text-white bg-[#E4C742] glass rounded-md font-bold tracking-widest">gold</div>
+            {sponsorss[0].gold.map((s: any, index: any) => (
+              <Sponsor
+                key={index}
+                title={s.title}
+                image={s.image}
+                link={s.link}
+              />
+            ))}
+          </div>
+        )}          
         {/* this silver sponsor is a placeholder */}
-        <div className="my-4 mr-4 flex flex-wrap gap-4 bg-gray-400 glass relative rounded-md bg-opacity-30 p-8">
-          <div className="absolute left-0 top-0 p-2 uppercase text-white bg-gray-400 glass rounded-md font-bold tracking-widest">Silver</div>
-        </div>
+        {sponsorss[0].silver && (   
+          <div className="my-4 mr-4 flex flex-wrap gap-4 bg-gray-400 glass relative rounded-md bg-opacity-30 p-8 w-full">
+            <div className="absolute left-0 top-0 p-2 uppercase text-white bg-gray-400 glass rounded-md font-bold tracking-widest">Bronze</div>
+            {sponsorss[0].silver.map((s: any, index: any) => (
+              <Sponsor
+                key={index}
+                title={s.title}
+                image={s.image}
+                link={s.link}
+              />
+            ))}
+          </div>
+        )}
         {/* this bronze sponsor is a placeholder */}
-        <div className="my-4 mr-4 flex flex-wrap gap-4 bg-[#CD7F32] glass relative rounded-md bg-opacity-30 p-8">
-          <div className="absolute left-0 top-0 p-2 uppercase text-white bg-[#CD7F32] glass rounded-md font-bold tracking-widest">Bronze</div>
-        </div>
-
+        {sponsorss[0].bronze && (
+          <div className="my-4 mr-4 flex flex-wrap gap-4 bg-[#CD7F32] glass relative rounded-md bg-opacity-30 p-8 w-full">
+            <div className="absolute left-0 top-0 p-2 uppercase text-white bg-[#CD7F32] glass rounded-md font-bold tracking-widest">Bronze</div>
+            {sponsorss[0].bronze.map((s: any, index: any) => (
+              <Sponsor
+                key={index}
+                title={s.title}
+                image={s.image}
+                link={s.link}
+              />
+            ))}
+          </div>
+        )}
         <SponsorsMarquee />
+        </div>
+      
 
         <div>
           <h2 className="font-raleway text-star  font-bold pb-4">
