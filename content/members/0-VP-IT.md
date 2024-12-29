@@ -1,9 +1,9 @@
 ---
-image: /IEEE my pictire Copy.jpg
+image: /team24-25/AlexGagnon.webp
 role: VP IT
 name: Alexandre Gagnon
 email: alexg@unixrealm.com
 program: COEN
-linkedin: www.linkedin.com/in/alexandregagnon-
+linkedin: 'https://www.linkedin.com/in/alexandregagnon-/'
 ---
 
