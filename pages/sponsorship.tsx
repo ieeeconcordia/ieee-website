@@ -56,7 +56,7 @@ export default function Sponsorship({ sponsorss }: any) {
                   {/* this gold sponsor is a placeholder */}
           {sponsorss[0].gold && (   
           <div className="my-4 mr-4 flex flex-wrap gap-4 bg-[#E4C742] glass relative rounded-md bg-opacity-30 p-8 w-full">
-            <div className="absolute left-0 top-0 p-2 uppercase text-white bg-[#E4C742] glass rounded-md font-bold tracking-widest">gold</div>
+            <div className="absolute left-0 top-0 p-2 uppercase text-white bg-[#E4C742] glass rounded-md font-bold tracking-widest">Gold</div>
             {sponsorss[0].gold.map((s: any, index: any) => (
               <Sponsor
                 key={index}
@@ -70,7 +70,7 @@ export default function Sponsorship({ sponsorss }: any) {
         {/* this silver sponsor is a placeholder */}
         {sponsorss[0].silver && (   
           <div className="my-4 mr-4 flex flex-wrap gap-4 bg-gray-400 glass relative rounded-md bg-opacity-30 p-8 w-full">
-            <div className="absolute left-0 top-0 p-2 uppercase text-white bg-gray-400 glass rounded-md font-bold tracking-widest">Bronze</div>
+            <div className="absolute left-0 top-0 p-2 uppercase text-white bg-gray-400 glass rounded-md font-bold tracking-widest">Silver</div>
             {sponsorss[0].silver.map((s: any, index: any) => (
               <Sponsor
                 key={index}
