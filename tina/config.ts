@@ -202,7 +202,20 @@ export default defineConfig({
             name: "blogLink",
             label: "Notion Blog Link"
           }
-          
+
+        ],
+      },
+      {
+        name: "lab_supervisor_form",
+        label: "Lab Supervisor Form",
+        path: "content/lab_supervisor_form_link",
+        fields: [
+          {
+            type: "string",
+            name: "form_link",
+            label: "Lab Supervisor Link"
+          }
+
         ],
       },
     ],
