@@ -112,3 +112,13 @@ export async function getProjects() {
   return projectArray;
 }
 
+export async function getLabSupervisorFormLink() {
+  const lab_supervisor_form_link_response = await client.queries.lab_supervisor_formConnection();
+  const lab_supervisor_form_link = lab_supervisor_form_link_response.data?.lab_supervisor_formConnection.edges;
+
+  if (!lab_supervisor_form_link || lab_supervisor_form_link.length === 0) return null;
+
+  return lab_supervisor_form_link[0]?.node?.form_link;
+}
+
+

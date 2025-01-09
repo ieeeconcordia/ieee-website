@@ -5,19 +5,23 @@ import { SponsorshipSection } from "@/components/SponsorshipSection";
 import { useEffect, useState } from "react";
 import { TypeAnimation } from "react-type-animation";
 import TypingAnimation from "@/components/animations/TypingAnimation";
-import { getMembers } from "@/lib/tina";
+import { getLabSupervisorFormLink, getMembers } from "@/lib/tina";
 
 export async function getStaticProps({ params }: any) {
   const members = await getMembers();
-  return {
+  const lab_supervisors_form_link = await getLabSupervisorFormLink();
+
+  return {  
     props: {
       members,
+      lab_supervisors_form_link,
     },
   };
 }
 
-export default function About({ members }: any) {
+export default function About({ members, lab_supervisors_form_link  }: any) {
   const [windowWidth, setWindowWidth] = useState(0);
+  
 
   useEffect(() => {
     const handleResize = () => {
@@ -105,9 +109,10 @@ export default function About({ members }: any) {
               dedicating this small amount of time, you help us ensure that all
               students members or not can have the chance to use the lab.
             </p>
+           
             <SponsorshipBtn
               text="Become a lab supervisor!"
-              link="https://docs.google.com/forms/d/e/1FAIpQLSfdBIGKD9NaIhjVVMSaKSyN22pzhVWBu3tJYn8OV8LVVigwQQ/viewform"
+              link={lab_supervisors_form_link}
             />
           </div>
         </section>
