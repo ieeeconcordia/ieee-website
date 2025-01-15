@@ -1,7 +1,7 @@
 ---
-title: Intro to Soldering SMD
-date: 2024-03-20T04:00:00.000Z
-location: H-431
+title: Intro to SMD Soldering
+date: 2025-02-13T05:00:00.000Z
+location: TBA
 time: '18:00 - 21:00'
 price: 10
 type: Academic
@@ -11,8 +11,8 @@ description: >-
   enthusiasts. It includes a comprehensive kit and offers a platform to network,
   learn, and improve essential soldering skills in electronics and circuit
   design.
-image: /events/Intro-to-Soldering.webp
-organizer: Alexandre
+image: /events/smd soldering.jpg
+organizer: ''
 ---
 
 ## About the Event
@@ -27,4 +27,4 @@ If you are an aspiring electrical engineer or a DIY enthusiast, this workshop se
 
 You don't need to bring anything to the event. All necessary equipment and materials will be provided. All you need to bring is your enthusiasm to learn.
 
-The participation fee for the event is just $10, making it an affordable opportunity to gain valuable practical experience.
+Registration link TBA!
