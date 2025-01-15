@@ -27,4 +27,4 @@ If you are an aspiring electrical engineer or a DIY enthusiast, this workshop se
 
 You don't need to bring anything to the event. All necessary equipment and materials will be provided. All you need to bring is your enthusiasm to learn.
 
-Registration link and price TBA!
+Registration link TBA!
