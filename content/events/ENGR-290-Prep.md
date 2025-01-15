@@ -11,6 +11,6 @@ image: /events/engr 290.jpg
 
 ## About the Event
 
-This workshop prepare students for their ENGR 290 project.
+This workshop prepares students for their ENGR 290 project.
 
 Registration link TBA!
