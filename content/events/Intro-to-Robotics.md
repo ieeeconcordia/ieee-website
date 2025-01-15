@@ -18,3 +18,5 @@ image: /events/intro to robotics.jpg
 ## About the Event
 
 An Introduction to Robotics workshop provides participants with foundational knowledge and hands-on experience in building and programming robots. It covers key topics such as robot design, sensors, actuators, and basic control systems, emphasizing how robots perceive and interact with their environment. By the end, participants create simple robotic projects, learning practical skills in mechanics, electronics, and coding.
+
+Registration link TBA!
