@@ -12,7 +12,7 @@ description: >-
   systems, emphasizing how robots perceive and interact with their environment.
   By the end, participants create simple robotic projects, learning practical
   skills in mechanics, electronics, and coding.
-image: /events/intro to robotics.jpg
+image: /events/introduction to robotics.jpg
 ---
 
 ## About the Event
