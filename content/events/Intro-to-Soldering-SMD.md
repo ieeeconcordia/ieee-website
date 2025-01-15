@@ -17,7 +17,7 @@ organizer: ''
 
 ## About the Event
 
-Welcome to our hands-on soldering workshop that delves into Surface-Mount Device (SMD) techniques. For a nominal fee of $10, you will not only gain invaluable experience but also receive a comprehensive kit to practice on. This workshop is designed to offer a blend of theory and practice, allowing you to master the art of soldering in a supportive and engaging environment.
+Welcome to our hands-on soldering workshop that delves into Surface-Mount Device (SMD) techniques. You will not only gain invaluable experience but also receive a comprehensive kit to practice on. This workshop is designed to offer a blend of theory and practice, allowing you to master the art of soldering in a supportive and engaging environment.
 
 ## Why Should I Attend?
 
@@ -27,4 +27,4 @@ If you are an aspiring electrical engineer or a DIY enthusiast, this workshop se
 
 You don't need to bring anything to the event. All necessary equipment and materials will be provided. All you need to bring is your enthusiasm to learn.
 
-Registration link TBA!
+Registration link and price TBA!
