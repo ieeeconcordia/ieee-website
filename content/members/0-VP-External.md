@@ -1,10 +1,10 @@
 ---
-image: /team24-25/Ivan.webp
+image: /team24-25/Isabella.webp
 role: VP External
-name: Shami Ivan Senga
-email: sponsor@ieeeconcordia.ca
-program: COEN
-linkedin: 'http://www.linkedin.com/in/shami-ivan-a611a4154'
-github: 'https://github.com/Shamiivan'
+name: Isabella Del Zoppo
+email: external@ieeeconcordia.ca
+program: ELEC
+linkedin: 'https://www.linkedin.com/in/isabella-del-zoppo-16b000189/'
+github: ''
 ---
 
