@@ -24,4 +24,4 @@ Attending this event can provide you with a significant advantage as an undergra
 
 You don't need to bring anything to the event. All necessary equipment and materials will be provided. All you need to bring is your enthusiasm to learn.
 
-[Registration link!](https://www.zeffy.com/ticketing/ieee-intro-to-lab-equipment-winter--2025 "Registration Link!")
+[Register Here!](https://www.zeffy.com/ticketing/ieee-intro-to-lab-equipment-winter--2025 "Register Here!")
