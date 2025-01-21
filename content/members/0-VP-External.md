@@ -1,6 +1,10 @@
 ---
 image: /team24-25/Isabella.webp
 role: VP External
+teams_role:
+  - VP
+teams:
+  - External
 name: Isabella Del Zoppo
 email: external@ieeeconcordia.ca
 program: ELEC

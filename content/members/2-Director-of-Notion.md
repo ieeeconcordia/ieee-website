@@ -1,6 +1,10 @@
 ---
 image: /team24-25/Diego.webp
 role: Director of Notion
+teams_role:
+  - Director
+teams:
+  - Notion
 name: Diego José Rodriguez Vasquez
 email: info@ieeeconcordia.ca
 program: ' '

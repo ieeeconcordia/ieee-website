@@ -1,6 +1,11 @@
 ---
 image: /team24-25/ElizabethOng.webp
 role: Director of IT & Marketing
+teams_role:
+  - Director
+teams:
+  - IT
+  - Marketing
 name: Elizabeth Ong
 email: marketingdirector@ieeeconcordia.ca
 program: COEN

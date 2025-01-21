@@ -1,6 +1,10 @@
 ---
 image: /team24-25/Raghda.webp
 role: Director of Marketing
+teams_role:
+  - Director
+teams:
+  - Marketing
 name: Raghda Elkei
 email: marketingdirector@ieeeconcordia.ca
 program: COEN

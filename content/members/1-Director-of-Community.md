@@ -1,6 +1,10 @@
 ---
 image: /team24-25/Fatema.webp
 role: Director of Community
+teams_role:
+  - Director
+teams:
+  - Community
 name: Fatema Apattad
 email: communitydirector@ieeeconcordia.ca
 program: ELEC

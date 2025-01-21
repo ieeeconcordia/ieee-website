@@ -114,6 +114,22 @@ export default defineConfig({
             isTitle: true,
           },
           {
+            list: true,
+            required: true,
+            type: 'string',
+            name: 'teams_role',
+            label: 'Teams role',
+            options: ['Branch ', 'Branch Vice', 'VP', 'Director','Senior'],
+          },
+          {
+            list: true,
+            required: true,
+            type: 'string',
+            name: 'teams',
+            label: 'Teams',
+            options: ['Chair', 'Academics', 'Community', 'Competitions', 'Development', 'External','Internal', 'Finance','IT','Lab Services','Projects','Marketing','Notion','Advisor'],
+          },
+          {
             type: "string",
             name: "name",
             label: "Name",

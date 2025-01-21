@@ -1,6 +1,12 @@
 ---
 image: /team24-25/Ethan.webp
 role: 'Director of Competitions, IT & External'
+teams_role:
+  - Director
+teams:
+  - Competitions
+  - IT
+  - External
 name: Ethan Logie
 email: itdirector@ieeeconcordia.ca
 program: COMP

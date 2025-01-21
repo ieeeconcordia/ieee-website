@@ -1,6 +1,10 @@
 ---
 image: /avatar.webp
 role: Director of Development
+teams_role:
+  - Director
+teams:
+  - Development
 name: Gorav Karwer
 email: devdirector@ieeeconcordia.ca
 program: COMP

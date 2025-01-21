@@ -1,5 +1,6 @@
 "use client";
 import client from "@/tina/__generated__/client";
+import { test } from "gray-matter";
 import { useState, useEffect, SetStateAction } from "react";
 
 type EventProps = {
@@ -71,7 +72,8 @@ export async function getMembers() {
       let temp = {
         _id: member.node.id,
         name: member.node.name,
-        role: member.node.role,
+        role: member.node.teams_role,
+        teams: member.node.teams,
         image: member.node.image,
         linkedin: member.node.linkedin,
         github: member.node.github,
