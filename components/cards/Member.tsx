@@ -16,10 +16,12 @@ type memberProps = {
   linkedIn: string;
   program: string;
   image: string;
+  teams: string;
 };
 
 export const Member = ({
   name,
+  teams,
   role,
   github,
   emailIEEE,
@@ -41,7 +43,7 @@ export const Member = ({
           className="h-56 w-full object-cover rounded-t-lg"
         />
       </div>
-
+    
       {/* Details */}
       <div className="w-full flex flex-col px-4 pb-4 gap-3 text-start rounded-b-xl">
         {/* Name & Tags */}
@@ -50,7 +52,8 @@ export const Member = ({
             {name}
           </h3>
           <p className=" text-label-l font-light">
-            {role} {program == "" ? " - B.Eng" : " - " + program}
+
+          {role} {['VP', 'Director'].includes(role[0]) ? ' of' : ''} {Array.isArray(teams) ? teams.join(', ') : teams} {program === "" ? " - B.Eng" : " - " + program}
           </p>
         </div>
 

@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import { TypeAnimation } from "react-type-animation";
 import TypingAnimation from "@/components/animations/TypingAnimation";
 import { getLabSupervisorFormLink, getMembers } from "@/lib/tina";
+import { Tab } from "@/components/tab/Tab";
 
 export async function getStaticProps({ params }: any) {
   const members = await getMembers();
@@ -38,7 +39,6 @@ export default function About({ members, lab_supervisors_form_link  }: any) {
   }, []);
 
   return (
-    <>
       <RootLayout>
         <div className="w-full bg-center bg-no-repeat bg-cover bg-execTeam ">
           <div
@@ -71,16 +71,20 @@ export default function About({ members, lab_supervisors_form_link  }: any) {
               </div>
             </div>
           </div>
-          {/* Exec Team */}
           <div className="container flex flex-col justify-center items-center gap-6">
             <h2 className="text-center font-raleway font-semibold text-headline-l text-secondary">
               Meet our team
             </h2>
-            <div className="w-fit grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 justify-items-center gap-4 sm:gap-10">
+          </div>
+
+          <Tab members={members}></Tab>
+          {/* Exec Team */}
+            {/* <div className="w-fit grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 justify-items-center gap-4 sm:gap-10">
               {members.map((member: any, index: any) => (
                 <Member
                   key={index}
                   name={member.name}
+                  teams={member.teams}
                   role={member.role}
                   program={member.program}
                   github={member.github}
@@ -90,7 +94,7 @@ export default function About({ members, lab_supervisors_form_link  }: any) {
                 />
               ))}
             </div>
-          </div>
+          </div> */}
 
           {/* Lab Supervisors */}
           <div className="flex flex-col justify-center items-center gap-6 px-8 sm:px-20 xl:px-section">
@@ -118,6 +122,5 @@ export default function About({ members, lab_supervisors_form_link  }: any) {
         </section>
         <SponsorshipSection />
       </RootLayout>
-    </>
   );
 }
