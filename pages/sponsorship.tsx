@@ -47,7 +47,7 @@ export default function Sponsorship() {
 
           <div className="font-raleway text-start text-gray-700 text-title-s md:text-lg">
             Contact our{" "}
-            <a href="mailto:sponsor@ieeeconcordia.ca" className="underline">
+            <a href="mailto:external@ieeeconcordia.ca" className="underline">
               Vice-President of External Affairs
             </a>{" "}
             to learn more about how you can be a part of our vision for a more
