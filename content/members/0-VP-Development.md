@@ -1,5 +1,5 @@
 ---
-image: /team24-25/maybe.webp
+image: /team24-25/pic.jpeg
 role: VP Development
 name: Nicholas Charland Armstrong
 email: dev@ieeeconcordia.ca
