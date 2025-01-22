@@ -1,6 +1,10 @@
 ---
 image: /team24-25/Ivan.webp
 role: Director of External
+teams_role:
+  - Director
+teams:
+  - External
 name: Shami Ivan Senga
 email: external@ieeeconcordia.ca
 program: COEN

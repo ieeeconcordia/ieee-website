@@ -1,6 +1,10 @@
 ---
 image: /team24-25/Kevin.webp
 role: Director of Projects
+teams_role:
+  - Director
+teams:
+  - Projects
 name: Kevin Sementilli
 email: projectsdirector@ieeeconcordia.ca
 program: ELEC
