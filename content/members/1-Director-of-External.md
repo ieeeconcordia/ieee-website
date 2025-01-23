@@ -1,8 +1,7 @@
 ---
 image: /team24-25/Ivan.webp
 role: External Advisor
-teams_role:
-  - Director
+teams_role: []
 teams:
   - External
 name: Shami Ivan Senga
