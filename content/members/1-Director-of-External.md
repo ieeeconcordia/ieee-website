@@ -4,7 +4,6 @@ role: External Advisor
 teams_role: []
 teams:
   - External
-  - Advisor
 name: Shami Ivan Senga
 email: external@ieeeconcordia.ca
 program: COEN
