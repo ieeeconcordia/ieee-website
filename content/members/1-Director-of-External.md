@@ -1,6 +1,6 @@
 ---
 image: /team24-25/Ivan.webp
-role: Director of External
+role: External Advisor
 teams_role:
   - Director
 teams:
