@@ -6,6 +6,7 @@ import { Member } from "@/components/cards/Member";
       const [activeTab, setActiveTab] = useState(tabs[0]);
       const [startIndex, setStartIndex] = useState(0);
       const [tabsToShow, setTabsToShow] = useState(3);
+      const [filteredMembers, setFilteredMembers] = useState<any[]>([]);
 
       useEffect(() => {
         const updateTabsToShow = () => {
@@ -25,6 +26,11 @@ import { Member } from "@/components/cards/Member";
         };
       }, []);
 
+      useEffect(() => {
+        if (members) {
+          setFilteredMembers(getMembersForTab(activeTab));
+        }
+      }, [members, activeTab]);
       
       const handleTabClick = (tab: string) => {
         setActiveTab(tab);
@@ -126,7 +132,7 @@ import { Member } from "@/components/cards/Member";
           </div>
         </div>
         <div className="w-fit grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 justify-items-center gap-4 sm:gap-10">
-          {getMembersForTab(activeTab).map((member: any) => (
+          {filteredMembers.map((member: any) => (
             <Member key={member.id} {...member} />
           ))}
         </div>
