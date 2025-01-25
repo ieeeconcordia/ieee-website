@@ -14,6 +14,6 @@ image: /events/machine learning.jpg
 
 ## About the Event
 
-This tutorial explores the applications of Machine Learning (ML) in real world situations applicable to computer & electrical engineers, such as embedded & low-power ML.
+This tutorial explores the applications of Machine Learning (ML) in real world situations applicable to computer & electrical engineers, such as embedded & low-power ML. Knowledge of Python and GitHub required.
 
 Registration link TBA!
