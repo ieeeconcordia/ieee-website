@@ -127,7 +127,18 @@ import { Member } from "@/components/cards/Member";
         </div>
         <div className="w-fit grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 justify-items-center gap-4 sm:gap-10">
           {getMembersForTab(activeTab).map((member: any) => (
-            <Member key={member.id} {...member} />
+            <Member 
+            
+              key={member.id}
+              name={member.name}
+              teams={member.teams}
+              role={member.role}
+              github={member.github}
+              emailIEEE={member.emailIEEE}
+              linkedIn={member.linkedin}
+              program={member.program}
+              image={member.image}
+            />
           ))}
         </div>
       </div>
