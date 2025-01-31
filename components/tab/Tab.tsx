@@ -134,7 +134,7 @@ import { Member } from "@/components/cards/Member";
               teams={member.teams}
               role={member.role}
               github={member.github}
-              emailIEEE={member.emailIEEE}
+              emailIEEE={member.email}
               linkedIn={member.linkedin}
               program={member.program}
               image={member.image}
