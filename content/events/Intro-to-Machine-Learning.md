@@ -8,7 +8,8 @@ type: Academic
 description: >-
   This tutorial explores the applications of Machine Learning (ML) in real world
   situations applicable to computer & electrical engineers, such as embedded &
-  low-power ML.
+  low-power ML. Basic knowledge of Python and GitHub required (bring your
+  laptops with Python already installed!).
 image: /events/machine learning.jpg
 ---
 
