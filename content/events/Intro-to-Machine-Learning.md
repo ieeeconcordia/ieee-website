@@ -16,8 +16,8 @@ image: /events/machine learning.jpg
 
 This tutorial explores the applications of Machine Learning (ML) in real world situations applicable to computer & electrical engineers, such as embedded & low-power ML. Basic knowledge of Python and GitHub required.
 
-Materials needed: Bring your laptops with Python already installed!
+**Materials needed: Bring your laptops with Python already installed!**
 
-\[Register Here!]\([https://www.zeffy.com/ticketing/ieee-intro-to-machine-learning-winter--2025](https://www.zeffy.com/ticketing/ieee-intro-to-machine-learning-winter--2025 "Register Here!"))
+[https://www.zeffy.com/ticketing/ieee-intro-to-machine-learning-winter--2025](https://www.zeffy.com/ticketing/ieee-intro-to-machine-learning-winter--2025 "Register here")
 
-\[Slides:][(https://docs.google.com/presentation/d/1mgQjAVDWWrat9vtzvpzyubi0U9fQp7nZvGqZkN7z5vY/edit?usp=sharing](https://docs.google.com/presentation/d/1mgQjAVDWWrat9vtzvpzyubi0U9fQp7nZvGqZkN7z5vY/edit?usp=sharing "Slides:"))
+[https://docs.google.com/presentation/d/1mgQjAVDWWrat9vtzvpzyubi0U9fQp7nZvGqZkN7z5vY/edit?usp=sharing](https://docs.google.com/presentation/d/1mgQjAVDWWrat9vtzvpzyubi0U9fQp7nZvGqZkN7z5vY/edit?usp=sharing "Slides")
