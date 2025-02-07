@@ -21,4 +21,4 @@ Materials needed: Bring your laptops with Python already installed!
 [Register here!\
 ](https://www.zeffy.com/ticketing/ieee-intro-to-machine-learning-winter--2025 "Register here!")\
 [Slides\
-](https://docs.google.com/presentation/d/1mgQjAVDWWrat9vtzvpzyubi0U9fQp7nZvGqZkN7z5vY/edit?usp=sharing "Slides")\
+](https://docs.google.com/presentation/d/1mgQjAVDWWrat9vtzvpzyubi0U9fQp7nZvGqZkN7z5vY/edit?usp=sharing "Slides")
