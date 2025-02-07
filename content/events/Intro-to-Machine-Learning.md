@@ -28,11 +28,11 @@ type: Academic
 
 description: >-
 
-  This tutorial explores the applications of Machine Learning (ML) in real world
+This tutorial explores the applications of Machine Learning (ML) in real world
 
-  situations applicable to computer & electrical engineers, such as embedded &
+situations applicable to computer & electrical engineers, such as embedded &
 
-  low-power ML.
+low-power ML.
 
 image: /events/machine learning.jpg
 
@@ -44,10 +44,6 @@ This tutorial explores the applications of Machine Learning (ML) in real world s
 
 Materials needed: Bring your laptops with Python already installed!
 
-\[Register here!\\
+\[Register here!]\([https://www.zeffy.com/ticketing/ieee-intro-to-machine-learning-winter--2025](https://www.zeffy.com/ticketing/ieee-intro-to-machine-learning-winter--2025))
 
-]\(https\://www\.zeffy.com/ticketing/ieee-intro-to-machine-learning-winter--2025 "Register here!")\\
-
-\[Slides\\
-
-]\(https\://docs.google.com/presentation/d/1mgQjAVDWWrat9vtzvpzyubi0U9fQp7nZvGqZkN7z5vY/edit?usp=sharing "Slides")
+\[Slides]\([https://docs.google.com/presentation/d/1mgQjAVDWWrat9vtzvpzyubi0U9fQp7nZvGqZkN7z5vY/edit?usp=sharing](https://docs.google.com/presentation/d/1mgQjAVDWWrat9vtzvpzyubi0U9fQp7nZvGqZkN7z5vY/edit?usp=sharing))
