@@ -18,4 +18,6 @@ This tutorial explores the applications of Machine Learning (ML) in real world s
 
 Materials needed: Bring your laptops with Python already installed!
 
-[Register here!](https://www.zeffy.com/ticketing/ieee-intro-to-machine-learning-winter--2025 "Register here!")
+[Register here!\
+](https://www.zeffy.com/ticketing/ieee-intro-to-machine-learning-winter--2025 "Register here!")\
+\[Slides] ([https://docs.google.com/presentation/d/1mgQjAVDWWrat9vtzvpzyubi0U9fQp7nZvGqZkN7z5vY/edit?usp=sharing](https://docs.google.com/presentation/d/1mgQjAVDWWrat9vtzvpzyubi0U9fQp7nZvGqZkN7z5vY/edit?usp=sharing))
