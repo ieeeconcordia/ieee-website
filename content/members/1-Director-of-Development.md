@@ -1,5 +1,5 @@
 ---
-image: /avatar.webp
+image: /team24-25/IMG_4425.jpeg
 role: Director of Development
 teams_role:
   - Director
