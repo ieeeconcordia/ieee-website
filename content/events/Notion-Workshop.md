@@ -1,6 +1,6 @@
 ---
 title: Notion Workshop
-date: 2025-02-21T05:00:00.000Z
+date: 2025-03-07T05:00:00.000Z
 location: TBA
 time: '18:00 - 21:00'
 price: 10
