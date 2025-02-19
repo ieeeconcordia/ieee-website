@@ -18,4 +18,4 @@ Participants are tasked with building a sumo robot capable of being active-react
 
 [Registration Link](https://www.zeffy.com/ticketing/ieee-robowars--2025 "Registration Link")
 
-[RoboWars Discord](https://discord.com/invite/uYw94MGjqv "RoboWars Discord")
+[RoboWars Discord](https://discord.gg/8kzMGqydTH "RoboWars Discord")
