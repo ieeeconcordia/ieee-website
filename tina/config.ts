@@ -298,6 +298,24 @@ export default defineConfig({
               },
             ],
           },
+          {
+            label: "Donors Names",
+            name: "Donors_names",
+            type: "object",
+            list: true, ui: {
+              itemProps: (item) => {
+                // Field values are accessed by item?.<Field name>
+                return { label: item?.name };
+              },
+            },
+            fields: [
+              {
+                label: "Name",
+                name: "name",
+                type: "string",
+              },
+            ]
+          },
           // ...other sponsor types if any...
         ],
       },

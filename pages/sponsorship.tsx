@@ -9,17 +9,18 @@ import { Sponsor } from "@/components/cards/SponsorCard";
 
 
 export async function getStaticProps({ params }: any) {
-  const sponsorss = await getSponsors();
+  const sponsors = await getSponsors();
+
   return {
     props: {
-      sponsorss
+      sponsors
     },
   };
 }
 
-export default function Sponsorship({ sponsorss }: any) {
+export default function Sponsorship({ sponsors }: any) {
   const [images, setImages] = useState([]);
-  console.log(sponsorss);
+  debugger;
 
   // useEffect(() => {
   //   const fetchData = async () => {
@@ -54,10 +55,10 @@ export default function Sponsorship({ sponsorss }: any) {
 
         <div className="my-8 w-full self-center px-4 lg:mx-auto lg:max-w-screen-lg">
                   {/* this gold sponsor is a placeholder */}
-          {sponsorss[0].gold && (   
+          {sponsors[0].gold && (   
           <div className="my-4 mr-4 flex flex-wrap gap-4 bg-[#E4C742] glass relative rounded-md bg-opacity-30 p-8 w-full">
             <div className="absolute left-0 top-0 p-2 uppercase text-white bg-[#E4C742] glass rounded-md font-bold tracking-widest">Gold</div>
-            {sponsorss[0].gold.map((s: any, index: any) => (
+            {sponsors[0].gold.map((s: any, index: any) => (
               <Sponsor
                 key={index}
                 title={s.title}
@@ -68,10 +69,10 @@ export default function Sponsorship({ sponsorss }: any) {
           </div>
         )}          
         {/* this silver sponsor is a placeholder */}
-        {sponsorss[0].silver && (   
+        {sponsors[0].silver && (   
           <div className="my-4 mr-4 flex flex-wrap gap-4 bg-gray-400 glass relative rounded-md bg-opacity-30 p-8 w-full">
             <div className="absolute left-0 top-0 p-2 uppercase text-white bg-gray-400 glass rounded-md font-bold tracking-widest">Silver</div>
-            {sponsorss[0].silver.map((s: any, index: any) => (
+            {sponsors[0].silver.map((s: any, index: any) => (
               <Sponsor
                 key={index}
                 title={s.title}
@@ -82,13 +83,26 @@ export default function Sponsorship({ sponsorss }: any) {
           </div>
         )}
         {/* this bronze sponsor is a placeholder */}
-        {sponsorss[0].bronze && (
+        {sponsors[0].bronze && (
           <div className="my-4 mr-4 flex flex-wrap gap-4 bg-[#CD7F32] glass relative rounded-md bg-opacity-30 p-8 w-full">
             <div className="absolute left-0 top-0 p-2 uppercase text-white bg-[#CD7F32] glass rounded-md font-bold tracking-widest">Bronze</div>
-            {sponsorss[0].bronze.map((s: any, index: any) => (
+            {sponsors[0].bronze.map((s: any, index: any) => (
               <Sponsor
                 key={index}
                 title={s.title}
+                image={s.image}
+                link={s.link}
+              />
+            ))}
+          </div>
+        )}
+        {sponsors[0].donors && (   
+          <div className="my-4 mr-4 flex flex-wrap gap-4 bg-sky-500 glass relative rounded-md bg-opacity-30 p-8 w-full">
+            <div className="absolute left-0 top-0 p-2 uppercase text-white bg-sky-500 glass rounded-md font-bold tracking-widest">Donors</div>
+            {sponsors[0].donors.map((s: any, index: any) => (
+              <Sponsor
+                key={index}
+                title={s.name}
                 image={s.image}
                 link={s.link}
               />

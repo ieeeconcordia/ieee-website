@@ -128,6 +128,7 @@ export async function getSponsors() {
         bronze: sponsor.node.Bronze_gallery,
         silver: sponsor.node.Sliver_gallery,
         gold: sponsor.node.Gold_gallery,
+        donors: sponsor.node.Donors_names,
       };
       sponsorArray.push(temp);
     }
