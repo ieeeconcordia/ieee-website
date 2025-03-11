@@ -5,7 +5,7 @@ location: Online
 time: '18:00 - 21:00'
 type: Academic
 description: >-
-  An Introduction to MATLAB workshop introduces participants to MATLAB's
+  This Introduction to MATLAB workshop introduces participants to MATLAB's
   environment and fundamental features for numerical computing and data
   analysis. It covers basics such as working with matrices, plotting data, and
   writing simple scripts and functions. Participants gain hands-on experience
