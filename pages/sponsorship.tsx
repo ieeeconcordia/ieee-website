@@ -55,7 +55,7 @@ export default function Sponsorship() {
             Engineering and Computer Science.
             <br />
             <br />
-            Access the 2022-2023 sponsorship package by{" "}
+            Access the 2024-2025 sponsorship package by{" "}
             <Link
               href="../SponsorshipPackage.pdf"
               rel="noopener noreferrer"
