@@ -20,6 +20,20 @@ export async function getStaticProps({ params }: any) {
   };
 }
 
+function groupMembersByTeam(members) {
+  return members.reduce((acc, member) => {
+    const team = member.teams[0] || "Other";
+
+    if (!acc[team]) {
+      acc[team] = [];
+    }
+
+    acc[team].push(member);
+
+    return acc;
+  }, {});
+}
+
 export default function About({ members, lab_supervisors_form_link }: any) {
   const [windowWidth, setWindowWidth] = useState(0);
 
@@ -76,8 +90,36 @@ export default function About({ members, lab_supervisors_form_link }: any) {
             Meet our team
           </h2>
         </div>
+        <div className="w-full px-4 sm:px-6">
+          {/* members by team/category */}
+          {Object.entries(groupMembersByTeam(members)).map(([team, teamMembers]) => (
+            <div key={team} className="mb-12 w-full">
+              {/* width and align */}
+              <div className="w-fit mx-auto">
+                <h3 className="text-2xl font-semibold mb-4 uppercase text-left font-bold tracking-wide">
+                  {team}
+                </h3>
 
-        <Tab members={members}></Tab>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+                  {teamMembers.map((member, index) => (
+                    <Member
+                      key={index}
+                      name={member.name}
+                      teams={member.teams}
+                      role={member.role}
+                      program={member.program}
+                      github={member.github}
+                      emailIEEE={member.email}
+                      linkedIn={member.linkedin}
+                      image={member.image}
+                    />
+                  ))}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
         {/* Exec Team */}
         {/* <div className="w-fit grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 justify-items-center gap-4 sm:gap-10">
               {members.map((member: any, index: any) => (
