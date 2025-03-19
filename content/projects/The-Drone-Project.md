@@ -14,6 +14,6 @@ blogLink: >-
   https://ieeeconcordia.notion.site/IEEE-Concordia-Projects-Department-11540a16c70980018766daf64ee0bdb3
 ---
 
-## About The Project
+## About
 
 The objective of this project is to design, develop, and deploy a custom remote-controlled (RC) drone that showcases advanced features such as autonomous flight, real-time FPV (First Person View) video transmission, obstacle avoidance, and robust navigation capabilities. This project will involve a multidisciplinary team working collaboratively to integrate skills and technologies in aerodynamics, electronics, design, and software development.
