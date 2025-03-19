@@ -1,5 +1,5 @@
 ---
-image: /team24-25/RafaelVincentDeGuzman.png
+image: /team24-25/RafaelVincentdeGuzman.jpeg
 role: Director of Development
 teams_role:
   - Director
@@ -11,5 +11,4 @@ program: COMP
 linkedin: 'https://www.linkedin.com/in/rvdeguzman/'
 github: 'https://github.com/rvdeguzman'
 ---
-
 
