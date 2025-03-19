@@ -90,53 +90,44 @@ export default function About({ members, lab_supervisors_form_link }: any) {
             Meet our team
           </h2>
         </div>
+
         <div className="w-full px-4 sm:px-6">
-          {/* members by team/category */}
           {Object.entries(groupMembersByTeam(members)).map(([team, teamMembers]) => (
             <div key={team} className="mb-12 w-full">
-              {/* width and align */}
-              <div className="w-fit mx-auto">
-                <h3 className="text-2xl font-semibold mb-4 uppercase text-left font-bold tracking-wide">
+              <div className="w-full mx-auto text-center">
+                <h3 className="text-2xl font-semibold mb-4 uppercase font-bold tracking-wide text-center">
                   {team}
                 </h3>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-                  {teamMembers.map((member, index) => (
-                    <Member
-                      key={index}
-                      name={member.name}
-                      teams={member.teams}
-                      role={member.role}
-                      program={member.program}
-                      github={member.github}
-                      emailIEEE={member.email}
-                      linkedIn={member.linkedin}
-                      image={member.image}
-                    />
-                  ))}
+                <div className="flex justify-center w-full">
+                  <div className="flex flex-wrap justify-center gap-4 max-w-6xl">
+                    {teamMembers.map((member, index) => (
+                      <div
+                        key={index}
+                        className="w-full md:w-auto flex justify-center"
+                        style={{
+                          maxWidth: "300px",
+                          minWidth: "250px"
+                        }}
+                      >
+                        <Member
+                          name={member.name}
+                          teams={member.teams}
+                          role={member.role}
+                          program={member.program}
+                          github={member.github}
+                          emailIEEE={member.email}
+                          linkedIn={member.linkedin}
+                          image={member.image}
+                        />
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>
           ))}
         </div>
-
-        {/* Exec Team */}
-        {/* <div className="w-fit grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 justify-items-center gap-4 sm:gap-10">
-              {members.map((member: any, index: any) => (
-                <Member
-                  key={index}
-                  name={member.name}
-                  teams={member.teams}
-                  role={member.role}
-                  program={member.program}
-                  github={member.github}
-                  emailIEEE={member.email}
-                  linkedIn={member.linkedin}
-                  image={member.image}
-                />
-              ))}
-            </div>
-          </div> */}
 
         {/* Lab Supervisors */}
         <div className="flex flex-col justify-center items-center gap-6 px-8 sm:px-20 xl:px-section">
