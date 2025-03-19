@@ -2,7 +2,7 @@
 title: Intro to MATLAB
 date: 2025-03-21T04:00:00.000Z
 location: Online
-time: '18:00 - 21:00'
+time: '18:00 - 19:30'
 type: Academic
 description: >-
   This Introduction to MATLAB workshop introduces participants to MATLAB's
