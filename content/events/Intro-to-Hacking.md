@@ -12,3 +12,5 @@ image: /events/hacking.webp
 ---
 
 Basic hacking tutorial, teaching offensive and defensive tactics. Meant as an introduction to white-hat hacking, penetration testing techniques & cybersecurity practices.
+
+Registration link TBA!
