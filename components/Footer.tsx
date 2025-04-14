@@ -92,7 +92,7 @@ export default function Footer() {
               <li className="">
                 <p className="text-gray-400 flex items-center max-w-sm">
                 <IoLocationSharp className="mr-2" size={20} />
-                  B204 Bishop street Montreal, Quebec H3G 2EG
+                  B204 Bishop street Montreal, Quebec H3G 2E9
                 </p>
               </li>
               <li className="inline">
