@@ -1,12 +1,13 @@
 ---
-image: /team24-25/Sam.webp
+image: /avatar.webp
 role: VP Academics
 teams_role:
   - VP
 teams:
   - Academics
-name: Samuel Partous
+name: Paolo Khayat
 email: academics@ieeeconcordia.ca
 program: ELEC
+linkedin: 'https://www.linkedin.com/in/paolokhayat/'
 ---
 
