@@ -1,12 +1,13 @@
 ---
-image: /team24-25/Ardalan.webp
+image: /team24-25/NicholasSaldanha.webp
 role: VP Marketing
 teams_role:
   - VP
 teams:
   - Marketing
-name: Ardalan Jamshidi
+name: Nicholas Saldanha
 email: marketing@ieeeconcordia.ca
-program: COEN
+program: MECH
+linkedin: 'https://www.linkedin.com/in/nicholassaldanha/'
 ---
 
