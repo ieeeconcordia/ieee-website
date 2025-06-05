@@ -1,6 +1,6 @@
 ---
 image: /team25-26/OumaymaBennamoun.webp
-role: Oumayma Bennamoun
+role: Branch Chair
 teams_role:
   - 'Branch '
 teams:
