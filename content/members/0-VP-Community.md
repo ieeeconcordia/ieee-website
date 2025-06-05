@@ -1,12 +1,13 @@
 ---
-image: /team24-25/NurseitMukanbaev.webp
+image: /team24-25/Camila.webp
 role: VP Community
 teams_role:
   - VP
 teams:
   - Community
-name: Nurseit Mukanbaev
+name: Camila Kin Márquez
 email: community@ieeeconcordia.ca
-program: MECH
+program: COEN
+linkedin: 'https://www.linkedin.com/in/camilakinmarquez'
 ---
 
