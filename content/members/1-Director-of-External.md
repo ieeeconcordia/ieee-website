@@ -3,6 +3,7 @@ image: /team24-25/Luyun.webp
 role: External Advisor
 teams_role: []
 teams:
+  - Advisor
   - External
 name: Luyun Chen
 email: info@ieeeconcordia.ca
