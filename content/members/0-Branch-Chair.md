@@ -1,14 +1,14 @@
 ---
-image: /team24-25/AugustoPinheiro.webp
-role: Branch Chair
+image: /team25-26/OumaymaBennamoun.webp
+role: Oumayma Bennamoun
 teams_role:
   - 'Branch '
 teams:
   - Chair
-name: Augusto Mota Pinheiro
+name: Oumayma Bennamoun
 email: chair@ieeeconcordia.ca
 program: COMP
-linkedin: 'https://www.linkedin.com/in/augustomp'
-github: 'https://github.com/AugustDG'
+linkedin: ''
+github: 'https://github.com/oumaymabennamoun'
 ---
 
