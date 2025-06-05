@@ -1,13 +1,13 @@
 ---
-image: /team24-25/Ivan.webp
+image: /team24-25/Luyun.webp
 role: External Advisor
 teams_role: []
 teams:
   - External
-name: Shami Ivan Senga
-email: external@ieeeconcordia.ca
-program: COEN
-linkedin: 'http://www.linkedin.com/in/shami-ivan-a611a4154'
-github: 'https://github.com/Shamiivan'
+name: Luyun Chen
+email: info@ieeeconcordia.ca
+program: SOEN
+linkedin: 'https://www.linkedin.com/in/luyun-chen-0973852a9/'
+github: ''
 ---
 
