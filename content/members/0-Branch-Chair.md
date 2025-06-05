@@ -1,5 +1,5 @@
 ---
-image: /team25-26/OumaymaBennamoun.webp
+image: /team25-26/OumaymaBennamoun2.webp
 role: Branch Chair
 teams_role:
   - 'Branch '
