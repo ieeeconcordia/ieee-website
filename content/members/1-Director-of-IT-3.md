@@ -6,7 +6,7 @@ teams_role:
 teams:
   - Projects
 name: Parsa Rashidi
-email: itdirector@ieeeconcordia.ca
+email: projectsdirector@ieeeconcordia.ca
 program: COEN
 github: 'https://github.com/parsarashidi81'
 ---
