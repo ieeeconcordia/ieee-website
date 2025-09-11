@@ -12,7 +12,7 @@ export async function getStaticProps({ params }: any) {
   const members = await getMembers();
   const lab_supervisors_form_link = await getLabSupervisorFormLink();
 
-  return {  
+  return {
     props: {
       members,
       lab_supervisors_form_link,
@@ -20,9 +20,23 @@ export async function getStaticProps({ params }: any) {
   };
 }
 
-export default function About({ members, lab_supervisors_form_link  }: any) {
+function groupMembersByTeam(members) {
+  return members.reduce((acc, member) => {
+    const team = member.teams[0] || "Other";
+
+    if (!acc[team]) {
+      acc[team] = [];
+    }
+
+    acc[team].push(member);
+
+    return acc;
+  }, {});
+}
+
+export default function About({ members, lab_supervisors_form_link }: any) {
   const [windowWidth, setWindowWidth] = useState(0);
-  
+
 
   useEffect(() => {
     const handleResize = () => {
@@ -39,88 +53,107 @@ export default function About({ members, lab_supervisors_form_link  }: any) {
   }, []);
 
   return (
-      <RootLayout>
-        <div className="w-full bg-center bg-no-repeat bg-cover bg-execTeam ">
-          <div
-            className="bg-black bg-opacity-75 text-center font-raleway font-bold text-4xl md:text-5xl text-white py-16"
-            style={{ zIndex: "1" }}
-          >
-            {windowWidth < 540 ? (
-              "The students behind the work!"
-            ) : (
-              <TypingAnimation />
-            )}
+    <RootLayout>
+      <div className="w-full bg-center bg-no-repeat bg-cover bg-execTeam ">
+        <div
+          className="bg-black bg-opacity-75 text-center font-raleway font-bold text-4xl md:text-5xl text-white py-16"
+          style={{ zIndex: "1" }}
+        >
+          {windowWidth < 540 ? (
+            "The students behind the work!"
+          ) : (
+            <TypingAnimation />
+          )}
+        </div>
+      </div>
+      <section className="flex flex-col items-center gap-10 pt-container pb-20">
+        <div className="">
+          <div className="relative">
+            <div
+              style={{ position: "relative", zIndex: 2 }}
+              className="px-8 sm:px-20 xl:px-section"
+            >
+              <p className="font-raleway text-start text-gray-700 text-title-s md:text-lg pt-8">
+                We are a dynamic team of enthusiastic students, united by our
+                shared love for learning, growth, and community. Together, we
+                organize engaging events, promote academic and skill
+                development, and create an inclusive environment where every
+                student can thrive. Join us as we embark on this exciting
+                journey, connecting students, fostering friendships, and
+                making unforgettable memories along the way.
+              </p>
+            </div>
           </div>
         </div>
-        <section className="flex flex-col items-center gap-10 pt-container pb-20">
-          <div className="">
-            <div className="relative">
-              <div
-                style={{ position: "relative", zIndex: 2 }}
-                className="px-8 sm:px-20 xl:px-section"
-              >
-                <p className="font-raleway text-start text-gray-700 text-title-s md:text-lg pt-8">
-                  We are a dynamic team of enthusiastic students, united by our
-                  shared love for learning, growth, and community. Together, we
-                  organize engaging events, promote academic and skill
-                  development, and create an inclusive environment where every
-                  student can thrive. Join us as we embark on this exciting
-                  journey, connecting students, fostering friendships, and
-                  making unforgettable memories along the way.
-                </p>
+        <div className="container flex flex-col justify-center items-center gap-6">
+          <h2 className="text-center font-raleway font-semibold text-headline-l text-secondary">
+            Meet our team
+          </h2>
+        </div>
+
+        <div className="w-full px-4 sm:px-6">
+          {Object.entries(groupMembersByTeam(members)).map(([team, teamMembers]) => (
+            <div key={team} className="mb-12 w-full">
+              <div className="w-full mx-auto text-center">
+                <h3 className="text-2xl font-semibold mb-4 uppercase font-bold tracking-wide text-center">
+                  {team}
+                </h3>
+
+                <div className="flex justify-center w-full">
+                  <div className="flex flex-wrap justify-center gap-4 max-w-6xl">
+                    {teamMembers.map((member, index) => (
+                      <div
+                        key={index}
+                        className="w-full md:w-auto flex justify-center"
+                        style={{
+                          maxWidth: "300px",
+                          minWidth: "250px"
+                        }}
+                      >
+                        <Member
+                          name={member.name}
+                          teams={member.teams}
+                          role={member.role}
+                          program={member.program}
+                          github={member.github}
+                          emailIEEE={member.email}
+                          linkedIn={member.linkedin}
+                          image={member.image}
+                        />
+                      </div>
+                    ))}
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-          <div className="container flex flex-col justify-center items-center gap-6">
-            <h2 className="text-center font-raleway font-semibold text-headline-l text-secondary">
-              Meet our team
-            </h2>
-          </div>
+          ))}
+        </div>
 
-          <Tab members={members}></Tab>
-          {/* Exec Team */}
-            {/* <div className="w-fit grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 justify-items-center gap-4 sm:gap-10">
-              {members.map((member: any, index: any) => (
-                <Member
-                  key={index}
-                  name={member.name}
-                  teams={member.teams}
-                  role={member.role}
-                  program={member.program}
-                  github={member.github}
-                  emailIEEE={member.email}
-                  linkedIn={member.linkedin}
-                  image={member.image}
-                />
-              ))}
-            </div>
-          </div> */}
+        {/* Lab Supervisors */}
+        <div className="flex flex-col justify-center items-center gap-6 px-8 sm:px-20 xl:px-section">
+          <h2 className="text-center font-raleway font-semibold text-headline-l text-secondary">
+            Lab Supervisors
+          </h2>
+          <p className="font-raleway text-gray-700 text-title-s md:text-lg text-center">
+            Lab Supervisors play a vital role in keeping our lab open and
+            accessible to all members. As a Lab Supervisor, you&apos;ll have
+            the privilege of accessing the lab whenever you want and you get
+            to experiment in a fully equipped lab.
+            <br />
+            <br />
+            In exchange for this incredible opportunity, we simply ask for
+            your commitment to supervise the lab for just 2 hours a week. By
+            dedicating this small amount of time, you help us ensure that all
+            students members or not can have the chance to use the lab.
+          </p>
 
-          {/* Lab Supervisors */}
-          <div className="flex flex-col justify-center items-center gap-6 px-8 sm:px-20 xl:px-section">
-            <h2 className="text-center font-raleway font-semibold text-headline-l text-secondary">
-              Lab Supervisors
-            </h2>
-            <p className="font-raleway text-gray-700 text-title-s md:text-lg text-center">
-              Lab Supervisors play a vital role in keeping our lab open and
-              accessible to all members. As a Lab Supervisor, you&apos;ll have
-              the privilege of accessing the lab whenever you want and you get
-              to experiment in a fully equipped lab.
-              <br />
-              <br />
-              In exchange for this incredible opportunity, we simply ask for
-              your commitment to supervise the lab for just 2 hours a week. By
-              dedicating this small amount of time, you help us ensure that all
-              students members or not can have the chance to use the lab.
-            </p>
-           
-            <SponsorshipBtn
-              text="Become a lab supervisor!"
-              link={lab_supervisors_form_link}
-            />
-          </div>
-        </section>
-        <SponsorshipSection />
-      </RootLayout>
+          <SponsorshipBtn
+            text="Become a lab supervisor!"
+            link={lab_supervisors_form_link}
+          />
+        </div>
+      </section>
+      <SponsorshipSection />
+    </RootLayout>
   );
 }
