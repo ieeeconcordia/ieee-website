@@ -9,6 +9,7 @@ description: >-
   This workshop aims to introduce students to the basics of circuitry and common
   lab equipment through direct practical work.
 image: /events/IMG_8795.JPG
+organizer: IEEE
 ---
 
 ## About the Event
