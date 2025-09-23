@@ -41,7 +41,7 @@
     "remark": "^14.0.3",
     "remark-html": "^15.0.2",
     "split-type": "^0.3.3",
-    "tinacms": "^1.5.28",
+    "tinacms": "1.5.28",
     "typescript": "5.0.3",
     "uuid": "^9.0.0"
   },
@@ -50,7 +50,7 @@
     "npm": ">=10.0.0"
   },
   "devDependencies": {
-    "@tinacms/cli": "^1.5.39",
+    "@tinacms/cli": "1.5.39",
     "@types/draft-js": "^0.11.12",
     "@types/node": "^20.11.0",
     "@types/react-burger-menu": "^2.8.3",
