@@ -9,9 +9,6 @@ const nextConfig = {
     config.experiments = { ...config.experiments, topLevelAwait: true };
     return config;
   },
-};
-module.exports = nextConfig;
-module.exports = {
   async rewrites() {
     return [
       {
@@ -20,11 +17,10 @@ module.exports = {
       },
     ];
   },
-};
-module.exports = {
-  // Other Next.js configurations...
   images: {
     loader: "imgix",
     path: "/",
   },
 };
+
+module.exports = nextConfig;
