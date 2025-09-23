@@ -1,6 +1,6 @@
 ---
 image: /team24-25/pic.jpeg
-role: VP Development
+role: Development guy
 teams_role:
   - VP
 teams:
