@@ -1,8 +1,8 @@
 ---
 title: The 6-Axis Robotic Arm
-leader: Nicolas Saldanha
+leader: Nicholas Saldanha
 startdate: 2024-07-16T04:00:00.000Z
-enddate: 2024-12-30T05:00:00.000Z
+enddate: 2025-09-30T04:00:00.000Z
 level: Advanced
 image: /image (1).png
 gallery:
