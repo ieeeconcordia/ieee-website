@@ -1,11 +1,13 @@
 ---
-title: Formula WIEEE
+title: Formula WIEEE Robotics
 date: 2025-11-08T05:00:00.000Z
 location: Concordia University
 time: '13:00 - 20:00'
 price: 15
 type: Competition
-description: Get ready to race at WIE x IEEE's brand n
+description: >-
+  Get ready to race at WIE x IEEE's brand-new beginner-friendly robotics
+  competition!
 image: /events/Formula_WIEEE_-_Insta_Post2.png
 ---
 
