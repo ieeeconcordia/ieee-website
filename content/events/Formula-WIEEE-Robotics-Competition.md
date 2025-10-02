@@ -1,5 +1,5 @@
 ---
-title: Formula WIEEE Robotics Competition
+title: Formula WIEEE
 date: 2025-11-08T05:00:00.000Z
 location: Concordia University
 time: '13:00 - 20:00'
