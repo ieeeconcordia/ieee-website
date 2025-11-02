@@ -1,13 +1,13 @@
 ---
-image: /team24-25/NicholasSaldanha.webp
+image: /linkedinheadshot.jpg
 role: VP Marketing
 teams_role:
   - VP
 teams:
   - Marketing
-name: Nicholas Saldanha
+name: Anabella Kowalski
 email: marketing@ieeeconcordia.ca
-program: MECH
-linkedin: 'https://www.linkedin.com/in/nicholassaldanha/'
+program: COEN
+linkedin: www.linkedin.com/in/anabella-kowalski-b3a32526a
 ---
 
