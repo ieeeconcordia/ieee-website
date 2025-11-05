@@ -4,15 +4,13 @@ date: 2025-09-11T04:00:00.000Z
 location: B-Annex Lounge
 time: '18:00 - 21:00'
 type: Academic
-description: >-
-  This workshop aims to introduce students to the basics of circuitry and common
-  lab equipment through direct practical work.
+description: Part 2 of learning the basics of circuitry and common lab equipment!
 image: /events/IMG_8825.JPG
 ---
 
 ## About the Event
 
-This workshop aims to introduce students to the basics of circuitry and common lab equipment through direct practical work. It will cover breadboards and circuit assembly, essential electronic components such as resistors and diodes, as well as measurement tools like multimeters and oscilloscopes. Students will also get hands-on experience with different power supplies, including AC voltage and DC sources.
+This workshop **(the same as Part 1; just different timing)** aims to introduce students to the basics of circuitry and common lab equipment through direct practical work. It will cover breadboards and circuit assembly, essential electronic components such as resistors and diodes, as well as measurement tools like multimeters and oscilloscopes. Students will also get hands-on experience with different power supplies, including AC voltage and DC sources.
 
 Details: September 11th, 6:00 PM - 9:00 PM at ECA Concordia's B-Annex Lounge (2160 Bishop St, Montreal, Quebec H3G 2E9) with FREE tickets!
 
