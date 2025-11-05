@@ -5,9 +5,7 @@ location: H-1032
 time: '18:00 - 21:00'
 price: 5
 type: Academic
-description: >-
-  Come learn the basics of modern C++! The goal is to make a small command-line
-  game.
+description: Come learn the basics of modern C++ and make a small command-line game!
 image: /events/coding-workstation-setup-stockcake.jpg
 ---
 
@@ -15,9 +13,7 @@ image: /events/coding-workstation-setup-stockcake.jpg
 
 Come learn the basics of modern C++! 💻👾
 
-We'll cover some essential syntax, allocating memory efficienctly, avoiding common pitfalls, popular tools within the ecosystem, the difference between the versions of C++ and much more :)
-
-The goal is to make a small command-line game!
+We'll cover some essential syntax, allocating memory efficienctly, avoiding common pitfalls, popular tools within the ecosystem, the difference between the versions of C++ and much more :) The goal is to make a small command-line game!
 
 ## What You Need
 
