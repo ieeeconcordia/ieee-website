@@ -4,7 +4,9 @@ date: 2025-11-07T05:00:00.000Z
 location: B-Annex Lounge
 time: '18:00 - 23:00'
 type: Social
-description: Relive the 2000’s energy and play your favourite throwback games!
+description: >-
+  Fall Lizard Lounge #2: Relive the 2000’s energy and play your favourite
+  throwback games!
 image: /events/SAE x IEEE Lizard Lounge.png
 ---
 
