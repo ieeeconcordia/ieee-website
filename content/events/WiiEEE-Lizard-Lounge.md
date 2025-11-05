@@ -5,7 +5,7 @@ location: B-Annex Lounge
 time: '18:00 - 22:00'
 price: 0
 type: Social
-description: Kick off the semester with WIE x IEEE at our Fall Lizard Lounge!
+description: Kick off the semester with WIE x IEEE at our 1st Fall Lizard Lounge!
 image: /events/Screenshot 2025-09-23 152603.png
 ---
 
