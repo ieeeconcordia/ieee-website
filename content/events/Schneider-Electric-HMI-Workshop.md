@@ -16,8 +16,9 @@ image: /events/d5945518-3189-4516-9ace-8c2900e7e27c.webp
 
 🔋 By the end of this workshop, you will understand how HMI systems work and how they are used in modern industrial control environments.
 
-🤝 In collaboration with Schneider Electric, a global leader in energy management and industrial automation.
+🤝 In collaboration with **Schneider Electric**, a global leader in energy management and industrial automation.
 They design the smart technologies behind factories, buildings, and infrastructure worldwide.
+
 🌐 [https://www.se.com/ca/en/about-us/](https://www.se.com/ca/en/about-us/)
 
 🔌 Get ready to see how humans and machines connect in the modern world of automation!
