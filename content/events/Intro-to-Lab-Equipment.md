@@ -5,7 +5,7 @@ location: 4th Space
 time: '14:30 - 17:30'
 price: 0
 type: Academic
-description: Learn the basics of circuitry and common lab equipment!
+description: Part 1 of learning the basics of circuitry and common lab equipment!
 image: /events/IMG_8795.JPG
 organizer: IEEE
 ---
