@@ -17,8 +17,6 @@ Come learn the basics of modern C++! 💻👾
 
 We'll cover some essential syntax, allocating memory efficienctly, avoiding common pitfalls, popular tools within the ecosystem, the difference between the versions of C++ and much more :)
 
-## Why Should I Attend?
-
 The goal is to make a small command-line game!
 
 ## What You Need
