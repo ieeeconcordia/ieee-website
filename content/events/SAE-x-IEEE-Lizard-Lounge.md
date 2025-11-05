@@ -5,7 +5,7 @@ location: B-Annex Lounge
 time: '18:00 - 23:00'
 type: Social
 description: Relive the 2000’s energy and play your favourite throwback games!
-image: /events/Screenshot 2025-11-05 075906.png
+image: /events/SAE x IEEE Lizard Lounge.png
 ---
 
 ✨ Grab your crew and join us for a blast from the past!
