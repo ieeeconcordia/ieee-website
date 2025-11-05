@@ -13,7 +13,7 @@ image: /events/Screenshot 2025-09-23 152603.png
 
 🕺 WiiEEE LIZARD LOUNGE 🪩
 
-Kick off the semester with WIE x IEEE at our Fall Lizard Lounge! 🎉 Get ready for a night of dancing, Wii battles, and good vibes you won’t want to miss.
+🎉 Get ready for a night of dancing, Wii battles, and good vibes you won’t want to miss.
 
 📅 When: September 26 | 6PM – 10PM
 
