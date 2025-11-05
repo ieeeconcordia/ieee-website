@@ -10,6 +10,8 @@ description: >-
 image: /events/SAE x IEEE Lizard Lounge.png
 ---
 
+## About the Event
+
 ✨ Grab your crew and join us for a blast from the past!
 
 🎮 Play your fave throwback games, get free snacks, beverages, and relive the 2000’s energy!
