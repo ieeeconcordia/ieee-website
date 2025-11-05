@@ -19,6 +19,4 @@ image: /events/Screenshot 2025-09-23 152603.png
 
 📍 Where: ECA Concordia B-Annex (2160 Bishop St, Montreal)
 
-🎟️ Free entry!
-
 Bring your energy, your friends, and your best dance moves💃 WIEEE’ll see you there!
