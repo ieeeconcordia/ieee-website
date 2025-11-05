@@ -4,10 +4,7 @@ date: 2025-11-06T05:00:00.000Z
 location: B-Annex Lounge
 time: '18:00 - 21:00'
 type: Academic
-description: >-
-  Ever wanted to design and 3D print your own creations? Join our Intro to 3D
-  Printing workshop and learn how to model in Fusion 360, slice in Bambu Studio,
-  and bring your ideas to life!
+description: 'Ever wanted to design and 3D print your own creations? '
 image: /events/1d7cd4cd-cadd-416d-a3e4-0ad5ec4d8ba6.webp
 ---
 
