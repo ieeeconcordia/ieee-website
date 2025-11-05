@@ -12,6 +12,8 @@ image: /events/Schneider-HMI.jpg
 
 ![](/events/image.png)
 
+## About the Event
+
 💡 Learn the fundamentals of Human-Machine Interfaces (HMI), including screen layout design, communication setup, variable management, and communication with controllers. You will put it all into practice through interactive group activities and a live demo using real HMI units!
 
 🔋 By the end of this workshop, you will understand how HMI systems work and how they are used in modern industrial control environments.
