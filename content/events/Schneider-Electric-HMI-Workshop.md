@@ -6,7 +6,7 @@ time: '18:00 - 20:00'
 type: Academic
 description: >-
   This workshop aims to introduce students to the fundamentals of Human-Machine
-  Interfaces (HMI) through an interactive and practical approach. 
+  Interfaces (HMI).
 image: /events/Schneider-HMI.jpg
 ---
 
