@@ -5,16 +5,14 @@ location: 4th Space
 time: '14:30 - 17:30'
 price: 0
 type: Academic
-description: >-
-  This workshop aims to introduce students to the basics of circuitry and common
-  lab equipment through direct practical work.
+description: Learn the basics of circuitry and common lab equipment!
 image: /events/IMG_8795.JPG
 organizer: IEEE
 ---
 
 ## About the Event
 
-This workshop **(the same as Part 1; just different timing)** aims to introduce students to the basics of circuitry and common lab equipment through direct practical work. It will cover breadboards and circuit assembly, essential electronic components such as resistors and diodes, as well as measurement tools like multimeters and oscilloscopes. Students will also get hands-on experience with different power supplies, including AC voltage and DC sources.
+This workshop aims to introduce students to the basics of circuitry and common lab equipment through direct practical work. It will cover breadboards and circuit assembly, essential electronic components such as resistors and diodes, as well as measurement tools like multimeters and oscilloscopes. Students will also get hands-on experience with different power supplies, including AC voltage and DC sources.
 
 Details: September 5th, 2:30 PM - 5:30 PM at Concordia University's 4th Space (1400 Maisonneuve Blvd W, Montreal  QC, H3G 1M8) with FREE tickets!
 
