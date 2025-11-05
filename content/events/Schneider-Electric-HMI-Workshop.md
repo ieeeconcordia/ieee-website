@@ -7,7 +7,7 @@ type: Academic
 description: >-
   This workshop aims to introduce students to the fundamentals of Human-Machine
   Interfaces (HMI) through an interactive and practical approach. 
-image: /events/d5945518-3189-4516-9ace-8c2900e7e27c.webp
+image: /events/Schneider-HMI.jpg
 ---
 
 ![](/events/image.png)
