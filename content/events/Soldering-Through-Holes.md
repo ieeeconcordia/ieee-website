@@ -11,7 +11,7 @@ description: >-
 image: /events/Through-Hole-soldering.webp
 ---
 
-**Ticket price: 5$**
+**Ticket price: 5$ (includes a full kit!)**
 
 Learn the fundamentals of soldering, the essential skill that joins electronic components together to bring circuits to life. This hands-on workshop introduces the basics of through-hole soldering, covering the use of key tools like the soldering iron, flux, solder wire safely.
 Participants will get to practice proper soldering techniques on cool beginner-friendly kits and take home their own assembled circuit!
