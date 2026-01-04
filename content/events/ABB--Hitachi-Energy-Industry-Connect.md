@@ -22,4 +22,4 @@ Looking to jumpstart your career profile? Come during lunch to meet ABB and Hita
 
 📍 Location: 2160 Bishop Street, Room B-104
 
-**🔗 Registration is open only Co-op/C.edge students through Compass!**
+**🔗 Registration is open only to Co-op/C.edge students through Compass!**
