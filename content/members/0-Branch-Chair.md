@@ -7,7 +7,7 @@ teams:
   - Chair
 name: Oumayma Bennamoun
 email: chair@ieeeconcordia.ca
-program: COMP
+program: COEN
 linkedin: ''
 github: 'https://github.com/oumaymabennamoun'
 ---
