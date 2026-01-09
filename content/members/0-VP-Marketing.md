@@ -1,5 +1,5 @@
 ---
-image: /linkedinheadshot.jpg
+image: /ellaheadshot.jpg
 role: VP Marketing
 teams_role:
   - VP
