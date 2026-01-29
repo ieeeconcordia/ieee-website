@@ -1,173 +1,110 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import RootLayout from "../layout";
-import styles from "@/styles/markdown.module.css";
 import { useTina } from "tinacms/dist/react";
 import moment from "moment";
 import { TinaMarkdown } from "tinacms/dist/rich-text";
 import client from "@/tina/__generated__/client";
 import Link from "next/link";
 import { BsDiscord } from "react-icons/bs";
-import { IoArrowForward, IoArrowBackCircle, IoArrowForwardCircle } from "react-icons/io5";
+import { IoPeople, IoCalendarOutline, IoArrowBack } from "react-icons/io5";
 
-export default function Projects(props: any) {
+export default function ProjectDetail(props: any) {
   const { data } = useTina({
     query: props.query,
     variables: props.variables,
     data: props.data,
   });
-
-  const [showGallery, setShowGallery] = useState(false);
-  const [galleryImages, setGalleryImages] = useState<string[]>([]);
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
-
-  const fetchGalleryImages = async () => {
-    try {
-      const imagePaths = data?.projects?.gallery || [];
-      setGalleryImages(imagePaths);
-    } catch (error) {
-    }
-  };
-
-  const handleSeeMoreClick = async () => {
-    await fetchGalleryImages();
-    setShowGallery(true);
-  };
-
-  const handleNextImage = () => {
-    setCurrentImageIndex((prevIndex) => (prevIndex + 1) % galleryImages.length);
-  };
-
-  const handlePrevImage = () => {
-    setCurrentImageIndex((prevIndex) =>
-      prevIndex === 0 ? galleryImages.length - 1 : prevIndex - 1
-    );
-  };
-
-  useEffect(() => {
-    if (showGallery && galleryImages.length > 0) {
-      setCurrentImageIndex(0);
-    }
-  }, [showGallery, galleryImages]);
+  const [imgError, setImgError] = useState(false);
 
   if (!data?.projects) {
     return <div>Error: Project data is missing!</div>;
   }
 
   const startDate = data.projects.startdate
-    ? moment(data.projects.startdate).format("MMMM Do, YYYY")
-    : "Start date not available";
-
+    ? moment(data.projects.startdate).format("MMM D, YYYY")
+    : "TBD";
   const endDate = data.projects.enddate
-    ? moment(data.projects.enddate).format("MMMM Do, YYYY")
-    : null;
+    ? moment(data.projects.enddate).format("MMM D, YYYY")
+    : "TBD";
 
   return (
-  <RootLayout>
-    <div className="max-w-4xl md:max-w-full flex flex-col px-8 sm:px-20 xl:px-section mb-2">
-      <h1 className="font-lora font-bold text-center text-headline-l text-secondary pb-4">
-        {data.projects.title}
-      </h1>
-    </div>
-    
-      <div className={styles.markdown }>
-        <div className="flex justify-center items-center w-full">
-        <img
-          src={data.projects.image}
-          alt={data.projects.title}
-          style={{
-            margin: '0 auto',
-            width: 'auto',
-            height: 'auto',
-            maxWidth: '60%', 
-            maxHeight: '400px', 
-          }}
-        />
-        </div>
-      <div className={styles.normalFontLi}>
-          <ul className="list-disc pl-5">
-            {/* Ensure each list item has a unique key to avoid the warning */}
-            <li key="Duration">
-              <strong>Duration:</strong> {startDate} {endDate && `to ${endDate}`}</li>
+    <RootLayout>
+      {/* Hero Banner */}
+      <div className="w-full bg-[#128DCD] text-white">
+        <div className="max-w-7xl mx-auto px-6 py-8">
+          <Link href="/projects" className="inline-flex items-center gap-2 text-white/80 hover:text-white mb-4">
+            <IoArrowBack size={18} />
+            Back to Projects
+          </Link>
+          <div className="flex items-center gap-3 mb-2">
             {data.projects.level && (
-              <li key="level"> <strong>Level:</strong> {data.projects.level}</li>
+              <span className="px-3 py-1 bg-white/20 rounded text-sm font-medium">
+                {data.projects.level}
+              </span>
             )}
-          </ul>
-        <TinaMarkdown content={data.projects.body} />
-          {showGallery && galleryImages.length > 0 && (
-              <div className="fixed inset-0 flex justify-center items-center" style={{ backgroundColor: 'rgba(0, 0, 0, 0.8)' }}>
-                <div className="relative w-auto h-auto max-w-full max-h-full flex justify-center items-center">
-                  <img
-                    src={galleryImages[currentImageIndex]}
-                    alt={`Gallery Image ${currentImageIndex + 1}`}
-                    className="object-contain max-w-full max-h-full"
-                    style={{ width: "auto", height: "auto", transform: "scale(2)" }}  
-                  />
-                  <button
-                    className="absolute left-0 top-1/2 transform -translate-y-1/2 text-black text-4xl"
-                    onClick={handlePrevImage}
-                  >
-                    <IoArrowBackCircle />
-                  </button>
-                  <button
-                    className="absolute right-0 top-1/2 transform -translate-y-1/2 text-black text-4xl"
-                    onClick={handleNextImage}
-                  >
-                    <IoArrowForwardCircle />
-                  </button>
-                  <button
-                    className="absolute top-1  right-1  p-2 text-black p-2"
-                    onClick={() => setShowGallery(false)}
-                    style={{ backgroundColor: 'white' }}
-                  >
-                    Close
-                  </button>
-                </div>
-              </div>
-            )
-          }
-          <>
-          {!showGallery && (
-          <li className={`${styles.noBullet} ${styles.rowItems}`} key="gallery" onClick={handleSeeMoreClick}>
-            <strong>Gallery:</strong>
-            <span className="text-lg md:text-xl font-semibold text-white">See More</span>
-            <IoArrowForward size={25} color="white" />
-          </li>
-      )}
-             {!showGallery && (
-            <a href={data.projects.blogLink} className={`${styles.noBullet} ${styles.rowItems} mb-5`} style={{ background: "#303030" }}>
-            <strong className=" text-lg md:text-xl font-semibold">Blogs:</strong>
-            <span className="text-lg md:text-xl font-semibold text-white">See More</span>
-            <IoArrowForward size={25} color="white" />
-            </a>
-          )}
-          </>
-
-        {!showGallery && (
-          <ul className={styles.bottomContainer}>
-            {data.projects.leader && (
-              <>
-                <li className={styles.noBullet} key="anotherItem">
-                  <Link
-                    href={data.projects.link}
-                    className="w-fit flex flex-row gap-2 justify-center items-center text-white bg-discord px-5 py-2 rounded-md shadow-md hover:shadow-lg text-2xl"
-                  >
-                    <BsDiscord className="text-4xl" color="#ffffff" />
-                    Join this Project!
-                  </Link>
-                </li>
-                <li className={styles.noBullet} key="leader">
-                  <strong>Project by:</strong> {data.projects.leader}
-                </li>
-              </>
-            )}
-          </ul>
-        )}
+          </div>
+          <h1 className="text-3xl font-bold">{data.projects.title}</h1>
+        </div>
       </div>
 
+      {/* Content */}
+      <div className="w-full">
+        <div className="max-w-7xl mx-auto px-6 py-10">
+          <div className="grid lg:grid-cols-3 gap-8">
+            {/* Sidebar */}
+            <div className="lg:col-span-1">
+              <div className="bg-white border border-[#B3DAE6] rounded-lg overflow-hidden sticky top-6">
+                <div className="h-64 bg-gray-100">
+                  {!imgError && data.projects.image ? (
+                    <img
+                      src={data.projects.image}
+                      alt={data.projects.title}
+                      className="w-full h-full object-cover"
+                      onError={() => setImgError(true)}
+                    />
+                  ) : (
+                    <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-[#128DCD] to-[#0e7ab8]">
+                      <span className="text-white text-4xl font-bold opacity-40">IEEE</span>
+                    </div>
+                  )}
+                </div>
+                <div className="p-5 space-y-3">
+                  <div className="flex items-center gap-3 text-gray-600">
+                    <IoCalendarOutline size={20} className="text-[#128DCD]" />
+                    <span>{startDate} - {endDate}</span>
+                  </div>
+                  {data.projects.leader && (
+                    <div className="flex items-center gap-3 text-gray-600">
+                      <IoPeople size={20} className="text-[#128DCD]" />
+                      <span>{data.projects.leader}</span>
+                    </div>
+                  )}
+                  {data.projects.link && (
+                    <Link
+                      href={data.projects.link}
+                      className="w-full flex items-center justify-center gap-2 px-4 py-3 bg-[#5865F2] text-white rounded-lg font-medium hover:bg-[#4752c4] transition-colors"
+                    >
+                      <BsDiscord size={18} />
+                      Join this Project
+                    </Link>
+                  )}
+                </div>
+              </div>
+            </div>
 
-    </div>
-    
-  </RootLayout>
+            {/* Details */}
+            <div className="lg:col-span-2">
+              <div className="bg-white border border-[#B3DAE6] rounded-lg p-6">
+                <h2 className="text-xl font-bold text-gray-900 mb-4">Project Details</h2>
+                <div className="prose prose-gray max-w-none">
+                  <TinaMarkdown content={data.projects.body} />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </RootLayout>
   );
 }
 
@@ -176,18 +113,14 @@ export const getStaticProps = async ({ params }: any) => {
   let query = {};
   let variables = { relativePath: `${params.slug}.md` };
 
-  
-    const res = await client.queries.projects(variables);
-    query = res.query;
-    data = res.data;
-
-
-  
+  const res = await client.queries.projects(variables);
+  query = res.query;
+  data = res.data;
 
   return {
     props: {
       variables,
-      data, 
+      data,
       query,
     },
   };
@@ -198,8 +131,8 @@ export const getStaticPaths = async () => {
 
   return {
     paths: projectsListData.data.projectsConnection?.edges?.map((project) => ({
-      params: { slug: project?.node?._sys.filename }, 
+      params: { slug: project?.node?._sys.filename },
     })),
-    fallback: false, 
+    fallback: false,
   };
 };

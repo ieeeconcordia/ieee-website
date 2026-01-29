@@ -3,17 +3,67 @@
 @tailwind utilities;
 
 @layer base {
-  h1 {
-    @apply mt-8 text-2xl;
-  }
-  h2 {
-    @apply mt-6 text-xl;
-  }
-  h3 {
-    @apply mt-4 text-lg;
+  :root {
+    /* Using hex values for better browser compatibility */
+    --background: #E0F2F7;
+    --foreground: #000101;
+    --card: #F0F8FA;
+    --card-foreground: #000101;
+    --popover: #E0F2F7;
+    --popover-foreground: #000101;
+    --primary: #128DCD;
+    --primary-foreground: #FFFFFF;
+    --secondary: #808080;
+    --secondary-foreground: #FFFFFF;
+    --muted: #C6E7F0;
+    --muted-foreground: #4A5568;
+    --accent: #128DCD;
+    --accent-foreground: #FFFFFF;
+    --destructive: #EF4444;
+    --destructive-foreground: #FFFFFF;
+    --border: #B3DAE6;
+    --input: #C6E7F0;
+    --ring: #128DCD;
+    --radius: 0.5rem;
   }
 
-  .markdown h1 {
-    @apply flex flex-col justify-center text-center gap-7 p-container pb-16;
+  .dark {
+    --background: #1a2332;
+    --foreground: #FFFFFF;
+    --card: #243447;
+    --card-foreground: #FFFFFF;
+    --popover: #1a2332;
+    --popover-foreground: #FFFFFF;
+    --primary: #128DCD;
+    --primary-foreground: #FFFFFF;
+    --secondary: #6366f1;
+    --secondary-foreground: #FFFFFF;
+    --muted: #2d3f54;
+    --muted-foreground: #94a3b8;
+    --accent: #128DCD;
+    --accent-foreground: #FFFFFF;
+    --destructive: #EF4444;
+    --destructive-foreground: #FFFFFF;
+    --border: #3d5068;
+    --input: #2d3f54;
+    --ring: #128DCD;
   }
+
+  * {
+    border-color: var(--border);
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-raleway), system-ui, sans-serif;
+  }
+}
+
+/* Clean card styling */
+.card {
+  background-color: var(--card);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.05);
 }

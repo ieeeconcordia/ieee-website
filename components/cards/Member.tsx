@@ -1,12 +1,6 @@
-import { link } from "fs";
 import Link from "next/link";
-import React from "react";
-import {
-  IoLogoGithub,
-  IoLogoLinkedin,
-  IoMail,
-  IoMailOutline,
-} from "react-icons/io5";
+import React, { useState } from "react";
+import { IoLogoGithub, IoLogoLinkedin, IoMailOutline } from "react-icons/io5";
 
 type memberProps = {
   name: string;
@@ -29,55 +23,50 @@ export const Member = ({
   program,
   image,
 }: memberProps) => {
-  // Handles undefined values
   linkedIn = linkedIn == undefined ? "" : linkedIn;
   github = github == undefined ? "" : github;
+  const [imgError, setImgError] = useState(false);
 
   return (
-    <div className="w-80 flex flex-col justify-start bg-white border rounded-xl mb-8 shadow-md">
-      {/* Image */}
-      <div className="h-56 bg-slate-400 rounded-t-lg">
+    <div className="w-72 flex flex-col bg-white border border-[#B3DAE6] rounded-lg overflow-hidden shadow-sm">
+      <div className="h-52 bg-gray-100">
         <img
-          src={image ? image : "/avatar.webp"}
-          alt="User PP"
-          className="h-56 w-full object-cover rounded-t-lg"
+          src={imgError || !image ? "/avatar.webp" : image}
+          alt={name}
+          className="h-52 w-full object-cover"
+          onError={() => setImgError(true)}
         />
       </div>
-    
-      {/* Details */}
-      <div className="w-full flex flex-col px-4 pb-4 gap-3 text-start rounded-b-xl">
-        {/* Name & Tags */}
-        <div>
-          <h3 className="w-full text-title-l font-semibold font-raleway text-black leading-5">
-            {name}
-          </h3>
-          <p className=" text-label-l font-light">
-
-          {role} {['VP', 'Director'].includes(role[0]) ? ' of' : ''} {Array.isArray(teams) ? teams.join(', ') : teams} {program === "" ? " - B.Eng" : " - " + program}
-          </p>
-        </div>
-
-        {/* Details */}
-        <div className="flex flex-row gap-4 items-center">
-          <Link href={"mailto:" + emailIEEE}>
-            {" "}
-            <IoMailOutline size={35} />
+      <div className="p-4">
+        <h3 className="text-lg font-semibold text-gray-900">{name}</h3>
+        <p className="text-sm text-gray-500 mb-3">
+          {role} {["VP", "Director"].includes(role[0]) ? " of" : ""}{" "}
+          {Array.isArray(teams) ? teams.join(", ") : teams}
+          {program && ` - ${program}`}
+        </p>
+        <div className="flex gap-3">
+          <Link
+            href={`mailto:${emailIEEE}`}
+            className="text-gray-600 hover:text-[#128DCD] transition-colors"
+          >
+            <IoMailOutline size={22} />
           </Link>
-
-          {linkedIn == "" ? (
-            <></>
-          ) : (
-            <Link href={linkedIn}>
-              {" "}
-              <IoLogoLinkedin size={28} />
+          {linkedIn && (
+            <Link
+              href={linkedIn}
+              target="_blank"
+              className="text-gray-600 hover:text-[#128DCD] transition-colors"
+            >
+              <IoLogoLinkedin size={22} />
             </Link>
           )}
-          {github == "" ? (
-            <></>
-          ) : (
-            <Link href={github}>
-              {" "}
-              <IoLogoGithub size={28} />
+          {github && (
+            <Link
+              href={github}
+              target="_blank"
+              className="text-gray-600 hover:text-[#128DCD] transition-colors"
+            >
+              <IoLogoGithub size={22} />
             </Link>
           )}
         </div>

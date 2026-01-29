@@ -67,13 +67,17 @@ export default function MobileHomeNav() {
                     <div className="flex h-full flex-col overflow-y-scroll bg-white py-6 shadow-xl">
                       <div className="relative mt-6 flex-1 px-4 sm:px-6">
                         {/* Your content */}
-                        <ul className="flex flex-col items-start font-raleway text-display-s font-bold gap-6 pt-8">
+                        <ul className="flex flex-col items-start font-raleway text-display-s font-bold gap-6 pt-8 text-foreground">
                           <li>
                             <Link href="/">Home</Link>
                           </li>
 
                           <li>
                             <Link href="/about">About Us</Link>
+                          </li>
+
+                          <li>
+                            <Link href="/laboratory">The Lab</Link>
                           </li>
 
                           <li>
@@ -85,7 +89,7 @@ export default function MobileHomeNav() {
                           </li>
 
                           <li>
-                            <Link href="contact">Contact us</Link>
+                            <Link href="/contact">Contact us</Link>
                           </li>
                           <li className="w-full">
                             <SponsorshipBtnNav />

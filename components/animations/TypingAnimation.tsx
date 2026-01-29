@@ -9,7 +9,7 @@ export default function TypingAnimation() {
         1000,
         "The students behind the projects!",
         1000,
-        "The students behind the work!",
+        "The students behind IEEE!",
         1000,
       ]}
       wrapper="span"

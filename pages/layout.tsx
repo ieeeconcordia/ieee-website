@@ -1,7 +1,5 @@
 import Navbar from "@/components/navbar/Navbar";
 import Footer from "@/components/Footer";
-import EventCard from "@/components/cards/EventCard";
-import { SimpleBtn } from "@/components/buttons/SimpleBtn";
 
 export default function RootLayout({
   children,
@@ -9,11 +7,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <main className="">
+    <main className="min-h-screen" style={{ backgroundColor: "#E0F2F7" }}>
       <Navbar />
-      <div className="">{children}</div>
+      <div>{children}</div>
       <Footer />
-      {/* <EventCard _id={''} name={''} date={''} location={''} time={''} description={''} price={''} image={''} organizer={''} eventType={''} sponsors={''} /> */}
     </main>
   );
 }

@@ -1,11 +1,6 @@
-import Link from "next/link";
 import { useRouter } from "next/router";
-import React from "react";
-import {
-  IoArrowForward,
-  IoLocationSharp,
-  IoTimeOutline,
-} from "react-icons/io5";
+import React, { useState } from "react";
+import { IoLocationSharp, IoTimeOutline } from "react-icons/io5";
 
 type EventProps = {
   _id: string;
@@ -32,10 +27,10 @@ export default function EventCard({
   description,
   image,
   eventType,
-  tags,
   link,
 }: EventProps) {
   const router = useRouter();
+  const [imgError, setImgError] = useState(false);
 
   const handleButtonClick = () => {
     router.push({
@@ -44,70 +39,56 @@ export default function EventCard({
     });
   };
 
-  // Function to check if the event date has passed
   const isEventPassed = (eventDate: string) => {
     const today = new Date();
     const eventDateObj = new Date(eventDate);
-
-    // Set hours, minutes, seconds and milliseconds to 0 for both dates
     today.setHours(0, 0, 0, 0);
     eventDateObj.setHours(eventDateObj.getHours() + 5);
-
     eventDateObj.setDate(eventDateObj.getDate() + 1);
-
-    // Compare the event date with today's date
     return eventDateObj <= today;
   };
 
   return (
     <button
       onClick={handleButtonClick}
-      className="w-72 sm:w-80 flex flex-col justify-start bg-white border overflow-hidden rounded-xl shadow-md hover:scale-105 transition duration-300"
+      className="w-full flex flex-col bg-white border border-[#B3DAE6] rounded-lg overflow-hidden hover:shadow-lg transition-shadow text-left"
     >
-      <div className="w-full h-48 sm:h-52 bg-slate-400 rounded-t-xl">
-        {isEventPassed(date) ? (
-          <div className="absolute w-32 p-1 bg-red-500 rounded-tl-lg rounded-br-lg text-white">
-            PASSED
-          </div>
+      <div className="relative w-full h-40 bg-gray-100">
+        <div
+          className={`absolute top-2 left-2 px-2 py-1 text-xs font-semibold text-white rounded ${
+            isEventPassed(date) ? "bg-gray-500" : "bg-[#128DCD]"
+          }`}
+        >
+          {isEventPassed(date) ? "PASSED" : eventType}
+        </div>
+        {!imgError && image ? (
+          <img
+            src={image}
+            alt={name}
+            className="w-full h-full object-cover"
+            onError={() => setImgError(true)}
+          />
         ) : (
-          <div className="absolute w-32 p-1 bg-sky-400 rounded-tl-lg rounded-br-lg text-white">
-            {eventType}
+          <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-[#128DCD] to-[#0e7ab8]">
+            <span className="text-white text-3xl font-bold opacity-40">IEEE</span>
           </div>
         )}
-        <img
-          src={image}
-          alt={name}
-          className="w-full h-full bg-center object-cover overflow-hidden "
-        />
       </div>
-      <div className="w-full flex flex-col px-4 pb-4 gap-2 sm-gap-3 text-start rounded-b-xl flex-grow">
-        {" "}
-        {/* Add 'flex-grow' class here */}
-        <div>
-          <h3 className="w-full text-title-l font-semibold font-raleway text-black line-clamp-1">
-            {name}
-          </h3>
-          {tags ? <p className="italic text-base font-light">{tags}</p> : <></>}
-        </div>
-        <div className="flex flex-row items-start sm:items-center gap-2 sm:gap-6">
-          <div className="flex flex-row items-center text-sm gap-1 text-gray-600">
-            <IoTimeOutline size={24} color="gray" /> {date}
+      <div className="p-4 flex flex-col flex-grow">
+        <h3 className="font-semibold text-gray-900 line-clamp-2 mb-2">{name}</h3>
+        <div className="text-sm text-gray-500 space-y-1 mb-3">
+          <div className="flex items-center gap-1">
+            <IoTimeOutline size={14} />
+            <span>{date}</span>
           </div>
-          <div className="flex flex-row items-center text-sm gap-1 text-gray-600">
-            <IoLocationSharp size={24} color="gray" /> {location}
+          <div className="flex items-center gap-1">
+            <IoLocationSharp size={14} />
+            <span className="line-clamp-1">{location}</span>
           </div>
         </div>
-        <p className="text-base text-gray-600 line-clamp-3">{description}</p>
-        {/* Learn more */}
-        <div className="mt-auto">
-          {" "}
-          {/* Add 'mt-auto' class here */}
-          <div className="flex flex-row gap-2 items-center text-sm text-cyan-400">
-            <div className="w-fit rounded p-1 bg-gradient-to-r from-cyan-400 to-sky-400">
-              <IoArrowForward size={16} color="white" />
-            </div>
-            Learn More
-          </div>
+        <p className="text-sm text-gray-600 line-clamp-2 flex-grow">{description}</p>
+        <div className="mt-3 pt-3 border-t border-gray-100">
+          <span className="text-sm font-medium text-[#128DCD]">Learn more →</span>
         </div>
       </div>
     </button>

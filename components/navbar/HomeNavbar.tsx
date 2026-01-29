@@ -59,6 +59,10 @@ export default function HomeNavbar() {
                 </li>
 
                 <li>
+                  <Link href="/laboratory">The Lab</Link>
+                </li>
+
+                <li>
                   <Link href="/events">Events</Link>
                 </li>
 
@@ -67,7 +71,7 @@ export default function HomeNavbar() {
                 </li>
 
                 <li>
-                  <Link href="contact">Contact us</Link>
+                  <Link href="/contact">Contact us</Link>
                 </li>
               </ul>
               <SponsorshipBtnNav />
