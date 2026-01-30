@@ -15,7 +15,8 @@ export default function handler(req, res) {
           extension === ".jpg" ||
           extension === ".jpeg" ||
           extension === ".png" ||
-          extension === ".gif"
+          extension === ".gif" ||
+          extension === ".webp"
         );
       });
 
