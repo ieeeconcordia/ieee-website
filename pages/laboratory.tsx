@@ -46,9 +46,9 @@ export default function Laboratory({ lab_supervisors_form_link }: any) {
                     <div>
                       <h3 className="font-semibold text-gray-900">Location</h3>
                       <p className="text-gray-600">
-                        H-831, Hall Building<br />
+                        B-204, B-Annex<br />
                         Concordia University<br />
-                        1455 De Maisonneuve Blvd. W.
+                        2160 Bishop St, Montreal, Quebec H3G 2E9
                       </p>
                     </div>
                   </div>
