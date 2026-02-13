@@ -17,4 +17,4 @@ Time: 6PM – 9PM
 
 Location: 1455 Blvd. De Maisonneuve West, Room 620
 
-[Register here! ](https://www.zeffy.com/en-CA/ticketing/ieee-intro-to-simulation-with-matlab "Register here!")
+Register here!: [https://www.zeffy.com/en-CA/ticketing/ieee-intro-to-simulation-with-matlab](https://www.zeffy.com/en-CA/ticketing/ieee-intro-to-simulation-with-matlab)
