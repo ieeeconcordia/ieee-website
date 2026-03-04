@@ -1,7 +1,7 @@
 ---
 title: Newton Quadruped Retrofit
 leader: Abdul Rahman Rizan
-startdate: 2026-01-23T05:00:00.000Z
+startdate: 2026-01-22T05:00:00.000Z
 enddate: 2026-08-31T04:00:00.000Z
 level: Intermediate-Advanced
 image: /projects/20250401_091912.jpg
