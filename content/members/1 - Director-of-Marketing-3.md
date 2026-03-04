@@ -7,7 +7,7 @@ teams:
   - Marketing
 name: Farah Benyoucef
 email: Farah05cs@gmail.com
-program: BSc Computer Science
+program: COMP
 linkedin: 'https://www.linkedin.com/in/farah-benyoucef-05395a338'
 ---
 
