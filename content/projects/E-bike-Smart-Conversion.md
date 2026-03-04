@@ -1,7 +1,7 @@
 ---
 title: E-Bike Smart Conversion
 leader: Abdul Rahman Rizan
-startdate: 2026-01-17T05:00:00.000Z
+startdate: 2026-01-22T05:00:00.000Z
 enddate: 2026-08-31T04:00:00.000Z
 level: Intermediate-Advanced
 image: /projects/618915281_18133319194496611_7097578911521867385_n.jpeg
@@ -18,7 +18,7 @@ This is our electrical-focused build: we’re converting a normal bicycle into a
 * Road-legal lighting + horn + safety systems (brake-cut levers, torque arms, fusing)
 * A custom PCB harness + energy analytics (voltage/current logging, Wh/km, range stats, regen event capture)
 
-Why (this is THE electrical project people asked for):If you want something that feels like “real electrical engineering,” this hits a ton of it in one platform:
+If you want something that feels like “real electrical engineering”, this hits a ton of it in one platform:
 
 * Power & energy: 48 V battery pack, BMS, fusing, charging, power budgeting
 * Circuits & integration: wiring diagrams, connectors, protection, grounding/returns, noise issues
