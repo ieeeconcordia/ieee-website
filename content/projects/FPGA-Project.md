@@ -12,8 +12,6 @@ link: 'https://discord.gg/H6er4G98mg'
 blogLink: 'https://ieeeconcordia.notion.site/IEEE-Concordia-Projects-Department-11540a16c70980018766daf64ee0bdb3'
 ---
 
-##
-
 The objective of this project is to use VHDL and an in-house FPGA to create a multicore, single-cycle RISC-V CPU.
 
 **Phase 1**: Introduces foundational FPGA and VHDL skills, such as setting up the basic environment for programming the FPGA, basic syntax, writing combinational and sequential logic, how to simulate and implement the design onto the board, and finding a synthesizer, wave simulator, and compiler.
