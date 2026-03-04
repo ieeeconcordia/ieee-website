@@ -46,4 +46,4 @@ How to Register:
 3. Each team member registers individually below
 4. Indicate your team name and teammates when registering
 
-[Register Here!: ](https://www.zeffy.com/en-CA/ticketing/robowars--2026 "Register Here!")[https://www.zeffy.com/en-CA/ticketing/robowars--2026](https://www.zeffy.com/en-CA/ticketing/robowars--2026)
+Register here!: [https://www.zeffy.com/en-CA/ticketing/robowars--2026](https://www.zeffy.com/en-CA/ticketing/robowars--2026)
