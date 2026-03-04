@@ -12,10 +12,6 @@ link: 'https://discord.gg/yhkMxEQ28c'
 
 We’re building a real robot that will physically play chess against humans — from vision to motion!
 
-You’ll learn it all as we go:
-Computer Vision
-ROS 2 + Motion Planning
-3D Design & Printing
-Microcontrollers Programming
+You’ll learn it all as we go: Computer Vision, ROS 2 + Motion Planning, 3D Design & Printing, Microcontrollers, & Programming.
 
 A full robot arm that can see the board, decide a move, and make it happen.
