@@ -7,7 +7,7 @@ teams:
   - Marketing
 name: Mridani Kashyap
 email: mridanikashyap@gmail.com
-program: BComm Marketing
+program: COMM
 linkedin: 'https://www.linkedin.com/in/mridani-kashyap/'
 ---
 
