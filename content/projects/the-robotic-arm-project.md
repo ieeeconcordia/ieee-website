@@ -2,7 +2,7 @@
 title: The 6-Axis Robotic Arm
 leader: Nicholas Saldanha
 startdate: 2024-07-16T04:00:00.000Z
-enddate: 2025-09-30T04:00:00.000Z
+enddate: 2025-05-31T04:00:00.000Z
 level: Advanced
 image: /image (1).png
 gallery:
@@ -10,11 +10,8 @@ gallery:
   - /projects/arm/arm2.webp
   - /projects/arm/arm3.webp
 link: 'https://discord.gg/yhkMxEQ28c'
-blogLink: >-
-  https://ieeeconcordia.notion.site/IEEE-Concordia-Projects-Department-11540a16c70980018766daf64ee0bdb3
+blogLink: 'https://ieeeconcordia.notion.site/IEEE-Concordia-Projects-Department-11540a16c70980018766daf64ee0bdb3'
 ---
-
-## About
 
 The goal of this project is to use state of the art technology to develop and
 fully design a 3d-Printed 7-axis robotic arm. The innovations began in the
