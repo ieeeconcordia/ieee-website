@@ -5,7 +5,7 @@ teams_role:
   - VP
 teams:
   - External
-name: Sofia Gonzalez
+name: Hatim Elbannaoui
 email: external@ieeeconcordia.ca
 program: ELEC
 ---
