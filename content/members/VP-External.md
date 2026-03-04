@@ -7,6 +7,6 @@ teams:
   - External
 name: Hatim Elbannaoui
 email: external@ieeeconcordia.ca
-program: ELEC
+program: COEN
 ---
 
