@@ -1,6 +1,6 @@
 ---
 image: /team24-25/Abu.webp
-role: VP Projects
+role: VP
 teams_role:
   - VP
 teams:
