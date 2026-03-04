@@ -9,11 +9,10 @@ gallery:
   - /projects/FPGA/FPGA1.webp
   - /projects/FPGA/FPGA2.webp
 link: 'https://discord.gg/H6er4G98mg'
-blogLink: >-
-  https://ieeeconcordia.notion.site/IEEE-Concordia-Projects-Department-11540a16c70980018766daf64ee0bdb3
+blogLink: 'https://ieeeconcordia.notion.site/IEEE-Concordia-Projects-Department-11540a16c70980018766daf64ee0bdb3'
 ---
 
-## About
+##
 
 The objective of this project is to use VHDL and an in-house FPGA to create a multicore, single-cycle RISC-V CPU.
 
