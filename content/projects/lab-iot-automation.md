@@ -2,7 +2,7 @@
 title: Lab IoT Automation
 leader: Achal Patel
 startdate: 2024-06-10T04:00:00.000Z
-enddate: 2024-10-31T04:00:00.000Z
+enddate: 2024-12-31T05:00:00.000Z
 level: Intermediate
 image: /image.jpeg
 gallery:
@@ -10,11 +10,8 @@ gallery:
   - /projects/iot/iot2.webp
   - /projects/iot/iot3.jpeg
 link: ' https://discord.gg/Cnu7N78DaK'
-blogLink: >-
-  https://ieeeconcordia.notion.site/IEEE-Concordia-Projects-Department-11540a16c70980018766daf64ee0bdb3
+blogLink: 'https://ieeeconcordia.notion.site/IEEE-Concordia-Projects-Department-11540a16c70980018766daf64ee0bdb3'
 ---
-
-## About
 
 This project is all about Automation and Intelligent IoT devices. The goal of this project is to engage students who are new to projects and teamwork. We aim to have them contribute to individual projects, creating cool gadgets, sensors, and devices. At the same time, we'll integrate these separate devices into one big, interconnected, cohesive automation system. This project will provide ongoing beginner-level experiences in IoT product development, self-hosted services, and interconnectivity Protocols.
 
