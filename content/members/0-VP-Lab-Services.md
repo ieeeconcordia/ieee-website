@@ -5,7 +5,7 @@ teams_role:
   - VP
 teams:
   - Lab Services
-name: Abdul Rahman
+name: Abdul Rahman Rizan
 email: services@ieeeconcordia.ca
 program: COEN
 linkedin: ''
