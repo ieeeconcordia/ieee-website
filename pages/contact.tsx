@@ -2,20 +2,26 @@ import RootLayout from "./layout";
 import { useState, useEffect } from "react";
 import { MdCheckCircleOutline } from "react-icons/md";
 
+type Sponsor = {
+  name: string;
+  logo: string;
+  link?: string | null;
+};
+
 export default function Contact() {
   const [email, setEmail] = useState("");
   const [subject, setSubject] = useState("");
   const [request, setRequest] = useState("it");
   const [message, setMessage] = useState("");
   const [successMessage, setSuccessMessage] = useState("");
-  const [sponsorImages, setSponsorImages] = useState<string[]>([]);
+  const [sponsors, setSponsors] = useState<Sponsor[]>([]);
 
   useEffect(() => {
     const fetchImages = async () => {
       try {
         const response = await fetch("/api/images");
         const data = await response.json();
-        setSponsorImages(data.images || []);
+        setSponsors(data.sponsors || []);
       } catch (e) {
         console.error("Failed to fetch sponsor images");
       }
@@ -169,19 +175,19 @@ export default function Contact() {
                   excellence.
                 </p>
 
-                {sponsorImages.length > 0 && (
+                {sponsors.length > 0 && (
                   <>
                     <h3 className="font-semibold text-gray-900 mb-4">Our Sponsors</h3>
                     <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 mb-6">
-                      {sponsorImages.map((image) => (
+                      {sponsors.map((sponsor) => (
                         <div
-                          key={image}
+                          key={sponsor.logo}
                           className="flex items-center justify-center p-4 bg-gray-50 rounded-lg border border-[#B3DAE6] h-20"
                         >
                           <img
                             className="max-h-12 w-auto object-contain"
-                            alt="Sponsor logo"
-                            src={`/sponsors/${image}`}
+                            alt={sponsor.name}
+                            src={sponsor.logo}
                           />
                         </div>
                       ))}

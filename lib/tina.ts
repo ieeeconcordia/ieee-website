@@ -114,6 +114,35 @@ export async function getProjects() {
   return projectArray;
 }
 
+export async function getSponsors() {
+  const sponsorResponse = await client.queries.sponsorConnection();
+  const sponsors = sponsorResponse.data?.sponsorConnection.edges;
+  if (!sponsors) return [];
+  const sponsorArray: any[] = [];
+  sponsors.forEach((sponsor) => {
+    if (sponsor && sponsor.node) {
+      let temp = {
+        _id: sponsor.node.id,
+        name: sponsor.node.name,
+        logo: sponsor.node.logo,
+        link: sponsor.node.link,
+        order: sponsor.node.order,
+      };
+      sponsorArray.push(temp);
+    }
+  });
+
+  // Explicit order first, then the rest alphabetically
+  sponsorArray.sort((a, b) => {
+    if (a.order != null && b.order != null) return a.order - b.order;
+    if (a.order != null) return -1;
+    if (b.order != null) return 1;
+    return String(a.name).localeCompare(String(b.name));
+  });
+
+  return sponsorArray;
+}
+
 export async function getLabSupervisorFormLink() {
   const lab_supervisor_form_link_response = await client.queries.lab_supervisor_formConnection();
   const lab_supervisor_form_link = lab_supervisor_form_link_response.data?.lab_supervisor_formConnection.edges;
