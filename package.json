@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "TINA_PUBLIC_IS_LOCAL=true tinacms dev -c \"next dev\"",
+    "dev": "cross-env TINA_PUBLIC_IS_LOCAL=true tinacms dev -c \"next dev\"",
     "build": "tinacms build && next build",
     "start": "next start",
     "lint": "next lint"
@@ -56,6 +56,7 @@
     "@types/react-burger-menu": "^2.8.3",
     "@types/react-draft-wysiwyg": "^1.13.4",
     "autoprefixer": "^10.4.14",
+    "cross-env": "^10.1.0",
     "postcss": "^8.4.21",
     "tailwindcss": "^3.3.1"
   }
