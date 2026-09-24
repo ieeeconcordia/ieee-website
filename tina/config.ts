@@ -127,7 +127,7 @@ export default defineConfig({
             type: 'string',
             name: 'teams',
             label: 'Teams',
-            options: ['Chair', 'Academics', 'Community', 'Competitions', 'Development', 'External','Internal', 'Finance','IT','Lab Services','Projects','Marketing','Notion','Advisor'],
+            options: ['Chair', 'Academics', 'Community', 'Competitions', 'Development', 'External','Internal', 'Finance','IT','Lab Services','Projects','Marketing','Notion','Advisor',"Robowars"],
           },
           {
             type: "string",
