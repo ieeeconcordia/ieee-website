@@ -5,7 +5,7 @@ teams_role:
   - VP
 teams:
   - Project
-name: Abdul Rahman Rizan
+name: Nirmal Patel
 email: projects@ieeeconcordia.ca
 program: COEN
 linkedin: ''
