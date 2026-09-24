@@ -4,7 +4,7 @@ role: VP Robowars
 teams_role:
   - VP
 teams:
-  - Advisor
+  - Robowars
 name: Zoëh Julien
 email: none@ieeeconcordia.ca
 program: MECH
