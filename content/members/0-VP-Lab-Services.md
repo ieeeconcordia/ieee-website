@@ -1,14 +1,14 @@
 ---
-image: /team24-25/Kevin.webp
+image: /team24-25/Abu.webp
 role: VP Lab Services
 teams_role:
   - VP
 teams:
   - Lab Services
-name: Kevin Sementilli
+name: Abdul Rahman
 email: services@ieeeconcordia.ca
-program: ELEC
-linkedin: 'https://www.linkedin.com/in/kevin-sementilli'
-github: 'https://github.com/KevinSementilli'
+program: COEN
+linkedin: ''
+github: ''
 ---
 
