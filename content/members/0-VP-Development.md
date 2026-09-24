@@ -5,7 +5,6 @@ teams_role:
   - VP
 teams:
   - Development
-  - Academics
 name: Gorav Karwer
 email: dev@ieeeconcordia.ca
 program: CS
