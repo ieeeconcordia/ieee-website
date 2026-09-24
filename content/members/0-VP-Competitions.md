@@ -1,14 +1,14 @@
 ---
-image: /team24-25/Ethan.webp
+image: /IMG_0638.jpg
 role: VP Competitions
 teams_role:
   - VP
 teams:
   - Competitions
-name: Ethan Logie
+name: Le Van Matthew Tran
 email: competitions@ieeeconcordia.ca
-program: COMP
-linkedin: 'https://www.linkedin.com/in/ethan-logie-478200309/'
+program: ELEC
+linkedin: ''
 github: ''
 ---
 

@@ -1,13 +1,13 @@
 ---
-image: /team24-25/Camila.webp
+image: /avatar.webp
 role: VP Community
 teams_role:
   - VP
 teams:
   - Community
-name: Camila Kin Márquez
+name: Merrick Marshall
 email: community@ieeeconcordia.ca
 program: COEN
-linkedin: 'https://www.linkedin.com/in/camilakinmarquez'
+linkedin: ''
 ---
 

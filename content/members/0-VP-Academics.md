@@ -5,9 +5,9 @@ teams_role:
   - VP
 teams:
   - Academics
-name: Paolo Khayat
+name: Parsa Morshedlou
 email: academics@ieeeconcordia.ca
-program: ELEC
-linkedin: 'https://www.linkedin.com/in/paolokhayat/'
+program: COEN
+linkedin: ''
 ---
 

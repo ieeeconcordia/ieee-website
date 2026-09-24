@@ -1,13 +1,13 @@
 ---
-image: /team24-25/AlexGagnon.webp
+image: /team24-25/IMG_6958.jpg
 role: VP IT
 teams_role:
   - VP
 teams:
   - IT
-name: Alexandre Gagnon
-email: alexg@unixrealm.com
+name: Malcolm David Peterson
+email: it@ieeeconcordia.ca
 program: COEN
-linkedin: 'https://www.linkedin.com/in/alexandregagnon-/'
+linkedin: ''
 ---
 

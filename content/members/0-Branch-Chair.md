@@ -1,14 +1,14 @@
 ---
-image: /team25-26/OumaymaBennamoun2.webp
+image: /team24-25/Ethan.webp
 role: Branch Chair
 teams_role:
   - 'Branch '
 teams:
   - Chair
-name: Oumayma Bennamoun
+name: Ethan Logie
 email: chair@ieeeconcordia.ca
-program: COEN
+program: CS
 linkedin: ''
-github: 'https://github.com/oumaymabennamoun'
+github: ''
 ---
 

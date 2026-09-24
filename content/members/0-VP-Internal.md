@@ -1,11 +1,11 @@
 ---
-image: /team24-25/Amirreza.webp
+image: /avatar.webp
 role: VP Internal
 teams_role:
   - VP
 teams:
   - Internal
-name: Amirreza Dalvandi
+name: Chelsea Ingabire
 email: logistics@ieeeconcordia.ca
 program: ELEC
 ---

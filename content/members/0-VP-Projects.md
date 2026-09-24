@@ -1,13 +1,13 @@
 ---
-image: /team24-25/Abu.webp
+image: /avatar.webp
 role: VP Projects
 teams_role:
   - VP
 teams:
   - Project
-name: Abdul Rahman Rizan
+name: Nirmal Patel
 email: projects@ieeeconcordia.ca
 program: COEN
-linkedin: 'https://www.linkedin.com/in/abdul-rahman-rizan/'
+linkedin: ''
 ---
 
