@@ -83,7 +83,8 @@ export default function TeamSection({ members }: { members: MemberProps[] }) {
     m.role?.some((r: string) => r.toLowerCase().includes("director"))
   );
 
-  const others = members.filter((m) =>
+  const seniors = members.filter((m) =>
+    m.role?.some((r: string) => r.toLowerCase().includes("senior")) &&
     !chairs.includes(m) && !vps.includes(m) && !directors.includes(m)
   );
 
@@ -137,15 +138,15 @@ export default function TeamSection({ members }: { members: MemberProps[] }) {
         </div>
       )}
 
-      {/* Other Team Members */}
-      {others.length > 0 && (
+      {/* Seniors */}
+      {seniors.length > 0 && (
         <div>
           <div className="bg-[#128DCD] text-white px-6 py-3 rounded-t-lg">
-            <h3 className="text-lg font-semibold">Team Members</h3>
+            <h3 className="text-lg font-semibold">Seniors</h3>
           </div>
           <div className="bg-white border border-t-0 border-[#B3DAE6] rounded-b-lg p-8">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {others.map((member, idx) => (
+              {seniors.map((member, idx) => (
                 <MemberCard key={idx} member={member} />
               ))}
             </div>
