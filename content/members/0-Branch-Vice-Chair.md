@@ -1,5 +1,5 @@
 ---
-image: /avatar.webp
+image: /team26-27/image0.jpg
 role: Branch Vice Chair
 teams_role:
   - Branch Vice
