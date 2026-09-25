@@ -259,6 +259,13 @@ export default defineConfig({
             label: "Website",
           },
           {
+            type: "string",
+            name: "background",
+            label: "Logo background",
+            options: ["light", "dark"],
+            description: "Pick dark for white logos that disappear on white. Defaults to light.",
+          },
+          {
             type: "number",
             name: "order",
             label: "Display order",

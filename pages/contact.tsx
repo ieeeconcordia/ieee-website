@@ -6,6 +6,7 @@ type Sponsor = {
   name: string;
   logo: string;
   link?: string | null;
+  background?: string | null;
 };
 
 export default function Contact() {
@@ -182,7 +183,11 @@ export default function Contact() {
                       {sponsors.map((sponsor) => (
                         <div
                           key={sponsor.logo}
-                          className="flex items-center justify-center p-4 bg-gray-50 rounded-lg border border-[#B3DAE6] h-20"
+                          className={`flex items-center justify-center p-4 rounded-lg border border-[#B3DAE6] h-20 ${
+                            sponsor.background === "dark"
+                              ? "bg-footer-bg"
+                              : "bg-gray-50"
+                          }`}
                         >
                           <img
                             className="max-h-12 w-auto object-contain"

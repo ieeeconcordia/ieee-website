@@ -5,6 +5,7 @@ type Sponsor = {
   name: string;
   logo: string;
   link?: string | null;
+  background?: string | null;
 };
 
 export default function SponsorsMarquee() {
@@ -30,7 +31,9 @@ export default function SponsorsMarquee() {
         {sponsors.map((sponsor) => {
           const logo = (
             <img
-              className="mx-1 bg-white rounded-lg"
+              className={`mx-1 rounded-lg ${
+                sponsor.background === "dark" ? "bg-footer-bg p-3" : "bg-white"
+              }`}
               width={300}
               height={200}
               alt={sponsor.name}

@@ -126,6 +126,7 @@ export async function getSponsors() {
         name: sponsor.node.name,
         logo: sponsor.node.logo,
         link: sponsor.node.link,
+        background: sponsor.node.background,
         order: sponsor.node.order,
       };
       sponsorArray.push(temp);

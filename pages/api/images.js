@@ -2,7 +2,7 @@ import fs from "fs/promises";
 import path from "path";
 import { getSponsors } from "@/lib/tina";
 
-const IMAGE_EXTENSIONS = [".jpg", ".jpeg", ".png", ".gif", ".webp"];
+const IMAGE_EXTENSIONS = [".jpg", ".jpeg", ".png", ".gif", ".webp", ".svg"];
 
 // Falls back to whatever is sitting in public/sponsors when the Tina collection
 // is empty or unreachable, so the marquee never goes blank.
