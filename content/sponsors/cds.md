@@ -1,6 +1,7 @@
 ---
-name: CDS
+name: 2.CDS
 logo: /sponsors/CDS.png
-link: 
+link: null
 order: 2
 ---
+
