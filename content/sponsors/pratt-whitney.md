@@ -1,6 +1,7 @@
 ---
-name: Pratt & Whitney
+name: 7.Pratt & Whitney
 logo: /sponsors/prattlogo.webp
-link: https://www.prattwhitney.com
+link: 'https://www.prattwhitney.com'
 order: 7
 ---
+
