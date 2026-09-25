@@ -1,7 +1,8 @@
 ---
 name: Lumentum
-logo: /sponsors/lumentum.svg
-link: https://www.lumentum.com
-background: dark
+logo: /sponsors/Logo-dark.svg
+link: 'https://www.lumentum.com'
+background: ''
 order: 10
 ---
+
