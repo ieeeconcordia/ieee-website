@@ -6,7 +6,7 @@ teams_role:
 teams:
   - Advisor
 name: Oumayma Bennamoun
-email: info@ieeeconcordia.ca
+email: senior.advisor@ieeeconcordia.ca
 program: COEN
 ---
 
