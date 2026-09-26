@@ -1,5 +1,5 @@
 ---
-image: /team25-26/OumaymaBennamoun.webp
+image: /headshot.jpeg
 role: Senior Advisor
 teams_role:
   - Senior
