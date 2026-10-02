@@ -1,5 +1,5 @@
 ---
-image: /team24-25/IMG_6958.jpg
+image: /team26-27/a.png
 role: VP IT
 teams_role:
   - VP
