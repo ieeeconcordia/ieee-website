@@ -78,7 +78,7 @@ export default function Footer() {
                 </a>
               </li>
               <li className="">
-                <a href="https://drive.google.com/file/d/1u_lXfp2X0j6Sz3W0pQbpdzgvA6uMft3z/view?usp=sharing" className="text-gray-400 hover:text-gray-100">
+                <a href="https://docs.google.com/document/d/1gyN8gVla-tdp6XcclLqUu51d1i73Hf9JweZDYhCFzPs/edit?usp=sharing" className="text-gray-400 hover:text-gray-100">
                   Constitution
                 </a>
               </li>
